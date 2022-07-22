@@ -1,0 +1,6 @@
+asgiref==3.5.2
+Django==4.0.6
+django-extensions==3.2.0
+mysqlclient==2.1.1
+python-decouple==3.6
+sqlparse==0.4.2
