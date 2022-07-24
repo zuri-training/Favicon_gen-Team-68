@@ -10,13 +10,14 @@
 
 {% block content %}
 <form method='post' action='' class="form">
+    {% csrf_token %}
     <header>
         <h1>Create a Free Account</h1>
         <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
     </header>
     <div class="field">
-        <label for="name">Name</label>
-        <input type="text" placeholder="Name" id="name" name="name">
+        <label for="name">Username</label>
+        <input type="text" placeholder="Name" id="username" name="username">
     </div>
 
     <div class="field">
@@ -26,11 +27,11 @@
 
     <div class="field">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Create Password">
+        <input type="password" id="password" name="password" placeholder="*****************">
     </div>
     <div class="butns">
         <div class="butn1">
-            <button>Create account</button>
+            <button id='submit' type='submit'>Create account</button>
         </div>
         <div class="txt-lines">
             <p>Or</p>
