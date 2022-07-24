@@ -9,7 +9,7 @@ class NewUserAccountManagerTests(TestCase):
         admin_user = User.objects.create_superuser(
              username = 'superadmin', email = 'superadmin@email.com', password = 'testpass123'
         )
-        self.assertEqual(admin_user.username, 'superadmin ')
+        self.assertEqual(admin_user.username, 'superadmin')
         self.assertEqual(admin_user.email, 'superadmin@email.com')
         self.assertTrue(admin_user.is_staff)
         self.assertTrue(admin_user.is_superuser)
@@ -25,14 +25,14 @@ class NewUserAccountManagerTests(TestCase):
         self.assertEqual(user.email, 'Tony@email.com')
         self.assertFalse(user.is_staff)
         self.assertFalse(user.is_superuser)
-        self.assertTrue(user.is_active)
+        self.assertFalse(user.is_active)
 
         with self.assertRaises(TypeError):
             User.objects.create_user()
         with self.assertRaises(TypeError):
             User.objects.create_user(email = '')
         with self.assertRaises(ValueError):
-            User.objects.create_user(email = '', password = '')
+            User.objects.create_user(email = '', username = '', password = '')
 
     
         
