@@ -1,57 +1,55 @@
-<!DOCTYPE html>
+{% extends 'layout.html' %}
 
-<html>
 {% load static %}
 
-<head>
-    <script src="https://kit.fontawesome.com/f605babb3d.js" crossorigin="anonymous"></script>
-    <title>Conficon Login Page</title>
-    <link rel="stylesheet" href="">
-</head>
-<header>
-    <h1>Login</h1>
-    <p><small>New? <a href="signup.html">Create an Account</a></small></p>
-</header>
+{% block title %}ConfIcon Login Page{% endblock %}
 
-<body>
-    <div class="form">
-        <div class="field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Myname@Domain.com">
-        </div>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
 
-        <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="*********">
-        </div>
+{% block content %}
+<form method='post' action='' class="form">
+    <header>
+        <h1>Login</h1>
+        <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+    </header>
+    <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Myname@Domain.com">
+    </div>
 
-        <label class="checkbox" for="myCheckboxId"><small></label>
-        <input class="checkbox-input" type="checkbox" name="mycheckbox" id="mycheckbox">
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="*********">
+    </div>
+
+    <div class='checkbox-field'>
+        <label class="checkbox" for="remember"><small></label>
+        <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
         <div class="checkbox_box"></div>
         <small>Remember me</small>
-        <p><small><a href="">Forgot password?</a></small></p>
+    </div>
+    <p><small><a href="">Forgot password?</a></small></p>
 
-        <div class="butns">
-            <div class="butn1">
-                <button>Create account</button>
-            </div>
-            <div class="txt-lines">
-                <p>Or</p>
-            </div>
-            <div class="butn2">
-                <button>
-                    <i class="fa-brands fa-facebook"></i>
-                    Continue with Facebook</button>
-            </div>
-            <div class="butn3">
-                <button>
-                    <img class="google" src="{% static 'images/Google_icon.png' %}">
-                    Continue with Google
-                </button>
-            </div>
-</body>
-<footer>
-
-</footer>
-
-</html>
+    <div class="butns">
+        <div class="butn1">
+            <button>Create account</button>
+        </div>
+        <div class="txt-lines">
+            <p>Or</p>
+        </div>
+        <div class="butn2">
+            <button>
+                <i class="fa-brands fa-facebook"></i>
+                Continue with Facebook</button>
+        </div>
+        <div class="butn3">
+            <button>
+                <img class="google" src="{% static 'images/Google_icon.png' %}">
+                Continue with Google
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock %}

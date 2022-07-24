@@ -1,52 +1,51 @@
-<!--{% load static %}!-->
-<!doctype html>
-<html>
-    <head>
-        <title>ConfIcon Sign Up Page</title>
-        <link rel = "stylesheet" href = "{%static 'signup.css'%}"></link>
-        <script src="https://kit.fontawesome.com/f605babb3d.js" crossorigin="anonymous"></script>
-    </head>
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}ConfIcon Sign Up Page{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method='post' action='' class="form">
     <header>
         <h1>Create a Free Account</h1>
-        <p><small>Already have an account? <a href="login.html">login</a> </small></p>
+        <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
     </header>
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Name" id="name" name="name">
+    </div>
 
-    <body>
-        <div class="form">
-            <div class="field">
-                <label for = "name">Name</label>
-                <input type="text" placeholder="Name" id="name" name="name">
-            </div>
+    <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" placeholder="Myname@domain.com" id="email" name="email">
+    </div>
 
-            <div class="field">
-                <label for="email">Email Address</label>
-                <input type="email" placeholder="Myname@domain.com" id="email" name="email">
-            </div>
-
-            <div class="field">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create Password"
-            </div>
-        </form>
-        <div class="butns">
-            <div class="butn1">
-                <button>Create account</button>
-            </div>
-            <div class="txt-lines">
-                <p>Or</p>
-            </div>
-            <div class="butn2">
-                <button>
-                    <i class="fa-brands fa-facebook"></i>
-                    Continue with Facebook</button>
-            </div>
-            <div class="butn3">
-                <button>
-                    <img class="google" src="Google_icon.png">
-                    Continue with Google
-                </button>
-            </div>
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create Password">
+    </div>
+    <div class="butns">
+        <div class="butn1">
+            <button>Create account</button>
         </div>
-    </body>
-
-</html>
+        <div class="txt-lines">
+            <p>Or</p>
+        </div>
+        <div class="butn2">
+            <button>
+                <i class="fa-brands fa-facebook"></i>
+                Continue with Facebook</button>
+        </div>
+        <div class="butn3">
+            <button>
+                <img class="google" src="{% static 'images/Google_icon.png' %}">
+                Continue with Google
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock %}
