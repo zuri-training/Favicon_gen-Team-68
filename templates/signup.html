@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}ConfIcon Sign Up Page{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method='post' action='' class="form">
+    {% csrf_token %}
+    <header>
+        <h1>Create a Free Account</h1>
+        <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
+    </header>
+    {% if messages %}
+    <section class="messages">
+        {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</div>
+            {% endfor %}
+    </section>
+    {% endif %}
+
+    <div class="field">
+        <label for="username">Username</label>
+        <input type="text" value="{{ instance.username }}"placeholder="username" id="username" name="username" required>
+    </div>
+
+    <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" value="{{ instance.email }}"placeholder="Myname@domain.com" id="email" name="email" required>
+    </div>
+
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="*****************" required>
+    </div>
+    <div class="butns">
+        <div class="butn1">
+            <button id='submit' type='submit'>Create account</button>
+        </div>
+
+        {% include 'social-logins.html' %}
+
+    </div>
+</form>
+{% endblock %}

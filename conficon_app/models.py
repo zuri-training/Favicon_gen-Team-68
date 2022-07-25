@@ -6,14 +6,14 @@ from .utils import file_path
 
 
 class Profile(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True)
-    username = models.CharField(max_length=150, unique=True)
+    email = models.EmailField(unique=True, blank=False)
+    username = models.CharField(max_length=150, unique=True, blank=False)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
 
     objects = NewUserAccountManager()
-    USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["email"]
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["username"]
 
     def __str__(self):
         return self.username
@@ -36,7 +36,7 @@ class Icon(models.Model):
         ordering = ["-created", "name"]
         constraints = [
             models.UniqueConstraint(
-                fields=["user", "name"], name="unique_icon_per_user"
+                fields=["user", "name", 'image'], name="unique_icon_per_user"
             ),
         ]
 
