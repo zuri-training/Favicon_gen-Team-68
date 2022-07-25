@@ -51,6 +51,7 @@ def login_view(request):
     if request.method == "POST":
         email = request.POST.get("email").lower()
         password = request.POST.get("password")
+        rememberbox = request.POST.get("rememberbox")
 
         try:
             user = Profile.objects.get(email=email)
@@ -60,6 +61,14 @@ def login_view(request):
             user = authenticate(username=email, password=password)
             if user:
                 login(request, user)
+
+                # This is setting session to clear(when the browser was closed),
+                # if checkbox is not ticked else it will use the default
+                # session
+                print(f"session {rememberbox}", dir(request.session))
+                if not rememberbox:
+                    request.session.set_expiry()
+
                 messages.info(request, f"You are now logged in as {user.username}.")
                 return redirect("home")
             else:
