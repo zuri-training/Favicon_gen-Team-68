@@ -16,13 +16,16 @@ def index(request):
 def signup_view(request):
     """redirects to home is user is already logged in."""
     if request.user.is_authenticated:
+        messages.info(
+            request, "You are already authenticated! Log out to create new account."
+        )
         return redirect("home")
 
-    instance = {'username': '', 'email': ''}
+    instance = {"username": "", "email": ""}
     if request.method == "POST":
-        instance['username'] = username = request.POST.get('username')
-        instance['email'] = email = request.POST.get('email')
-        password = request.POST.get('password')
+        instance["username"] = username = request.POST.get("username")
+        instance["email"] = email = request.POST.get("email")
+        password = request.POST.get("password")
 
         try:
             Profile.objects.get(email=email)
@@ -36,13 +39,16 @@ def signup_view(request):
             return redirect("home")
         else:
             messages.error(request, "User exists, please login")
-    context = {'instance': instance}
+    context = {"instance": instance}
     return render(request, "signup.html", context)
 
 
 def login_view(request):
     """redirects to home is user is already logged in."""
     if request.user.is_authenticated:
+        messages.info(
+            request, "You are already authenticated! Log out to a create new account."
+        )
         return redirect("home")
 
     if request.method == "POST":

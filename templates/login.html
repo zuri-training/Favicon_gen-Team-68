@@ -19,8 +19,8 @@
     <section class="messages">
         {% for message in messages %}
         <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-    </div>
-    {% endfor %}
+            </div>
+            {% endfor %}
     </section>
     {% endif %}
 
@@ -46,20 +46,9 @@
         <div class="butn1">
             <button type='submit' id='submit'>Login</button>
         </div>
-        <div class="txt-lines">
-            <p>Or</p>
-        </div>
-        <div class="butn2">
-            <button>
-                <i class="fa-brands fa-facebook"></i>
-                Continue with Facebook</button>
-        </div>
-        <div class="butn3">
-            <button>
-                <img class="google" src="{% static 'images/Google_icon.png' %}">
-                Continue with Google
-            </button>
-        </div>
+
+        {% include 'social-logins.html' %}
+    
     </div>
 </form>
 {% endblock %}

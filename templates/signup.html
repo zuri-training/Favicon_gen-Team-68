@@ -41,20 +41,9 @@
         <div class="butn1">
             <button id='submit' type='submit'>Create account</button>
         </div>
-        <div class="txt-lines">
-            <p>Or</p>
-        </div>
-        <div class="butn2">
-            <button>
-                <i class="fa-brands fa-facebook"></i>
-                Continue with Facebook</button>
-        </div>
-        <div class="butn3">
-            <button>
-                <img class="google" src="{% static 'images/Google_icon.png' %}">
-                Continue with Google
-            </button>
-        </div>
+
+        {% include 'social-logins.html' %}
+
     </div>
 </form>
 {% endblock %}
