@@ -1,8 +1,11 @@
-<!doctype html>
-<html>
+{% extends 'layout.html' %}
 
-<body>
-    <h1>Yipee!!!!! It worked, welcome on board GUYS</h1>
-</body>
+{% load static %}
 
-</html>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Yipee!!!!! It worked, welcome on board GUYS</h1>
+{% endblock %}

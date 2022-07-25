@@ -1,8 +1,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-from multiprocessing import AuthenticationError
-from turtle import home
 from django.shortcuts import render,  get_object_or_404, redirect
 from django.views import generic
 from .models import Profile, Icon, Result
@@ -47,6 +45,11 @@ def login(request):
     form = AuthenticationForm()
     return render(request=request, template_name="login.html", context={"login_form": form})
 
+def logout(request):
+    logout(request)
+    messages.info(request, "You have successfully logged out of your account.")
+    return redirect('home')
+
 class IconList(generic.ListView):
     queryset = Icon.objects.all()
     template_name = 'index.html'
@@ -55,13 +58,9 @@ class IconList(generic.ListView):
         user = self.request.user
         return self.queryset.filter(user=user)
 
-def upload():
+def upload(request):
     pass
 
-def result():
+def result(request):
     pass
 
-def logout(request):
-    logout(request)
-    messages.info(request, "You have successfully logged out of your account.")
-    return redirect('home')

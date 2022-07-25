@@ -36,7 +36,7 @@ class Icon(models.Model):
         ordering = ["-created", "name"]
         constraints = [
             models.UniqueConstraint(
-                fields=["user", "name"], name="unique_icon_per_user"
+                fields=["user", "name", 'image'], name="unique_icon_per_user"
             ),
         ]
 
