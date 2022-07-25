@@ -1,11 +1,9 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import AuthenticationForm
 # Create your views here.
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import redirect, render
 from django.views import generic
 
-from .forms import SignUpForm  # to be created in forms
 from .models import Icon, Profile, Result
 
 
