@@ -30,7 +30,6 @@ def signup_view(request):
         except:
             user = Profile(username=username.lower(), email=email)
             user.set_password(password)
-            user.is_active = True
             user.save()
             login(request, user)
             messages.success(request, "Your registration was successful!")

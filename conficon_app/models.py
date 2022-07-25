@@ -9,7 +9,8 @@ class Profile(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True, blank=False)
     username = models.CharField(max_length=150, unique=True, blank=False)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    admin = models.BooleanField(default=False)
 
     objects = NewUserAccountManager()
     USERNAME_FIELD = "email"

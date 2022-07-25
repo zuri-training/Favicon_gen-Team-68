@@ -1,10 +1,13 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from .models import Profile
 
-from .models import Icon, Profile, Result
-
-
-class SignUpForm(UserCreationForm):
+class ProfileCreationForm(UserCreationForm):
     class Meta:
         model = Profile
-        fields = ["username", "email"]
+        fields = ("username", "email")
+
+class ProfileChangeForm(UserChangeForm):
+    class Meta:
+        model = Profile
+        fields = ("username", "email")
