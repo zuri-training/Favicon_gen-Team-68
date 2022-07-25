@@ -7,5 +7,15 @@
 {% endblock %}
 
 {% block content %}
-<h1>Yipee!!!!! It worked, welcome on board GUYS</h1>
+{% if messages %}
+
+<section class="messages">
+    {% for message in messages %}
+    <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+        </div>
+        {% endfor %}
+</section>
+{% endif %}
+
+<h1>Yipee!!!!! It worked, welcome on board {{ request.user }}</h1>
 {% endblock %}
