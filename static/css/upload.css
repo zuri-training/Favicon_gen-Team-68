@@ -1,0 +1,44 @@
+section.modal {
+  position: absolute;
+  width: 861px;
+  height: 556px;
+  left: 290px;
+  top: 230px;
+
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+section.modal button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 8px;
+
+  width: 150px;
+  height: 52px;
+
+  /* blue */
+  background: #3250ec;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+section.modal aside {
+  width: 345px;
+  height: 409px;
+
+  background: #dddddd;
+  border-radius: 14px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

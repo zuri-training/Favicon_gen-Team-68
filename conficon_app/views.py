@@ -67,7 +67,7 @@ def login_view(request):
                 # session
                 print(f"session {rememberbox}", dir(request.session))
                 if not rememberbox:
-                    request.session.set_expiry()
+                    request.session.set_expiry(0)
 
                 messages.info(request, f"You are now logged in as {user.username}.")
                 return redirect("home")

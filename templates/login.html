@@ -15,14 +15,8 @@
         <h1>Login</h1>
         <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
     </header>
-    {% if messages %}
-    <section class="messages">
-        {% for message in messages %}
-        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-            </div>
-            {% endfor %}
-    </section>
-    {% endif %}
+
+    {% include 'flash-messages.html' %}
 
     <div class="field">
         <label for="email">Email Address</label>
