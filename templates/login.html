@@ -5,16 +5,36 @@
 {% block title %}ConfIcon Login Page{% endblock %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
 {% endblock %}
 
 {% block content %}
+<header>
+    <h1>Login</h1>
+    <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+</header>
+
+
 <form method='post' action='' class="form">
     {% csrf_token %}
-    <header>
-        <h1>Login</h1>
-        <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
-    </header>
+   
+    <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Myname@Domain.com" name='email'>
+    </div>
+
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name='password' placeholder="*********">
+        
+            <i class="far fa-eye" id="togglePassword" 
+           style="cursor: pointer"></i>
+          
+    </div>
     {% if messages %}
     <section class="messages">
         {% for message in messages %}
@@ -24,24 +44,16 @@
     </section>
     {% endif %}
 
-    <div class="field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Myname@Domain.com" name='email'>
-    </div>
-
-    <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" name='password' placeholder="*********">
-    </div>
-
+    <div class="rem-pass">
     <div class='checkbox-field'>
-        <label class="checkbox" for="remember"><small></label>
+        <label class="checkbox" for="remember">Remember me</label>
         <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
-        <div class="checkbox_box"></div>
-        <small>Remember me</small>
+                
     </div>
-    <p><small><a href="">Forgot password?</a></small></p>
-
+    <div class="pass">
+     <p><a href="">Forgot password?</a></p>
+    </div>
+</div>
     <div class="butns">
         <div class="butn1">
             <button type='submit' id='submit'>Login</button>
