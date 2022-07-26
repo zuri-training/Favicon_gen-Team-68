@@ -45,7 +45,7 @@ header p small a {
   position: relative;
 }
 .field input {
-    position: relative;
+   
   padding: 0.7em 1em;
   border-radius: 5px;
   border: .8px solid rgba(58, 99, 146, 0.562);
@@ -185,14 +185,15 @@ img.google {
   width: 15px;
   height: 15px;
 }
-.far .fa-eye
- i {
-text-decoration: none;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -5em;
-    margin-left: -30px;
-    background-color: transparent;
+ .fa-eye{
+position: absolute;
+font-size: 1.3rem;
+top: 53%;
+right: 0;
+padding-right: .7em;
+  color: rgb(102, 102, 102);
 
+}
+@media screen, (min-width:200) and (max-width: 768) {
+  
 }
