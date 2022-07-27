@@ -5,12 +5,12 @@
 {% block title %}ConfIcon Login Page{% endblock %}
 
 {% block extra_css %}
-
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
-<script src="{% static 'js/login.js' %}"></script>
-
 {% endblock %}
 
+{% block extra_scripts %}
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock %}
 {% block content %}
 <header>
     <h1>Login</h1>
@@ -32,7 +32,7 @@
         
             <div 
             id="togglePassword" 
-            onclick = myToggle();
+            onclick = 'myToggle();'
            >
            <i  id="hide2" class="fa-solid fa-eye"></i>
       <i id="hide1" class="fa-solid fa-eye-slash"></i>
@@ -40,15 +40,9 @@
         </div>
           
     </div>
-    {% if messages %}
-    <section class="messages">
-        {% for message in messages %}
-        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-            </div>
-            {% endfor %}
-    </section>
-    {% endif %}
-
+    
+    {% include 'flash-messages' %}
+    
     <div class="rem-pass">
     <div class='checkbox-field'>
         <label class="checkbox" for="remember">Remember me</label>
