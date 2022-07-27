@@ -1,92 +1,86 @@
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" type='text/css' href="{% static 'css/header.css' %}">
-{% endblock %}
-
 <header>
     <nav class="navbar">
         <a href="#" class="nav-brand" style="color: white;">Conficon</a>
 
         <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="generate.html" class="nav-link">Generate</a>
+            <li class="nav-item">
+                <a href="generate.html" class="nav-link">Generate</a>
             </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">How it works</a>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">How it works</a>
             </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
             </li>
-          <li class="nav-item">
-            <a href="signup.html" class="nav-link">Signup</a>
+            <li class="nav-item">
+                <a href="signup.html" class="nav-link">Signup</a>
             </li>
-          <li class="nav-item">
-            <a href="login.html" class="nav-link">Login</a>
+            <li class="nav-item">
+                <a href="login.html" class="nav-link">Login</a>
             </li>
         </ul>
-      <div class="hamburger">
+        <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-      </nav>
+    </nav>
 
-       <div class="intro">
+    <div class="intro">
         <h2>Get the right sized favicon for you</h2>
         <p>Upload your image or input your text to generate your favicon</p>
-      </div>
+    </div>
 
-      <div class="upload">
+    <div class="upload">
         <div class="upload-col">
-          <input type="file" name="" id="" class="file-input" />
-          <!-- <button type="button">Upload image</button> -->
+            <input type="file" name="" id="" class="file-input" />
+            <!-- <button type="button">Upload image</button> -->
         </div>
         <div class="generate">
-          <button type="submit" class="generate">Generate</button>
+            <button type="submit" class="generate">Generate</button>
         </div>
-      </div>
+    </div>
 
-      <div class="icons">
+    <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
         </ul>
-      </div>
-      <div class="icons">
+    </div>
+    <div class="icons">
         <ul class="recent lower">
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
-          <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
+            <li>ICON</li>
         </ul>
 
         <!-- I will adjust when I have the logos from designers -->
-      </div> 
-    </header>
+    </div>
+</header>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-})
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}));
-    </script>
-
-{% endblock %}
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }));
+</script>
