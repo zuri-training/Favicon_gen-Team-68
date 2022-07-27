@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-header{
+header.main-header{
     background-color: #232330;
 }
 
@@ -47,6 +47,7 @@ header{
     background-color: blue;
     border: none;
     padding: 5px;
+    cursor: pointer;
 }
 li {
     list-style: none;

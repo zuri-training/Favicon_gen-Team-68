@@ -1,40 +1,31 @@
 {% load static %}
 
-<<<<<<< HEAD
 <header class='main-header'>
-    <h1>I am header</h1>
-    {% if request.user.is_authenticated %}
-    <button> <a href="{% url 'logout' %}">Logout</a></button>
-
-    {% else %}
-    <button> <a href="{% url 'login' %}">Login</a></button>
-    <button> <a href="{% url 'signup' %}">Create New Accout</a></button>
-
-    {% endif %}
-
-    <hr />
-</header>
-=======
-<header>
     <nav class="navbar">
         <a href="#" class="nav-brand" style="color: white;">Conficon</a>
 
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="generate.html" class="nav-link">Generate</a>
+                <a href="#" class="nav-link">Generate</a>
             </li>
             <li class="nav-item">
-                <a href="about.html" class="nav-link">How it works</a>
+                <a href="#" class="nav-link">How it works</a>
             </li>
             <li class="nav-item">
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li class='nav-item'>
+                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="{% url 'signup' %}" class="nav-link">Signup</a>
             </li>
             <li class="nav-item">
-                <a href="signup.html" class="nav-link">Signup</a>
+                <a href="{% url 'login' %}" class="nav-link">Login</a>
             </li>
-            <li class="nav-item">
-                <a href="login.html" class="nav-link">Login</a>
-            </li>
+            {% endif %}
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -48,15 +39,16 @@
         <p>Upload your image or input your text to generate your favicon</p>
     </div>
 
-    <div class="upload">
+    <form method='post' action="{% url 'home' %}" class="upload">
+        {% csrf_token %}
         <div class="upload-col">
-            <input type="file" name="" id="" class="file-input" />
+            <input type="file" name="file-input" id="" class="file-input" />
             <!-- <button type="button">Upload image</button> -->
         </div>
         <div class="generate">
             <button type="submit" class="generate">Generate</button>
         </div>
-    </div>
+    </form>
 
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
@@ -99,4 +91,3 @@
         navMenu.classList.remove("active");
     }));
 </script>
->>>>>>> headerbranch

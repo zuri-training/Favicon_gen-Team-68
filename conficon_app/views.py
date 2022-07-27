@@ -39,7 +39,7 @@ def signup_view(request):
             user.save()
             login(request, user)
             messages.success(request, "Your registration was successful!")
-            return redirect("auth-page")
+            return redirect("home")
         else:
             messages.error(request, "User exists, please login")
     context = {"instance": instance}
@@ -77,7 +77,7 @@ def login_view(request):
                     request.session.set_expiry(0)
 
                 messages.info(request, f"You are now logged in as {user.username}.")
-                return redirect("auth-page")
+                return redirect("home")
             else:
                 messages.error(request, "Invalid password.")
     return render(request, "login.html")

@@ -13,8 +13,6 @@
 
     <!-- base styles -->
     <link rel="stylesheet" type='text/css' href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <!-- This are extra  styles and scripts that you might include in other html -->
     {% block extra_css %}{% endblock %}
     {% block extra_scripts %}{% endblock %}
@@ -23,13 +21,11 @@
 <body>
     {% block header %}
 
-    {% include 'header.html' %}
-
     {% endblock %}
+    
     {% block content %}{% endblock %}
+    
     {% block footer%}
-
-    {% include 'footer.html' %}
 
     {% endblock %}
 </body>
