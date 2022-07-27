@@ -15,6 +15,7 @@ header {
   margin-top: 3em;
   width: 45%;
   padding: 2em 3.1em;
+   
 }
 header p {
   padding-top: 0.7em;
@@ -69,7 +70,7 @@ header p small a {
   padding-top: 0;
   margin-top: -1em;
   padding-left: .3em;
-}
+ }
 .rem-pass {
   padding: 0 .2em;
   display: flex;
@@ -185,15 +186,17 @@ img.google {
   width: 15px;
   height: 15px;
 }
- .fa-eye{
+ #togglePassword{
 position: absolute;
 font-size: 1.3rem;
-top: 53%;
+top: 50%;
 right: 0;
 padding-right: .7em;
-  color: rgb(102, 102, 102);
-
-}
+cursor: pointer;
+ }
+ #hide1{
+  display: none;
+} 
 @media screen, (min-width:200) and (max-width: 768) {
   
 }

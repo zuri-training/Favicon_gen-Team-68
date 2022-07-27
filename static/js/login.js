@@ -1,14 +1,16 @@
-const togglePassword = document.querySelector("#togglePassword");
+const togglePassword1 = document.querySelector("#hide1");
+const togglePassword2 = document.querySelector("#hide2");
 const password = document.querySelector("#password");
 
-togglePassword.addEventListener("click", function () {
+togglePassword1.addEventListener("click", function () {
    
   // toggle the type attribute
-  const type = password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
-  // toggle the eye icon
-  this.classList.toggle('fa-eye');
-  this.classList.toggle('fa-eye-slash');
+  if (password.type === 'password'){
+    password.type = 'text'
+    togglePassword1.style.display = block
+    togg
+  }
+ 
 });
         // prevent form submit
         const form = document.querySelector("form");
