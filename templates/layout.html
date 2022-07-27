@@ -5,20 +5,30 @@
 
 <head>
     <script src="https://kit.fontawesome.com/f605babb3d.js" crossorigin="anonymous" defer></script>
-    
+
     <title>{% block title %} Conficon Login Page{% endblock %}</title>
-    
+
     <!-- base styles -->
     <link rel="stylesheet" type='text/css' href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <!-- This are extra  styles and scripts that you might include in other html -->
     {% block extra_css %}{% endblock %}
     {% block extra_scripts %}{% endblock %}
 </head>
 
 <body>
-  {% block header %}{% endblock %}
-  {% block content %}{% endblock %}
-  {% block footer%}{% endblock %}
+    {% block header %}
+
+    {% include 'header.html' %}
+
+    {% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer%}
+
+    {% include 'footer.html' %}
+
+    {% endblock %}
 </body>
 
 </html>

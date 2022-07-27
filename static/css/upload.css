@@ -1,13 +1,14 @@
 section.modal {
+  border: 1px solid #545558;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -80%);
   background: #ffffff;
   border-radius: 8px;
   width: 50%;
   padding: 2.5em 1.5em;
-  display: flex;
+  display: flex; /* this will be 'flex' after successful upload else 'none' */
   justify-content: center;
   gap: 2.5rem;
 }
@@ -109,4 +110,19 @@ form h3 {
   background: #fcfcff;
   color: #545558;
   border: 1px solid #3250ec;
+}
+
+@media (max-width: 600px) {
+  section.modal {
+    width: 90%;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+  }
+  .modal article {
+    width: 100%;
+  }
+
+  .modal-right {
+    min-height: 200px;
+  }
 }

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}
+Authorized User - {{ request.user }}
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/authorized-page.css' %}">
+<link rel="stylesheet" href="{% static 'css/upload.css' %}">
+{% endblock %}
+
+{% block header %}
+{% include 'header.html' %}
+
+{% endblock %}
+
+{% block content %}
+{% include 'upload.html' %}
+{% endblock %}
+
+{% block footer %}
+{% include 'footer.html' %}
+
+
+{% endblock %}

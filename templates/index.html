@@ -4,15 +4,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
-<link rel="stylesheet" href="{% static 'css/header.css' %}">
-<link rel="stylesheet" href="{% static 'css/footer.css' %}">
-<link rel="stylesheet" href="{% static 'css/upload.css' %}">
 {% endblock %}
-
-{% block header %}
-{% include 'header.html' %}
-{% endblock %}
-
 
 {% block content %}
 
@@ -29,8 +21,4 @@
 {% endif %}
 
 <h1>Yipee!!!!! It worked, welcome on board {{ request.user }}</h1>
-{% endblock %}
-
-{% block footer %}
-{% include 'footer.html' %}
 {% endblock %}
