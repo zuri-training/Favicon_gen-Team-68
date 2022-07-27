@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}ConfIcon Login Page{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method='post' action='' class="form">
+    {% csrf_token %}
+    <header>
+        <h1>Login</h1>
+        <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+    </header>
+    {% if messages %}
+    <section class="messages">
+        {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+            </div>
+            {% endfor %}
+    </section>
+    {% endif %}
+
+    <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Myname@Domain.com" name='email'>
+    </div>
+
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name='password' placeholder="*********">
+    </div>
+
+    <div class='checkbox-field'>
+        <label class="checkbox" for="remember"><small></label>
+        <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
+        <div class="checkbox_box"></div>
+        <small>Remember me</small>
+    </div>
+    <p><small><a href="">Forgot password?</a></small></p>
+
+    <div class="butns">
+        <div class="butn1">
+            <button type='submit' id='submit'>Login</button>
+        </div>
+
+        {% include 'social-logins.html' %}
+    
+    </div>
+</form>
+{% endblock %}

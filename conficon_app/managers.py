@@ -4,9 +4,8 @@ from django.contrib.auth.models import BaseUserManager
 class NewUserAccountManager(BaseUserManager):
     def create_superuser(self, username, email, password, **other_fields):
         other_fields.setdefault("is_staff", True)
+        other_fields.setdefault('admin', True)
         other_fields.setdefault("is_superuser", True)
-        other_fields.setdefault("is_active", True)
-
         if other_fields.get("is_staff") is not True:
             raise ValueError("Superuser must be assigned to is_staff=True")
 
@@ -18,8 +17,12 @@ class NewUserAccountManager(BaseUserManager):
         return user
 
     def create_user(self, username, email, password, **other_fields):
+        other_fields.setdefault("is_active", True)
+        
         if not email:
             raise ValueError("Email address is required!")
+        if not username:
+            raise ValueError("Username is required!")
         email = self.normalize_email(email)
         if password is not None:
             user = self.model(
