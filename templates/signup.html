@@ -7,8 +7,12 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 {% endblock %}
-<body>
-    {% block content %}
+
+{% block extra_scripts %}
+<srcipt type="text/javascript" src="{% static 'js/signup.js' %}"></script>
+{% endblock %}
+
+{% block content %}
 <form method='post' action='' class="form">
     {% csrf_token %}
     <header>
@@ -22,28 +26,28 @@
             {% endfor %}
     </section>
     {% endif %}
-
-    <div class="field">
-        <label for="username">Username</label>
-        <input type="text" value="{{ instance.username }}"placeholder="username" id="username" name="username" required>
-    </div>
-
-    <div class="field">
-        <label for="email">Email Address</label>
-        <input type="email" value="{{ instance.email }}"placeholder="Myname@domain.com" id="email" name="email" required>
-    </div>
-
-    <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="*****************" required>
-        <i id="visibility" class="fa-solid fa-eye-slash"></i>
-    </div>
-
-    <button class="butn1">Create account</button>
-
-        <!--{% include 'social-logins.html' %}-->
-
+    <div class="frm">
+        <div class="field">
+            <label for="username">Username</label>
+            <input type="text" value="{{ instance.username }}"placeholder="username" id="username" name="username" required>
+        </div>
+    
+        <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" value="{{ instance.email }}"placeholder="Myname@domain.com" id="email" name="email" required>
+        </div>
+    
+        <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="*****************" required>
+            <i id="visibility" class="fa-solid fa-eye"></i>
+        </div>
+    
+        <button id="submit" class="butn1">Create account</button>
+    
+            <!--{% include 'social-logins.html' %}-->
+    
+        </div>
     </div>
 </form>
 {% endblock %}
-</body>
