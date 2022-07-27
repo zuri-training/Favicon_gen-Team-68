@@ -11,14 +11,5 @@
 {# importing flash-messages #}
 {% include 'flash-messages.html' %}
 
-{% if request.user.is_authenticated %}
-<button> <a href="{% url 'logout' %}">Logout</a></button>
-
-{% else %}
-<button> <a href="{% url 'login' %}">Login</a></button>
-<button> <a href="{% url 'signup' %}">Create New Accout</a></button>
-
-{% endif %}
-
 <h1>Yipee!!!!! It worked, welcome on board {{ request.user }}</h1>
 {% endblock %}

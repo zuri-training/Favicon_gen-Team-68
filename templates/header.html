@@ -2,5 +2,14 @@
 
 <header class='main-header'>
     <h1>I am header</h1>
+    {% if request.user.is_authenticated %}
+    <button> <a href="{% url 'logout' %}">Logout</a></button>
+
+    {% else %}
+    <button> <a href="{% url 'login' %}">Login</a></button>
+    <button> <a href="{% url 'signup' %}">Create New Accout</a></button>
+
+    {% endif %}
+
     <hr />
 </header>
