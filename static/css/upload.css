@@ -1,0 +1,128 @@
+section.modal {
+  border: 1px solid #545558;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  background: #ffffff;
+  border-radius: 8px;
+  width: 50%;
+  padding: 2.5em 1.5em;
+  display: flex; /* this will be 'flex' after successful upload else 'none' */
+  justify-content: center;
+  gap: 2.5rem;
+}
+.modal-left form h3 {
+  font-size: 1.5rem;
+  color: #0a0a0b;
+}
+.modal-left form small {
+  font-size: 1rem;
+  color: #545558;
+}
+.modal article {
+  width: 45%;
+}
+.modal-right {
+  font-size: 1.2rem;
+  text-align: right;
+  background: #dddddd;
+  border-radius: 14px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.modal-right-hds {
+  padding: 1em;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.child1,
+.child2 {
+  border: none;
+  background: transparent;
+}
+.child1:hover,
+.child2:hover {
+  opacity: 0.5;
+}
+.ex-right-btns {
+  display: flex;
+  align-items: start;
+  column-gap: 1.5em;
+}
+form h3 {
+  margin-bottom: 0.5em;
+}
+
+.sizes-chb {
+  margin: 0.5em 0 2em 0;
+  display: flex;
+  flex-direction: column;
+}
+.sizes-chb label {
+  font-size: 1.5rem;
+}
+.sizes-chb label:not(.s16) {
+  margin-top: 0.5em;
+}
+.sizes-chb label span {
+  margin-left: 0.6em;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.cp-dwld-icons h4 {
+  margin-bottom: 1em;
+  color: #76777a;
+  font-size: 1.3rem;
+}
+.cp-space {
+  padding: 1em;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-x: scroll;
+  font-size: 0.8rem;
+  background: #ddd;
+  color: #545558;
+  border-radius: 4px;
+}
+.cp-space::-webkit-scrollbar {
+  display: none;
+}
+.down-btns {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.down-btns > * {
+  font-size: 1.5rem;
+  flex-direction: row;
+  font-weight: bolder;
+  padding: 0.4em 1em;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+.down-btn-pri {
+  background: #3250ec;
+}
+.down-btn-grey {
+  background: #fcfcff;
+  color: #545558;
+  border: 1px solid #3250ec;
+}
+
+@media (max-width: 600px) {
+  section.modal {
+    width: 90%;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+  }
+  .modal article {
+    width: 100%;
+  }
+
+  .modal-right {
+    min-height: 200px;
+  }
+}

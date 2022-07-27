@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 from django.shortcuts import redirect, render
 from django.views import generic
@@ -9,6 +10,11 @@ from .models import Icon, Profile, Result
 
 def index(request):
     return render(request, "index.html")
+
+
+@login_required(login_url="/login")
+def authorized_page(request):
+    return render(request, "authorized-page.html", {})
 
 
 def signup_view(request):
@@ -46,7 +52,9 @@ def login_view(request):
         messages.info(
             request, "You are already authenticated! Log out to a create new account."
         )
-        return redirect("home")
+        return redirect("authorized-page")
+    if request.META["QUERY_STRING"].startswith("next="):
+        messages.info(request, "You must login login first to access that page")
 
     if request.method == "POST":
         email = request.POST.get("email").lower()
@@ -65,14 +73,12 @@ def login_view(request):
                 # This is setting session to clear(when the browser was closed),
                 # if checkbox is not ticked else it will use the default
                 # session
-                print(f"session {rememberbox}", dir(request.session))
                 if not rememberbox:
-                    request.session.set_expiry()
+                    request.session.set_expiry(0)
 
                 messages.info(request, f"You are now logged in as {user.username}.")
                 return redirect("home")
             else:
-                #For security reasons, it's better to flash password or email
                 messages.error(request, "Invalid password or email.")
     return render(request, "login.html")
 
