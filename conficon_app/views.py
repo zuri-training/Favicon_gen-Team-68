@@ -79,7 +79,6 @@ def login_view(request):
                 messages.info(request, f"You are now logged in as {user.username}.")
                 return redirect("home")
             else:
-                # For security reasons, it's better to flash password or email
                 messages.error(request, "Invalid password or email.")
     return render(request, "login.html")
 

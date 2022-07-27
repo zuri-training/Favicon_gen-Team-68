@@ -11,17 +11,15 @@
 {% block extra_scripts %}
 <script src="{% static 'js/login.js' %}"></script>
 {% endblock %}
-
 {% block content %}
 <header>
     <h1>Login</h1>
     <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
 </header>
 
+
 <form method='post' action='' class="form">
     {% csrf_token %}
-
-    {% include 'flash-messages.html' %}
 
     <div class="field">
         <label for="email">Email Address</label>
@@ -32,21 +30,15 @@
         <label for="password">Password</label>
         <input type="password" id="password" name='password' placeholder="*********">
 
-        <div id="togglePassword" onclick=myToggle();>
+        <div id="togglePassword" onclick='myToggle();'>
             <i id="hide2" class="fa-solid fa-eye"></i>
             <i id="hide1" class="fa-solid fa-eye-slash"></i>
 
         </div>
 
     </div>
-    {% if messages %}
-    <section class="messages">
-        {% for message in messages %}
-        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-            </div>
-            {% endfor %}
-    </section>
-    {% endif %}
+
+    {% include 'flash-messages' %}
 
     <div class="rem-pass">
         <div class='checkbox-field'>
