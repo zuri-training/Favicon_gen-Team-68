@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 20em;
+}
+header, p{
+    margin-top: 0.5rem;
+}
+header, a{
+    position: relative; left: 1%;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+a:active{
+    text-decoration: none;
+}
+.frm{
+    margin-top: 2em;
+}
+label{
+    display: block;
+    margin-top: 0.5em;
+    text-align: justify;
+}
+input{
+    padding: 0.3em;
+    border: solid 1px;
+    width: 25em;
+}
+.butn1{
+    margin-top: 2em;
+    text-align: center;
+    background-color: #3250EC;
+    color: white;
+    width: 100%;
+    border-radius: 3px;
+    height: 2em;
+}
+.field, i{
+    position: absolute;
+    right: 7px;
+    transform: translate(0, -50%);
+    top: 76.5%;
+    cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    form{
+        position: relative;
+        width: 100%;
+    }
+}

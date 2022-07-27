@@ -7,8 +7,8 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 {% endblock %}
-
-{% block content %}
+<body>
+    {% block content %}
 <form method='post' action='' class="form">
     {% csrf_token %}
     <header>
@@ -36,14 +36,14 @@
     <div class="field">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="*****************" required>
+        <i class="fa-solid fa-eye-slash"></i>
     </div>
-    <div class="butns">
-        <div class="butn1">
-            <button id='submit' type='submit'>Create account</button>
-        </div>
 
-        {% include 'social-logins.html' %}
+    <button  id="visibility" class="butn1">Create account</button>
+
+        <!--{% include 'social-logins.html' %}-->
 
     </div>
 </form>
 {% endblock %}
+</body>
