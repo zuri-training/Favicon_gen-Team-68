@@ -1,0 +1,7 @@
+[run]
+source=conficon/,conficon_app/,
+omit=
+    venv
+    */migrations/*
+    */tests/*
+    */__init__.py/*
