@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 1px;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgb(255, 255, 255);
+}
+header {
+  margin: 0% auto;
+  margin-top: 3em;
+  width: 45%;
+  padding: 2em 3.1em;
+   
+}
+header p {
+  padding-top: 0.7em;
+  font-size: 1.2rem;
+  color: rgb(41, 49, 58);
+}
+header p small a {
+  text-decoration: none;
+  color: rgb(0, 102, 255);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.3em 3em;
+  position: relative;
+  width: 45%;
+  margin: 0% auto;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+    margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+.field input {
+   
+  padding: 0.7em 1em;
+  border-radius: 5px;
+  border: .8px solid rgba(58, 99, 146, 0.562);
+}
+.field label {
+  padding-left: 0.15em;
+}
+.field input:focus {
+    margin-top: .8em;
+    padding: 0.8em 1em;
+    box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
+  border: 1px solid rgba(12, 125, 255, 0.699);
+  transform: translateY(-5px);
+}
+.field input::placeholder {
+  color: rgba(95, 133, 177, 0.562);
+}
+.messages {
+  color: red;
+  font-style: italic;
+  padding-top: 0;
+  margin-top: -1em;
+  padding-left: .3em;
+ }
+.rem-pass {
+  padding: 0 .2em;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-top: -1em;
+  font-size: 1.2rem;
+}
+.checkbox-field {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5em;
+  align-content: center;
+  align-items: center;
+}
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(12, 125, 255, 0.699);
+}
+.pass p a {
+  text-decoration: none;
+  color: rgb(0, 102, 255);
+}
+
+.butns {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0em;
+  gap: 1.5em;
+  width: 100%;
+}
+#submit {
+  width: 100%;
+  padding: 0.4em 0em;
+  border: none;
+  background-color: rgb(0, 102, 255);
+  box-shadow: 1px 2px 5px .5px rgba(45, 73, 235, 0.5);
+    font-weight: 600;
+  color: #ffff;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+#submit:hover {
+    padding: 0.5em 0em;
+  opacity: 0.5;
+}
+.txt-lines {
+  position: relative;
+  display: block;
+  text-align: center;
+  max-width: 500px;
+  margin: 10px auto;
+}
+.txt-lines::before {
+  content: " ";
+  display: block;
+  height: 0.8px;
+  width: 13.4em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-123%);
+  background: rgba(0, 102, 255, 0.5);
+}
+.txt-lines::after {
+  content: " ";
+  display: block;
+  height: 0.8px;
+  width: 13.4em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(123%);
+  background: rgba(0, 102, 255, 0.5);
+}
+
+.butn2,
+.butn3 {
+  width: 100%;
+  padding: 0.4em 0em;
+  border: none;
+  background-color: rgba(0, 102, 255, 0.219);
+  box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4);
+  font-weight: 700;
+  color: rgb(6, 26, 112);
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  gap: 2em;
+}
+.butn2.butn3:hover{
+    padding: 0.5em 0em;
+    transform: translateY(-5px);
+}
+button {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+i.fa-brands {
+  color: rgb(0, 47, 255);
+}
+img.google {
+  width: 15px;
+  height: 15px;
+}
+ #togglePassword{
+position: absolute;
+font-size: 1.3rem;
+top: 50%;
+right: 0;
+padding-right: .7em;
+cursor: pointer;
+ }
+ #hide1{
+  display: none;
+} 
+@media screen, (min-width:200) and (max-width: 768) {
+  
+}
