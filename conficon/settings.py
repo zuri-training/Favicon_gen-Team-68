@@ -77,17 +77,21 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "db_testing",
-#         "USER": "root",
-#         "PASSWORD": 'SingaPore9296#',
-#         "HOST": "127.0.0.1",
-#         "PORT": "3306",
-#         "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
-#     }
-# }
+# In case you are having problems with mysql setup for now we use sqlite3 for dev database
+# and if its installed successfully make sure you add 'USE_PROD=1' and 'DB_PWD='your root password'' and you install requirements
+if os.getenv("USE_PROD") == "1" and os.getenv("DB_PWD"):
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": "db_testing",
+            "USER": "root",
+            "PASSWORD": os.getenv("DB_PWD"),
+            "HOST": "127.0.0.1",
+            "PORT": "3306",
+            "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
+        }
+    }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
