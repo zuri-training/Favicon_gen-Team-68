@@ -1,17 +1,11 @@
-{% extends 'layout.html' %}
-
 {% load static %}
 
 {% block extra_css %}
 <link rel="stylesheet" type='text/css' href="{% static 'css/header.css' %}">
 {% endblock %}
 
-{% block content %}
-    
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
+<header>
+    <nav class="navbar">
         <a href="#" class="nav-brand" style="color: white;">Conficon</a>
 
         <ul class="nav-menu">
@@ -94,7 +88,5 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }));
     </script>
-  </body>
-</html>
 
 {% endblock %}
