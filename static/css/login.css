@@ -15,7 +15,6 @@ header {
   margin-top: 3em;
   width: 45%;
   padding: 2em 3.1em;
-   
 }
 header p {
   padding-top: 0.7em;
@@ -41,23 +40,22 @@ header p small a {
 .field {
   display: flex;
   flex-direction: column;
-    margin: 0 auto;
+  margin: 0 auto;
   width: 100%;
   position: relative;
 }
 .field input {
-   
   padding: 0.7em 1em;
   border-radius: 5px;
-  border: .8px solid rgba(58, 99, 146, 0.562);
+  border: 0.8px solid rgba(58, 99, 146, 0.562);
 }
 .field label {
   padding-left: 0.15em;
 }
 .field input:focus {
-    margin-top: .8em;
-    padding: 0.8em 1em;
-    box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
+  margin-top: 0.8em;
+  padding: 0.8em 1em;
+  box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
   border: 1px solid rgba(12, 125, 255, 0.699);
   transform: translateY(-5px);
 }
@@ -69,10 +67,10 @@ header p small a {
   font-style: italic;
   padding-top: 0;
   margin-top: -1em;
-  padding-left: .3em;
- }
+  padding-left: 0.3em;
+}
 .rem-pass {
-  padding: 0 .2em;
+  padding: 0 0.2em;
   display: flex;
   align-content: center;
   align-items: center;
@@ -111,14 +109,14 @@ header p small a {
   padding: 0.4em 0em;
   border: none;
   background-color: rgb(0, 102, 255);
-  box-shadow: 1px 2px 5px .5px rgba(45, 73, 235, 0.5);
-    font-weight: 600;
+  box-shadow: 1px 2px 5px 0.5px rgba(45, 73, 235, 0.5);
+  font-weight: 600;
   color: #ffff;
   border-radius: 5px;
   font-size: 1.2rem;
 }
 #submit:hover {
-    padding: 0.5em 0em;
+  padding: 0.5em 0em;
   opacity: 0.5;
 }
 .txt-lines {
@@ -157,7 +155,7 @@ header p small a {
   padding: 0.4em 0em;
   border: none;
   background-color: rgba(0, 102, 255, 0.219);
-  box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4);
+  box-shadow: 0px -1px 8px 0.3px rgba(45, 73, 235, 0.4);
   font-weight: 700;
   color: rgb(6, 26, 112);
   border-radius: 5px;
@@ -170,9 +168,9 @@ header p small a {
   align-content: center;
   gap: 2em;
 }
-.butn2.butn3:hover{
-    padding: 0.5em 0em;
-    transform: translateY(-5px);
+.butn2.butn3:hover {
+  padding: 0.5em 0em;
+  transform: translateY(-5px);
 }
 button {
   text-decoration: none;
@@ -186,17 +184,16 @@ img.google {
   width: 15px;
   height: 15px;
 }
- #togglePassword{
-position: absolute;
-font-size: 1.3rem;
-top: 50%;
-right: 0;
-padding-right: .7em;
-cursor: pointer;
- }
- #hide1{
+#togglePassword {
+  position: absolute;
+  font-size: 1.3rem;
+  top: 50%;
+  right: 0;
+  padding-right: 0.7em;
+  cursor: pointer;
+}
+#hide1 {
   display: none;
-} 
-@media screen, (min-width:200) and (max-width: 768) {
-  
+}
+@media screen, (min-width: 200) and (max-width: 768) {
 }

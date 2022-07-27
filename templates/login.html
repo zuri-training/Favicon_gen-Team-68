@@ -5,24 +5,21 @@
 {% block title %}ConfIcon Login Page{% endblock %}
 
 {% block extra_css %}
-
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
 {% endblock %}
 
 {% block extra_scripts %}
-
 <script src="{% static 'js/login.js' %}"></script>
 {% endblock %}
 
 {% block content %}
+<header>
+    <h1>Login</h1>
+    <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+</header>
 
 <form method='post' action='' class="form">
     {% csrf_token %}
-    <header>
-        <h1>Login</h1>
-        <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
-    </header>
 
     {% include 'flash-messages.html' %}
 
@@ -34,16 +31,13 @@
     <div class="field">
         <label for="password">Password</label>
         <input type="password" id="password" name='password' placeholder="*********">
-        
-            <div 
-            id="togglePassword" 
-            onclick = myToggle();
-           >
-           <i  id="hide2" class="fa-solid fa-eye"></i>
-      <i id="hide1" class="fa-solid fa-eye-slash"></i>
-    
+
+        <div id="togglePassword" onclick=myToggle();>
+            <i id="hide2" class="fa-solid fa-eye"></i>
+            <i id="hide1" class="fa-solid fa-eye-slash"></i>
+
         </div>
-          
+
     </div>
     {% if messages %}
     <section class="messages">
@@ -55,22 +49,22 @@
     {% endif %}
 
     <div class="rem-pass">
-    <div class='checkbox-field'>
-        <label class="checkbox" for="remember">Remember me</label>
-        <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
-                
+        <div class='checkbox-field'>
+            <label class="checkbox" for="remember">Remember me</label>
+            <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
+
+        </div>
+        <div class="pass">
+            <p><a href="">Forgot password?</a></p>
+        </div>
     </div>
-    <div class="pass">
-     <p><a href="">Forgot password?</a></p>
-    </div>
-</div>
     <div class="butns">
         <div class="butn1">
             <button type='submit' id='submit'>Login</button>
         </div>
 
         {% include 'social-logins.html' %}
-    
+
     </div>
 </form>
 {% endblock %}
