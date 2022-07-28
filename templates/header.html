@@ -1,6 +1,7 @@
 {% load static %}
 
 <header class='main-header'>
+    {% include 'upload.html' %}
     <nav class="navbar">
         <a href="#" class="nav-brand" style="color: white;">Conficon</a>
 
@@ -39,7 +40,7 @@
         <p>Upload your image or input your text to generate your favicon</p>
     </div>
 
-    <form method='post' action="{% url 'home' %}" class="upload">
+    <form method='post' action="{% url 'upload' %}" class="upload">
         {% csrf_token %}
         <div class="upload-col">
             <input type="file" name="file-input" id="" class="file-input" />
@@ -49,7 +50,7 @@
             <button type="submit" class="generate">Generate</button>
         </div>
     </form>
-
+    {% if request.user.is_authenticated %}
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
@@ -75,6 +76,7 @@
 
         <!-- I will adjust when I have the logos from designers -->
     </div>
+    {% endif %}
 </header>
 
 <script>
@@ -90,4 +92,17 @@
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }));
+
+    const generate = document.querySelector('.generate .generate');
+    const modal = document.getElementById('modal');
+
+    generate.addEventListener('click', (e) => {
+        {% if request.user.is_authenticated %}
+
+        e.preventDefault()
+        e.stopPropagation()
+        modal.style.display = 'flex'
+        {% endif %}
+      }
+    )
 </script>

@@ -79,7 +79,7 @@ def login_view(request):
                 messages.info(request, f"You are now logged in as {user.username}.")
                 return redirect("home")
             else:
-                messages.error(request, "Invalid password.")
+                messages.error(request, "Invalid password or email.")
     return render(request, "login.html")
 
 
@@ -98,8 +98,9 @@ class IconList(generic.ListView):
         return self.queryset.filter(user=user)
 
 
+@login_required(login_url="/login")
 def upload(request):
-    pass
+    return render(request, "index.html", {})
 
 
 def result(request):

@@ -8,7 +8,7 @@ section.modal {
   border-radius: 8px;
   width: 50%;
   padding: 2.5em 1.5em;
-  display: flex; /* this will be 'flex' after successful upload else 'none' */
+  display: none; /* this will be 'flex' after successful upload else 'none' */
   justify-content: center;
   gap: 2.5rem;
 }
