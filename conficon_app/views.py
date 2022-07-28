@@ -98,8 +98,9 @@ class IconList(generic.ListView):
         return self.queryset.filter(user=user)
 
 
+@login_required(login_url="/login")
 def upload(request):
-    pass
+    return render(request, "index.html", {})
 
 
 def result(request):
