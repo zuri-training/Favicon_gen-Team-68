@@ -7,6 +7,13 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 {% endblock %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+
 
 {% block extra_scripts %}
 <srcipt type="text/javascript" src="{% static 'js/signup.js' %}"></script>
@@ -17,7 +24,9 @@
     {% csrf_token %}
     <header>
         <h1>Create a Free Account</h1>
-        <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
+        <div class="desktop-display">
+            <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
+        </div>
     </header>
     {% if messages %}
     <section class="messages">
@@ -28,7 +37,7 @@
     {% endif %}
     <div class="frm">
         <div class="field">
-            <label for="username">Username</label>
+            <label for="username">Name</label>
             <input type="text" value="{{ instance.username }}"placeholder="username" id="username" name="username" required>
         </div>
     
@@ -45,8 +54,11 @@
     
         <button id="submit" class="butn1">Create account</button>
     
-            <!--{% include 'social-logins.html' %}-->
-    
+            {% include 'social-logins.html' %}
+        
+        <div class="mobile-display">
+            <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
+        </div>
         </div>
     </div>
 </form>

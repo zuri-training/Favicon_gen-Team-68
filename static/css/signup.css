@@ -1,12 +1,25 @@
 * {
+  width: auto;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 form {
   position: absolute;
-  top: 20%;
-  left: 40%;
+  top: 10%;
+  left: 32%;
   transform: translate(-50% -50%);
+  background-color: #ffff;
+}
+h1{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 }
 header,
 p {
@@ -37,11 +50,15 @@ label {
   display: block;
   margin-top: 0.5em;
   text-align: justify;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
 }
 input {
   padding: 0.3em;
-  border: solid 1px;
-  width: 25em;
+  border: solid 1.5px grey;
+  width: 30em;
+  border-radius: 3px;
 }
 .butn1 {
   margin-top: 2em;
@@ -50,15 +67,157 @@ input {
   color: white;
   border-radius: 3px;
   height: 2em;
-  width: 95%;
+  min-width: 95%;
   position: relative;
   right: 2em;
+  box-shadow: 0px 2px 5px gray;
+}
+.butn1:hover{
+  cursor: pointer;
+  background-color: transparent;
+  color: blue;
+  transition: 0.5s;
+  border: solid 2px grey;
 }
 .field,
 i {
   position: relative;
-  right: 24px;
+  right: 27px;
   transform: translate(0 -50%);
   top: 76.5%;
   cursor: pointer;
+}
+.txt-lines {
+  position: relative; right: 2em;
+  display: block;
+  text-align: center;
+  max-width: 30px;
+  margin: 15px auto;
+  color: lightsteelblue;
+}
+.txt-lines::before {
+  content: " ";
+  display: block;
+  height: 0.8px;
+  width: 10.5em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-123%);
+  background: lightsteelblue;
+}
+.txt-lines::after {
+  content: " ";
+  display: block;
+  height: 0.8px;
+  width: 10em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(123%);
+  background: lightsteelblue;
+}
+
+.butn2,
+.butn3 {
+  min-width: 95%;
+  padding: 0.4em 0em;
+  border: none;
+  margin: 1em;
+  background-color: lightsteelblue;
+  font-weight: 700;
+  border-radius: 1px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  gap: 2em;
+  font-family:'Nunito Sans', sans-serif;
+  font-size: 16px;
+  position: relative; right: 2.8em;
+}
+.butn3{
+  height: 2em;
+}
+.butn2:hover{
+    padding: 0.5em 0em;
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: transparent;
+    color: blue;
+    border: solid 2px grey;
+    box-shadow: 0px 2px 5px gray;
+    transition: 0.5s;
+}
+
+.butn3:hover{
+  padding: 0.5em 0em;
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: transparent;
+  color: blue;
+  border: solid 3px grey;
+  box-shadow: 0px 2px 5px gray;
+  transition: 0.5s;
+}
+button {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+i.fa-brands {
+  color: rgb(0, 47, 255);
+}
+img.google {
+  width: 15px;
+  height: 15px;
+}
+.mobile-display{
+  display:none
+}
+                
+.desktop-display{
+  display:block
+}
+
+@media (max-width: 750px){
+  *{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  form{
+    width: 60%;
+    position: relative; left: 20%;
+  }
+  input{
+    width: 95%;
+  }
+  .fa-eye{
+    position: relative; 
+    left: 80%;
+    transform: translate(0 -30%);
+    top:-1.5em;
+  }
+  .txt-lines::before{
+    width: 3.5em;
+  }
+  .txt-lines::after{
+    width: 3.0em;
+  }
+  .fa-brands{
+    position: relative; top: 3%; left: -3%;
+  }
+  .desktop-display{
+    display:none
+  }
+  .mobile-display{
+    display:block
+  }
+  .mobile-display, p{
+    position: relative; right: 7%;
+  }
 }
