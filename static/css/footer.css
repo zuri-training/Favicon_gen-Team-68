@@ -1,179 +1,175 @@
-*{
-  margin: 0%;
-  padding: 0%;
-}
-Footer div a, #About_Conficons div h2, Footer div h3, #About_Conficons div p{
+Footer div a,
+#About_Conficons div h2,
+Footer div h3,
+#About_Conficons div p {
   text-decoration: none;
   font-family: Dosis, sans-serif;
   font-weight: 600;
 }
-#About_Conficons div h2{
+#About_Conficons div h2 {
   font-size: 36px;
-  color: #191A1C;
+  color: #191a1c;
   font-weight: 700;
 }
-#About_Conficons div p{
+#About_Conficons div p {
   color: #323337;
   line-height: 1.4rem;
   padding: 30px 150px 100px;
   font-size: 18px;
 }
-Footer div h3{
+Footer div h3 {
   color: white;
   font-size: 20px;
 }
-Footer div a{
-  color: #98999B;
+Footer div a {
+  color: #98999b;
   font-weight: 500;
   font-size: 16px;
-  display: block;    
+  display: block;
 }
-Footer div a:hover{
+Footer div a:hover {
   color: rgb(0, 128, 0);
 }
-#About_Conficons{
+#About_Conficons {
   padding: 200px 0px 100px;
   text-align: center;
 }
-div.fav{
-  background-color: #232330;;
+div.fav {
+  display: flex;
+  justify-content: center;
+  gap: 4.8rem;
+  background-color: #232330;
   padding: 50px 0;
 }
-div.fav img{
-  padding: 0 70px;
-}
-footer{    
+footer {
   padding: 40px;
   background-color: #232330;
 }
 
-footer div#footer_top{
+footer div#footer_top {
   display: flex;
   padding: 40px;
   line-height: 2.7rem;
-  color: #98999B;  
+  color: #98999b;
   font-size: 15px;
 }
-div.group{
+div.group {
   width: 25%;
 }
-div.icons{
+div.icons {
   display: flex;
   justify-content: space-around;
 }
-i{
+i {
   font-size: 28px;
   padding: 0 10px;
+}
+.Icons i {
+  color: white;
+}
+.copyright {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-family: Dosis, sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  #About_Conficons div h2 {
+    font-size: 20px;
   }
-  .Icons i{
-      color: white;
+  #About_Conficons div p {
+    padding: 20px 0 60px;
+    font-size: 14px;
   }
-  .copyright{
-      color: white;
-      font-size: 18px;
-      text-align: center;
-      font-family: Dosis, sans-serif;
-      font-weight: 400;
+  Footer div h3 {
+    font-size: 16px;
   }
-@media(max-width:768px){
-      *, body, html{
-          margin: 0%;
-          padding: 0%;
-      }
-      #About_Conficons div h2{
-          font-size: 20px;
-      }
-      #About_Conficons div p{
-          padding: 20px 0 60px;
-          font-size: 14px;
-      }
-      Footer div h3{
-          font-size: 16px;
-      }
-      Footer div a{
-          font-weight: 400;
-          font-size: 14px;
-          display: block;    
-      }
-      #About_Conficons{
-          padding: 50px;
-      }
-      div.fav img{            
-          padding: 0 20px;
-      }
-      footer{    
-          padding: 40px 0;
-      }
-      footer div#footer_top{
-          display: block;
-          padding: 20px 0;
-          line-height: 2.1rem;
-          color: #ababab;  
-          font-size: 15px;
-      }
-      div.group{
-          width: 100%;
-      }
-      div.icons{
-          display: flex;
-          justify-content: left;
-      }
-      i{
-          font-size: 20px;
-          padding: 0 5px;
-          }
-          .copyright{
-              text-align: center;
-              font-size: 12px;
-          }
-          }    
-          @media(max-width:400px){
-             
-              #About_Conficons div h2{
-                  font-size: 18px;
-              }
-              #About_Conficons div p{
-                  padding: 20px 0 40px;
-                  font-size: 14px;
-              }
-              Footer div h3{
-                  font-size: 16px;
-              }
-              Footer div a{
-                  font-weight: 400;
-                  font-size: 14px;
-                  display: block;    
-              }
-              #About_Conficons{
-                  padding: 30px 10px;                    
-              }
-              div.fav img{                  
-                  padding: 0 10px;
-              }
-              footer{    
-                  padding: 30px 0;
-              }
-              footer div#footer_top{
-                  display: block;
-                  padding: 20px 0;
-                  line-height: 2.1rem;
-                  color: #ababab;  
-                  font-size: 14px;
-              }
-              div.group{
-                  width: 100%;
-              }
-              div.icons{
-                  display: flex;
-                  justify-content: left;
-              }
-              i{
-                  font-size: 20px;
-                  padding: 0 5px;
-                  }
-                  .copyright{
-                      text-align: left;
-                      font-size: 12px;
-                  }
-                  }    
-      
+  Footer div a {
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+  }
+  #About_Conficons {
+    padding: 50px;
+  }
+  div.fav {
+    gap: 2.4rem;
+  }
+  footer {
+    padding: 40px 0;
+  }
+  footer div#footer_top {
+    display: block;
+    padding: 20px 0;
+    line-height: 2.1rem;
+    color: #ababab;
+    font-size: 15px;
+  }
+  div.group {
+    width: 100%;
+  }
+  div.icons {
+    display: flex;
+    justify-content: left;
+  }
+  i {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  #About_Conficons div h2 {
+    font-size: 18px;
+  }
+  #About_Conficons div p {
+    padding: 20px 0 40px;
+    font-size: 14px;
+  }
+  Footer div h3 {
+    font-size: 16px;
+  }
+  Footer div a {
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+  }
+  #About_Conficons {
+    padding: 30px 10px;
+  }
+  div.fav {
+    gap: 1.6rem;
+  }
+  div.fav img {
+    padding: 0 10px;
+  }
+  footer {
+    padding: 30px 0;
+  }
+  footer div#footer_top {
+    display: block;
+    padding: 20px 0;
+    line-height: 2.1rem;
+    color: #ababab;
+    font-size: 14px;
+  }
+  div.group {
+    width: 100%;
+  }
+  div.icons {
+    display: flex;
+    justify-content: left;
+  }
+  i {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  .copyright {
+    text-align: left;
+    font-size: 12px;
+  }
+}
