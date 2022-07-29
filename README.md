@@ -4,6 +4,6 @@ Conficon
 An image converter
 
 # Sample of our recent works
-## *Here
+## * Here
 
-![ico images](./images/Google.png)
+![ico images]('./images/Google.png')
