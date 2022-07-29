@@ -1,176 +1,179 @@
-* {
+*{
   margin: 0%;
   padding: 0%;
 }
-a,
-h2,
-h3,
-p {
+Footer div a, #About_Conficons div h2, Footer div h3, #About_Conficons div p{
   text-decoration: none;
   font-family: Dosis, sans-serif;
   font-weight: 600;
 }
-h2 {
-  font-size: 30px;
+#About_Conficons div h2{
+  font-size: 36px;
+  color: #191A1C;
+  font-weight: 700;
 }
-p {
-  color: hsl(208, 11%, 55%);
+#About_Conficons div p{
+  color: #323337;
   line-height: 1.4rem;
-  padding: 30px 0 100px;
-  font-size: 17px;
+  padding: 30px 150px 100px;
+  font-size: 18px;
 }
-h3 {
+Footer div h3{
   color: white;
   font-size: 20px;
 }
-a {
-  color: hsl(208, 11%, 55%);
+Footer div a{
+  color: #98999B;
   font-weight: 500;
   font-size: 16px;
-  display: block;
+  display: block;    
 }
-a:hover {
-  color: green;
+Footer div a:hover{
+  color: rgb(0, 128, 0);
 }
-#About_Conficons {
-  padding: 200px 150px 50px;
+#About_Conficons{
+  padding: 200px 0px 100px;
   text-align: center;
 }
-div.fav img {
-  font-size: 50px;
-  padding: 0 80px;
+div.fav{
+  background-color: #232330;;
+  padding: 50px 0;
 }
-footer {
+div.fav img{
+  padding: 0 70px;
+}
+footer{    
   padding: 40px;
-  background-color: hsl(192, 100%, 9%);
-  color: hsl(208, 11%, 55%);
+  background-color: #232330;
 }
 
-footer div#footer_top {
+footer div#footer_top{
   display: flex;
   padding: 40px;
   line-height: 2.7rem;
-  color: #ababab;
+  color: #98999B;  
   font-size: 15px;
 }
-div.group {
+div.group{
   width: 25%;
 }
-div.icons {
+div.icons{
   display: flex;
   justify-content: space-around;
 }
-i {
+i{
   font-size: 28px;
   padding: 0 10px;
-}
-.Icons i {
-  color: white;
-}
-.copyright {
-  text-align: right;
-}
-@media (max-width: 768px) {
-  *,
-  body,
-  html {
-    margin: 0%;
-    padding: 0%;
   }
-  h2 {
-    font-size: 20px;
+  .Icons i{
+      color: white;
   }
-  p {
-    padding: 20px 0 60px;
-    font-size: 14px;
+  .copyright{
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      font-family: Dosis, sans-serif;
+      font-weight: 400;
   }
-  h3 {
-    font-size: 16px;
-  }
-  a {
-    font-weight: 400;
-    font-size: 14px;
-    display: block;
-  }
-  #About_Conficons {
-    padding: 50px;
-  }
-  div.fav img {
-    font-size: 30px;
-    padding: 0 20px;
-  }
-  footer {
-    padding: 40px 0;
-  }
-  footer div#footer_top {
-    display: block;
-    padding: 20px 0;
-    line-height: 2.1rem;
-    color: #ababab;
-    font-size: 15px;
-  }
-  div.group {
-    width: 100%;
-  }
-  div.icons {
-    display: flex;
-    justify-content: left;
-  }
-  i {
-    font-size: 20px;
-    padding: 0 5px;
-  }
-  .copyright {
-    text-align: center;
-    font-size: 12px;
-  }
-}
-@media (max-width: 400px) {
-  h2 {
-    font-size: 18px;
-  }
-  p {
-    padding: 20px 0 40px;
-    font-size: 14px;
-  }
-  h3 {
-    font-size: 16px;
-  }
-  a {
-    font-weight: 400;
-    font-size: 14px;
-    display: block;
-  }
-  #About_Conficons {
-    padding: 30px 10px;
-  }
-  div.fav img {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-  footer {
-    padding: 30px 0;
-  }
-  footer div#footer_top {
-    display: block;
-    padding: 20px 0;
-    line-height: 2.1rem;
-    color: #ababab;
-    font-size: 14px;
-  }
-  div.group {
-    width: 100%;
-  }
-  div.icons {
-    display: flex;
-    justify-content: left;
-  }
-  i {
-    font-size: 20px;
-    padding: 0 5px;
-  }
-  .copyright {
-    text-align: left;
-    font-size: 12px;
-  }
-}
+@media(max-width:768px){
+      *, body, html{
+          margin: 0%;
+          padding: 0%;
+      }
+      #About_Conficons div h2{
+          font-size: 20px;
+      }
+      #About_Conficons div p{
+          padding: 20px 0 60px;
+          font-size: 14px;
+      }
+      Footer div h3{
+          font-size: 16px;
+      }
+      Footer div a{
+          font-weight: 400;
+          font-size: 14px;
+          display: block;    
+      }
+      #About_Conficons{
+          padding: 50px;
+      }
+      div.fav img{            
+          padding: 0 20px;
+      }
+      footer{    
+          padding: 40px 0;
+      }
+      footer div#footer_top{
+          display: block;
+          padding: 20px 0;
+          line-height: 2.1rem;
+          color: #ababab;  
+          font-size: 15px;
+      }
+      div.group{
+          width: 100%;
+      }
+      div.icons{
+          display: flex;
+          justify-content: left;
+      }
+      i{
+          font-size: 20px;
+          padding: 0 5px;
+          }
+          .copyright{
+              text-align: center;
+              font-size: 12px;
+          }
+          }    
+          @media(max-width:400px){
+             
+              #About_Conficons div h2{
+                  font-size: 18px;
+              }
+              #About_Conficons div p{
+                  padding: 20px 0 40px;
+                  font-size: 14px;
+              }
+              Footer div h3{
+                  font-size: 16px;
+              }
+              Footer div a{
+                  font-weight: 400;
+                  font-size: 14px;
+                  display: block;    
+              }
+              #About_Conficons{
+                  padding: 30px 10px;                    
+              }
+              div.fav img{                  
+                  padding: 0 10px;
+              }
+              footer{    
+                  padding: 30px 0;
+              }
+              footer div#footer_top{
+                  display: block;
+                  padding: 20px 0;
+                  line-height: 2.1rem;
+                  color: #ababab;  
+                  font-size: 14px;
+              }
+              div.group{
+                  width: 100%;
+              }
+              div.icons{
+                  display: flex;
+                  justify-content: left;
+              }
+              i{
+                  font-size: 20px;
+                  padding: 0 5px;
+                  }
+                  .copyright{
+                      text-align: left;
+                      font-size: 12px;
+                  }
+                  }    
+      
