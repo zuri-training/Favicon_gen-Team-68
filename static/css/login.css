@@ -20,6 +20,7 @@
   --regularfontweight: 400;
   --dark: #191a1c;
   --regularFontSize: 0.96rem;
+  --transit: all 0.4s linear;
 }
 
 body {
@@ -78,7 +79,8 @@ header p small a {
   margin-top: 0.8em;
   padding: 0.8em 1em;
   box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
-  border: 0.8px solid #3250ec;
+  /* border: 0.8px solid #3250ec; */
+  border: none;
   transform: translateY(-5px);
 }
 .field input::placeholder {
@@ -220,16 +222,16 @@ img.google {
   height: 23.65px;
 }
 #togglePassword {
+  display: inline;
   position: absolute;
   font-size: 1.3rem;
   top: 30%;
   right: 0;
   padding-right: 0.8em;
-  cursor: pointer;
-  color: var(--eyecolor);
+   color: var(--eyecolor);
 }
 #hide1 {
-  display: none;
+  cursor: pointer;
 }
 @media only screen and (max-width: 768) and (min-width: 200) {
   body {

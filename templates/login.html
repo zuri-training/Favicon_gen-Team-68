@@ -31,8 +31,7 @@
         <input type="password" id="password" placeholder='Password' name="password" > 
 
         <span id="togglePassword">
-            <i id="hide2" class="fa-solid fa-eye"></i>
-            <i id="hide1" class="fa-solid fa-eye-slash"></i>
+                     <i id="hide1" class="fa-solid eyes fa-eye"></i>
         </span>
 
     </div>
@@ -58,6 +57,25 @@
 
     </div>
 </form>
+<script>
+    const toggle = document.querySelector(".eyes");
+const password = document.querySelector("#password");
 
+toggle.addEventListener("click", () =>{
+  // toggle the type attribute
+  if (password.type === "password") {
+    password.type = "text";
+    toggle.classList.replace('fa-eye', 'fa-eye-slash')
+      }else{
+        password.type = 'password'
+        toggle.classList.replace('fa-eye-slash', 'fa-eye')
+      }
+});
+// prevent form submit
+const form = document.querySelector("form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+</script>
 {% endblock %}
 
