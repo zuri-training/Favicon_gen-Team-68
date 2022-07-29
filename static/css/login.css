@@ -145,7 +145,7 @@ header p small a {
   letter-spacing: 0.02em;
   font-size: 1.08rem;
   line-height: 20px;
-
+  cursor: pointer;
 }
 #submit:hover {
   padding: 0.6em 0em;
@@ -190,7 +190,7 @@ header p small a {
   border: none;
   background-color: var(--btncolor2);
   /* box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4); */
- 
+  cursor: pointer;
   color: var(--dark);
   border-radius: var(--radius);
   font-size: 1.3rem;
@@ -226,6 +226,7 @@ img.google {
   right: 0;
   padding-right: 0.8em;
   cursor: pointer;
+  color: var(--eyecolor);
 }
 #hide1 {
   display: none;
@@ -236,10 +237,17 @@ img.google {
     padding: 0;
   }
   header {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
     margin: 48px 0px 0px 0px;
-
+    height: 23.625em;
     width: var(--mobilewidth);
     padding: 0;
+  }
+  header p small{
+     position: absolute;
+     bottom: 0;
   }
   .form {
     width: var(--mobilewidth);

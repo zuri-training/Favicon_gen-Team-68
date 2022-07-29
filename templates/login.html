@@ -14,7 +14,7 @@
 {% block content %}
 <header>
     <h1>Login</h1>
-    <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+    <p><small>Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></small></p>
 </header>
 
 
@@ -28,9 +28,9 @@
 
     <div class="field">
         <label for="password">Password</label>
-        <input type="password" id="password" name='password' placeholde="Password" > 
+        <input type="password" id="password" placeholder='Password' name="password" > 
 
-        <span id="togglePassword" onclick='myToggle();'>
+        <span id="togglePassword">
             <i id="hide2" class="fa-solid fa-eye"></i>
             <i id="hide1" class="fa-solid fa-eye-slash"></i>
         </span>
@@ -58,5 +58,6 @@
 
     </div>
 </form>
+
 {% endblock %}
 
