@@ -1,42 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 1px;
+font-family: 'Nunito Sans', sans-serif;
+/* outline: solid 2px red; */
 }
+:root{
+  --backgrouncolor: #ffffff;
+  --fontFam: 'Nunito Sans';
+  --btncolor: #3250EC;
+  --btncolor2: #D6DCFB;
+  --radius: 4px;
+  --gap: 4px;
+  --mobilewidth: 22.25em;
+  --eyecolor: #99999B;
+  --inputbordercolor:#76777A;
+  --regularfontweight: 400;
+
+}
+
+
 body {
   height: 100vh;
   width: 100vw;
-
-  background-color: rgb(255, 255, 255);
+font-weight: var(--regularfontweight);
+font-family: var(--fontFam);
+  background-color: var(--backgrouncolor);
+ 
 }
 header {
+
   margin: 0% auto;
   margin-top: 3em;
-  width: 45%;
-  padding: 2em 3.1em;
+  width: 37.5em;
+  padding: 2em 3.2em;
    
 }
 header p {
-  padding-top: 0.7em;
+  padding-top: 0.8em;
   font-size: 1.2rem;
   color: rgb(41, 49, 58);
 }
 header p small a {
   text-decoration: none;
-  color: rgb(0, 102, 255);
+  color:var(--btncolor);
 }
 .form {
   display: flex;
   flex-direction: column;
   padding: 1.3em 3em;
   position: relative;
-  width: 45%;
+  width: 37.5em;
   margin: 0% auto;
   align-content: center;
   justify-content: space-evenly;
   align-items: flex-start;
-  gap: 1.5em;
+  gap: 1.2em;
 }
 .field {
   display: flex;
@@ -47,39 +68,43 @@ header p small a {
 }
 .field input {
    
-  padding: 0.7em 1em;
-  border-radius: 5px;
-  border: .8px solid rgba(58, 99, 146, 0.562);
+  padding: 0.7em .8em;
+  border-radius: var(--radius);
+  border: .8px solid var(--inputbordercolor);
 }
 .field label {
-  padding-left: 0.15em;
+  display: none;
+  padding-left: 0.08em;
 }
 .field input:focus {
     margin-top: .8em;
     padding: 0.8em 1em;
     box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
-  border: 1px solid rgba(12, 125, 255, 0.699);
+  border: .8px solid  #3250EC;
   transform: translateY(-5px);
 }
 .field input::placeholder {
-  color: rgba(95, 133, 177, 0.562);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--inputbordercolor);
 }
 .messages {
   color: red;
   font-style: italic;
   padding-top: 0;
   margin-top: -1em;
-  padding-left: .3em;
+  
  }
 .rem-pass {
-  padding: 0 .2em;
+  
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  margin-top: -1em;
+  margin-top: 0em;
   font-size: 1.2rem;
 }
 .checkbox-field {
@@ -92,11 +117,11 @@ header p small a {
 .checkbox-input {
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(12, 125, 255, 0.699);
+  border: 1px solid var(--inputbordercolor);
 }
 .pass p a {
   text-decoration: none;
-  color: rgb(0, 102, 255);
+  color: var(--btncolor);
 }
 
 .butns {
@@ -110,45 +135,47 @@ header p small a {
   width: 100%;
   padding: 0.4em 0em;
   border: none;
-  background-color: rgb(0, 102, 255);
+  background-color: var(--btncolor);
   box-shadow: 1px 2px 5px .5px rgba(45, 73, 235, 0.5);
     font-weight: 600;
   color: #ffff;
-  border-radius: 5px;
+  border-radius: var(--radius);
   font-size: 1.2rem;
 }
 #submit:hover {
-    padding: 0.5em 0em;
+    padding: 0.6em 0em;
   opacity: 0.5;
 }
 .txt-lines {
   position: relative;
   display: block;
   text-align: center;
-  max-width: 500px;
+  max-width: 100%;
   margin: 10px auto;
 }
 .txt-lines::before {
   content: " ";
   display: block;
   height: 0.8px;
-  width: 13.4em;
+  width: calc(24em/2);
   position: absolute;
   top: 50%;
   left: 0;
+  opacity: .5;
   transform: translateX(-123%);
-  background: rgba(0, 102, 255, 0.5);
+  background: var(--inputbordercolor);
 }
 .txt-lines::after {
   content: " ";
   display: block;
   height: 0.8px;
-  width: 13.4em;
+  width: calc(24em/2);
   position: absolute;
   top: 50%;
   right: 0;
+  opacity: .5;
   transform: translateX(123%);
-  background: rgba(0, 102, 255, 0.5);
+  background: var(--inputbordercolor);
 }
 
 .butn2,
@@ -156,11 +183,11 @@ header p small a {
   width: 100%;
   padding: 0.4em 0em;
   border: none;
-  background-color: rgba(0, 102, 255, 0.219);
-  box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4);
+  background-color: var(--btncolor2);
+  /* box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4); */
   font-weight: 700;
   color: rgb(6, 26, 112);
-  border-radius: 5px;
+  border-radius: var(--radius);
   font-size: 1.3rem;
   text-align: center;
   display: flex;
@@ -180,11 +207,13 @@ button {
   background-color: transparent;
 }
 i.fa-brands {
-  color: rgb(0, 47, 255);
+  color: var(--btncolor);
+  width: 23.65px;
+  height: 23.65px;
 }
 img.google {
-  width: 15px;
-  height: 15px;
+  width: 23.65px;
+  height: 23.65px;
 }
  #togglePassword{
 position: absolute;
@@ -197,7 +226,25 @@ cursor: pointer;
  #hide1{
   display: none;
 } 
-@media screen, (min-width:200) and (max-width: 768) {
+@media only screen and (max-width:768) and (min-width: 200) {
+ body{
+  margin: 0;
+  padding: 0;
+ }
+  header{
+    margin: 48px 0px 0px 0px;
   
+    width: var(--mobilewidth);
+    padding: 0;
+  }
+  .form{
+    width:var(--mobilewidth);
+    padding: 0;
+    margin: 0;
+  }
+  .field, .butn2, .butns, .rem-pass, .txt-lines, #submit, .butn3 {
+    width: 100%;
+  }
+
 }
 
