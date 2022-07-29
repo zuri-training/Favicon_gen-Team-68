@@ -1,173 +1,176 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
-a, h2, h3, p{
-    text-decoration: none;
-    font-family: Dosis, sans-serif;
-    font-weight: 600;
+a,
+h2,
+h3,
+p {
+  text-decoration: none;
+  font-family: Dosis, sans-serif;
+  font-weight: 600;
 }
-h2{
-    font-size: 30px;
+h2 {
+  font-size: 30px;
 }
-p{
-    color: hsl(208, 11%, 55%);
-    line-height: 1.4rem;
-    padding: 30px 0 100px;
-    font-size: 17px;
+p {
+  color: hsl(208, 11%, 55%);
+  line-height: 1.4rem;
+  padding: 30px 0 100px;
+  font-size: 17px;
 }
-h3{
-    color: white;
-    font-size: 20px;
+h3 {
+  color: white;
+  font-size: 20px;
 }
-a{
-    color: hsl(208, 11%, 55%);
-    font-weight: 500;
-    font-size: 16px;
-    display: block;    
+a {
+  color: hsl(208, 11%, 55%);
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
 }
-a:hover{
-    color: green;
+a:hover {
+  color: green;
 }
-#About_Conficons{
-    padding: 200px 150px 50px;
-    text-align: center;
+#About_Conficons {
+  padding: 200px 150px 50px;
+  text-align: center;
 }
-div.fav img{
-    font-size: 50px;
-    padding: 0 80px;
+div.fav img {
+  font-size: 50px;
+  padding: 0 80px;
 }
-footer{    
-    padding: 40px;
-    background-color: hsl(192, 100%, 9%);
-    color: hsl(208, 11%, 55%);
+footer {
+  padding: 40px;
+  background-color: hsl(192, 100%, 9%);
+  color: hsl(208, 11%, 55%);
 }
 
-footer div#footer_top{
-    display: flex;
-    padding: 40px;
-    line-height: 2.7rem;
-    color: #ababab;  
+footer div#footer_top {
+  display: flex;
+  padding: 40px;
+  line-height: 2.7rem;
+  color: #ababab;
+  font-size: 15px;
+}
+div.group {
+  width: 25%;
+}
+div.icons {
+  display: flex;
+  justify-content: space-around;
+}
+i {
+  font-size: 28px;
+  padding: 0 10px;
+}
+.Icons i {
+  color: white;
+}
+.copyright {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  *,
+  body,
+  html {
+    margin: 0%;
+    padding: 0%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    padding: 20px 0 60px;
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+  }
+  #About_Conficons {
+    padding: 50px;
+  }
+  div.fav img {
+    font-size: 30px;
+    padding: 0 20px;
+  }
+  footer {
+    padding: 40px 0;
+  }
+  footer div#footer_top {
+    display: block;
+    padding: 20px 0;
+    line-height: 2.1rem;
+    color: #ababab;
     font-size: 15px;
-}
-div.group{
-    width: 25%;
-}
-div.icons{
+  }
+  div.group {
+    width: 100%;
+  }
+  div.icons {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
+  }
+  i {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+  }
 }
-i{
-    font-size: 28px;
+@media (max-width: 400px) {
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    padding: 20px 0 40px;
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+  }
+  #About_Conficons {
+    padding: 30px 10px;
+  }
+  div.fav img {
+    font-size: 20px;
     padding: 0 10px;
-    }
-    .Icons i{
-        color: white;
-    }
-    .copyright{
-        text-align: right;
-    }
-@media(max-width:768px){
-        *, body, html{
-            margin: 0%;
-            padding: 0%;
-        }
-        h2{
-            font-size: 20px;
-        }
-        p{
-            padding: 20px 0 60px;
-            font-size: 14px;
-        }
-        h3{
-            font-size: 16px;
-        }
-        a{
-            font-weight: 400;
-            font-size: 14px;
-            display: block;    
-        }
-        #About_Conficons{
-            padding: 50px;
-        }
-        div.fav img{
-            font-size: 30px;
-            padding: 0 20px;
-        }
-        footer{    
-            padding: 40px 0;
-        }
-        footer div#footer_top{
-            display: block;
-            padding: 20px 0;
-            line-height: 2.1rem;
-            color: #ababab;  
-            font-size: 15px;
-        }
-        div.group{
-            width: 100%;
-        }
-        div.icons{
-            display: flex;
-            justify-content: left;
-        }
-        i{
-            font-size: 20px;
-            padding: 0 5px;
-            }
-            .copyright{
-                text-align: center;
-                font-size: 12px;
-            }
-            }    
-            @media(max-width:400px){
-               
-                h2{
-                    font-size: 18px;
-                }
-                p{
-                    padding: 20px 0 40px;
-                    font-size: 14px;
-                }
-                h3{
-                    font-size: 16px;
-                }
-                a{
-                    font-weight: 400;
-                    font-size: 14px;
-                    display: block;    
-                }
-                #About_Conficons{
-                    padding: 30px 10px;                    
-                }
-                div.fav img{
-                    font-size: 20px;
-                    padding: 0 10px;
-                }
-                footer{    
-                    padding: 30px 0;
-                }
-                footer div#footer_top{
-                    display: block;
-                    padding: 20px 0;
-                    line-height: 2.1rem;
-                    color: #ababab;  
-                    font-size: 14px;
-                }
-                div.group{
-                    width: 100%;
-                }
-                div.icons{
-                    display: flex;
-                    justify-content: left;
-                }
-                i{
-                    font-size: 20px;
-                    padding: 0 5px;
-                    }
-                    .copyright{
-                        text-align: left;
-                        font-size: 12px;
-                    }
-                    }    
-        
+  }
+  footer {
+    padding: 30px 0;
+  }
+  footer div#footer_top {
+    display: block;
+    padding: 20px 0;
+    line-height: 2.1rem;
+    color: #ababab;
+    font-size: 14px;
+  }
+  div.group {
+    width: 100%;
+  }
+  div.icons {
+    display: flex;
+    justify-content: left;
+  }
+  i {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  .copyright {
+    text-align: left;
+    font-size: 12px;
+  }
+}
