@@ -9,16 +9,17 @@
 {% endblock %}
 
 {% block extra_scripts %}
-<script src="{% static 'js/login.js' %}"></script>
+<script src="{% static 'js/login.js' %}" defer></script>
 {% endblock %}
 {% block content %}
-<header>
-    <h1>Login</h1>
-    <p><small>Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></small></p>
-</header>
+
 
 
 <form method='post' action='' class="form">
+    <header id="mbile">
+        <h1>Login</h1>
+        <p><small class="down-mobile">Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+    </header>
     {% csrf_token %}
 
     <div class="field">
@@ -31,7 +32,7 @@
         <input type="password" id="password" placeholder='Password' name="password" > 
 
         <span id="togglePassword">
-                     <i id="hide1" class="fa-solid eyes fa-eye"></i>
+                     <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
         </span>
 
     </div>
@@ -57,25 +58,6 @@
 
     </div>
 </form>
-<script>
-    const toggle = document.querySelector(".eyes");
-const password = document.querySelector("#password");
 
-toggle.addEventListener("click", () =>{
-  // toggle the type attribute
-  if (password.type === "password") {
-    password.type = "text";
-    toggle.classList.replace('fa-eye', 'fa-eye-slash')
-      }else{
-        password.type = 'password'
-        toggle.classList.replace('fa-eye-slash', 'fa-eye')
-      }
-});
-// prevent form submit
-const form = document.querySelector("form");
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-});
-</script>
 {% endblock %}
 
