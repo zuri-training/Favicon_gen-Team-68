@@ -100,8 +100,12 @@ class IconList(generic.ListView):
 
 @login_required(login_url="/login")
 def upload(request):
+    print(request.POST)
     return render(request, "index.html", {})
 
 
-def result(request):
-    pass
+@login_required(login_url="/login")
+def download(request, pk=None):
+    icon = Icon.objects.get(pk=pk)
+    print(request.POST)
+    return render(request, "index.html")

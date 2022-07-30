@@ -97,12 +97,15 @@
     const modal = document.getElementById('modal');
 
     generate.addEventListener('click', (e) => {
-        {% if request.user.is_authenticated %}
+        {
+            %
+            if request.user.is_authenticated %
+        }
 
         e.preventDefault()
         e.stopPropagation()
-        modal.style.display = 'flex'
-        {% endif %}
-      }
-    )
+        modal.style.display = 'flex' {
+            % endif %
+        }
+    })
 </script>
