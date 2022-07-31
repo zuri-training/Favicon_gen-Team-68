@@ -109,7 +109,7 @@ def upload(request):
     )
     print(icon, "myicon")
     return render(request, "index.html", {"icon": icon})
-
+    # return render(request, "upload.html")
 
 @login_required(login_url="/login")
 def result(request, pk=None):

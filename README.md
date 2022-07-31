@@ -19,7 +19,8 @@ Python, Django Framework, HTML, CSS and Javascript are used to build the project
 - python manage.py runserver
 
 Link to the figma Workspace:  https://www.figma.com/file/Om0i0dm6XOQN27utcHw5QD/Favicon-general?node-id=0%3A1
-Images
+
+# Icon Images
 
 ![ico images](static/images/Vector1.png)
 

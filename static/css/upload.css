@@ -36,7 +36,6 @@ section.modal {
   display: flex;
   justify-content: space-between;
 }
-
 .child1,
 .child2 {
   border: none;
