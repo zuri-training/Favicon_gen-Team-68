@@ -1,7 +1,6 @@
 
 # Conficon
-A Favicon generator app, it converts image design(.PNG, .JPEG) to smaller [favicon]()
-[favicon](https://en.wikipedia.org/wiki/Favicon)
+A Favicon generator app, it converts image design(.PNG, .JPEG) to smaller [favicon](https://en.wikipedia.org/wiki/Favicon) sizes which are available for download and available to use in the code
 
 # Sample of our recent works
 ## * Here
