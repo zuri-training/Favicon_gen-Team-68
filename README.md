@@ -10,6 +10,12 @@ The application allows users to upload images and they convert the images into t
 
 
 
+# Website Preview Image
+
+
+![HeaderImage](media/files/icons/header.png)
+
+
 The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available to use during coding process.
 Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the project. The design structure of the project is a [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application) application. HTML, CSS and Javascript are use in the frontend, Python Django framework is used for the backend and MySQL as the database
 
