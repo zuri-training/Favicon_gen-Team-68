@@ -1,3 +1,5 @@
+import time
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -101,7 +103,10 @@ class IconList(generic.ListView):
 @login_required(login_url="/login")
 def upload(request):
     file_input = request.FILES["file-input"]
-    icon = Icon.objects.create(name=str(file_input), user=request.user, image=file_input)
+
+    icon = Icon.objects.create(
+        name=str(file_input), user=request.user, image=file_input
+    )
     print(icon, "myicon")
     return render(request, "index.html", {"icon": icon})
 

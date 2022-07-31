@@ -108,14 +108,14 @@
         }
         const http = new XMLHttpRequest()
         const fd = new FormData(e.target)
-        http.addEventListener("success", (ev) => {
+        http.addEventListener("load", (ev) => {
             modal.style.display = 'flex'
         });
         http.addEventListener("error", (event) => {
             alert('Oops failed to upload');
         });
         http.open('POST', location.origin + '/upload/', true)
-        setTimeout(() => http.send(fd), 4000)
+        http.send(fd)
     })
 </script>
 {% endif %}
