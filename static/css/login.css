@@ -14,12 +14,13 @@
   --btncolor2: #d6dcfb;
   --radius: 4px;
   --gap: 4px;
-  --mobilewidth: 22.25em;
+  --mobilewidth: 35em;
   --eyecolor: #99999b;
   --inputbordercolor: #76777a;
   --regularfontweight: 400;
   --dark: #191a1c;
   --regularFontSize: 0.96rem;
+  --transit: all 0.3s linear;
 }
 
 body {
@@ -30,33 +31,44 @@ body {
   background-color: var(--backgrouncolor);
   color: var(--dark);
   font-size: var(--regularFontSize);
+ 
 }
-header {
+header#mbile {
   margin: 0% auto;
   margin-top: 3em;
-  width: 37.5em;
-  padding: 2em 3.2em;
+  width: 100%;
+  padding: 1em 0em;
 }
-header p {
+header h1{
+  font-size: 3.12rem;
+  line-height: 64px;
+  font-weight: 600;
+  font-style: normal;
+}
+header#mbile p {
   padding-top: 0.8em;
   font-size: 1.2rem;
   color: rgb(41, 49, 58);
 }
-header p small a {
+header#mbile p small a {
   text-decoration: none;
   color: var(--btncolor);
 }
 .form {
   display: flex;
   flex-direction: column;
-  padding: 1.3em 3em;
+  padding: .8em 3em;
   position: relative;
-  width: 37.5em;
+  width: 60em;
+  margin-right: 0;
   margin: 0% auto;
+  margin-top: 2em;
   align-content: center;
   justify-content: space-evenly;
   align-items: flex-start;
-  gap: 1.2em;
+  gap: 1.6em;
+  transition: all 0.4s ease-in-out
+  
 }
 .field {
   display: flex;
@@ -66,20 +78,25 @@ header p small a {
   position: relative;
 }
 .field input {
-  padding: 0.7em 0.8em;
+  padding: 1em 0.8em;
   border-radius: var(--radius);
   border: 0.8px solid var(--eyecolor);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 .field label {
   display: none;
   padding-left: 0.08em;
 }
 .field input:focus {
-  margin-top: 0.8em;
-  padding: 0.8em 1em;
+   padding: 1.2em 0.8em;
+   outline: none;
   box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
-  border: 0.8px solid #3250ec;
-  transform: translateY(-5px);
+  border: 0.4px solid var(--btncolor); 
+ border-radius: 8px;
+  transition: all 0.2s ease-out;
 }
 .field input::placeholder {
   display: flex;
@@ -104,7 +121,6 @@ header p small a {
   flex-direction: row;
   width: 100%;
   margin-top: 0em;
-  font-size: 1.2rem;
   line-height: 20px;
   font-size: 0.84rem;
 }
@@ -116,10 +132,17 @@ header p small a {
   align-items: center;
 }
 .checkbox-input {
+  outline: none;
   width: 20px;
   height: 20px;
-  border: 1px solid var(--inputbordercolor);
+  border: .4px solid var(--eyecolor);
 }
+.pass{
+  display: block;
+  right: 3.6em;
+  position: absolute;
+  bottom: 19.8em;
+   }
 .pass p a {
   text-decoration: none;
   color: var(--btncolor);
@@ -134,22 +157,28 @@ header p small a {
 }
 #submit {
   width: 100%;
-  padding: 0.4em 0em;
+  padding: 1em 0em;
   border: none;
   background-color: var(--btncolor);
-  box-shadow: 1px 2px 5px 0.5px rgba(45, 73, 235, 0.5);
+  /* box-shadow: 1px 2px 5px 0.5px rgba(45, 73, 235, 0.5); */
   font-weight: 600;
   color: #fcfcff;
   border-radius: var(--radius);
-  font-size: 1.2rem;
   letter-spacing: 0.02em;
   font-size: 1.08rem;
   line-height: 20px;
-
+  cursor: pointer;
+ 
 }
 #submit:hover {
-  padding: 0.6em 0em;
-  opacity: 0.5;
+  padding: 1.2em 0em;
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 12px 16px rgba(150, 150, 209, 0.253);
+}
+ #submit:visited {
+  padding: 1em 0em;
+  background-color: #21359d;
+  box-shadow: inset 0px 1px 12px rgba(67, 92, 221, 0.13);
 }
 .txt-lines {
   position: relative;
@@ -157,12 +186,14 @@ header p small a {
   text-align: center;
   max-width: 100%;
   margin: 10px auto;
+  margin-top: 3em;
+  color: var(--eyecolor);
 }
 .txt-lines::before {
   content: " ";
   display: block;
   height: 0.8px;
-  width: calc(24em / 2);
+  width: calc(28em / 2);
   position: absolute;
   top: 50%;
   left: 0;
@@ -174,7 +205,7 @@ header p small a {
   content: " ";
   display: block;
   height: 0.8px;
-  width: calc(24em / 2);
+  width: calc(28em / 2);
   position: absolute;
   top: 50%;
   right: 0;
@@ -186,11 +217,11 @@ header p small a {
 .butn2,
 .butn3 {
   width: 100%;
-  padding: 0.4em 0em;
+  padding: 1em 0em;
   border: none;
   background-color: var(--btncolor2);
   /* box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4); */
- 
+  cursor: pointer;
   color: var(--dark);
   border-radius: var(--radius);
   font-size: 1.3rem;
@@ -200,11 +231,22 @@ header p small a {
   justify-content: center;
   flex-direction: row;
   align-content: center;
-  gap: 1.2em;
+  gap: 1.6em;
+  position: relative;
 }
-.butn2.butn3:hover {
-  padding: 0.5em 0em;
+.butn2:hover,.butn3:hover {
+  padding: 1.2em 0em;
+  background-color: #fcfcff;
+  border: 1px solid #3250ec;
+
   transform: translateY(-5px);
+  transition: all 0.2s ease-out;
+}
+.butn2:visited,.butn3:visited{
+  padding: 1em 0em;
+  box-shadow: inset 4px 4px 12px rgb(152, 167, 245, 0.25);
+ background-color: #d6dcfb;
+ border: 1px solid #3250ec;
 }
 button {
   text-decoration: none;
@@ -214,45 +256,100 @@ button {
 i.fa-brands {
   color: var(--btncolor);
   font-size: 24px;
+  position: absolute;
+  left:25%;
+  transform: translateY(-50%);
+ 
 }
 img.google {
-  width: 23.65px;
-  height: 23.65px;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 25%;
+  width: 20px;
+  height: 20px;
 }
 #togglePassword {
+  display: inline;
   position: absolute;
   font-size: 1.3rem;
-  top: 30%;
+  top: 35%;
   right: 0;
   padding-right: 0.8em;
+   color: var(--eyecolor);
+}
+#hide1  {
   cursor: pointer;
+  
 }
-#hide1 {
-  display: none;
+.eyes{
+  transform: scaleX(-1);
 }
-@media only screen and (max-width: 768) and (min-width: 200) {
+@media only screen and (max-width: 768px) and (min-width: 200px) {
   body {
+  
     margin: 0;
     padding: 0;
   }
-  header {
-    margin: 48px 0px 0px 0px;
-
-    width: var(--mobilewidth);
-    padding: 0;
+  
+header#mbile{
+      margin-top: 3em;
+   width: 100%;
+    padding: 2.8em 0em;
+    padding-bottom: .8em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  header h1{
+    font-size: 1.44rem;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: normal;
+  }
+header#mbile p{
+     position: absolute;
+     bottom: -2.4em;
+     text-align: center;
   }
   .form {
-    width: var(--mobilewidth);
+    position: relative;
+     width: var(--mobilewidth); 
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    margin-top: 2em;
   }
-  .field,
-  .butn2,
-  .butns,
-  .rem-pass,
-  .txt-lines,
-  #submit,
-  .butn3 {
-    width: 100%;
+ 
+  .pass{
+    display: block;
+    right: 0;
+    position: absolute;
+    bottom: 19.8em;
+     }
+     .txt-lines{
+      margin-top: 3em;
+     }
+  .txt-lines::before{
+    width: 13.5em;
   }
+  .txt-lines::after{
+    width: 13.5em;
+  }
+  i.fa-brands {
+    color: var(--btncolor);
+    font-size: 24px;
+    position: absolute;
+    left: 16%;
+    transform: translateY(-50%);
+   
+  }
+  img.google {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 16%;
+    width: 20px;
+    height: 20px;
+  }
+  
 }
