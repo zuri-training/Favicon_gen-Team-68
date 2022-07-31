@@ -98,19 +98,20 @@
 <script>
     const form = document.getElementById('upload');
     const modal = document.getElementById('modal');
-    const fileInput = document.getElementById('file-input').files
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        if (fileInput[0].size > 5e6) {
-            alert('file size exceeded 5 mb')
-            return
-        }
+
         const http = new XMLHttpRequest()
         const fd = new FormData(e.target)
         http.addEventListener("load", (ev) => {
             modal.style.display = 'flex'
         });
+        if (fd.get('file-input').size > 10e6) {
+            alert('file size exceeded 10 mb')
+            return
+        }
+        console.log(fd.get('file-input'), 'kfjkfjfk')
         http.addEventListener("error", (event) => {
             alert('Oops failed to upload');
         });
