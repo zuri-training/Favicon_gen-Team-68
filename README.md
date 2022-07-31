@@ -16,20 +16,25 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 # How to Install and Run the Project
 -  run git clone https://github.com/zuri-training/Favicon_gen-Team-68.git 
 - create a virtual environment
-- run pip install -r requirements.txt
+- run ```pip install -r requirements.txt```
   - # Database
     - To use the default sqlite database
-      - run python manage.py makemigrations
-      - run python manage.py migrate
-      - run python manage.py runserver
+      - run ```python manage.py makemigrations```
+      - run ```python manage.py migrate```
+      - run ```python manage.py runserver```
     - To use MySQL as default database
       - Install [MySQL](https://www.mysql.com/downloads/)
       - create a ```.env``` file in your project root directory
       - In the ```.env``` define variable name ```USE_PROD=1``` and ```DB_PWD=<your database password>```
-      - run python manage.py makemigrations
-      - run python manage.py migrate
-      - run python manage.py runserver
+      - run ```python manage.py makemigrations```
+      - run ```python manage.py migrate```
+      - run ```python manage.py runserver```
 
 
 Link to the figma Workspace:  https://www.figma.com/file/Om0i0dm6XOQN27utcHw5QD/Favicon-general?node-id=0%3A1
 
+<a href = "https://github.com/zuri-training/Favicon_gen-Team-68/contributors">
+  <img src = "https://contrib.rocks/image?repo = Conradgabe/Favicon_gen-Team-68"/>
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
