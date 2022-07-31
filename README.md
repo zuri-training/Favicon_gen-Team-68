@@ -18,7 +18,8 @@ A Favicon generator app, converts image design(.PNG, .JPEG) to smaller [favicon]
     - run ```python manage.py runserver``` to run the project.
  
 Images
-![ico images]('https://raw.githubusercontent.com/zuri-training/Favicon_gen-Team-68/main/static/images/Vector1.png')
+
+![ico images](static/images/Vector1.png)
 
 # Figma Workspace: 
 
