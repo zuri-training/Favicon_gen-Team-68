@@ -34,7 +34,7 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 Link to the figma Workspace:  https://www.figma.com/file/Om0i0dm6XOQN27utcHw5QD/Favicon-general?node-id=0%3A1
 
 <a href = "https://github.com/zuri-training/Favicon_gen-Team-68/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo = Conradgabe/"/>
+  <img src = "https://contrib.rocks/image?repo = Conradgabe/zuri-training/Favicon_gen-Team-68"/>
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
