@@ -17,11 +17,11 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 -  run git clone https://github.com/zuri-training/Favicon_gen-Team-68.git 
 - create a virtual environment
 - run pip install -r requirements.txt
-- run python manage.py runserver
   - # Database
     - To use the default sqlite database
       - run python manage.py makemigrations
       - run python manage.py migrate
+      - run python manage.py runserver
     - To use MySQL as default database
       - Install [MySQL](https://www.mysql.com/downloads/)
       - create a ```.env``` file in your project root directory
