@@ -40,10 +40,10 @@
         <p>Upload your image or input your text to generate your favicon</p>
     </div>
 
-    <form method='post' action="{% url 'upload' %}" class="upload">
+    <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
         {% csrf_token %}
         <div class="upload-col">
-            <input type="file" name="file-input" id="" class="file-input" />
+            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
             <!-- <button type="button">Upload image</button> -->
         </div>
         <div class="generate">
@@ -78,7 +78,6 @@
     </div>
     {% endif %}
 </header>
-
 <script>
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
@@ -92,20 +91,31 @@
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }));
+</script>
 
-    const generate = document.querySelector('.generate .generate');
+{% if request.user.is_authenticated %}
+
+<script>
+    const form = document.getElementById('upload');
     const modal = document.getElementById('modal');
+    const fileInput = document.getElementById('file-input').files
 
-    generate.addEventListener('click', (e) => {
-        {
-            %
-            if request.user.is_authenticated %
-        }
-
+    form.addEventListener('submit', (e) => {
         e.preventDefault()
-        e.stopPropagation()
-        modal.style.display = 'flex' {
-            % endif %
+        if (fileInput[0].size > 5e6) {
+            alert('file size exceeded 5 mb')
+            return
         }
+        const http = new XMLHttpRequest()
+        const fd = new FormData(e.target)
+        http.addEventListener("load", (ev) => {
+            modal.style.display = 'flex'
+        });
+        http.addEventListener("error", (event) => {
+            alert('Oops failed to upload');
+        });
+        http.open('POST', location.origin + '/upload/', true)
+        http.send(fd)
     })
 </script>
+{% endif %}
