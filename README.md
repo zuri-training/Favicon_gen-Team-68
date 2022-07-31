@@ -4,7 +4,12 @@ A Favicon generator app, converts image design(.PNG, .JPEG) to smaller [favicon]
 
 # Projects Desccription
 The application allows users to upload images and they convert the images into the different sizes of favicon. Users can choose the sizes they want and then download.
+
+images...
 ![My Image](media/files/icons/footer.png)
+
+
+
 The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available to use during coding process.
 Python, Django Framework, HTML, CSS and Javascript are used to build the project. The design structure of the project is a [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application) application. HTML, CSS and Javascript are use in the frontend, Python Django framework is used for the backend
 
