@@ -6,14 +6,13 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
-{% endblock %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
-
+{% endblock %}
 
 {% block content %}
 <form method='post' action='' class="form">
@@ -24,47 +23,37 @@
             <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
         </div>
     </header>
-    {% if messages %}
-    <section class="messages">
-        {% for message in messages %}
-        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</div>
-            {% endfor %}
-    </section>
-    {% endif %}
     <div class="frm">
         <div class="field">
             <label for="username">Name</label>
-            <input type="text" value="{{ instance.username }}"placeholder="username" id="username" name="username" required>
+            <input type="text" value="{{ instance.username }}" placeholder="username" id="username" name="username" required>
         </div>
-    
+
         <div class="field">
             <label for="email">Email Address</label>
-            <input type="email" value="{{ instance.email }}"placeholder="Myname@domain.com" id="email" name="email" required>
+            <input type="email" value="{{ instance.email }}" placeholder="Myname@domain.com" id="email" name="email" required>
         </div>
-    
+
         <div class="field">
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="*****************" required>
-
-            <div id="togglePassword" onclick='myToggle();'>
-                <i id="hide2" class="fa-solid fa-eye"></i>
-                <i id="hide1" class="fa-solid fa-eye-slash"></i>
-            </div>
+            <span id="togglePassword">
+                <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
+            </span>
         </div>
-    
+        {% include 'flash-messages.html' %}
         <button id="submit" class="butn1">Create account</button>
-    
-            {% include 'social-logins.html' %}
-        
+
+        {% include 'social-logins.html' %}
+
         <div class="mobile-display">
             <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
         </div>
-        </div>
+    </div>
     </div>
 </form>
+{% endblock %}
 
 {% block extra_scripts %}
 <script src="{% static 'js/signup.js' %}" defer></script>
-{% endblock %}
-
 {% endblock %}
