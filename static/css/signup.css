@@ -11,13 +11,13 @@ form {
   transform: translate(-50% -50%);
   background-color: #ffff;
 }
-h1{
-  font-family: 'Nunito Sans', sans-serif;
+h1 {
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
   font-size: 30px;
 }
-p{
-  font-family: 'Nunito Sans', sans-serif;
+p {
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -50,7 +50,7 @@ label {
   display: block;
   margin-top: 0.5em;
   text-align: justify;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
 }
@@ -67,28 +67,21 @@ input {
   color: white;
   border-radius: 3px;
   height: 2em;
-  min-width: 95%;
+  min-width: 100%;
   position: relative;
-  right: 2em;
+  right: 0em;
   box-shadow: 0px 2px 5px gray;
 }
-.butn1:hover{
+.butn1:hover {
   cursor: pointer;
   background-color: transparent;
   color: blue;
   transition: 0.5s;
   border: solid 2px grey;
 }
-.field,
-i {
-  position: relative;
-  right: 27px;
-  transform: translate(0 -50%);
-  top: 76.5%;
-  cursor: pointer;
-}
 .txt-lines {
-  position: relative; right: 2em;
+  position: relative;
+  right: 0em;
   display: block;
   text-align: center;
   max-width: 30px;
@@ -120,7 +113,7 @@ i {
 
 .butn2,
 .butn3 {
-  min-width: 95%;
+  min-width: 100%;
   padding: 0.4em 0em;
   border: none;
   margin: 1em;
@@ -134,25 +127,26 @@ i {
   flex-direction: row;
   align-content: center;
   gap: 2em;
-  font-family:'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  position: relative; right: 2.8em;
+  position: relative;
+  right: 1em;
 }
-.butn3{
+.butn3 {
   height: 2em;
 }
-.butn2:hover{
-    padding: 0.5em 0em;
-    transform: translateY(-5px);
-    cursor: pointer;
-    background-color: transparent;
-    color: blue;
-    border: solid 2px grey;
-    box-shadow: 0px 2px 5px gray;
-    transition: 0.5s;
+.butn2:hover {
+  padding: 0.5em 0em;
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-color: transparent;
+  color: blue;
+  border: solid 2px grey;
+  box-shadow: 0px 2px 5px gray;
+  transition: 0.5s;
 }
 
-.butn3:hover{
+.butn3:hover {
   padding: 0.5em 0em;
   transform: translateY(-5px);
   cursor: pointer;
@@ -174,50 +168,67 @@ img.google {
   width: 15px;
   height: 15px;
 }
-.mobile-display{
-  display:none
-}
-                
-.desktop-display{
-  display:block
+.mobile-display {
+  display: none;
 }
 
-@media (max-width: 750px){
-  *{
+.desktop-display {
+  display: block;
+}
+#togglePassword {
+  display: inline;
+  position: absolute;
+  font-size: 1.3rem;
+  top: 35%;
+  right: 0;
+  padding-right: 0.7em;
+  cursor: pointer;
+}
+#hide1 {
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  * {
     width: auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  form{
+  form {
     width: 60%;
-    position: relative; left: 20%;
+    position: relative;
+    left: 20%;
   }
-  input{
+  input {
     width: 95%;
   }
-  .fa-eye{
-    position: relative; 
-    left: 80%;
+  .fa-eye {
+    position: relative;
+    left: 1%;
     transform: translate(0 -30%);
-    top:-1.5em;
+    top: -0.5em;
   }
-  .txt-lines::before{
+  .txt-lines::before {
     width: 3.5em;
   }
-  .txt-lines::after{
-    width: 3.0em;
+  .txt-lines::after {
+    width: 3em;
   }
-  .fa-brands{
-    position: relative; top: 3%; left: -3%;
+  .fa-brands {
+    position: relative;
+    top: 3%;
+    left: -3%;
   }
-  .desktop-display{
-    display:none
+  .desktop-display {
+    display: none;
   }
-  .mobile-display{
-    display:block
+  .mobile-display {
+    display: block;
   }
-  .mobile-display, p{
-    position: relative; right: 7%;
+  .mobile-display,
+  p {
+    position: relative;
+    right: 7%;
   }
 }

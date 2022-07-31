@@ -20,10 +20,6 @@
 {# importing flash-messages #}
 {% include 'flash-messages.html' %}
 
-{% if request.user.is_authenticated %}
-{% include 'upload.html' %}
-{% endif %}
-
 <h1>Yipee!!!!! It worked, welcome on board {{ request.user }}</h1>
 
 {% endblock %}

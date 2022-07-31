@@ -1,8 +1,18 @@
-const visibility = document.querySelector("#visibility");
-    const password = ("click", "#password");
+const toggle = document.querySelector(".eyes");
+const password = document.querySelector("#password");
 
-visibility.addEventListener('click', function(e) {
-    const type = password.getAttribute('type')=== "password" ? "text" : "password";
-    password.setAttribute('type', type)
-    this.classList.toggle('fa-eye-slash');
+toggle.addEventListener("click", () => {
+  // toggle the type attribute
+  if (password.type === "password") {
+    password.type = "text";
+    toggle.classList.replace("fa-eye-slash", "fa-eye");
+  } else {
+    password.type = "password";
+    toggle.classList.replace("fa-eye", "fa-eye-slash");
+  }
+});
+
+const login = document.getElementById("submit");
+login.addEventListener("click", () => {
+  login.textContent = "Authenticating....";
 });
