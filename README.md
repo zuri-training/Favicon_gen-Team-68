@@ -19,7 +19,7 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 - run pip install -r requirements.txt
 - run python manage.py runserver
   - # Database
-    - To use the default sqlite database in django
+    - To use the default sqlite database
       - run python manage.py makemigrations
       - run python manage.py migrate
     - To use MySQL as default database
