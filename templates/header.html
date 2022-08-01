@@ -6,13 +6,10 @@
 {% block extra_css %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {% endblock %}
 {% block extra_scripts %}
 <script src="{% static 'js/upload.js' %}" defer></script>
@@ -30,14 +27,14 @@
                 <a href="#" class="nav-link">Generate
                     <span class="material-symbols-outlined">
                         expand_more
-                        </span>          
+                    </span>
                 </a>
                 <ul class="drop-down">
                     <li><a href="">Upload Image</a></li>
                     <li><a href="">From Text</a></li>
                 </ul>
             </li>
-                
+
             <li class="nav-item">
                 <a href="#" class="nav-link">How it works</a>
             </li>
@@ -72,13 +69,13 @@
     <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
         {% csrf_token %}
         <div class="upload-col">
-            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*'  required/>
+            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
             <!-- <button type="button">Upload image</button> -->
 
             <!-- <img src="images/Vector.png" alt=""> -->
             <!-- <h3>Upload image</h3> -->
-          
-          <!-- i need help on how to style the file upload with the image and text above -->
+
+            <!-- i need help on how to style the file upload with the image and text above -->
 
         </div>
         <div class="generatediv">
@@ -89,15 +86,6 @@
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
-
-            {#<li><img src="{% static 'images/Vector (1).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (2).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (3).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (4).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (5).png' %}" alt="" class="hide-img"></li>
-            <li><img src="{% static 'images/Vector (6).png' %}" alt="" class="hide-img"></li>
-            <li><img src="{% static 'images/Vector (7).png' %}" alt="" class="hide-img"></li> #}
-
             {% for recent in icons %}
             <li>{{ recent.name }}</li>
             {% endfor %}
@@ -106,13 +94,6 @@
     </div>
     <div class="icons">
         <ul class="recent lower">
-            {# <li><img src="{% static 'images/Vector (8).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (9).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (10).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (11).png' %}" alt=""></li>
-            <li><img src="{% static 'images/Vector (12).png' %}" alt="" class="hide-img"></li>
-            <li><img src="{% static 'images/Vector (13).png' %}" alt="" class="hide-img"></li>
-            <li><img src="{% static 'images/Vector (14).png' %}" alt="" class="hide-img"></li> #}
         </ul>
 
         <!-- I will adjust when I have the logos from designers -->

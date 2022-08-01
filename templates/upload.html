@@ -1,7 +1,6 @@
 {% if request.user.is_authenticated %}
 <section class='modal' id='modal'>
     <article class='modal-left'>
-        {{icon.name}}{{ icon.image }}{{ request.user }}
         <form method='post' action={% url 'result' %} id='result-gen'>
             {% csrf_token %}
             <h3>Download favicon size</h3>
