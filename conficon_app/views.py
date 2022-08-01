@@ -1,11 +1,15 @@
-import time
+import glob
+import os
+from zipfile import ZipFile
 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.core.files import File
 # Create your views here.
 from django.shortcuts import redirect, render
 from django.views import generic
+from PIL import Image
 
 from .models import Icon, Profile, Result
 
@@ -91,28 +95,65 @@ def logout_view(request):
     return redirect("home")
 
 
-class IconList(generic.ListView):
-    queryset = Icon.objects.all()
+class RecentIconList(generic.ListView):
+    # queryset = Icon.objects.all()
+    model = Icon
     template_name = "index.html"
-
-    def get_queryset(self):
+    print(model)
+    """def get_queryset(self):
         user = self.request.user
-        return self.queryset.filter(user=user)
+        return self.queryset.filter(user=user)"""
 
 
 @login_required(login_url="/login")
 def upload(request):
-    file_input = request.FILES["file-input"]
+    if request.method == "POST":
+        file_input = request.FILES["file-input"]
 
-    icon = Icon.objects.create(
-        name=str(file_input), user=request.user, image=file_input
-    )
-    print(icon, "myicon")
-    return render(request, "index.html", {"icon": icon})
+        icon = Icon.objects.create(
+            name=str(file_input), user=request.user, image=file_input
+        )
+        print(icon, "myicon")
+        return render(request, "index.html", {"icon": icon})
+    else:
+        return render(request, "index.html")
+
+
+def rm(name, sm=""):
+    try:
+        os.remove(name)
+    except:
+        pass
 
 
 @login_required(login_url="/login")
-def result(request, pk=None):
-    icon = Icon.objects.all()
-    print(request.POST, icon)
-    return render(request, "index.html")
+def result(request):
+    user_latest = Icon.objects.filter(user=request.user).first()
+    name = "favicon%sx%s.ico"
+    sizes = []
+    for i in request.POST:
+        if i.startswith("s"):
+            sizes.append((int(request.POST[i]), int(request.POST[i])))
+    print(sizes)
+
+    with (
+        Image.open(user_latest.image.path) as img,
+        ZipFile("favicon.zip", "w") as zip_obj,
+    ):
+        for size in sizes:
+            img.save(name % size, sizes=(size,))
+            zip_obj.write(name % size)
+            rm(name % size)
+        img.save("favicon.ico", sizes=sizes)
+        zip_obj.write("favicon.ico")
+        rm("favicon.ico", sm="major")
+    zipf = open("favicon.zip", "rb")
+    zipf = File(zipf)
+    result = Result.objects.create(
+        name=user_latest.name.split(".")[0] + ".ico",
+        upload=user_latest,
+        zip_file=zipf,
+        user=request.user,
+    )
+    print(result)
+    return render(request, "index.html", {"result": result})

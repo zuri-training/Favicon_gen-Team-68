@@ -9,4 +9,5 @@ urlpatterns = [
     path("signup/", views.signup_view, name="signup"),
     path("upload/", views.upload, name="upload"),
     path("result/", views.result, name="result"),
+    path("recent/", views.RecentIconList.as_view(), name="recent-icons"),
 ]
