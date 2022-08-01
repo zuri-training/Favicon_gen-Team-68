@@ -13,7 +13,9 @@ The application allows users to upload images and they convert the images into t
 # Website Preview Image
 
 
+
 ![HeaderImage](media/files/icons/header.png)
+
 
 
 The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available to use during coding process.

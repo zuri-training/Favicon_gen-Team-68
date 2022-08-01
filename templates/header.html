@@ -1,5 +1,9 @@
 {% load static %}
 
+{% block extra_scripts %}
+<script src="{% static 'js/upload.js' %}" defer></script>
+{% endblock %}
+
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
@@ -43,7 +47,7 @@
     <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
         {% csrf_token %}
         <div class="upload-col">
-            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*'  />
             <!-- <button type="button">Upload image</button> -->
         </div>
         <div class="generate">

@@ -111,13 +111,11 @@ def upload(request):
     else:
         return redirect("home")
 
-
 def rm(name, sm=""):
     try:
         os.remove(name)
     except:
         pass
-
 
 @login_required(login_url="/login")
 def result(request):
