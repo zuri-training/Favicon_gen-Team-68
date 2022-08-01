@@ -1,5 +1,6 @@
 {% if request.user.is_authenticated %}
 <section class='modal' id='modal'>
+    <button class="close-modal">&times;</button>
     <article class='modal-left'>
         {{icon.name}}{{ icon.image }}{{ request.user }}
         <form method='post' action={% url 'result' %} id='result-gen'>
@@ -27,17 +28,17 @@
                     <pre>&lt;link rel="apple-touch-icon" sizes="32 X 32"&gt;</pre>
                 </div>
                 <h4>Copy HTML code after Generating favicon</h4>
-                <div class='down-btns'>
-                    <button class='down-btn-pri' type='submit'>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <p>Download</p>
-                    </button>
-                    <button class='down-btn-grey'>Copy HTML</button>
-                </div>
+              
 
             </section>
         </form>
-
+        <div class='down-btns'>
+            <button class='down-btn-pri' type='submit'>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Download</p>
+            </button>
+            <button class='down-btn-grey'>Copy HTML</button>
+        </div>
     </article>
 
     <article class='modal-right'>

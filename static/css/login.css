@@ -14,7 +14,7 @@
   --btncolor2: #d6dcfb;
   --radius: 4px;
   --gap: 4px;
-  --mobilewidth: 35em;
+  --mobilewidth: 84%;
   --eyecolor: #99999b;
   --inputbordercolor: #76777a;
   --regularfontweight: 400;
@@ -97,6 +97,7 @@ header#mbile p small a {
   border: 0.4px solid var(--btncolor); 
  border-radius: 8px;
   transition: all 0.2s ease-out;
+  caret-color: #3250ec;
 }
 .field input::placeholder {
   display: flex;
