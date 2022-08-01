@@ -2,6 +2,7 @@
 
 {% load static %}
 
+
 {% block extra_css %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
@@ -13,9 +14,12 @@
       rel="stylesheet"
     />
 {% endblock %}
-
+{% block extra_scripts %}
+<script src="{% static 'js/upload.js' %}" defer></script>
+{% endblock %}
 
 {% block content %}
+
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
@@ -59,7 +63,7 @@
             <span class="bar"></span>
         </div>
     </nav>
-
+    {{icon.name}}{{ icon.image }}
     <div class="intro">
         <h2>Get the right sized favicon for you</h2>
         <p>Upload your image or input your text to generate your favicon</p>
@@ -68,7 +72,7 @@
     <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
         {% csrf_token %}
         <div class="upload-col">
-            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*'  required/>
             <!-- <button type="button">Upload image</button> -->
 
             <!-- <img src="images/Vector.png" alt=""> -->
@@ -85,24 +89,30 @@
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
-            <li><img src="{% static 'images/Vector (1).png' %}" alt=""></li>
+
+            {#<li><img src="{% static 'images/Vector (1).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (2).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (3).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (4).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (5).png' %}" alt="" class="hide-img"></li>
             <li><img src="{% static 'images/Vector (6).png' %}" alt="" class="hide-img"></li>
-            <li><img src="{% static 'images/Vector (7).png' %}" alt="" class="hide-img"></li>
+            <li><img src="{% static 'images/Vector (7).png' %}" alt="" class="hide-img"></li> #}
+
+            {% for recent in icons %}
+            <li>{{ recent.name }}</li>
+            {% endfor %}
+
         </ul>
     </div>
     <div class="icons">
         <ul class="recent lower">
-            <li><img src="{% static 'images/Vector (8).png' %}" alt=""></li>
+            {# <li><img src="{% static 'images/Vector (8).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (9).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (10).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (11).png' %}" alt=""></li>
             <li><img src="{% static 'images/Vector (12).png' %}" alt="" class="hide-img"></li>
             <li><img src="{% static 'images/Vector (13).png' %}" alt="" class="hide-img"></li>
-            <li><img src="{% static 'images/Vector (14).png' %}" alt="" class="hide-img"></li>
+            <li><img src="{% static 'images/Vector (14).png' %}" alt="" class="hide-img"></li> #}
         </ul>
 
         <!-- I will adjust when I have the logos from designers -->
@@ -129,19 +139,20 @@
 <script>
     const form = document.getElementById('upload');
     const modal = document.getElementById('modal');
-    const fileInput = document.getElementById('file-input').files
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        if (fileInput[0].size > 5e6) {
-            alert('file size exceeded 5 mb')
-            return
-        }
+
         const http = new XMLHttpRequest()
         const fd = new FormData(e.target)
         http.addEventListener("load", (ev) => {
             modal.style.display = 'flex'
         });
+        if (fd.get('file-input').size > 10e6) {
+            alert('file size exceeded 10 mb')
+            return
+        }
+        console.log(fd.get('file-input'), 'kfjkfjfk')
         http.addEventListener("error", (event) => {
             alert('Oops failed to upload');
         });
