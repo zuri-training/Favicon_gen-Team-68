@@ -1,5 +1,9 @@
 {% load static %}
 
+{% block extra_scripts %}
+<script src="{% static 'js/upload.js' %}" defer></script>
+{% endblock %}
+
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
@@ -102,10 +106,10 @@
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        if (fileInput[0].size > 5e6) {
-            alert('file size exceeded 5 mb')
-            return
-        }
+        //if (fileInput[0].size > 5e6) {
+           // alert('file size exceeded 5 mb')
+          //  return
+       // }
         const http = new XMLHttpRequest()
         const fd = new FormData(e.target)
         http.addEventListener("load", (ev) => {
