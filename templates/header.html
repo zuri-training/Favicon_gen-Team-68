@@ -38,7 +38,7 @@
             <span class="bar"></span>
         </div>
     </nav>
-
+    {{icon.name}}{{ icon.image }}
     <div class="intro">
         <h2>Get the right sized favicon for you</h2>
         <p>Upload your image or input your text to generate your favicon</p>
@@ -58,13 +58,9 @@
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
+            {% for recent in icons %}
+            <li>{{ recent.name }}</li>
+            {% endfor %}
         </ul>
     </div>
     <div class="icons">
