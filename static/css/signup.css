@@ -499,7 +499,7 @@ img.google {
   } 
   input {
     width: 100%;
-    height: 10%;
+    height: 3em;
   }
   .fa-eye {
     position: relative;
