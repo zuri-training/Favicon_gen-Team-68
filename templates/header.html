@@ -54,8 +54,8 @@
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
-            {% for recent in object_list %}
-            <li>{{ recent }}</li>
+            {% for recent in icons %}
+            <li>{{ recent.name }}</li>
             {% endfor %}
         </ul>
     </div>

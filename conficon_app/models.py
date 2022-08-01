@@ -47,7 +47,6 @@ class Result(models.Model):
     I figured out that we only need on upload per result.
     We will populate the 'zip_file' field in the view by using the upload field
     """
-
     name = models.CharField(max_length=100)
     upload = models.OneToOneField(Icon, on_delete=models.CASCADE)
     zip_file = models.FileField(upload_to=file_path)
