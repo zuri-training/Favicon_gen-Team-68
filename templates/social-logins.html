@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load socialaccount %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -9,15 +9,16 @@
 
     <button>
         <i class="fa-brands fa-facebook"></i>
-        
+
     </button>
     <p>Continue with Facebook</p>
 </div>
-<div class="butn2">
-    <button>
-        <img class="google" src="{% static 'images/Google_icon.png' %}"> 
-    </button>
-    <p>Continue with Google</p>
-</div>
 
-
+<a style='text-decoration: none' href={% provider_login_url 'google' %}>
+    <div class="butn2">
+        <button>
+            <img class="google" src="{% static 'images/Google_icon.png' %}">
+        </button>
+        <p>Continue with Google</p>
+    </div>
+</a>
