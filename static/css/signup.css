@@ -197,17 +197,9 @@ img.google {
   width: 16px;
   height: 16px;
 }
-.github{
-  position: absolute;
-  transform: translateY(-50%);
-  left: 25%;
-  width: 20px;
-  height: 20px;
-}
 .mobile-display {
   display: none;
 }
-
 .desktop-display {
   display: block;
 }
