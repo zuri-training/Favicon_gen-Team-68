@@ -1,9 +1,13 @@
+
+
+const darkMode = document.querySelector('.child2')
 const lightMode = document.querySelector('.child1')
 const prevModalVDiv = document.querySelector('.prev-board')
+
 darkMode.addEventListener('click', ()=>{
     lightMode.classList.remove('active-toggle')
     darkMode.classList.add('active-toggle')
-prevModalVDiv.style.backgroundColor = '#323337'
+prevModalVDiv.style.backgroundColor = '#232330'
    
 })
 lightMode.addEventListener('click' , ()=>{
@@ -12,14 +16,14 @@ lightMode.addEventListener('click' , ()=>{
     prevModalVDiv.style.backgroundColor = '#dddddd'
 })
 
-const modal = document.querySelector('#modal')
 const closeButton = document.querySelector('.close-modal');
 
 const closeModal = () =>{
-    modal.classList.add('hidden')
+    modal.style.display = 'none'
+    overlay.classList.add('hidden')
         }
- closeButton.addEventListener('click', closeModal )
- document.body.addEventListener('click', closeModal)
+ closeButton.addEventListener('click', closeModal)
+ overlay.addEventListener('click', closeModal)
 
 document.addEventListener('keydown', (e)=>{
     // console.log(e.key)

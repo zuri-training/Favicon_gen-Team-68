@@ -98,7 +98,7 @@
 <script>
     const form = document.getElementById('upload');
     const modal = document.getElementById('modal');
-
+    const overlay = document.querySelector('.overlay');
     form.addEventListener('submit', (e) => {
         e.preventDefault()
 
@@ -106,6 +106,7 @@
         const fd = new FormData(e.target)
         http.addEventListener("load", (ev) => {
             modal.style.display = 'flex'
+            overlay.classList.remove('hidden')
         });
         if (fd.get('file-input').size > 10e6) {
             alert('file size exceeded 10 mb')

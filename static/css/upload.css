@@ -24,8 +24,8 @@ section.modal {
   justify-content: center;
   gap: 2.5rem;
   transition: var(--transit);
-  animation: fadein .4s 1s forwards ease-out;
-  opacity: .2;
+  animation: fadein .4s 1s forwards linear;
+  opacity: .5;
 }
 .close-modal{
   position: absolute;
@@ -96,12 +96,13 @@ section.modal {
 }
 .prev-board{
 padding: 1em;
-  height: 14em;
+  height: 16em;
   width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #dddddd;
+  border-radius: 4px;
 }
 .child1,
 .child2 {
@@ -117,7 +118,7 @@ padding: 1em;
  border-radius: 3px;
  font-size: 0.8rem;
   transition: all 0.3s linear;
-
+cursor: pointer;
 }
 .hidden{
   display: none;
@@ -231,10 +232,10 @@ form h3 {
   background-color: #21359d;
   box-shadow: inset 0px 1px 12px rgba(67, 92, 221, 0.13);
 }
-.fa-magnifying-glass{
+.fa-download{
   display: inline;
   padding-left: 0;
-  font-size: 1.08rem;
+  font-size: 1.5rem;
 }
 .down-btn-grey {
   background: #98999b;
@@ -245,6 +246,17 @@ form h3 {
   line-height: 24px;
   border-radius: 4px;
 }
+.overlay {
+  background-color: rgb(0, 0, 0, 0.3);
+  position: absolute;
+  backdrop-filter: blur(2px);
+  top: 0;
+  z-index: -1;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  }
 @keyframes fadein {
   0% {
       opacity: 0;
@@ -289,5 +301,9 @@ form h3 {
   }
   .prev-board{
     padding-bottom: 2em;
+  }
+  .close-modal{
+    top: 1.5%;
+    left: 90%;
   }
 }
