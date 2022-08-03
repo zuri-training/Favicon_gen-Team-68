@@ -20,7 +20,7 @@
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
-        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame 137.png' %}" alt="" class="logo-img"><span>onficon</span> </a>
+        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -29,10 +29,12 @@
                         expand_more
                     </span>
                 </a>
-                <ul class="drop-down">
-                    <li><a href="">Upload Image</a></li>
-                    <li><a href="">From Text</a></li>
-                </ul>
+                <div class="sub-gen">
+                    <ul class="drop-down">
+                        <li><a href="">Upload Image</a></li>
+                        <li><a href="">From Text</a></li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -42,6 +44,12 @@
                 <a href="#" class="nav-link">Contact</a>
             </li>
             {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <span class="material-symbols-outlined">
+                    account_circle</span>
+                  Hi {{ request.user}}!</a>
+            </li>
             <li class='nav-item'>
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>
             </li>
@@ -68,15 +76,14 @@
 
     <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
         {% csrf_token %}
-        <div class="upload-col">
-            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
-            <!-- <button type="button">Upload image</button> -->
+        <div class="container">
+            <div class="file-input-cover">
+                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam"><h3 class="upload-text">Upload image</h3>
+            </div>
 
-            <!-- <img src="images/Vector.png" alt=""> -->
-            <!-- <h3>Upload image</h3> -->
-
-            <!-- i need help on how to style the file upload with the image and text above -->
-
+            <div class="upload-col">
+                <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+            </div>
         </div>
         <div class="generatediv">
             <button type="submit" class="generatebtn">Generate</button>
@@ -87,17 +94,17 @@
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
             {% for recent in icons %}
+            
             <li>{{ recent.name }}</li>
+            
             {% endfor %}
 
-        </ul>
-    </div>
-    <div class="icons">
-        <ul class="recent lower">
-        </ul>
+            <!-- what will be the file path to show the images -->
+            
 
-        <!-- I will adjust when I have the logos from designers -->
+        </ul>
     </div>
+    
     {% endif %}
 </header>
 <script>
