@@ -28,14 +28,25 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    "django.contrib.sites",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # Third party app
-    "django_extensions",
+
     # Local app
     "conficon_app.apps.ConficonAppConfig",
+
+    # Third party app
+    "django_extensions",
+    
+    # Social accounts
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
+    "allauth.socialaccount.providers.facebook",
+    "allauth.socialaccount.providers.google",
 ]
 
 MIDDLEWARE = [
@@ -66,14 +77,69 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKEND = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+SITE_ID = 1
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "APP": {
+            "client_id":
+            # os.getenv('GOOGlE_CLIENT_ID'),
+            "570722611011-luldu717veovbbnovt2mcsmq68eifhbi.apps.googleusercontent.com",
+            "secret":
+            # os.getenv('GOOGLE_SECRET'),
+            "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",
+        },
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        },
+    },
+    "facebook": {
+        "METHOD": "oauth2",
+        "SDK_URL": "//connect.facebook.net/{locale}/sdk.js",
+        "SCOPE": ["email", "public_profile"],
+        "AUTH_PARAMS": {"auth_type": "reauthenticate"},
+        "INIT_PARAMS": {"cookie": True},
+        "FIELDS": [
+            "id",
+            "first_name",
+            "last_name",
+            "middle_name",
+            "name",
+            "name_format",
+            "picture",
+            "short_name",
+        ],
+        "EXCHANGE_TOKEN": True,
+        "LOCALE_FUNC": "path.to.callable",
+        "VERIFIED_EMAIL": False,
+        "VERSION": "v13.0",
+        "APP": {
+            "client_id": os.getenv("APP_ID"),  # !!! THIS App ID
+            "secret": os.getenv("APP_SECRET"),  # !!! THIS App Secret
+            "key": "",
+        },
+    },
+}
+
 WSGI_APPLICATION = "conficon.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -91,7 +157,6 @@ if os.getenv("USE_PROD") == "1" and os.getenv("DB_PWD"):
             "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -138,6 +203,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "conficon_app.Profile"
 
+
 #SMTP (Simple Mail Transfer Protocol) Config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -147,3 +213,19 @@ EMAIL_HOST_USER = 'deborahudoh02@gmail.com'
 EMAIL_HOST_PASSWORD = os.getenv('GOOGLE_APP_PASSWORD')
 # EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+# Django allauth for social signin
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+SITE_ID = 4
+LOGIN_REDIRECT_URL = "/"
+
+# Additional configuration settings
+SOCIALACCOUNT_QUERY_EMAIL = True
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_EMAIL_REQUIRED = True
+

@@ -1,18 +1,42 @@
+{% extends 'layout.html' %}
+
 {% load static %}
 
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+{% endblock %}
 {% block extra_scripts %}
 <script src="{% static 'js/upload.js' %}" defer></script>
 {% endblock %}
 
+{% block content %}
+
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
-        <a href="#" class="nav-brand" style="color: white;">Conficon</a>
+        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="#" class="nav-link">Generate</a>
+                <a href="#" class="nav-link">Generate
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </a>
+                <div class="sub-gen">
+                    <ul class="drop-down">
+                        <li><a href="">Upload Image</a></li>
+                        <li><a href="">From Text</a></li>
+                    </ul>
+                </div>
             </li>
+
             <li class="nav-item">
                 <a href="#" class="nav-link">How it works</a>
             </li>
@@ -20,6 +44,12 @@
                 <a href="#" class="nav-link">Contact</a>
             </li>
             {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <span class="material-symbols-outlined">
+                    account_circle</span>
+                  Hi {{ request.user}}!</a>
+            </li>
             <li class='nav-item'>
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>
             </li>
@@ -46,12 +76,17 @@
 
     <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
         {% csrf_token %}
-        <div class="upload-col">
-            <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*'  />
-            <!-- <button type="button">Upload image</button> -->
+        <div class="container">
+            <div class="file-input-cover">
+                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam"><h3 class="upload-text">Upload image</h3>
+            </div>
+
+            <div class="upload-col">
+                <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+            </div>
         </div>
-        <div class="generate">
-            <button type="submit" class="generate">Generate</button>
+        <div class="generatediv">
+            <button type="submit" class="generatebtn">Generate</button>
         </div>
     </form>
     {% if request.user.is_authenticated %}
@@ -59,23 +94,17 @@
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
             {% for recent in icons %}
+            
             <li>{{ recent.name }}</li>
+            
             {% endfor %}
-        </ul>
-    </div>
-    <div class="icons">
-        <ul class="recent lower">
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-        </ul>
 
-        <!-- I will adjust when I have the logos from designers -->
+            <!-- what will be the file path to show the images -->
+            
+
+        </ul>
     </div>
+    
     {% endif %}
 </header>
 <script>
@@ -120,3 +149,5 @@
     })
 </script>
 {% endif %}
+
+{% endblock %}

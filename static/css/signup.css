@@ -11,19 +11,33 @@ form {
   transform: translate(-50% -50%);
   background-color: #ffff;
 }
+.desktop-display1{
+  display: block;
+}
+.mobile-display1{
+  display: none;
+}
 h1 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
   font-size: 30px;
+  position: relative; left: 3%;
 }
-p {
+.butn2, .butn3, p{
   font-family: "Nunito Sans", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 20px;
+}
+small{
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  position: relative; left: 6%;
 }
 header,
 p {
   margin-top: 1rem;
+  position: relative; right: 30%;
 }
 header,
 a {
@@ -47,18 +61,24 @@ a:active {
   left: 1.5em;
 }
 label {
-  display: block;
+  display: none;
   margin-top: 0.5em;
   text-align: justify;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
+  
 }
 input {
   padding: 0.3em;
-  border: solid 1.5px grey;
+  border: solid 1px grey;
   width: 30em;
   border-radius: 3px;
+  margin: 0.5em;
+  height: 2.5em;
+  box-shadow: 0px 0.5px 0px 0px gray;
+}
+::placeholder{
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
 }
 .butn1 {
   margin-top: 2em;
@@ -67,9 +87,9 @@ input {
   color: white;
   border-radius: 3px;
   height: 2em;
-  min-width: 100%;
+  min-width: 97%;
   position: relative;
-  right: 0em;
+  right: -0.5em;
   box-shadow: 0px 2px 5px gray;
 }
 .butn1:hover {
@@ -92,7 +112,7 @@ input {
   content: " ";
   display: block;
   height: 0.8px;
-  width: 10.5em;
+  width: 15em;
   position: absolute;
   top: 50%;
   left: 0;
@@ -103,7 +123,7 @@ input {
   content: " ";
   display: block;
   height: 0.8px;
-  width: 10em;
+  width: 15em;
   position: absolute;
   top: 50%;
   right: 0;
@@ -113,11 +133,11 @@ input {
 
 .butn2,
 .butn3 {
-  min-width: 100%;
+  min-width: 97%;
   padding: 0.4em 0em;
   border: none;
   margin: 1em;
-  background-color: lightsteelblue;
+  background-color: hsl(230,82%,91%);
   font-weight: 700;
   border-radius: 1px;
   text-align: center;
@@ -126,17 +146,20 @@ input {
   justify-content: center;
   flex-direction: row;
   align-content: center;
-  gap: 2em;
+  gap: 50%;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   position: relative;
-  right: 1em;
+  right: 0.5em;
 }
 .butn3 {
   height: 2em;
 }
+.butn2{
+  height: 3em;
+  right: 0.2em;
+}
 .butn2:hover {
-  padding: 0.5em 0em;
   transform: translateY(-5px);
   cursor: pointer;
   background-color: transparent;
@@ -147,7 +170,6 @@ input {
 }
 
 .butn3:hover {
-  padding: 0.5em 0em;
   transform: translateY(-5px);
   cursor: pointer;
   background-color: transparent;
@@ -162,11 +184,18 @@ button {
   background-color: transparent;
 }
 i.fa-brands {
-  color: rgb(0, 47, 255);
+  color: blue;
+  font-size: 16px;
+  position: absolute;
+  left:25%;
+  transform: translateY(-50%);
 }
 img.google {
-  width: 15px;
-  height: 15px;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 25%;
+  width: 16px;
+  height: 16px;
 }
 .mobile-display {
   display: none;
@@ -187,37 +216,61 @@ img.google {
 #hide1 {
   cursor: pointer;
 }
-
+.butn2, p{
+  font-size: 10px;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+.eyes{
+  color: grey;
+  transform: scaleX(-1);
+}
 @media (max-width: 750px) {
   * {
     width: auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 2px red;
   }
   form {
-    width: 60%;
+    width: 80%;
     position: relative;
-    left: 20%;
-  }
+    left: 4%;
+  } 
   input {
-    width: 95%;
+    width: 100%;
+    height: 3em;
   }
-  .fa-eye {
+  .eyes{
+    display: none;
     position: relative;
     left: 1%;
     transform: translate(0 -30%);
-    top: -0.5em;
+    top: -0.9em;
+  }
+  .txt-lines{
+    font-size: 13px;
+    position: relative; left: 5%;
   }
   .txt-lines::before {
-    width: 3.5em;
+    width: 7.5em;
+  }
+  h1{
+    margin-top: 3em;
+    font-size: 17px;
+    position: relative; left: 19%;
+  }
+  p{
+    left: -4%;
   }
   .txt-lines::after {
-    width: 3em;
+    width: 6em;
   }
   .fa-brands {
     position: relative;
-    top: 3%;
+    top: 65%;
     left: -3%;
   }
   .desktop-display {
@@ -226,9 +279,30 @@ img.google {
   .mobile-display {
     display: block;
   }
-  .mobile-display,
-  p {
+  .mobile-display, small{
     position: relative;
-    right: 7%;
+    left: 15%;
+  }
+  .mobile-display1{
+    display: block;
+  }
+  .desktop-display1{
+    display: none;
+  }
+  .butn1{
+    height: 3em;
+  }
+  .butn2{
+    height: 4em;
+    gap: 7em;
+  }
+  .butn3{
+    height: 3em;
+    gap: 5em;
+  }
+  small{
+    left: -5%;
+    font-size: 12px;
+    font-weight: 600;
   }
 }
