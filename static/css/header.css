@@ -37,8 +37,47 @@ header.main-header{
 .file-input::-webkit-file-upload-button{
     visibility: hidden;
 }
+
+.container{
+    position: relative;
+}
+
+.upload-text{
+    width: 229px;
+    height: 48px;
+    font-size: 36px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    color: #323337;
+    margin-left: 16px;
+    margin-top: auto;
+}
+
+.upload-image-cam{
+    width: 28px;
+    height: 24px;
+}
+
 .file-input{
+    position: absolute;
+    background-color: transparent;
+    color: #323337;
+    border-radius: 4px;
     display: inline-block;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 84px;
+    cursor: pointer;
+}
+
+
+.file-input-cover{ 
+    justify-content: center;
+    align-items: center;
+    display: flex;
     background-color: #ffff;
     color: black;
     width: 600px;
@@ -65,15 +104,21 @@ header.main-header{
 
 .icons{
     color: #ffff;
-    margin: 20px 0;
+    margin-left: 100px;
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
+    display: flex;
+    flex-direction: column;
 }
-
-
+.sub-gen{
+    display: none;
+}
+.navbar ul li:hover .sub-gen{
+    display: block;
+}
 
 .lower{
     padding-bottom: 50px;
@@ -84,6 +129,7 @@ header.main-header{
     font-weight: 600;
     margin-left: 70px;
     margin-bottom: 36px;
+    color: #ffff;
 }
 
 /* .generatediv{
@@ -148,8 +194,8 @@ a{
 }
 
 .logo-img{
-    color: #232330;
-    /* filter: brightness(0) invert(1); */
+    width: 28px;
+    height: 32px;
 }
 
 .nav-link{
@@ -179,9 +225,9 @@ a{
     margin-top: 8px;
     display: flex;
     flex-direction: column;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1; 
 }
+
 .drop-down a{
     color: #232330;
 }
@@ -229,7 +275,7 @@ a{
         gap: 0;
         flex-direction: column;
         background-color: white;
-        
+        z-index: 2;
         width: 95%;
         text-align: center;
         transition: 0.3s;
@@ -243,12 +289,16 @@ a{
     .nav-item{
         margin: 16px 0;
         border: #232330;
+        background-color: lightgray;
+        width: 100%;
     }
 
     .nav-menu.active{
         right: 0;
     }
-
+    .nav-link:hover{
+        border: none;
+    }
     .upload{
         display: block;
         justify-content: center;
@@ -256,7 +306,9 @@ a{
         margin: auto;
         width: 356px;
     }
-
+    .navbar ul li:hover .sub-gen{
+        display: block;
+    }
     .intro{
         width: 356px;
         margin: auto; 
@@ -290,11 +342,13 @@ a{
         font-size: 16px;
         line-height: 24px;
     }
-
+    .container{
+        position: relative;
+    }
     .file-input{
-        content: 'Upload image';
-        background-color: #ffff;
-        color: black;
+        position: absolute;
+        background-color: transparent;
+        color: #323337;
         border-radius: 4px;
         justify-content: center;
         align-items: center;
@@ -303,15 +357,39 @@ a{
         height: 72px;
     }
 
-    /* .generatediv{
-        background-color: #3250EC;
+    .file-input-cover{
+        background-color: #ffff;
+        color: black;
         border-radius: 4px;
-        width: 356px;
-        height: 48px;
-        padding: 16px;
-        margin-top: 8px;
+        justify-content: center;
         align-items: center;
-    } */
+        padding: 12px 0;
+        width: 356px;
+        height: 72px;
+        bottom: 50px;
+    }
+
+    .upload-text{
+        width: 116px;
+        height: 24px;
+        font-size: 16px;
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        color: #323337;
+        margin-top: auto;
+        text-align: justify;
+    }
+
+    .upload-image-cam{
+        width: 20px;
+        height: 20px;
+    }
+
+    .generatediv{
+       text-align: center;
+    }
 
     .generatebtn{     
         align-items: center;
@@ -325,6 +403,12 @@ a{
         font-size: 16px;
         line-height: 24px;
     }
+
+    .logo-img{
+        width: 24px;
+        height: 28px;
+    }
+
     .hide-img{
         display: none;
     }
@@ -337,5 +421,21 @@ a{
         font-weight: 400;
         font-family: 'Nunito Sans', sans-serif;
     }
- 
+    .drop-down{
+        background-color: steelblue;
+        border-radius: 4px;
+        padding: 4px;
+        width: 180px;
+        font-size: 16px;
+        position: absolute;
+        margin-top: 8px;
+        margin-left: 250px;
+        display: flex;
+        flex-direction: column;
+        opacity: 1; 
+        top: 40px;
+    }
+    .drop-down{
+        font-size: 16px;
+    }
 }
