@@ -203,13 +203,24 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "conficon_app.Profile"
 
+
+#SMTP (Simple Mail Transfer Protocol) Config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = 'deborahudoh02@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('GOOGLE_APP_PASSWORD')
+# EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
 # Django allauth for social signin
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
-# SITE_ID = 4
+SITE_ID = 4
 LOGIN_REDIRECT_URL = "/"
 
 # Additional configuration settings
@@ -217,3 +228,4 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+
