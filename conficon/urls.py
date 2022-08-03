@@ -22,6 +22,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path("", include("conficon_app.urls")),
+    path('accounts/', include('allauth.urls')),
 ]
 
 urlpatterns += static(
