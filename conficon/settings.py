@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
     # Third party app
     "django_extensions",
-    
+
     # Social accounts
     "allauth",
     "allauth.account",
@@ -130,6 +130,17 @@ SOCIALACCOUNT_PROVIDERS = {
             "key": "",
         },
     },
+    'github': {
+        "APP": {
+            "client_id": "368a3ebad72f7560125d",
+            "secret": "24a716f3c66f995be4a897526e247ab9ae5accd3"
+        },
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    }
 }
 
 WSGI_APPLICATION = "conficon.wsgi.application"
