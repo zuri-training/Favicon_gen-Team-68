@@ -1,11 +1,11 @@
+{% load static %}
 {% load socialaccount %}
 <a style='text-decoration: none'href="{% provider_login_url 'github' %}">
     <div class="butn3">
 
-        <!-- <button>
-            <i class="fa-brands fa-facebook"></i>
-            
-        </button> -->
+        <button>
+            <img class="github" src="{% static 'images/github2.png' %}">
+        </button>
         <p>Continue with Github</p>
     </div>
 </a>

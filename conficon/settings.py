@@ -32,11 +32,11 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "cloudinary_storage",
     "django.contrib.staticfiles",
 
+    #Third party app
+    "cloudinary_storage",
     "cloudinary",
-    "django.contrib.sites",
     # Local app
     "conficon_app.apps.ConficonAppConfig",
 
