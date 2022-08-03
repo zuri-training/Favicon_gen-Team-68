@@ -225,7 +225,7 @@ AUTHENTICATION_BACKENDS = [
 # SITE_ID = 4
 LOGIN_REDIRECT_URL = "/"
 
-Additional configuration settings
+# Additional configuration settings
 SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
