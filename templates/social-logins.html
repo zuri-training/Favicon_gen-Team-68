@@ -1,26 +1,8 @@
 {% load static %}
-{% load socialaccount %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 <p class="txt-lines">Or</p>
-    {% include 'facebook_login.html' %}
-    
-<div class="butn2">
-    <button>
-        <img class="google" src="{% static 'images/Google_icon.png' %}"> 
-    </button>
-    <p>Continue with Google</p>
-</div>
-
-
-
-<a style='text-decoration: none' href={% provider_login_url 'google' %}>
-    <div class="butn2">
-        <button>
-            <img class="google" src="{% static 'images/Google_icon.png' %}">
-        </button>
-        <p>Continue with Google</p>
-    </div>
-</a>
+{% include 'facebook_login.html' %}
+{% include 'google-login.html' %}
