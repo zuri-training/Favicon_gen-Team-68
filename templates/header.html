@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {% endblock %}
 {% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
 <script src="{% static 'js/upload.js' %}" defer></script>
 {% endblock %}
 
@@ -20,7 +21,7 @@
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
-        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
+        <a href="#" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="" class="logo-img"><span></span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -46,9 +47,9 @@
             {% if request.user.is_authenticated %}
             <li class="nav-item">
                 <a href="login.html" class="nav-link">
-                  <span class="material-symbols-outlined">
-                    account_circle</span>
-                  Hi {{ request.user}}!</a>
+                    <span class="material-symbols-outlined">
+                        account_circle</span>
+                    Hi {{ request.user}}!</a>
             </li>
             <li class='nav-item'>
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>
@@ -78,8 +79,10 @@
         {% csrf_token %}
         <div class="container">
             <div class="file-input-cover">
-                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam"><h3 class="upload-text">Upload image</h3>
+                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam">
+                <h3 class="upload-text">Upload image</h3>
             </div>
+            <span id='file-name'></span>
 
             <div class="upload-col">
                 <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
@@ -94,59 +97,29 @@
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
             {% for recent in icons %}
-            
-            <li>{{ recent.name }}</li>
-            
+
+            <a href="files/{{recent.zip_file}}">
+                <li>{{ recent.name }}</li>
+            </a>
+
+
             {% endfor %}
 
+
             <!-- what will be the file path to show the images -->
-            
+           
 
         </ul>
     </div>
-    
+
     {% endif %}
 </header>
-<script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    })
-
-    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }));
+<script src="{% static 'js/navbar.js' %}">
 </script>
 
 {% if request.user.is_authenticated %}
 
-<script>
-    const form = document.getElementById('upload');
-    const modal = document.getElementById('modal');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault()
-
-        const http = new XMLHttpRequest()
-        const fd = new FormData(e.target)
-        http.addEventListener("load", (ev) => {
-            modal.style.display = 'flex'
-        });
-        if (fd.get('file-input').size > 10e6) {
-            alert('file size exceeded 10 mb')
-            return
-        }
-        console.log(fd.get('file-input'), 'kfjkfjfk')
-        http.addEventListener("error", (event) => {
-            alert('Oops failed to upload');
-        });
-        http.open('POST', location.origin + '/upload/', true)
-        http.send(fd)
-    })
+<script src="{% static 'js/header.js' %} " defer>
 </script>
 {% endif %}
 

@@ -17,22 +17,15 @@
 
 {% block content %}
 <form method='post' action='' class="form">
-    {% csrf_token %}
-    <header>
-        <div class="desktop-display1">
-            <h1>Create a Free Account</h1>
-        </div>
-        <div class="mobile-display1">
-            <h1> Create a new account</h1>
-        </div>
-        <div class="desktop-display">
-            <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
-        </div>
+    
+    <header id="mbile">
+        <h1>Create a Free Account</h1>
+        <p><small class="down-mobile">Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
     </header>
-    <div class="frm">
+    {% csrf_token %} 
         <div class="field">
             <label for="username">Name</label>
-            <input type="text" value="{{ instance.username }}" placeholder="Username" id="username" name="username" required>
+            <input type="text" value="{{ instance.username }}" placeholder="Username" id="username" name="username" autofocus required>
         </div>
 
         <div class="field">
@@ -42,20 +35,23 @@
 
         <div class="field">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" placeholder='Password' name="password" > 
+    
             <span id="togglePassword">
-                <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
+                         <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
             </span>
+    
         </div>
+
         {% include 'flash-messages.html' %}
-        <button id="submit" class="butn1">Create account</button>
+
+      <div class="butns">
+        <div class="butn1">
+            <button type='submit' id='submit'>Create account</button>
+        </div>
 
         {% include 'social-logins.html' %}
 
-        <div class="mobile-display">
-            <p><small>Already have an account? <a href="{% url 'login' %}">login</a> </small></p>
-        </div>
-    </div>
     </div>
 </form>
 {% endblock %}
