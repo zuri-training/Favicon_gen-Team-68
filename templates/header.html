@@ -20,7 +20,7 @@
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
-        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
+        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame 259.svg' %}" alt="" class="log-img"></a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -88,7 +88,23 @@
         <div class="generatediv">
             <button type="submit" class="generatebtn">Generate</button>
         </div>
+
     </form>
+    <!-- adding the new part of generate with text -->
+
+    
+
+    <!-- <div class="textgen-container">
+        <div>
+            <p class="p-1">NEW FEATURE</p>
+            <p class="p-2">GENERATE FAVICONS FROM TEXT</p>
+            <p class="p-3">Use this tool to generate a favicon from scratch if you don't have an image or logo for your website</p>
+            <button type="submit" class="textgen-btn">Generate</button>
+        </div>
+        <div>
+            <img src="{% static 'images/Rectangle 458.svg' %}" alt="" class="textgen-img">
+        </div>
+    </div> -->
     {% if request.user.is_authenticated %}
     <div class="icons">
         <p class="recent-1">Recently generated favicons</p>
