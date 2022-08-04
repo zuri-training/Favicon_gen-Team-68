@@ -44,6 +44,7 @@ header h1{
   line-height: 64px;
   font-weight: 600;
   font-style: normal;
+<<<<<<< HEAD
 }
 header#mbile p {
   padding-top: 0.8em;
@@ -54,6 +55,18 @@ header#mbile p small a {
   text-decoration: none;
   color: var(--btncolor);
 }
+=======
+}
+header#mbile p {
+  padding-top: 0.8em;
+  font-size: 1.2rem;
+  color: rgb(41, 49, 58);
+}
+header#mbile p small a {
+  text-decoration: none;
+  color: var(--btncolor);
+}
+>>>>>>> 3b1c3e3b9d9f19c3581da34fe4950b4f8f66b3da
 .form {
   display: flex;
   flex-direction: column;
@@ -266,6 +279,13 @@ img.google {
   position: absolute;
   transform: translateY(-50%);
   left: 25%;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  width: 20px;
+  height: 20px;
+=======
+>>>>>>> Stashed changes
   width: 16px;
   height: 16px;
 }
@@ -274,6 +294,10 @@ img.google {
 }
 .desktop-display {
   display: block;
+<<<<<<< Updated upstream
+=======
+>>>>>>> 3b1c3e3b9d9f19c3581da34fe4950b4f8f66b3da
+>>>>>>> Stashed changes
 }
 #togglePassword {
   display: inline;
