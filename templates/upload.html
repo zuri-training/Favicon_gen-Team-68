@@ -9,7 +9,7 @@
             <small>Recommended sizes</small>
 
             <div class='sizes-chb'>
-                <label for='mani'><input type='checkbox' class='mani' value='mani' id='smani' name='smani' ><span>webmanifest</span></label>
+               
                 <label for='s16'><input type='checkbox' class='size-icon' value='16' id='s16' name='s16'><span>16 X 16</span></label>
                 <label for='s32'><input type='checkbox' class='size-icon' id='s32' value='32' name='s32'><span>32 X 32<span></label>
                 <label for='s96'><input type='checkbox' class='size-icon' id='s96' name='s96' value='96'><span>96 X 96</span></label>
@@ -27,14 +27,9 @@
                 <div class='cp-space'>
                     <pre id='box'>
                        
-                       {% comment %}  &Lt;link rel="manifest" href="/site.webmanifest"&gt;
-                        &lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
-                        &lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
-                        &lt;link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"&gt;
-                        &lt;link rel="icon" type="image/png" sizes="120x120" href="/favicon-120x120.png"&gt;
-                        &lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
-                        &lt;link rel="icon" type="image/png" sizes="300x300" href="/favicon-300x300.png"&gt;
-                        &lt;link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png"&gt; {% endcomment %}
+                        <code class="prettyprint">
+                        &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
+                        </code>
                        
                     </pre>
                 </div>
@@ -43,7 +38,7 @@
 
             </section>
             <div class='down-btns'>
-               <a class='down-btn-pri' download="{{result.name}}" href="{{result.zip_file}}">
+               <a class='down-btn-pri' download="{{result.name}}" href="files/{{result.zip_file}}">
                 <i class="fa-solid fa-download"></i>
                 <button  type='submit'>
                     <p>Download <i class="fa-solid fa-file-zipper"></i></p>
@@ -64,9 +59,9 @@
                 <button class='child2'>Dark</button>
             </div>
         </section>
-        
+        {%load static%}
         <section class="prev-board">
-            
+            <img class="google" src="{% static 'images/logo.svg' %}">
         </section>
     </article>
     </section>
