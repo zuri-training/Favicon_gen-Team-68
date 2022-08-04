@@ -80,6 +80,7 @@ TEMPLATES = [
 AUTHENTICATION_BACKEND = [
     # Needed to login by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
+    
     # `allauth` specific authentication methods, such as login by e-mail
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
@@ -108,7 +109,7 @@ SOCIALACCOUNT_PROVIDERS = {
         "METHOD": "oauth2",
         "SDK_URL": "//connect.facebook.net/{locale}/sdk.js",
         "SCOPE": ["email", "public_profile"],
-        "AUTH_PARAMS": {"auth_type": "reauthenticate"},
+        "AUTH_PARAMS": {"auth_type": "reauthenticate", "access_type": "online"},
         "INIT_PARAMS": {"cookie": True},
         "FIELDS": [
             "id",
@@ -125,11 +126,26 @@ SOCIALACCOUNT_PROVIDERS = {
         "VERIFIED_EMAIL": False,
         "VERSION": "v13.0",
         "APP": {
-            "client_id": os.getenv("APP_ID"),  # !!! THIS App ID
-            "secret": os.getenv("APP_SECRET"),  # !!! THIS App Secret
+            "client_id": '598815134931532', # os.getenv("APP_ID"),  # !!! THIS App ID
+            "secret": '2bf5d62e37d9793d23d586f8f536023f', # os.getenv("APP_SECRET"),  # !!! THIS App Secret
             "key": "",
         },
     },
+    'github': {
+        "METHOD": "oauth2",
+        "APP": {
+            "client_id": "368a3ebad72f7560125d",
+            "secret": "24a716f3c66f995be4a897526e247ab9ae5accd3"
+        },
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        },
+    }
 }
 
 WSGI_APPLICATION = "conficon.wsgi.application"
@@ -203,17 +219,30 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "conficon_app.Profile"
 
+
+#SMTP (Simple Mail Transfer Protocol) Config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = 'deborahudoh02@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('GOOGLE_APP_PASSWORD')
+# EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
 # Django allauth for social signin
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
-# SITE_ID = 4
+SITE_ID = 4
 LOGIN_REDIRECT_URL = "/"
 
 # Additional configuration settings
+SOCIALACCOUNT_LOGIN_ON_GET=True
 SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+

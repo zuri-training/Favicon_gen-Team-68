@@ -24,7 +24,7 @@
 
     <div class="field">
         <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Email Address" name='email'>
+        <input type="email" id="email" placeholder="Email Address" name='email' autofocus >
     </div>
 
     <div class="field">
@@ -46,7 +46,7 @@
 
         </div>
         <div class="pass">
-            <p><a href="">Forgot password?</a></p>
+            <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
         </div>
     </div>
     <div class="butns">

@@ -29,14 +29,14 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
     - To use the default sqlite database
       - run ```python manage.py makemigrations```
       - run ```python manage.py migrate```
-      - run ```python manage.py runserver```
+      - run ```python manage.py runserver localhost:8000```
     - To use MySQL as default database
       - Install [MySQL](https://www.mysql.com/downloads/)
       - create a ```.env``` file in your project root directory
       - In the ```.env``` define variable name ```USE_PROD=1``` and ```DB_PWD=<your database password>```
       - run ```python manage.py makemigrations```
       - run ```python manage.py migrate```
-      - run ```python manage.py runserver```
+      - run ```python manage.py runserver localhost:8000```
 
 
 - [Figma WorkSpace](https://www.figma.com/file/Om0i0dm6XOQN27utcHw5QD/Favicon-general?node-id=0%3A1)
