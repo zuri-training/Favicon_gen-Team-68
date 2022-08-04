@@ -36,9 +36,7 @@ section.modal {
   transition: var(--transit);
   animation: fadein 1s  forwards linear;
   opacity: .5;
-  -ms-overflow-style: none; /* IE and Edge */
-   overflow-y: scroll;
-  scrollbar-color: #3250ec; 
+ z-index: 10;
 }
 .close-modal{
   position: absolute;
