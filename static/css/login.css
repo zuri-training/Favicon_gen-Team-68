@@ -31,7 +31,7 @@ body {
   background-color: var(--backgrouncolor);
   color: var(--dark);
   font-size: var(--regularFontSize);
- 
+ overflow-y: hidden;
 }
 header#mbile {
   margin: 0% auto;
@@ -46,6 +46,7 @@ header h1{
   font-style: normal;
 }
 header#mbile p {
+  transition: none;
   padding-top: 0.8em;
   font-size: 1.2rem;
   color: rgb(41, 49, 58);
@@ -78,7 +79,7 @@ header#mbile p small a {
   position: relative;
 }
 .field input {
-  padding: 1em 0.8em;
+  padding: .8em 0.8em;
   border-radius: var(--radius);
   border: 0.8px solid var(--eyecolor);
   font-size: 18px;
@@ -91,9 +92,9 @@ header#mbile p small a {
   padding-left: 0.08em;
 }
 .field input:focus {
-   padding: 1.2em 0.8em;
+   padding: 1em 0.8em;
    outline: none;
-  box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
+  box-shadow: 0.2px 0px 2px 1.5px rgba(45, 73, 235, 0.25);
   border: 0.4px solid var(--btncolor); 
  border-radius: 8px;
   transition: all 0.2s ease-out;
@@ -142,7 +143,7 @@ header#mbile p small a {
   display: block;
   right: 3.6em;
   position: absolute;
-  bottom: 19.8em;
+  bottom: 27em;
    }
 .pass p a {
   text-decoration: none;
@@ -152,7 +153,8 @@ header#mbile p small a {
 .butns {
   display: flex;
   flex-direction: column;
-  padding: 1em 0em;
+  padding: 0em 0em;
+  margin: 1em 0em;
   gap: 1.5em;
   width: 100%;
 }
@@ -187,7 +189,7 @@ header#mbile p small a {
   text-align: center;
   max-width: 100%;
   margin: 10px auto;
-  margin-top: 3em;
+  margin-top: 3.5em;
   color: var(--eyecolor);
 }
 .txt-lines::before {
@@ -287,15 +289,15 @@ img.google {
 }
 @media only screen and (max-width: 768px) and (min-width: 200px) {
   body {
-  
+  overflow-y: hidden;
     margin: 0;
     padding: 0;
   }
   
 header#mbile{
-      margin-top: 3em;
+      margin-top: 5.8em;
    width: 100%;
-    padding: 2.8em 0em;
+    padding: 0em 0em;
     padding-bottom: .8em;
     display: flex;
     flex-direction: column;
@@ -310,6 +312,7 @@ header#mbile{
     font-style: normal;
   }
 header#mbile p{
+  z-index: 2;
      position: absolute;
      bottom: -2.4em;
      text-align: center;
@@ -324,17 +327,19 @@ header#mbile p{
  
   .pass{
     display: block;
-    right: 0;
+    right: .4em;
     position: absolute;
-    bottom: 19.8em;
+    bottom: 26em;
      }
      .txt-lines{
-      margin-top: 3em;
+      margin-top: 3.5em;
      }
   .txt-lines::before{
+    height: 0.4px;
     width: 13.5em;
   }
   .txt-lines::after{
+    height: 0.4px;
     width: 13.5em;
   }
   i.fa-brands {
@@ -353,4 +358,14 @@ header#mbile p{
     height: 20px;
   }
   
+}
+@media only screen and (max-width: 400px){
+  .txt-lines::before{
+    height: 0.4px;
+    width: 10.5em;
+  }
+  .txt-lines::after{
+    height: 0.4px;
+    width: 10.5em;
+  }
 }
