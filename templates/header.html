@@ -21,7 +21,7 @@
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar">
-        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
+        <a href="#" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -47,9 +47,9 @@
             {% if request.user.is_authenticated %}
             <li class="nav-item">
                 <a href="login.html" class="nav-link">
-                  <span class="material-symbols-outlined">
-                    account_circle</span>
-                  Hi {{ request.user}}!</a>
+                    <span class="material-symbols-outlined">
+                        account_circle</span>
+                    Hi {{ request.user}}!</a>
             </li>
             <li class='nav-item'>
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>
@@ -79,7 +79,8 @@
         {% csrf_token %}
         <div class="container">
             <div class="file-input-cover">
-                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam"><h3 class="upload-text">Upload image</h3>
+                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam">
+                <h3 class="upload-text">Upload image</h3>
             </div>
 
             <div class="upload-col">
@@ -95,19 +96,21 @@
         <p class="recent-1">Recently generated favicons</p>
         <ul class="recent">
             {% for recent in icons %}
-            
-            <a href="files/{{recent.zip_file}}"><li>{{ recent.name }}</li></a>
-            
-            
+
+            <a href="files/{{recent.zip_file}}">
+                <li>{{ recent.name }}</li>
+            </a>
+
+
             {% endfor %}
 
 
             <!-- what will be the file path to show the images -->
-            
+
 
         </ul>
     </div>
-    
+
     {% endif %}
 </header>
 <script>
@@ -138,7 +141,7 @@
         const fd = new FormData(e.target)
         http.addEventListener("load", (ev) => {
             modal.style.display = 'flex'
-          
+
         });
         if (fd.get('file-input').size > 10e6) {
             alert('file size exceeded 10 mb')
