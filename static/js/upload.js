@@ -52,29 +52,25 @@ function CopyToClipboard(containerId) {
 //Adding embedded html code from the user selection of preferred sizes
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-const insertDiv = document.getElementById("box");
+const insertDiv = document.querySelector(".prettyprint");
 
 /*  function func() {
       checkboxes[1].checked = true;
   } */
+let sizes = []
 
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("click", function (i) {
     let value = i.target.value;
     let iconType = i.target.classList.value;
     let checked = i.target.checked;
+    let valueSet = `${value}x${value}`
     console.log(value, iconType, checked);
-    let html2 = ` &lt;link rel="manifest" href="/site.webmanifest"&gt; `;
-    let html3 = `<code class="prettyprint"> &lt;link rel="apple-touch-icon" sizes="${i.value}x${i.value}" href="/apple-touch-icon.png"&gt; </code>`;
-    let html1 = `<code class="prettyprint"> &lt;link rel="icon" type="image/png" sizes="${value}x${value}" href="/favicon-${value}x${value}.png"&gt; </code>`;
+   
     if ((checked = true)) {
-      if (iconType == "size-icon") {
-        insertDiv.insertAdjacentHTML("afterbegin", html1 + "\n");
-      } else if (iconType == "mani") {
-        insertDiv.insertAdjacentHTML("afterbegin", html2 + "\n");
-      } else if (iconType == "apple") {
-        insertDiv.insertAdjacentHTML("afterbegin", html3 + "\n");
-      }
+     sizes.push(valueSet)
+     console.log(sizes);
+     console.log(insertDiv.classList)
     } else if ((checked = false)) {
       insertDiv.textContent = "";
     }
