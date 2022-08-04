@@ -9,13 +9,14 @@
             <small>Recommended sizes</small>
 
             <div class='sizes-chb'>
-                <label for='s16'><input type='checkbox' value='16' id='s16' name='s16'><span>16 X 16</span></label>
-                <label for='s32'><input type='checkbox' id='s32' value='32' name='s32'><span>32 X 32<span></label>
-                <label for='s96'><input type='checkbox' id='s96' name='s96' value='96'><span>96 X 96</span></label>
-                <label for='s120'><input type='checkbox' id='s120' name='s120' value='120'><span>120 X 120</span></label>
-                <label for='s180'><input type='checkbox' id='s180' name='s180' value='180'><span>180 X 180</span></label>
-                <label for='s300'><input type='checkbox' id='s300' name='s300' value='300'><span>300 X 300</span></label>
-                <label for='s512'><input type='checkbox' id='s512' name='s512' value='512'><span>512 X 512</span></label>
+                <label for='mani'><input type='checkbox' class='mani' value='mani' id='smani' name='smani' ><span>webmanifest</span></label>
+                <label for='s16'><input type='checkbox' class='size-icon' value='16' id='s16' name='s16'><span>16 X 16</span></label>
+                <label for='s32'><input type='checkbox' class='size-icon' id='s32' value='32' name='s32'><span>32 X 32<span></label>
+                <label for='s96'><input type='checkbox' class='size-icon' id='s96' name='s96' value='96'><span>96 X 96</span></label>
+                <label for='s120'><input type='checkbox' class='size-icon' id='s120' name='s120' value='120'><span>120 X 120</span></label>
+                <label for='s180'><input type='checkbox' class='apple' id='s180' name='s180' value='180'><span>180 X 180</span></label>
+                <label for='s300'><input type='checkbox' class='size-icon' id='s300' name='s300' value='300'><span>300 X 300</span></label>
+                <label for='s512'><input type='checkbox' class='size-icon' id='s512' name='s512' value='512'><span>512 X 512</span></label>
             </div>
 
 
@@ -24,20 +25,35 @@
                 
 
                 <div class='cp-space'>
-                    <pre>&lt;link rel="apple-touch-icon" sizes="32 X 32"&gt;</pre>
+                    <pre id='box'>
+                       
+                       {% comment %}  &Lt;link rel="manifest" href="/site.webmanifest"&gt;
+                        &lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
+                        &lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
+                        &lt;link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"&gt;
+                        &lt;link rel="icon" type="image/png" sizes="120x120" href="/favicon-120x120.png"&gt;
+                        &lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
+                        &lt;link rel="icon" type="image/png" sizes="300x300" href="/favicon-300x300.png"&gt;
+                        &lt;link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png"&gt; {% endcomment %}
+                       
+                    </pre>
                 </div>
                 <h4>Copy HTML code after Generating favicon</h4>
               
 
             </section>
-        </form>
-        <div class='down-btns'>
-            <button class='down-btn-pri' type='submit'>
+            <div class='down-btns'>
+               <a class='down-btn-pri' download="{{result.name}}" href="{{result.zip_file}}">
                 <i class="fa-solid fa-download"></i>
-                <p>Download</p>
-            </button>
-            <button class='down-btn-grey'>Copy HTML</button>
-        </div>
+                <button  type='submit'>
+                    <p>Download <i class="fa-solid fa-file-zipper"></i></p>
+                </button>
+                </a>
+                <button class='down-btn-grey' onclick="CopyToClipboard('cp-space')">Copy HTML</button>
+            </div>
+            
+        </form>
+       
     </article>
 
     <article class='modal-right'>
@@ -54,5 +70,5 @@
         </section>
     </article>
     </section>
-    <div class="hidden overlay"></div>
+
 {% endif %}

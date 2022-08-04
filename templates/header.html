@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {% endblock %}
 {% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
 <script src="{% static 'js/upload.js' %}" defer></script>
 {% endblock %}
 
@@ -137,7 +138,7 @@
         const fd = new FormData(e.target)
         http.addEventListener("load", (ev) => {
             modal.style.display = 'flex'
-            overlay.classList.remove('hidden')
+          
         });
         if (fd.get('file-input').size > 10e6) {
             alert('file size exceeded 10 mb')
