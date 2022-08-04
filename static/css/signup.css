@@ -194,6 +194,13 @@ img.google {
   position: absolute;
   transform: translateY(-50%);
   left: 25%;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  width: 20px;
+  height: 20px;
+=======
+>>>>>>> Stashed changes
   width: 16px;
   height: 16px;
 }
@@ -202,6 +209,10 @@ img.google {
 }
 .desktop-display {
   display: block;
+<<<<<<< Updated upstream
+=======
+>>>>>>> vi
+>>>>>>> Stashed changes
 }
 #togglePassword {
   display: inline;
