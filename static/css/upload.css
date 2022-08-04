@@ -10,6 +10,16 @@
 :root{
   --transit: all 0.3s linear;
 }
+
+.cp-space::-moz-selection{
+  color: #ffffff;
+  background-color: #3250ec;
+}
+.cp-space::selection{
+  color: #ffffff;
+  background-color: #3250ec;
+}
+
 section.modal {
   border: 1px solid #545558;
   position: absolute;
@@ -24,12 +34,15 @@ section.modal {
   justify-content: center;
   gap: 2.5rem;
   transition: var(--transit);
-  animation: fadein .4s 1s forwards linear;
+  animation: fadein 1s  forwards linear;
   opacity: .5;
+  -ms-overflow-style: none; /* IE and Edge */
+   overflow-y: scroll;
+  scrollbar-color: #3250ec; 
 }
 .close-modal{
   position: absolute;
-  top: 2%;
+  top: 4%;
   padding: .05em .4em;
   left: 95%;
   font-weight: 700;
@@ -102,7 +115,7 @@ padding: 1em;
   justify-content: center;
   align-items: center;
   background-color: #dddddd;
-  border-radius: 4px;
+  border-radius: 16px;
 }
 .child1,
 .child2 {
@@ -110,7 +123,7 @@ padding: 1em;
   border: none;
   border-radius: 2px;
   padding: .4em .6em;
-  background: transparent;
+  color: #191a1c;
 }
 .child1:hover,
 .child2:hover {
@@ -167,17 +180,20 @@ form h3 {
   line-height: 24px;
 }
 .cp-space {
-  padding: 1em 0em;
-  margin: 0em .6em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0em .6em;
+  margin: 0em 0em;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   overflow-x: scroll;
   scrollbar-color: #3250ec; 
   font-size: 0.8rem;
   background: #ddd;
-  color: #545558;
-  border-radius: 4px;
-  text-align: center;
+   border-radius: 4px;
+
 }
 .cp-space::-webkit-scrollbar {
   display: none;
@@ -212,7 +228,18 @@ form h3 {
   line-height: 24px;
   border-radius: 4px;
 }
-
+a,button{
+  text-decoration: none;
+background-color: transparent;
+border: none;
+outline: none;
+font-size: 1.08rem;
+color: #f5f5f5;
+font-weight: 800;
+letter-spacing: 0.02em;
+line-height: 24px;
+border-radius: 4px;
+}
 .down-btn-grey:hover{
   box-shadow: inset 4px 4px 12px rgb(152, 167, 245, 0.25);
  background-color: #f5f5f5;
@@ -237,6 +264,10 @@ form h3 {
   padding-left: 0;
   font-size: 1.5rem;
 }
+.fa-file-zipper{
+  padding: 0;
+  font-size: .8rem;
+}
 .down-btn-grey {
   background: #98999b;
   font-size: 1.08rem;
@@ -246,17 +277,7 @@ form h3 {
   line-height: 24px;
   border-radius: 4px;
 }
-.overlay {
-  background-color: rgb(0, 0, 0, 0.3);
-  position: absolute;
-  backdrop-filter: blur(2px);
-  top: 0;
-  z-index: -1;
-  left: 0;
-  
-  width: 100%;
-  height: 100%;
-  }
+
 @keyframes fadein {
   0% {
       opacity: 0;
@@ -284,6 +305,14 @@ form h3 {
   
 }
 @media (max-width: 768px) {
+  .cp-space::-moz-selection{
+    color: #ffffff;
+    background-color: #3250ec;
+  }
+  .cp-space::selection{
+    color: #ffffff;
+    background-color: #3250ec;
+  }
   section.modal {
     width: 90%;
     flex-direction: column;
@@ -303,7 +332,7 @@ form h3 {
     padding-bottom: 2em;
   }
   .close-modal{
-    top: 1.5%;
+    top: 4%;
     left: 90%;
   }
 }
