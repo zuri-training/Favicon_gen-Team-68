@@ -70,7 +70,7 @@ span{
     font-size: 52px;
     line-height: 64px;
     width: 720px;
-    height: 128px;
+    height: 180px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -84,12 +84,13 @@ span{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 80px 108px 100px;
-    gap: 176px;
-
+    justify-content: space-evenly;
+    /* padding: 100px 108px; */
+    gap: 10px;
     /* width: 1440px; */
     width: 100%;
-    height: 540px;
+    height: 560px;
+    background: #FFFFFF;
 }
 
 .empty-2{
