@@ -1,0 +1,10 @@
+{% load static %}
+{% load socialaccount %}
+<a style='text-decoration: none' href="{% provider_login_url 'google' %}">
+    <div class="butn2">
+        <button>
+            <img class="google" src="{% static 'images/Google_icon.png' %}">
+        </button>
+        <p>Continue with Google</p>
+    </div>
+</a>

@@ -1,0 +1,18 @@
+*,
+html,
+body,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: #3250ec;
+}
+input{
+  outline: #3250ec;
+}
+
+html {
+  font-size: 10px;
+
+}

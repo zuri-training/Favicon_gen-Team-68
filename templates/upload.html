@@ -1,4 +1,58 @@
-<section class='model'>
+{% if request.user.is_authenticated %}
+<section class='modal' id='modal'>
+    <button class="close-modal">&times;</button>
+    <article class='modal-left'>
+        <form method='post' action={% url 'result' %} id='result-gen'>
+            {% csrf_token %}
+            <h3>Download favicon size</h3>
 
-  <h1>I am upload</h1>
-</section>
+            <small>Recommended sizes</small>
+
+            <div class='sizes-chb'>
+                <label for='s16'><input type='checkbox' value='16' id='s16' name='s16'><span>16 X 16</span></label>
+                <label for='s32'><input type='checkbox' id='s32' value='32' name='s32'><span>32 X 32<span></label>
+                <label for='s96'><input type='checkbox' id='s96' name='s96' value='96'><span>96 X 96</span></label>
+                <label for='s120'><input type='checkbox' id='s120' name='s120' value='120'><span>120 X 120</span></label>
+                <label for='s180'><input type='checkbox' id='s180' name='s180' value='180'><span>180 X 180</span></label>
+                <label for='s300'><input type='checkbox' id='s300' name='s300' value='300'><span>300 X 300</span></label>
+                <label for='s512'><input type='checkbox' id='s512' name='s512' value='512'><span>512 X 512</span></label>
+            </div>
+
+
+            <section class='cp-dwld-icons'>
+
+                
+
+                <div class='cp-space'>
+                    <pre>&lt;link rel="apple-touch-icon" sizes="32 X 32"&gt;</pre>
+                </div>
+                <h4>Copy HTML code after Generating favicon</h4>
+              
+
+            </section>
+        </form>
+        <div class='down-btns'>
+            <button class='down-btn-pri' type='submit'>
+                <i class="fa-solid fa-download"></i>
+                <p>Download</p>
+            </button>
+            <button class='down-btn-grey'>Copy HTML</button>
+        </div>
+    </article>
+
+    <article class='modal-right'>
+        <section class='modal-right-hds'>
+            <small class='ex-left'>Preview</small>
+            <div class='ex-right-btns'>
+                <button class='child1 active-toggle'>Light</button>
+                <button class='child2'>Dark</button>
+            </div>
+        </section>
+        
+        <section class="prev-board">
+            
+        </section>
+    </article>
+    </section>
+    <div class="hidden overlay"></div>
+{% endif %}

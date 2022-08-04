@@ -1,8 +1,156 @@
-<header>
-  <h1>I am header</h1>
-  <hr />
-  {# After all the header navbar and others #}
+{% extends 'layout.html' %}
 
-  {% include 'upload.html' %}
+{% load static %}
 
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+{% endblock %}
+{% block extra_scripts %}
+<script src="{% static 'js/upload.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+
+<header class='main-header'>
+    {% include 'upload.html' %}
+    <nav class="navbar">
+        <a href="#" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame logo.svg' %}" alt="" class="logo-img"><span>onficon</span> </a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Generate
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </a>
+                <div class="sub-gen">
+                    <ul class="drop-down">
+                        <li><a href="">Upload Image</a></li>
+                        <li><a href="">From Text</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">How it works</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <span class="material-symbols-outlined">
+                    account_circle</span>
+                  Hi {{ request.user}}!</a>
+            </li>
+            <li class='nav-item'>
+                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a href="{% url 'signup' %}" class="nav-link">Signup</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'login' %}" class="nav-link">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    {{icon.name}}{{ icon.image }}
+    <div class="intro">
+        <h2>Get the right sized favicon for you</h2>
+        <p>Upload your image or input your text to generate your favicon</p>
+    </div>
+
+    <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
+        {% csrf_token %}
+        <div class="container">
+            <div class="file-input-cover">
+                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam"><h3 class="upload-text">Upload image</h3>
+            </div>
+
+            <div class="upload-col">
+                <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+            </div>
+        </div>
+        <div class="generatediv">
+            <button type="submit" class="generatebtn">Generate</button>
+        </div>
+    </form>
+    {% if request.user.is_authenticated %}
+    <div class="icons">
+        <p class="recent-1">Recently generated favicons</p>
+        <ul class="recent">
+            {% for recent in icons %}
+            
+            <a href="files/{{recent.zip_file}}"><li>{{ recent.name }}</li></a>
+            
+            
+            {% endfor %}
+
+
+            <!-- what will be the file path to show the images -->
+            
+
+        </ul>
+    </div>
+    
+    {% endif %}
 </header>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }));
+</script>
+
+{% if request.user.is_authenticated %}
+
+<script>
+    const form = document.getElementById('upload');
+    const modal = document.getElementById('modal');
+    const overlay = document.querySelector('.overlay');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        const http = new XMLHttpRequest()
+        const fd = new FormData(e.target)
+        http.addEventListener("load", (ev) => {
+            modal.style.display = 'flex'
+            overlay.classList.remove('hidden')
+        });
+        if (fd.get('file-input').size > 10e6) {
+            alert('file size exceeded 10 mb')
+            return
+        }
+        console.log(fd.get('file-input'), 'kfjkfjfk')
+        http.addEventListener("error", (event) => {
+            alert('Oops failed to upload');
+        });
+        http.open('POST', location.origin + '/upload/', true)
+        http.send(fd)
+    })
+</script>
+{% endif %}
+
+{% endblock %}
