@@ -437,4 +437,8 @@ a {
   .drop-down {
     font-size: 16px;
   }
+  nav.navbar.sticky {
+    position: sticky;
+    top: 0;
+  }
 }
