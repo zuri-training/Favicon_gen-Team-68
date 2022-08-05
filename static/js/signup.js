@@ -12,7 +12,7 @@ toggle.addEventListener("click", () => {
   }
 });
 
-const login = document.getElementById("submit");
-login.addEventListener("click", () => {
-  login.textContent = "Authenticating....";
+const signup = document.getElementById("submit");
+signup.addEventListener("click", () => {
+  signup.textContent = "Creating account....";
 });

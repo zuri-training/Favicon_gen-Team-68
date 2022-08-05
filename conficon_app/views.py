@@ -151,5 +151,6 @@ def result(request):
         zip_file=zipf,
         user=request.user,
     )
+    return redirect('upload')
     print(result)
     return render(request, "index.html", {"result": result})

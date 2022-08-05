@@ -7,6 +7,18 @@
   font-family: "Nunito Sans", sans-serif;
   /* outline: solid 2px red; */
 }
+:root{
+  --transit: all 0.3s linear;
+}
+
+.cp-space::-moz-selection{
+  color: #ffffff;
+  background-color: #3250ec;
+}
+.cp-space::selection{
+  color: #ffffff;
+  background-color: #3250ec;
+}
 
 section.modal {
   border: 1px solid #545558;
@@ -21,6 +33,31 @@ section.modal {
   display: none; /* this will be 'flex' after successful upload else 'none' */
   justify-content: center;
   gap: 2.5rem;
+  transition: var(--transit);
+  animation: fadein 1s  forwards linear;
+  opacity: .5;
+ z-index: 10;
+}
+.close-modal{
+  position: absolute;
+  top: 4%;
+  padding: .05em .4em;
+  left: 95%;
+  font-weight: 700;
+  font-size:2rem;
+  border: 1px solid #3250ec;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #3250ec;
+  position: absolute;
+  background-color: #f5f5f5;
+  transform: translate (-50%, -0%); 
+}
+.close-modal:hover{
+  background-color: #3250ec;
+  color: #ffffff;
+  border: none;
+  transition: all .3s ease-out;
 }
 .modal-left form h3 {
   padding-left: .4em;
@@ -39,10 +76,10 @@ section.modal {
 }
 .modal-left{
   width: calc(100%/2);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .modal-right {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,24 +91,29 @@ section.modal {
   border-radius: 14px;
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0.08em;
+ 
+
 }
 .modal-right-hds {
+ 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: 2px solid #f5f5f5;
   height: 3em;
-  width: 21em;
+  width: 90%;
   padding: 0 1.5em;
 }
 .prev-board{
 padding: 1em;
-  height: 13em;
-  width: 21em;
+  height: 16em;
+  width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   background-color: #dddddd;
+  border-radius: 16px;
 }
 .child1,
 .child2 {
@@ -79,14 +121,22 @@ padding: 1em;
   border: none;
   border-radius: 2px;
   padding: .4em .6em;
-  background: transparent;
+  color: #191a1c;
 }
 .child1:hover,
 .child2:hover {
-  opacity: 0.5;
+ border: 1px solid #a7c6ff;
+ border-radius: 3px;
+ font-size: 0.8rem;
+  transition: all 0.3s linear;
+cursor: pointer;
+}
+.hidden{
+  display: none;
 }
 .active-toggle{
   background-color: #a7c6ff;
+  transition: all ease-in-out;
 }
 .ex-right-btns {
   display: flex;
@@ -128,16 +178,20 @@ form h3 {
   line-height: 24px;
 }
 .cp-space {
-  padding: 1em 0em;
-  margin: 0em .6em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0em .6em;
+  margin: 0em 0em;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   overflow-x: scroll;
+  scrollbar-color: #3250ec; 
   font-size: 0.8rem;
   background: #ddd;
-  color: #545558;
-  border-radius: 4px;
-  text-align: center;
+   border-radius: 4px;
+
 }
 .cp-space::-webkit-scrollbar {
   display: none;
@@ -172,10 +226,45 @@ form h3 {
   line-height: 24px;
   border-radius: 4px;
 }
-.fa-magnifying-glass{
+a,button{
+  text-decoration: none;
+background-color: transparent;
+border: none;
+outline: none;
+font-size: 1.08rem;
+color: #f5f5f5;
+font-weight: 800;
+letter-spacing: 0.02em;
+line-height: 24px;
+border-radius: 4px;
+}
+.down-btn-grey:hover{
+  box-shadow: inset 4px 4px 12px rgb(152, 167, 245, 0.25);
+ background-color: #f5f5f5;
+ color: #21359d;
+  border: 1px solid #3250ec;
+  padding: .6em 0em;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in;
+}
+.down-btn-pri:hover{
+  transition: all 0.3s ease-in;
+  box-shadow: 0px 12px 16px rgba(150, 150, 209, 0.253);
+   padding: .6em 0em;
+   font-size: 1.2rem;
+}
+.down-btn-pri:visited{
+  background-color: #21359d;
+  box-shadow: inset 0px 1px 12px rgba(67, 92, 221, 0.13);
+}
+.fa-download{
   display: inline;
   padding-left: 0;
-  font-size: 1.08rem;
+  font-size: 1.5rem;
+}
+.fa-file-zipper{
+  padding: 0;
+  font-size: .8rem;
 }
 .down-btn-grey {
   background: #98999b;
@@ -187,7 +276,41 @@ form h3 {
   border-radius: 4px;
 }
 
-@media (max-width: 600px) {
+@keyframes fadein {
+  0% {
+      opacity: 0;
+      transform: scale();
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes fadeup {
+  0% {
+      transform: translateY(50px);
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+@media  (min-width: 769px) and (max-width:1024px){
+  section.modal {
+    width: 80%;
+  }
+
+  
+}
+@media (max-width: 768px) {
+  .cp-space::-moz-selection{
+    color: #ffffff;
+    background-color: #3250ec;
+  }
+  .cp-space::selection{
+    color: #ffffff;
+    background-color: #3250ec;
+  }
   section.modal {
     width: 90%;
     flex-direction: column;
@@ -196,8 +319,18 @@ form h3 {
   .modal article {
     width: 100%;
   }
-
+.modal-left{
+  height: 60%;
+}
   .modal-right {
-    min-height: 200px;
+   
+    min-height: 50%;
+  }
+  .prev-board{
+    padding-bottom: 2em;
+  }
+  .close-modal{
+    top: 4%;
+    left: 90%;
   }
 }
