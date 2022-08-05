@@ -57,6 +57,7 @@ const insertDiv = document.querySelector(".prettyprint");
       checkboxes[1].checked = true;
   } */
 let sizes = []
+let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`
 
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("click", function (i) {
@@ -68,11 +69,11 @@ for (let i = 0; i < checkboxes.length; i++) {
    
     if ((checked = true)) {
      sizes.push(valueSet)
-     console.log(sizes);
-    
+     console.log(sizes.join(' '));
+     
     } else if ((checked = false)) {
       insertDiv.textContent = "";
     }
   });
 }
-
+insertDiv.textContent = faviconLink

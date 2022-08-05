@@ -1,6 +1,6 @@
 {% if request.user.is_authenticated %}
 <section class='modal' id='modal'>
-    <button class="close-modal">&times;</button>
+    <button class="close-modal"><i class="fa-solid fa-arrow-left"></i></button>
     <article class='modal-left'>
         <form method='post' action={% url 'result' %} id='result-gen'>
             {% csrf_token %}
@@ -23,12 +23,8 @@
             <section class='cp-dwld-icons'>
                 <h4>Copy HTML code after Generating favicon</h4>
                 <div class='cp-space'>
-                    <pre id='box'>
-                       
-                        <code class="prettyprint">
-                        &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
-                        </code>
-                       
+                    <pre class="prettyprint">
+                     &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
                     </pre>
                 </div>
                 
