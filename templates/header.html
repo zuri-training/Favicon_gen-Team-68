@@ -99,7 +99,7 @@
             {% for recent in icons %}
 
             <li>
-                <a href="{{ recent.upload.image.url }}" download='favicon.ico'>
+                <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
                     <img src="{{ recent.upload.image.url }}" />
                 </a>
             </li>
