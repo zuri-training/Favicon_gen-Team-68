@@ -1,32 +1,34 @@
-*, html {
+*,
+html {
   margin: 0%;
-  padding: 0%;    
+  padding: 0%;
 }
 Footer div a,
 #About_Conficons div h2,
 Footer div h3,
-#About_Conficons div p, #footer_top span {
+#About_Conficons div p,
+#footer_top span {
   text-decoration: none;
   font-family: Dosis, sans-serif;
   font-weight: 600;
 }
-#About_Conficons {    
-  text-align: center; 
+#About_Conficons {
+  text-align: center;
   background-color: white;
 }
 #About_Conficons div h2 {
   font-size: 36px;
-  color: #191A1C;
+  color: #191a1c;
   font-weight: 700;
   padding: 100px 0 50px;
 }
 #About_Conficons div p {
   color: #323337;
-  line-height: 1.4rem;    
+  line-height: 1.4rem;
   padding-bottom: 100px;
-  width: 80%;    
+  width: 80%;
   font-size: 17px;
-  margin: 0 auto;   
+  margin: 0 auto;
 }
 #for_gap {
   background-color: white;
@@ -34,7 +36,7 @@ Footer div h3,
 
 div.fav {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   background-color: #232330;
   padding: 70px 0;
 }
@@ -44,7 +46,7 @@ Footer div span {
   font-size: 20px;
 }
 Footer div a {
-  color: #98999B;
+  color: #98999b;
   font-weight: 500;
   font-size: 16px;
   display: block;
@@ -53,34 +55,38 @@ Footer div a:hover {
   color: rgba(0, 128, 0, 0.927);
 }
 footer {
-  background-color: #232330;  
-  padding: 100px 0;     
+  background-color: #232330;
+  padding: 100px 0;
 }
-footer div#footer_top, footer div#footer_special {
+footer div#footer_top,
+footer div#footer_special {
   display: flex;
   line-height: 2.5rem;
-  justify-content: space-evenly;        
-  font-weight: normal;    
+  justify-content: space-evenly;
+  font-weight: normal;
 }
-footer div#footer_special{
+footer div#footer_special {
   width: 60%;
   justify-content: space-between;
   padding-bottom: 80px;
 }
 div.group {
   width: 20%;
-} 
+}
+.group a {
+  min-width: 25ch;
+}
 span.spec {
   font-weight: normal;
   font-size: 17px;
   display: block;
-  color: #D6D6D7;
+  color: #d6d6d7;
 }
-.footer_column1{
+.footer_column1 {
   text-align: center;
 }
-footer div#footer_top div span img{
-  width: 120px;    
+footer div#footer_top div span img {
+  width: 120px;
 }
 div.icons {
   display: flex;
@@ -90,195 +96,197 @@ div.icons {
   color: white;
   font-size: 30px;
 }
-footer div.copy-icon{
+footer div.copy-icon {
   display: flex;
   justify-content: space-evenly;
 }
 .copyright {
   color: white;
-  font-size: 18px;    
+  font-size: 18px;
   font-family: Dosis, sans-serif;
   font-weight: 400;
 }
-a#arrowup i{
+a#arrowup i {
   color: white;
   font-size: 35px;
 }
-@media(max-width:768px) {    
+@media (max-width: 768px) {
   /* *, body, html{
       width: 100%;
   } */
   #About_Conficons {
-      background-color: #56CCF2;
-      padding: 50px 0;
+    background-color: #56ccf2;
+    padding: 50px 0;
   }
-  #About_Conficons div h2 {        
-      padding: 100px 0 50px;
+  #About_Conficons div h2 {
+    padding: 100px 0 50px;
   }
   #About_Conficons div p {
-      padding-bottom: 80px;        
-      width: 80%;    
-      font-size: 15px;        
-      font-weight: 400;
-  }    
-  div.fav {
-      justify-content:space-evenly;        ;    
-      background-color: white;
-      padding: 50px 0 20px;
+    padding-bottom: 80px;
+    width: 80%;
+    font-size: 15px;
+    font-weight: 400;
   }
-  div.fav img{
-      width: 35px;
+  div.fav {
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 50px 0 20px;
+  }
+  div.fav img {
+    width: 35px;
   }
   Footer div h3,
   Footer div span {
-      color: white;
-      font-size: 30px;
+    color: white;
+    font-size: 30px;
   }
   span.spec {
-      font-weight: 100;
-      font-size: 24px;        
+    font-weight: 100;
+    font-size: 24px;
   }
   div.icons {
-      display: flex;            
+    display: flex;
   }
   .Icons i {
-      color: white;
-      font-size: 25px;        
-  }   
+    color: white;
+    font-size: 25px;
+  }
   Footer div a {
-      color: #98999B;
-      font-weight: 500;
-      font-size: 16px;
-      display: block;
-  }    
-  footer div#footer_top div span img{
-      width: 100px;
+    color: #98999b;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+  }
+  footer div#footer_top div span img {
+    width: 100px;
   }
   footer {
-      background-color: #232330;  
-      padding: 100px 0;     
+    background-color: #232330;
+    padding: 100px 0;
   }
-  footer div#footer_top, footer div#footer_special {
-      display: block;
-      line-height: 2.9rem;
-      text-align: center;    
-      font-size: 15px;
-      font-weight: normal;    
+  footer div#footer_top,
+  footer div#footer_special {
+    display: block;
+    line-height: 2.9rem;
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
   }
-  footer div#footer_special{
-      display:flex;
-      flex-wrap: wrap;  
-      line-height: 2.0rem;
-      width: 100%;        
-      text-align: start;
-      padding: 50px 0;
+  footer div#footer_special {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 2rem;
+    width: 100%;
+    text-align: start;
+    padding: 50px 0;
   }
   div.group {
-      width: 40%;
-      margin: 0 auto;
-  } 
-   .copyright {
-      color: white;
-      font-size: 18px;
-      text-align: center;
-      font-family: Dosis, sans-serif;
-      font-weight: 400;
+    width: 40%;
+    margin: 0 auto;
   }
-  a#arrowup i{
-      color: white;
-      font-size: 25px;
-  }    
-}    
-@media(max-width:400px) {
-  *, html {
-      margin: 0%;
-      padding: 0%;    
+  .copyright {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: Dosis, sans-serif;
+    font-weight: 400;
   }
-  #About_Conficons div h2 {        
-      padding-bottom: 30px;
+  a#arrowup i {
+    color: white;
+    font-size: 25px;
+  }
+}
+@media (max-width: 400px) {
+  *,
+  html {
+    margin: 0%;
+    padding: 0%;
+  }
+  #About_Conficons div h2 {
+    padding-bottom: 30px;
   }
   #About_Conficons div p {
-      padding-bottom: 50px;        
-      width: 80%;    
-      font-size: 14px;        
-      font-weight: normal;
-      line-height: 1.3rem;
-  }    
+    padding-bottom: 50px;
+    width: 80%;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.3rem;
+  }
   div.fav {
-      justify-content:space-evenly;        ;    
-      background-color: white;
-      padding: 50px 0 0;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 50px 0 0;
   }
-  div.fav img{
-      width: 25px;
-      height: 25px;
+  div.fav img {
+    width: 25px;
+    height: 25px;
   }
-  Footer div h3{
-      font-size: 16px;
+  Footer div h3 {
+    font-size: 16px;
   }
   Footer div h3,
   Footer div span {
-      color: white;
-      font-size: 22px;
+    color: white;
+    font-size: 22px;
   }
-  Footer div h3{
-      font-size: 14px;
-      font-weight: normal;
+  Footer div h3 {
+    font-size: 14px;
+    font-weight: normal;
   }
   span.spec {
-      font-weight: 100;
-      font-size: 15px;   
-      
+    font-weight: 100;
+    font-size: 15px;
   }
   div.icons {
-      display: flex;        
-      justify-content: space-evenly;        
+    display: flex;
+    justify-content: space-evenly;
   }
   .Icons i {
-      color: white;
-      font-size: 20px;        
-  }   
+    color: white;
+    font-size: 20px;
+  }
   Footer div a {
-      color: #98999B;
-      font-weight: 500;
-      font-size: 16px;
-      display: block;
-  }    
-  footer div#footer_top div span img{
-      width: 80px;
+    color: #98999b;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+  }
+  footer div#footer_top div span img {
+    width: 80px;
   }
   footer {
-      background-color: #232330;  
-      padding: 70px 0;     
+    background-color: #232330;
+    padding: 70px 0;
   }
-  footer div#footer_top, footer div#footer_special {
-      display: block;
-      line-height: 2.9rem;
-      text-align: center;    
-      font-size: 14px;
-      font-weight: normal;    
+  footer div#footer_top,
+  footer div#footer_special {
+    display: block;
+    line-height: 2.9rem;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
   }
-  footer div#footer_special{
-      display:flex;
-      flex-wrap: wrap;  
-      line-height: 2.0rem;
-      width: 100%;        
-      text-align: start;
-      padding: 30px 0;
+  footer div#footer_special {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 2rem;
+    width: 100%;
+    text-align: start;
+    padding: 30px 0;
   }
   div.group {
-      width: 40%;
-      margin: 0 auto;
-  } 
-   .copyright {
-      color: white;
-      font-size: 18px;
-      text-align: center;
-      font-family: Dosis, sans-serif;
-      font-weight: 400;
+    width: 40%;
+    margin: 0 auto;
   }
-  a#arrowup i{
-      color: white;
-      font-size: 20px;
-  }    
-}    
+  .copyright {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: Dosis, sans-serif;
+    font-weight: 400;
+  }
+  a#arrowup i {
+    color: white;
+    font-size: 20px;
+  }
+}
