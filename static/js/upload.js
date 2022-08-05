@@ -7,14 +7,13 @@ darkMode.addEventListener("click", () => {
   lightMode.classList.remove("active-toggle");
   darkMode.classList.add("active-toggle");
   prevModalVDiv.style.backgroundColor = "#232330";
-  codeDiv.style.backgroundColor = "#232330";
-  codeDiv.style.color = "#ffffff";
+ 
 });
 lightMode.addEventListener("click", () => {
   lightMode.classList.add("active-toggle");
   darkMode.classList.remove("active-toggle");
-  prevModalVDiv.style.backgroundColor = "#ddd";
-  codeDiv.style.backgroundColor = "#ddd";
+  prevModalVDiv.style.backgroundColor = "#ffffff";
+  
 });
 //closing the modal of upload page
 const closeButton = document.querySelector(".close-modal");
@@ -70,7 +69,7 @@ for (let i = 0; i < checkboxes.length; i++) {
     if ((checked = true)) {
      sizes.push(valueSet)
      console.log(sizes);
-     console.log(insertDiv.classList)
+    
     } else if ((checked = false)) {
       insertDiv.textContent = "";
     }
