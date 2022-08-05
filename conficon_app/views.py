@@ -5,7 +5,7 @@ from zipfile import ZipFile
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.core.files import File
+from django.core.files.images import ImageFile as File
 from django.shortcuts import redirect, render
 from django.views import generic
 from PIL import Image
@@ -46,7 +46,7 @@ def signup_view(request):
             user = Profile(username=username.lower(), email=email)
             user.set_password(password)
             user.save()
-            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            login(request, user, backend="django.contrib.auth.backends.ModelBackend")
             messages.success(request, "Your registration was successful!")
             return redirect("home")
         else:

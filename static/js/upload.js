@@ -29,10 +29,10 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-const resultForm = document.getElementById("result-gen");
-resultForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
+//const resultForm = document.getElementById("result-gen");
+//resultForm.addEventListener("submit", (e) => {
+//e.preventDefault();
+//});
 //Copying embedded html code for the generated favicon
 function CopyToClipboard(containerId) {
   if (document.selection) {
@@ -64,7 +64,7 @@ for (let i = 0; i < checkboxes.length; i++) {
     let iconType = i.target.classList.value;
     let checked = i.target.checked;
     console.log(value, iconType, checked);
-    let html2 = `<code class="prettyprint"> &lt;link rel="manifest" href="/site.webmanifest"&gt; </code>`;
+    let html2 = ` &lt;link rel="manifest" href="/site.webmanifest"&gt; `;
     let html3 = `<code class="prettyprint"> &lt;link rel="apple-touch-icon" sizes="${i.value}x${i.value}" href="/apple-touch-icon.png"&gt; </code>`;
     let html1 = `<code class="prettyprint"> &lt;link rel="icon" type="image/png" sizes="${value}x${value}" href="/favicon-${value}x${value}.png"&gt; </code>`;
     if ((checked = true)) {
@@ -80,15 +80,4 @@ for (let i = 0; i < checkboxes.length; i++) {
     }
   });
 }
-/* for(let  checkbox of checkboxes) {
-     checkbox.addEventListener("click", function() {
-  if(this.checkbox.checked = true){
-        insertDiv.insertAdjacentHTML("afterbegin", html2 + '\n')
-        console.log(`${checkbox.value}`)
-      }
-      else{
-        insertDiv.insertAdjacentHTML("afterbegin", '' + '\n')
-      }
-         
-  });
-} */
+

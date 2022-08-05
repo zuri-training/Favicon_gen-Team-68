@@ -225,6 +225,7 @@ form h3 {
   letter-spacing: 0.02em;
   line-height: 24px;
   border-radius: 4px;
+  gap: .8em;
 }
 a,button{
   text-decoration: none;
