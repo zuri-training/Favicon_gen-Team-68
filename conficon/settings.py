@@ -243,7 +243,7 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 465
 EMAIL_USE_TLS = False
 EMAIL_HOST_USER = "deborahudoh02@gmail.com"
-EMAIL_HOST_PASSWORD = os.getenv("GOOGLE_APP_PASSWORD")
+EMAIL_HOST_PASSWORD = 'zwhgjenwimhzelay'
 # EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
