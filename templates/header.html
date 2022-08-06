@@ -16,7 +16,7 @@
 <script src="{% static 'js/upload.js' %}" defer></script>
 {% endblock %}
 
-{% block content %}
+{% block header %}
 
 <header class='main-header'>
     {% include 'upload.html' %}
@@ -98,16 +98,18 @@
         <ul class="recent">
             {% for recent in icons %}
 
-            <a href="files/{{recent.zip_file}}">
-                <li>{{ recent.name }}</li>
-            </a>
+            <li>
+                <a href="{{ recent.upload.image.url }}" download='favicon.ico'>
+                    <img src="{{ recent.upload.image.url }}" />
+                </a>
+            </li>
 
 
             {% endfor %}
 
 
             <!-- what will be the file path to show the images -->
-           
+
 
         </ul>
     </div>

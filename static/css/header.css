@@ -6,7 +6,7 @@
 
 header.main-header {
   background-color: #232330;
-  height: 1024px;
+  min-height: 1024px;
 }
 
 .intro {

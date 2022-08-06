@@ -5,7 +5,7 @@ from zipfile import ZipFile
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.core.files import File
+from django.core.files.images import ImageFile as File
 from django.shortcuts import redirect, render
 from django.views import generic
 from PIL import Image
@@ -46,7 +46,7 @@ def signup_view(request):
             user = Profile(username=username.lower(), email=email)
             user.set_password(password)
             user.save()
-            login(request, user)
+            login(request, user, backend="django.contrib.auth.backends.ModelBackend")
             messages.success(request, "Your registration was successful!")
             return redirect("home")
         else:
@@ -77,7 +77,9 @@ def login_view(request):
         else:
             user = authenticate(username=email, password=password)
             if user:
-                login(request, user)
+                login(
+                    request, user, backend="django.contrib.auth.backends.ModelBackend"
+                )
 
                 # This is setting session to clear(when the browser was closed),
                 # if checkbox is not ticked else it will use the default
@@ -111,11 +113,13 @@ def upload(request):
     else:
         return redirect("home")
 
+
 def rm(name, sm=""):
     try:
         os.remove(name)
     except:
         pass
+
 
 @login_required(login_url="/login")
 def result(request):
@@ -151,6 +155,6 @@ def result(request):
         zip_file=zipf,
         user=request.user,
     )
-    return redirect('upload')
+    return redirect("upload")
     print(result)
     return render(request, "index.html", {"result": result})
