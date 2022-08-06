@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 asgiref==3.5.2
 certifi==2022.6.15
 cffi==1.15.1
