@@ -2,6 +2,7 @@
 
 {% load static %}
 
+{% block title %}Welcome | ConfIcon{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -42,7 +43,7 @@
                 <a href="#" class="nav-link">How it works</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="{% url 'contact' %}" class="nav-link">Contact</a>
             </li>
             {% if request.user.is_authenticated %}
             <li class="nav-item">
