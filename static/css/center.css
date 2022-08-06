@@ -1,6 +1,7 @@
 .container {
     margin: 0;
     padding: 0;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -700,13 +701,12 @@ small{
     }
 }
 @media only screen and (max-width: 590px) {
-    .container {
+    /* * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        max-width: 428px;
-    }
-
+        box-sizing: content-box;
+        width: 100%;
+    } */
     div img{
         width: 100%;
     }
@@ -1061,7 +1061,7 @@ small{
         align-items: center;
         padding: 62px 0px;
         gap: 157px;
-        width: 428px;
+        width: 484px;
         height: 384px;
         background: #D7EEFF;
         margin: 100px 0px 0px 0px;
