@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-div img{
+div.center-img img{
     width: 100%;
 }
 

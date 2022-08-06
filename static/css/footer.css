@@ -7,8 +7,7 @@ Footer div a,
 Footer div h3,
 #About_Conficons div p, #footer_top span {
   text-decoration: none;
-  font-family: Dosis, sans-serif;
-  font-weight: 600;
+  font-family: Dosis, sans-serif;  
 }
 #About_Conficons {    
   text-align: center; 
@@ -18,14 +17,14 @@ Footer div h3,
   font-size: 36px;
   color: #191A1C;
   font-weight: 700;
-  padding: 100px 0 50px;
+  padding: 100px 0 20px;
 }
 #About_Conficons div p {
   color: #323337;
   line-height: 1.4rem;    
   padding-bottom: 100px;
-  width: 80%;    
-  font-size: 17px;
+  width: 75%;    
+  font-size: 16px;
   margin: 0 auto;   
 }
 #for_gap {
@@ -43,48 +42,64 @@ Footer div span {
   color: white;
   font-size: 20px;
 }
-Footer div a {
-  color: #98999B;
-  font-weight: 500;
-  font-size: 16px;
-  display: block;
-}
 Footer div a:hover {
-  color: rgba(0, 128, 0, 0.927);
+  color: rgba(14, 11, 220, 0.927);
+  margin-right: 0;
 }
 footer {
   background-color: #232330;  
   padding: 100px 0;     
 }
 footer div#footer_top, footer div#footer_special {
-  display: flex;
-  line-height: 2.5rem;
+  display: flex;  
   justify-content: space-evenly;        
   font-weight: normal;    
+}
+.footer_column1{
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5em;
 }
 footer div#footer_special{
   width: 60%;
   justify-content: space-between;
   padding-bottom: 80px;
+  line-height: 5.5em;  
+}
+div .group{
+  color: #98999B;
+  font-weight: 500;
+  font-size: 16px;  
+  display: flex;
+  flex-direction: column;
+  min-width: 25ch; 
+  gap: 2.0em;
+  gap: 5.0em;
 }
 div.group {
-  width: 20%;
+  /* min-width: calc(100%/4); */
+  gap: 2.0em;  
 } 
 span.spec {
   font-weight: normal;
-  font-size: 17px;
+  font-size: 16px;
   display: block;
   color: #D6D6D7;
 }
-.footer_column1{
-  text-align: center;
-}
+
 footer div#footer_top div span img{
   width: 120px;    
 }
 div.icons {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;  
+  justify-content: space-between; 
+  gap: 2.1em; 
+  margin-left: 0;
 }
 .Icons i {
   color: white;
