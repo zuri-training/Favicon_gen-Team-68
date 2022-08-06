@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+import dj_database_url
 from decouple import config
 from dotenv import load_dotenv
 
@@ -21,7 +22,11 @@ SECRET_KEY = config(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'conficon.herokuapp.com',]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "conficon.herokuapp.com",
+]
 
 # Application definition
 
@@ -33,6 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Cloudinary apps
+    "cloudinary_storage",
+    "cloudinary",
     # Local app
     "conficon_app.apps.ConficonAppConfig",
     # Third party app
@@ -46,6 +54,11 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.google",
 ]
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "conficon",
+    "API_KEY": "315576426699662",
+    "API_SECRET": "CHXEK8JOnuizHCwiL1DsNGPIy1w",
+}
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -243,11 +256,10 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 465
 EMAIL_USE_TLS = False
 EMAIL_HOST_USER = "deborahudoh02@gmail.com"
-EMAIL_HOST_PASSWORD = 'zwhgjenwimhzelay'
+EMAIL_HOST_PASSWORD = "zwhgjenwimhzelay"
 # EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-import dj_database_url
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES["default"].update(db_from_env)
