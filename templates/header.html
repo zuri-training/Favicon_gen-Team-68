@@ -2,6 +2,7 @@
 
 {% load static %}
 
+{% block title %}Welcome | ConfIcon{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -21,7 +22,7 @@
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar sticky">
-        <a href="#" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="" class="logo-img"><span></span> </a>
+      <a href="{% url 'home' %}" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -32,21 +33,21 @@
                 </a>
                 <div class="sub-gen">
                     <ul class="drop-down">
-                        <li><a href="">Upload Image</a></li>
-                        <li><a href="">From Text</a></li>
+                      <li><a href={% url 'home' %}>Upload Image</a></li>
+                        <li><a href="#">From Text</a></li>
                     </ul>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">How it works</a>
+                <a href="#how-it-works" class="nav-link">How it works</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="{% url 'contact' %}" class="nav-link">Contact</a>
             </li>
             {% if request.user.is_authenticated %}
             <li class="nav-item">
-                <a href="login.html" class="nav-link">
+                <a href="#" class="nav-link">
                     <span class="material-symbols-outlined">
                         account_circle</span>
                     Hi {{ request.user}}!</a>
@@ -69,7 +70,6 @@
             <span class="bar"></span>
         </div>
     </nav>
-    {{icon.name}}{{ icon.image }}
     <div class="intro">
         <h2>Get the right sized favicon for you</h2>
         <p>Upload your image or input your text to generate your favicon</p>
