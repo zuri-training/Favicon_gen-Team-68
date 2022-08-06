@@ -1,7 +1,8 @@
-*{
+.container {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: fit-content;
 }
 
 div img{
@@ -378,7 +379,7 @@ small{
         display: flex;
         align-items: center;
         text-align: center;
-        margin: 0px 20px;
+        margin: 0px 20px 30px;
         padding: 0 64.3px;
         background: linear-gradient(103.33deg, #00BBF7 40.01%, #3250EC 59.58%);
         -webkit-background-clip: text;
@@ -387,12 +388,13 @@ small{
     }
     .container-4 {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: space-evenly;
         /* padding: 100px 108px; */
         gap: 10px;
         /* width: 1440px; */
+        margin-top: 70px;
         width: 100%;
         height: 560px;
         background: #FFFFFF;
@@ -415,12 +417,15 @@ small{
         /* width: 278px; */
         height: 48px;
         color: #232330;
+        margin-bottom: 20px;
     }
     
     .container-4-p1{
+        display: flex; 
+        padding-bottom: 25px;
         font-family: 'Nunito Sans';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 16px;
         line-height: 24px;
         color: #3250EC;
@@ -448,5 +453,6 @@ small{
         padding: 16px;
         gap: 8px;
     }
+
     
 }
