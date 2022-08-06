@@ -33,6 +33,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    #Third party app
+    "cloudinary_storage",
+    "cloudinary",
     # Local app
     "conficon_app.apps.ConficonAppConfig",
     # Third party app
@@ -45,6 +49,12 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.facebook",
     "allauth.socialaccount.providers.google",
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config ('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config ('CLOUDINARY_API_KEY'),
+    'API_SECRET': config ('CLOUDINARY_API_SECRET')
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -214,6 +224,8 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_URL = "/files/"
 MEDIA_ROOT = BASE_DIR / "media/files"
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
