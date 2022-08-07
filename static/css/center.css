@@ -1,8 +1,9 @@
-.container {
+.container-main {
     margin: 0;
     padding: 0;
     width: 100%;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 div img{
@@ -1061,7 +1062,7 @@ small{
         align-items: center;
         padding: 62px 0px;
         gap: 157px;
-        width: 484px;
+        width: 100%;
         height: 384px;
         background: #D7EEFF;
         margin: 100px 0px 0px 0px;
@@ -1092,6 +1093,8 @@ small{
         align-items: center;
         text-align: center;
         color: #323337;
+        margin: 30px 0px 10px;
+        padding: 20px 20px;
     }
     
     .container-7-p3 {
@@ -1113,4 +1116,10 @@ small{
         letter-spacing: 0.02em;
         color: #FFFFFF;
     }
+}
+.container-7-div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: #3250ec;
 }
