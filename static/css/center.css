@@ -728,10 +728,9 @@ small{
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding: 62px 30px;
+        padding: 62px 0px 62px 30px;
         gap: 10px;
-
-        width: 428px;
+        width: 95%;
         height: 472px;
         background: #FFFFFF;
     }
@@ -765,12 +764,13 @@ small{
     }
     .container-3{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 62px 36px 28px;
+        padding: 62px 0px 62px 30px;
         gap: 10px;
-        width: 428px;
+        width: 95%;
         height: 234px;
         background: #FFFFFF;
     }
@@ -796,11 +796,12 @@ small{
     }
     .container-4 {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column-reverse;
         align-items: flex-start;
         padding: 62px 30px;
         gap: 44px;
-        width: 428px;
+        width: 95%;
         height: 580px;
         background: #FFFFFF;
     }
@@ -858,19 +859,19 @@ small{
         gap: 10px;
     }
     .container-4-p1{
-        width: 450px;
+        width: 95%;
         height: 48px;
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 24px;
-        display: flex;
         align-items: center;
         color: #3250EC;
-        gap: 6px;
+        margin: 0px 0px 10px;
+        padding: 0px 0px 0px 0px;
     }
-    
+
     small{
         color: black;
         font-weight: 100;
@@ -897,7 +898,7 @@ small{
         align-items: flex-start;
         padding: 63px 36px;
         gap: 44px;
-        width: 428px;
+        width: 95%;
         height: 559px;
         background: #FFFFFF;
         margin: 100px 0px 0px 0px;
@@ -932,14 +933,13 @@ small{
     }
     
     .container-5-p1{
-        width: 450px;
+        width: 95%;
         height: 48px;
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 24px;
-        display: flex;
         align-items: center;
         color: #3250EC;
         gap: 6px;
@@ -976,11 +976,12 @@ small{
     
     .container-6{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column-reverse;
         align-items: flex-start;
-        padding: 30px;
+        padding: 30px 0px 30px 30px;
         gap: 44px;
-        width: 428px;
+        width: 95%;
         height: 580px;
         background: #FFFFFF;
         margin: 100px 0px 0px 0px;
@@ -1021,7 +1022,7 @@ small{
         font-weight: 600;
         font-size: 12px;
         line-height: 24px;
-        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         color: #3250EC;
     }
@@ -1057,6 +1058,7 @@ small{
      */
     .container-7{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -1082,7 +1084,7 @@ small{
     }
     
     .container-7-p2{
-        width: 850px;
+        width: 95%;
         height: 50px;
         font-family: 'Nunito Sans';
         font-style: normal;
@@ -1092,9 +1094,8 @@ small{
         display: flex;
         align-items: center;
         text-align: center;
-        color: #323337;
-        margin: 30px 0px 10px;
-        padding: 20px 20px;
+        margin: 20px 10px;
+        padding: 20px;
     }
     
     .container-7-p3 {
