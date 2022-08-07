@@ -443,5 +443,7 @@ a {
   nav.navbar.sticky {
     position: sticky;
     top: 0;
+    background: #232330; 
+    z-index: 9999;
   }
 }
