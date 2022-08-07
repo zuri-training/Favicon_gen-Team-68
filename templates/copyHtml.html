@@ -1,0 +1,22 @@
+{% if request.user.is_authenticated %}
+<button class="close-modal2 hidden"><i class="fa-solid fa-xmark"></i></button>
+<section class='modal2' id='modal2'>
+
+    <button class="close-modal2"><i class="fa-solid fa-xmark"></i></button>
+  
+            <h3>Favicon Downloaded</h3>
+
+            <section class='cp-dwld-icons2'>
+                <h4>Remember to Copy HTML code after generating favicon</h4>
+               
+                    <pre class="prettyprint">
+                     &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
+                    </pre>
+          
+                    <div class='down-btns2'>
+                        <button class='down-btn-grey2' onclick="CopyToClipboard2('prettyprint')">Copy HTML</button>
+                    </div>
+            </section> 
+</section>
+
+{% endif %}

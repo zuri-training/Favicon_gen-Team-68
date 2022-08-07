@@ -1,4 +1,5 @@
 {% if request.user.is_authenticated %}
+<button class="close-modal1 hidden"><i class="fa-solid fa-xmark"></i></button>
 <section class='modal' id='modal'>
     <button class="close-modal"><i class="fa-solid fa-arrow-left"></i></button>
     <article class='modal-left'>
@@ -22,23 +23,20 @@
 
             <section class='cp-dwld-icons'>
                 <h4>Copy HTML code after Generating favicon</h4>
-                <div class='cp-space'>
+               
                     <pre class="prettyprint">
                      &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
                     </pre>
-                </div>
-                
-              
-
+          
             </section>
             <div class='down-btns'>
                <a class='down-btn-pri' download="{{result.name}}" href="files/{{result.zip_file}}">
-                <i class="fa-solid fa-download"></i>
+                <i class="fa-solid fa-down-to-line"></i>
                 <button  type='submit'>
-                    <p>Download <i class="fa-solid fa-file-zipper"></i></p>
+                    <p>Download</p>
                 </button>
                 </a>
-                <button class='down-btn-grey' onclick="CopyToClipboard('cp-space')">Copy HTML</button>
+                <button class='down-btn-grey' onclick="CopyToClipboard('prettyprint')">Copy HTML</button>
             </div>
             
         </form>

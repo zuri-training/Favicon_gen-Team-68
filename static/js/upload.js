@@ -17,10 +17,13 @@ lightMode.addEventListener("click", () => {
 });
 //closing the modal of upload page
 const closeButton = document.querySelector(".close-modal");
+const closeBtnDesk = document.querySelector(".close-modal1")
 const closeModal = () => {
   modal.style.display = "none";
+  closeBtnDesk.classList.add('hidden')
 };
 closeButton.addEventListener("click", closeModal);
+closeBtnDesk.addEventListener("click", closeModal);
 document.addEventListener("keydown", (e) => {
   // console.log(e.key)
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
@@ -36,12 +39,12 @@ resultForm.addEventListener("submit", (e) => {
 function CopyToClipboard(containerId) {
   if (document.selection) {
     let range = document.body.createTextRange();
-    range.moveToElementText(document.querySelector(".cp-space"));
+    range.moveToElementText(document.querySelector(".prettyprint"));
     range.select().createTextRange();
     navigator.clipboard.writeText(range);
   } else if (window.getSelection) {
     let range = document.createRange();
-    range.selectNode(document.querySelector(".cp-space"));
+    range.selectNode(document.querySelector(".prettyprint"));
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     navigator.clipboard.writeText(range);
@@ -51,13 +54,13 @@ function CopyToClipboard(containerId) {
 //Adding embedded html code from the user selection of preferred sizes
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-const insertDiv = document.querySelector(".prettyprint");
+let insertDiv = document.querySelector(".prettyprint");
 
 /*  function func() {
       checkboxes[1].checked = true;
   } */
-let sizes = []
-let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`
+
+
 
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("click", function (i) {
@@ -68,12 +71,14 @@ for (let i = 0; i < checkboxes.length; i++) {
     console.log(value, iconType, checked);
    
     if ((checked = true)) {
+      let sizes = ['16x16']
+      let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`
      sizes.push(valueSet)
      console.log(sizes.join(' '));
-     
+     insertDiv.textContent = faviconLink
     } else if ((checked = false)) {
       insertDiv.textContent = "";
     }
   });
 }
-insertDiv.textContent = faviconLink
+

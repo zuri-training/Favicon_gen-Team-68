@@ -14,12 +14,14 @@
 {% block extra_scripts %}
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
 <script src="{% static 'js/upload.js' %}" defer></script>
+<script src="{% static 'js/copyhtml.js' %}" defer></script>
 {% endblock %}
 
 {% block content %}
 
 <header class='main-header'>
     {% include 'upload.html' %}
+    {% include 'copyHtml.html' %}
     <nav class="navbar">
         <a href="#" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="" class="logo-img"><span></span> </a>
 
