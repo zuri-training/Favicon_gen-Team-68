@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
-
 {% load static %}
+{% load custom_tags %}
 
 {% block title %}Welcome | ConfIcon{% endblock %}
 
@@ -22,7 +22,7 @@
 <header class='main-header'>
     {% include 'upload.html' %}
     <nav class="navbar sticky">
-      <a href="{% url 'home' %}" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
+        <a href="{% url 'home' %}" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -33,7 +33,7 @@
                 </a>
                 <div class="sub-gen">
                     <ul class="drop-down">
-                      <li><a href={% url 'home' %}>Upload Image</a></li>
+                        <li><a href={% url 'home' %}>Upload Image</a></li>
                         <li><a href="#">From Text</a></li>
                     </ul>
                 </div>
@@ -101,7 +101,7 @@
             <li class="header-recent-nmae">
                 <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
                     <img src="{{ recent.upload.image.url }}" />
-                    <p>{{recent.name}}</p>
+                    <p>{{recent.upload.image.name | split:'/'}}</p>
                 </a>
             </li>
 

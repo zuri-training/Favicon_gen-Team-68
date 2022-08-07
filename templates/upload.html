@@ -9,7 +9,7 @@
             <small>Recommended sizes</small>
 
             <div class='sizes-chb'>
-               
+
                 <label for='s16'><input type='checkbox' class='size-icon' value='16' id='s16' name='s16'><span>16 X 16</span></label>
                 <label for='s32'><input type='checkbox' class='size-icon' id='s32' value='32' name='s32'><span>32 X 32<span></label>
                 <label for='s96'><input type='checkbox' class='size-icon' id='s96' name='s96' value='96'><span>96 X 96</span></label>
@@ -22,11 +22,11 @@
 
             <section class='cp-dwld-icons'>
 
-                
+
 
                 <div class='cp-space'>
                     <pre id='box'>
-                       
+
                         <code class="prettyprint">
                         &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
                         </code>
@@ -34,21 +34,21 @@
                     </pre>
                 </div>
                 <h4>Copy HTML code after Generating favicon</h4>
-              
+
 
             </section>
             <div class='down-btns'>
-               <a class='down-btn-pri' download="{{result.name}}" href="{{result.zip_file.file.url}}">
-                <i class="fa-solid fa-download"></i>
-                <button  type='submit'>
-                    <p>Download <i class="fa-solid fa-file-zipper"></i></p>
-                </button>
+                <a class='down-btn-pri' download="{{result.name}}" href="{{result.zip_file.file.url}}">
+                    <i class="fa-solid fa-download"></i>
+                    <button type='submit'>
+                        <p>Download <i class="fa-solid fa-file-zipper"></i></p>
+                    </button>
                 </a>
                 <button class='down-btn-grey' onclick="CopyToClipboard('cp-space')">Copy HTML</button>
             </div>
-            
+
         </form>
-       
+
     </article>
 
     <article class='modal-right'>
@@ -64,6 +64,6 @@
             <img class="google" src="{% static 'images/logo.svg' %}">
         </section>
     </article>
-    </section>
+</section>
 
 {% endif %}
