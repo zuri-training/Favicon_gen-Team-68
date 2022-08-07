@@ -149,8 +149,8 @@ SOCIALACCOUNT_PROVIDERS = {
     "github": {
         "METHOD": "oauth2",
         "APP": {
-            "client_id": "368a3ebad72f7560125d",
-            "secret": "24a716f3c66f995be4a897526e247ab9ae5accd3",
+            "client_id": "5b233b9bb1906bce10c7",
+            "secret": "065f73590df2fd7cac0e7a0077f863b95483aca3 ",
         },
         "SCOPE": [
             "user",

@@ -98,9 +98,10 @@
         <ul class="recent">
             {% for recent in icons %}
 
-            <li>
+            <li class="header-recent-nmae">
                 <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
                     <img src="{{ recent.upload.image.url }}" />
+                    <p>{{recent.name}}</p>
                 </a>
             </li>
 
