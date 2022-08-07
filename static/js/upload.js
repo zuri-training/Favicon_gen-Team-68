@@ -16,8 +16,8 @@ lightMode.addEventListener("click", () => {
   
 });
 //closing the modal of upload page
-const closeButton = document.querySelector(".close-modal");
-const closeBtnDesk = document.querySelector(".close-modal1")
+
+
 const closeModal = () => {
   modal.style.display = "none";
   closeBtnDesk.classList.add('hidden')

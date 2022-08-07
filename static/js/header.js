@@ -1,11 +1,12 @@
+
 const form = document.getElementById("upload");
 const modal = document.getElementById("modal");
 const overlay = document.querySelector(".overlay");
 const fileName = document.getElementById("file-name");
 const input = document.getElementById("file-input");
-const closeBtnDesk = document.querySelector("..close-modal1")
+
 const closeButton = document.querySelector(".close-modal");
-const width = window.innerWidth;
+
 
 const displayImage = (e) => {
   while (fileName.firstChild) {
@@ -26,13 +27,11 @@ const generateIcon = (e) => {
   const http = new XMLHttpRequest();
   const fd = new FormData(e.target);
   http.addEventListener("load", (ev) => {
-    if(width > 768){
-      closeBtnDesk.classList.remove('hidden')
+   
+     
       closeButton.style.display = "none"
       modal.style.display = "flex";
-    }else{
-      modal.style.display = "flex";
-    }
+  
     
   });
   if (fd.get("file-input").size > 10e6) {
