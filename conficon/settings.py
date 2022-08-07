@@ -114,9 +114,6 @@ SOCIALACCOUNT_PROVIDERS = {
             "profile",
             "email",
         ],
-        "AUTH_PARAMS": {
-            "access_type": "online",
-        },
     },
     "facebook": {
         "METHOD": "oauth2",
@@ -149,8 +146,8 @@ SOCIALACCOUNT_PROVIDERS = {
     "github": {
         "METHOD": "oauth2",
         "APP": {
-            "client_id": "5b233b9bb1906bce10c7",
-            "secret": "065f73590df2fd7cac0e7a0077f863b95483aca3 ",
+            "client_id": "b84a070a76abde434e99",
+            "secret": "02f7bf7243065181f50594c93a118d7cd7b35bd0  ",
         },
         "SCOPE": [
             "user",
@@ -241,7 +238,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 4
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "conficon.herokuapp.com/"
 
 # Additional configuration settings
 SOCIALACCOUNT_LOGIN_ON_GET = True
@@ -249,6 +246,7 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
 
 # SMTP (Simple Mail Transfer Protocol) Config
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
