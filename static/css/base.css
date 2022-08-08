@@ -16,6 +16,7 @@ html {
   font-size: 10px;
 }
 
-body{
+html,
+body {
   overflow-x: hidden;
 }
