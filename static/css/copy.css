@@ -24,7 +24,10 @@ section#modal2.modal2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  height: auto !important;
   background: #ffffff;
   border-radius: 8px;
   width: 50%;

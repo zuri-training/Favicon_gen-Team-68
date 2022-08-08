@@ -5,13 +5,29 @@ const closeButtonDeskCopy = document.querySelector(".close-modal22")
 const copyHtml = document.querySelector('.down-btn-grey2')
 const width = window.innerWidth;
 
-downloadBtn.addEventListener("click", ()=>{
-    
-        modal.style.display = "none";
-      closeButtonDeskCopy.classList.remove('hidden')
-        secondModal.style.display = "flex";
 
-});
+copyHtml.addEventListener('click', ()=>{
+  copyHtml.textContent = 'Copied!'
+})
+const downloadIcon = (e) => {
+  e.preventDefault();
+  const http = new XMLHttpRequest();
+  const fd = new FormData(e.target);
+  http.addEventListener("load", (ev) => {
+    modal.style.display = "none";
+    closeButtonDeskCopy.classList.remove('hidden')
+      secondModal.style.display = "flex";
+  });
+ 
+  http.addEventListener("error", (event) => {
+    alert("Oops failed to download");
+  });
+  http.open("POST", location.origin + "/result/", true);
+  http.send(fd);
+};
+downloadBtn.addEventListener("submit", downloadIcon);
+
+
 
 const closeModal2 = () => {
     secondModal.style.display = "none";
