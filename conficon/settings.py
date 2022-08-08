@@ -114,9 +114,6 @@ SOCIALACCOUNT_PROVIDERS = {
             "profile",
             "email",
         ],
-        "AUTH_PARAMS": {
-            "access_type": "online",
-        },
     },
     "facebook": {
         "METHOD": "oauth2",
@@ -249,7 +246,7 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
 
 # SMTP (Simple Mail Transfer Protocol) Config
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
