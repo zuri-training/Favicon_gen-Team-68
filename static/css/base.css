@@ -8,11 +8,14 @@ body,
   box-sizing: border-box;
   caret-color: #3250ec;
 }
-input{
+input {
   outline: #3250ec;
 }
 
 html {
   font-size: 10px;
+}
 
+body{
+  overflow-x: hidden;
 }
