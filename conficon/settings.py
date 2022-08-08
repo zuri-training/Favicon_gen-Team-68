@@ -241,7 +241,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 4
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "conficon.herokuapp.com/"
 
 # Additional configuration settings
 SOCIALACCOUNT_LOGIN_ON_GET = True
@@ -249,6 +249,7 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
 
 # SMTP (Simple Mail Transfer Protocol) Config
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
