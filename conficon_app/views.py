@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.files.images import ImageFile as File
 from django.shortcuts import redirect, render
 from django.views import generic
+from conficon.forms import ContactForm
 from PIL import Image
 
 from .models import Icon, Profile, Result
@@ -54,7 +55,9 @@ def signup_view(request):
     context = {"instance": instance}
     return render(request, "signup.html", context)
 
-
+def contactView(request):
+    form = ContactForm()
+    return render(request, "email.html", {'form': form})
 def login_view(request):
     """redirects to home is user is already logged in."""
     if request.user.is_authenticated:

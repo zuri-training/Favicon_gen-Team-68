@@ -279,6 +279,7 @@ a {
     text-align: center;
     transition: 0.3s;
     height: 90%;
+    z-index: 9;
   }
 
   a {
@@ -354,6 +355,7 @@ a {
     padding: 8px;
     width: 356px;
     height: 72px;
+    z-index: 0;
   }
 
   .file-input-cover {
@@ -366,6 +368,7 @@ a {
     width: 356px;
     height: 72px;
     bottom: 50px;
+    z-index: 0;
   }
 
   .upload-text {
@@ -440,5 +443,7 @@ a {
   nav.navbar.sticky {
     position: sticky;
     top: 0;
+    background: #232330; 
+    z-index: 9999;
   }
 }

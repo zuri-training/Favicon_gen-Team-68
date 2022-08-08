@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+import dj_database_url
 from decouple import config
 from dotenv import load_dotenv
 
@@ -21,7 +22,11 @@ SECRET_KEY = config(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "conficon.herokuapp.com",
+]
 
 # Application definition
 
@@ -33,13 +38,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
+    # Cloudinary apps
+    "cloudinary_storage",
+    "cloudinary",
     # Local app
     "conficon_app.apps.ConficonAppConfig",
-
     # Third party app
     "django_extensions",
-    
     # Social accounts
     "allauth",
     "allauth.account",
@@ -49,6 +54,11 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.google",
 ]
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "conficon",
+    "API_KEY": "315576426699662",
+    "API_SECRET": "CHXEK8JOnuizHCwiL1DsNGPIy1w",
+}
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -57,7 +67,11 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
+
+# "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 ROOT_URLCONF = "conficon.urls"
 
@@ -80,7 +94,6 @@ TEMPLATES = [
 AUTHENTICATION_BACKEND = [
     # Needed to login by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
-    
     # `allauth` specific authentication methods, such as login by e-mail
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
@@ -126,26 +139,28 @@ SOCIALACCOUNT_PROVIDERS = {
         "VERIFIED_EMAIL": False,
         "VERSION": "v13.0",
         "APP": {
-            "client_id": '598815134931532', # os.getenv("APP_ID"),  # !!! THIS App ID
-            "secret": '2bf5d62e37d9793d23d586f8f536023f', # os.getenv("APP_SECRET"),  # !!! THIS App Secret
+            "client_id": "598815134931532",  # os.getenv("APP_ID"),  # !!! THIS App ID
+            "secret":
+            # os.getenv("APP_SECRET"),  # !!! THIS App Secret
+            "2bf5d62e37d9793d23d586f8f536023f",
             "key": "",
         },
     },
-    'github': {
+    "github": {
         "METHOD": "oauth2",
         "APP": {
-            "client_id": "368a3ebad72f7560125d",
-            "secret": "24a716f3c66f995be4a897526e247ab9ae5accd3"
+            "client_id": "5b233b9bb1906bce10c7",
+            "secret": "065f73590df2fd7cac0e7a0077f863b95483aca3 ",
         },
-        'SCOPE': [
-            'user',
-            'repo',
-            'read:org',
+        "SCOPE": [
+            "user",
+            "repo",
+            "read:org",
         ],
         "AUTH_PARAMS": {
             "access_type": "online",
         },
-    }
+    },
 }
 
 WSGI_APPLICATION = "conficon.wsgi.application"
@@ -229,18 +244,22 @@ SITE_ID = 4
 LOGIN_REDIRECT_URL = "/"
 
 # Additional configuration settings
-SOCIALACCOUNT_LOGIN_ON_GET=True
+SOCIALACCOUNT_LOGIN_ON_GET = True
 SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
 
-#SMTP (Simple Mail Transfer Protocol) Config
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+# SMTP (Simple Mail Transfer Protocol) Config
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 465
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = 'deborahudoh02@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv('GOOGLE_APP_PASSWORD')
+EMAIL_HOST_USER = "deborahudoh02@gmail.com"
+EMAIL_HOST_PASSWORD = "zwhgjenwimhzelay"
 # EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES["default"].update(db_from_env)

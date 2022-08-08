@@ -1,0 +1,18 @@
+{% extends 'contact.html' %} 
+
+{% block title %}Contact Us{% endblock%}
+
+
+{% block content %}
+    <form method='post' action='' class="form">
+        <header id="mcont">
+            <h1>Contact Us</h1>
+            <p><small class="down-mobile">We'll ove to hear from you, please send a message </small></p>
+        </header>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+        <button type="submit">Send</button>
+    </div>    
+</form>
+{% endblock %}
