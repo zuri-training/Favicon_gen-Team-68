@@ -3,24 +3,22 @@ const darkMode = document.querySelector(".child2");
 const lightMode = document.querySelector(".child1");
 const prevModalVDiv = document.querySelector(".prev-board");
 const codeDiv = document.querySelector(".cp-space");
-darkMode.addEventListener("click", () => {
+darkMode?.addEventListener("click", () => {
   lightMode.classList.remove("active-toggle");
   darkMode.classList.add("active-toggle");
   prevModalVDiv.style.backgroundColor = "#232330";
- 
 });
-lightMode.addEventListener("click", () => {
+lightMode?.addEventListener("click", () => {
   lightMode.classList.add("active-toggle");
   darkMode.classList.remove("active-toggle");
   prevModalVDiv.style.backgroundColor = "#ffffff";
-  
 });
 //closing the modal of upload page
-
-
+const closeButton = document.querySelector(".close-modal1");
+const closeBtnDesk = document.querySelector(".close-modal");
 const closeModal = () => {
   modal.style.display = "none";
-  closeBtnDesk.classList.add('hidden')
+  closeBtnDesk.classList.add("hidden");
 };
 closeButton.addEventListener("click", closeModal);
 closeBtnDesk.addEventListener("click", closeModal);
@@ -60,25 +58,22 @@ let insertDiv = document.querySelector(".prettyprint");
       checkboxes[1].checked = true;
   } */
 
-
-
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("click", function (i) {
     let value = i.target.value;
     let iconType = i.target.classList.value;
     let checked = i.target.checked;
-    let valueSet = `${value}x${value}`
+    let valueSet = `${value}x${value}`;
     console.log(value, iconType, checked);
-   
+
     if ((checked = true)) {
-      let sizes = ['16x16']
-      let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`
-     sizes.push(valueSet)
-     console.log(sizes.join(' '));
-     insertDiv.textContent = faviconLink
+      let sizes = ["16x16"];
+      let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`;
+      sizes.push(valueSet);
+      console.log(sizes.join(" "));
+      insertDiv.textContent = faviconLink;
     } else if ((checked = false)) {
       insertDiv.textContent = "";
     }
   });
 }
-
