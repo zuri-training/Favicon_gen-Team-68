@@ -2,26 +2,36 @@
 const darkMode = document.querySelector(".child2");
 const lightMode = document.querySelector(".child1");
 const prevModalVDiv = document.querySelector(".prev-board");
+const centerContainerUpload = document.querySelector(".container-main")
+const closeButtonDeskUpload = document.querySelector(".close-modal1")
+const closeButtonMobileUpload = document.querySelector(".close-modal")
+
+
 const codeDiv = document.querySelector(".cp-space");
 darkMode?.addEventListener("click", () => {
   lightMode.classList.remove("active-toggle");
-  darkMode.classList.add("active-toggle");
+  darkMode.style.backgroundColor = "#0a0a0b";
+  darkMode.style.color = "#ffffff"
   prevModalVDiv.style.backgroundColor = "#232330";
+
 });
 lightMode?.addEventListener("click", () => {
   lightMode.classList.add("active-toggle");
-  darkMode.classList.remove("active-toggle");
+  darkMode.style.backgroundColor = "#ffffff"
+  darkMode.style.color = "#191a1c"
   prevModalVDiv.style.backgroundColor = "#ffffff";
+
 });
 //closing the modal of upload page
-const closeButton = document.querySelector(".close-modal1");
-const closeBtnDesk = document.querySelector(".close-modal");
+
+
 const closeModal = () => {
   modal.style.display = "none";
-  closeBtnDesk.classList.add("hidden");
+closeButtonDeskUpload.classList.add("hidden");
 };
-closeButton.addEventListener("click", closeModal);
-closeBtnDesk.addEventListener("click", closeModal);
+closeButtonDeskUpload.addEventListener("click", closeModal);
+closeButtonMobileUpload.addEventListener("click", closeModal);
+centerContainerUpload.addEventListener('click', closeModal)
 document.addEventListener("keydown", (e) => {
   // console.log(e.key)
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
