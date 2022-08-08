@@ -142,6 +142,11 @@ header.main-header {
 } */
 
 .generatebtn {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 165px;
+  height: 88px;
   margin-top: 0;
   justify-items: center;
   background-color: #3250ec;
@@ -150,6 +155,14 @@ header.main-header {
   padding: 31px 32px;
   cursor: pointer;
   border-radius: 4px;
+
+  width: 164px;
+  height: 85px;
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
 }
 li {
   list-style: none;
@@ -267,9 +280,11 @@ a {
   background-color: white;
 }
 
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    z-index: 99;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -277,23 +292,26 @@ a {
   }
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    background-color: #000000;
   }
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    background-color: #000000;
   }
   header {
     height: 720px;
     flex-wrap: wrap;
+    width: 100%;
   }
   .nav-menu {
     position: fixed;
     right: -100%;
-    top: 60px;
+    top: 0;
     gap: 0;
     flex-direction: column;
     background-color: white;
     z-index: 2;
-    width: 95%;
+    width: 92%;
     text-align: center;
     transition: 0.3s;
     height: 90%;
@@ -302,13 +320,13 @@ a {
 
   a {
     color: #232330;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   .nav-item {
-    margin: 16px 0;
+    margin: 4px 0;
     border: #232330;
-    background-color: lightgray;
-    width: 100%;
   }
 
   .nav-menu.active {
@@ -414,7 +432,7 @@ a {
   .generatebtn {
     align-items: center;
     background-color: #3250ec;
-    margin-top: 20px;
+    /* margin-top: 4px; */
     width: 356px;
     height: 12px;
     font-family: "Nunito Sans", sans-serif;
@@ -434,6 +452,7 @@ a {
     display: none;
   }
   .icons {
+    margin-top: 80px;
     margin-left: 18px;
   }
   .recent-1 {
@@ -449,8 +468,8 @@ a {
     width: 180px;
     font-size: 16px;
     position: absolute;
-    margin-top: 8px;
-    margin-left: 250px;
+    margin-top: 4px;
+    margin-left: 28px;
     display: flex;
     flex-direction: column;
     opacity: 1;
@@ -463,12 +482,12 @@ a {
     width: 180px;
     font-size: 16px;
     position: absolute;
-    margin-top: 8px;
-    margin-left: 250px;
+    margin-top: 320px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     opacity: 1;
-    top: 40px;
+    top: 4px;
   }
   .drop-down {
     font-size: 16px;
@@ -478,5 +497,28 @@ a {
     top: 0;
     background: #232330; 
     z-index: 9999;
+  }
+  /* The image preview is not fitting on mobile view */
+  .header-recent-name{
+    padding-top: 4px;
+  }
+
+}
+@media (max-width: 480px){
+ 
+  .file-input{
+    text-align: center;
+    width: 256px;
+  }
+  .file-input-cover{
+    width: 256px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 48px;
+  }
+  .generatebtn{
+    width: 256px;
+    justify-content: center;
+    align-items: center;
   }
 }

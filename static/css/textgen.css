@@ -6,6 +6,12 @@
 .textgen-container{
     background-color: #232330;
     border-top: 1px solid #FFFFFF;
+    align-items: flex-start;
+    padding: 100px 108px;
+    gap: 10px;
+    height: 560px;
+    display: flex;
+    width: 100%;
 }
 .p-1{
     width: 173px;
@@ -16,11 +22,10 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
-    background-color: linear-gradient(98.93deg, #FF00D5 11.22%, #3250EC 51.33%);
+    background: linear-gradient(98.93deg, #FF00D5 11.22%, #3250EC 51.33%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
 }
 .p-2{
     width: 512px;
@@ -44,4 +49,97 @@
     line-height: 32px;
     letter-spacing: 0.02em;
     color: #D6D6D7;
+}
+
+.textgen-btn{
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+
+    width: 200px;
+    height: 64px;
+    background: #3250EC;
+    border-radius: 4px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 32px;
+}
+.textgen-image{
+    gap: 12px;
+
+    width: 540px;
+    height: 360px;
+}
+
+@media (max-width: 768px) {
+
+    .textgen-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 62px 36px;
+        gap: 44px;
+        
+        width: 100%;
+        height: 644px;
+    }
+    .p-1{
+        width: 173px;
+        height: 36px;
+
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .p-2{
+        width: 359px;
+        height: 72px;
+
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .p-3{
+        width: 353px;
+        height: 48px;
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .textgen-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        gap: 8px;
+
+        width: 168px;
+        height: 44px;
+    }
+    .textgen-image{
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 6.58px;
+
+        width: 356px;
+        height: 240px;
+    }
+
+}
+
+@media (max-width: 320px){
+    
 }
