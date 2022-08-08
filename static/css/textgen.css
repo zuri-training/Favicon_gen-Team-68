@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.textgen-container{
+    background-color: #232330;
+    border-top: 1px solid #FFFFFF;
+}
+.p-1{
+    width: 173px;
+    height: 32px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    background-color: linear-gradient(98.93deg, #FF00D5 11.22%, #3250EC 51.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.p-2{
+    width: 512px;
+    height: 96px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.p-3{
+    width: 509px;
+    height: 64px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #D6D6D7;
+}

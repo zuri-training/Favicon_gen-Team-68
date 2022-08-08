@@ -19,10 +19,10 @@
 
 {% block header %}
 
-<header class='main-header'>
+<header class='main-header' id="Go_up">
     {% include 'upload.html' %}
     <nav class="navbar sticky">
-        <a href="{% url 'home' %}" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
+        <a href="{% url 'home' %}" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -51,6 +51,33 @@
                     <span class="material-symbols-outlined">
                         account_circle</span>
                     Hi {{ request.user}}!</a>
+                    <div class="sub-gen">
+                        <ul class="drop-down-2">
+                            <li><a href={% url 'home' %}>
+                                <span class="material-symbols-outlined">
+                                    account_box
+                                    </span>
+                                Hi {{ request.user }}!
+                                {{ user.email }}
+                            </a>
+                            <a href="#"></a></li>
+                            <li><a href="#">
+                                <span class="material-symbols-outlined">
+                                    cloud_download
+                                    </span>
+                                Downloads</a></li>
+                            <li><a href="#">
+                                <span class="material-symbols-outlined">
+                                    edit
+                                    </span>
+                                Edit profile</a></li>
+                            <li><a href="{% url 'logout' %}">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                    </span>
+                                Log out</a></li>
+                        </ul>
+                    </div>
             </li>
             <li class='nav-item'>
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>

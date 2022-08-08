@@ -142,12 +142,12 @@ header.main-header {
 } */
 
 .generatebtn {
-  margin-top: 0px;
+  margin-top: 0;
   justify-items: center;
   background-color: #3250ec;
   color: #ffff;
   border: none;
-  padding: 34px 32px;
+  padding: 31px 32px;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -231,6 +231,24 @@ a {
   color: #232330;
 }
 .drop-down a:hover {
+  text-decoration: underline;
+}
+.drop-down-2 {
+  background-color: #fbfbfb;
+  border-radius: 4px;
+  padding: 4px;
+  width: 252px;
+  position: absolute;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.drop-down-2 a {
+  color: #232330;
+}
+.drop-down-2 a:hover {
   text-decoration: underline;
 }
 
@@ -403,7 +421,8 @@ a {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
+    padding-top: 20px;
   }
 
   .logo-img {
@@ -424,6 +443,20 @@ a {
     font-family: "Nunito Sans", sans-serif;
   }
   .drop-down {
+    background-color: steelblue;
+    border-radius: 4px;
+    padding: 4px;
+    width: 180px;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    top: 40px;
+  }
+  .drop-down-2 {
     background-color: steelblue;
     border-radius: 4px;
     padding: 4px;
