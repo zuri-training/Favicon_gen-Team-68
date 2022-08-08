@@ -4,12 +4,16 @@
 {% load static %}
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='icon' type='image/x-icon' href="{% static 'images/logo.svg' %}">
+    <meta name="theme-color" content="#3250ec" <meta name="msapplication-navbutton-color" content="#3250ec">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3250ec">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/f605babb3d.js" crossorigin="anonymous" defer></script>
 
-    <title>{% block title %} Conficon Login Page{% endblock %}</title>
+    <title>{% block title %} Welcome | Conficon{% endblock %}</title>
 
     <!-- base styles -->
     <link rel="stylesheet" type='text/css' href="{% static 'css/base.css' %}">
@@ -22,9 +26,9 @@
     {% block header %}
 
     {% endblock %}
-    
+
     {% block content %}{% endblock %}
-    
+
     {% block footer%}
 
     {% endblock %}

@@ -1,86 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 1px;
+  font-family: "Nunito Sans", sans-serif;
+  /* outline: solid 2px red; */
 }
+:root {
+  --backgrouncolor: #ffffff;
+  --fontFam: "Nunito Sans";
+  --btncolor: #3250ec;
+  --btncolor2: #d6dcfb;
+  --radius: 4px;
+  --gap: 4px;
+  --mobilewidth: 84%;
+  --eyecolor: #99999b;
+  --inputbordercolor: #76777a;
+  --regularfontweight: 400;
+  --dark: #191a1c;
+  --regularFontSize: 0.96rem;
+  --transit: all 0.3s linear;
+}
+
 body {
   height: 100vh;
   width: 100vw;
-
-  background-color: rgb(255, 255, 255);
+  font-weight: var(--regularfontweight);
+  font-family: var(--fontFam);
+  background-color: var(--backgrouncolor);
+  color: var(--dark);
+  font-size: var(--regularFontSize);
+ overflow-y: hidden;
 }
-header {
+header#mbile {
   margin: 0% auto;
   margin-top: 3em;
-  width: 45%;
-  padding: 2em 3.1em;
-   
+  width: 100%;
+  padding: 1em 0em;
 }
-header p {
-  padding-top: 0.7em;
+header h1{
+  font-size: 3.12rem;
+  line-height: 64px;
+  font-weight: 600;
+  font-style: normal;
+}
+header#mbile p {
+  transition: none;
+  padding-top: 0.8em;
   font-size: 1.2rem;
   color: rgb(41, 49, 58);
 }
-header p small a {
+header#mbile p small a {
   text-decoration: none;
-  color: rgb(0, 102, 255);
+  color: var(--btncolor);
 }
 .form {
   display: flex;
   flex-direction: column;
-  padding: 1.3em 3em;
+  padding: .8em 3em;
   position: relative;
-  width: 45%;
+  width: 60em;
+  margin-right: 0;
   margin: 0% auto;
+  margin-top: 2em;
   align-content: center;
   justify-content: space-evenly;
   align-items: flex-start;
-  gap: 1.5em;
+  gap: 1.6em;
+  transition: all 0.4s ease-in-out
+  
 }
 .field {
   display: flex;
   flex-direction: column;
-    margin: 0 auto;
+  margin: 0 auto;
   width: 100%;
   position: relative;
 }
 .field input {
-   
-  padding: 0.7em 1em;
-  border-radius: 5px;
-  border: .8px solid rgba(58, 99, 146, 0.562);
+  padding: .8em 0.8em;
+  border-radius: var(--radius);
+  border: 0.8px solid var(--eyecolor);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 .field label {
-  padding-left: 0.15em;
+  display: none;
+  padding-left: 0.08em;
 }
 .field input:focus {
-    margin-top: .8em;
-    padding: 0.8em 1em;
-    box-shadow: 0.2px 0px 8px 1.5px rgba(45, 73, 235, 0.3);
-  border: 1px solid rgba(12, 125, 255, 0.699);
-  transform: translateY(-5px);
+   padding: 1em 0.8em;
+   outline: none;
+  box-shadow: 0.2px 0px 2px 1.5px rgba(45, 73, 235, 0.25);
+  border: 0.4px solid var(--btncolor); 
+ border-radius: 8px;
+  transition: all 0.2s ease-out;
+  caret-color: #3250ec;
 }
 .field input::placeholder {
-  color: rgba(95, 133, 177, 0.562);
+  display: flex;
+  letter-spacing: 0.08em;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--eyecolor);
+  font-size: 14px;
+  line-height: 20px;
 }
 .messages {
   color: red;
   font-style: italic;
   padding-top: 0;
   margin-top: -1em;
-  padding-left: .3em;
- }
+}
 .rem-pass {
-  padding: 0 .2em;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  margin-top: -1em;
-  font-size: 1.2rem;
+  margin-top: 0em;
+  line-height: 20px;
+  font-size: 0.84rem;
 }
 .checkbox-field {
   display: flex;
@@ -90,77 +134,99 @@ header p small a {
   align-items: center;
 }
 .checkbox-input {
+  outline: none;
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(12, 125, 255, 0.699);
+  border: .4px solid var(--eyecolor);
 }
+.pass{
+  display: block;
+  right: 3.6em;
+  position: absolute;
+  bottom: 27em;
+   }
 .pass p a {
   text-decoration: none;
-  color: rgb(0, 102, 255);
+  color: var(--btncolor);
 }
 
 .butns {
   display: flex;
   flex-direction: column;
-  padding: 1em 0em;
+  padding: 0em 0em;
+  margin: 1em 0em;
   gap: 1.5em;
   width: 100%;
 }
 #submit {
   width: 100%;
-  padding: 0.4em 0em;
+  padding: 1em 0em;
   border: none;
-  background-color: rgb(0, 102, 255);
-  box-shadow: 1px 2px 5px .5px rgba(45, 73, 235, 0.5);
-    font-weight: 600;
-  color: #ffff;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  background-color: var(--btncolor);
+  /* box-shadow: 1px 2px 5px 0.5px rgba(45, 73, 235, 0.5); */
+  font-weight: 600;
+  color: #fcfcff;
+  border-radius: var(--radius);
+  letter-spacing: 0.02em;
+  font-size: 1.08rem;
+  line-height: 20px;
+  cursor: pointer;
+ 
 }
 #submit:hover {
-    padding: 0.5em 0em;
-  opacity: 0.5;
+  padding: 1.2em 0em;
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 12px 16px rgba(150, 150, 209, 0.253);
+}
+ #submit:visited {
+  padding: 1em 0em;
+  background-color: #21359d;
+  box-shadow: inset 0px 1px 12px rgba(67, 92, 221, 0.13);
 }
 .txt-lines {
   position: relative;
   display: block;
   text-align: center;
-  max-width: 500px;
+  max-width: 100%;
   margin: 10px auto;
+  margin-top: 3.5em;
+  color: var(--eyecolor);
 }
 .txt-lines::before {
   content: " ";
   display: block;
   height: 0.8px;
-  width: 13.4em;
+  width: calc(28em / 2);
   position: absolute;
   top: 50%;
   left: 0;
+  opacity: 0.5;
   transform: translateX(-123%);
-  background: rgba(0, 102, 255, 0.5);
+  background: var(--inputbordercolor);
 }
 .txt-lines::after {
   content: " ";
   display: block;
   height: 0.8px;
-  width: 13.4em;
+  width: calc(28em / 2);
   position: absolute;
   top: 50%;
   right: 0;
+  opacity: 0.5;
   transform: translateX(123%);
-  background: rgba(0, 102, 255, 0.5);
+  background: var(--inputbordercolor);
 }
 
 .butn2,
 .butn3 {
   width: 100%;
-  padding: 0.4em 0em;
+  padding: 1em 0em;
   border: none;
-  background-color: rgba(0, 102, 255, 0.219);
-  box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4);
-  font-weight: 700;
-  color: rgb(6, 26, 112);
-  border-radius: 5px;
+  background-color: var(--btncolor2);
+  /* box-shadow: 0px -1px 8px .3px rgba(45, 73, 235, 0.4); */
+  cursor: pointer;
+  color: var(--dark);
+  border-radius: var(--radius);
   font-size: 1.3rem;
   text-align: center;
   display: flex;
@@ -168,11 +234,22 @@ header p small a {
   justify-content: center;
   flex-direction: row;
   align-content: center;
-  gap: 2em;
+  gap: 1.6em;
+  position: relative;
 }
-.butn2.butn3:hover{
-    padding: 0.5em 0em;
-    transform: translateY(-5px);
+.butn2:hover,.butn3:hover {
+  padding: 1.2em 0em;
+  background-color: #fcfcff;
+  border: 1px solid #3250ec;
+
+  transform: translateY(-5px);
+  transition: all 0.2s ease-out;
+}
+.butn2:visited,.butn3:visited{
+  padding: 1em 0em;
+  box-shadow: inset 4px 4px 12px rgb(152, 167, 245, 0.25);
+ background-color: #d6dcfb;
+ border: 1px solid #3250ec;
 }
 button {
   text-decoration: none;
@@ -180,24 +257,115 @@ button {
   background-color: transparent;
 }
 i.fa-brands {
-  color: rgb(0, 47, 255);
+  color: var(--btncolor);
+  font-size: 24px;
+  position: absolute;
+  left:25%;
+  transform: translateY(-50%);
+ 
 }
 img.google {
-  width: 15px;
-  height: 15px;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 25%;
+  width: 20px;
+  height: 20px;
 }
- #togglePassword{
-position: absolute;
-font-size: 1.3rem;
-top: 50%;
-right: 0;
-padding-right: .7em;
-cursor: pointer;
- }
- #hide1{
-  display: none;
-} 
-@media screen, (min-width:200) and (max-width: 768) {
+#togglePassword {
+  display: inline;
+  position: absolute;
+  font-size: 1.3rem;
+  top: 35%;
+  right: 0;
+  padding-right: 0.8em;
+   color: var(--eyecolor);
+}
+#hide1  {
+  cursor: pointer;
   
 }
-
+.eyes{
+  transform: scaleX(-1);
+}
+@media only screen and (max-width: 768px) and (min-width: 200px) {
+  body {
+  overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+header#mbile{
+      margin-top: 5.8em;
+   width: 100%;
+    padding: 0em 0em;
+    padding-bottom: .8em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  header h1{
+    font-size: 1.44rem;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: normal;
+  }
+header#mbile p{
+  z-index: 2;
+     position: absolute;
+     bottom: -2.4em;
+     text-align: center;
+  }
+  .form {
+    position: relative;
+     width: var(--mobilewidth); 
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+ 
+  .pass{
+    display: block;
+    right: .4em;
+    position: absolute;
+    bottom: 26em;
+     }
+     .txt-lines{
+      margin-top: 3.5em;
+     }
+  .txt-lines::before{
+    height: 0.4px;
+    width: 13.5em;
+  }
+  .txt-lines::after{
+    height: 0.4px;
+    width: 13.5em;
+  }
+  i.fa-brands {
+    color: var(--btncolor);
+    font-size: 24px;
+    position: absolute;
+    left: 16%;
+    transform: translateY(-50%);
+   
+  }
+  img.google {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 16%;
+    width: 20px;
+    height: 20px;
+  }
+  
+}
+@media only screen and (max-width: 400px){
+  .txt-lines::before{
+    height: 0.4px;
+    width: 10.5em;
+  }
+  .txt-lines::after{
+    height: 0.4px;
+    width: 10.5em;
+  }
+}

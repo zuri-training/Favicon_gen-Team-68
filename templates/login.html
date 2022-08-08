@@ -9,31 +9,31 @@
 {% endblock %}
 
 {% block extra_scripts %}
-<script src="{% static 'js/login.js' %}"></script>
+<script src="{% static 'js/login.js' %}" defer></script>
 {% endblock %}
 {% block content %}
-<header>
-    <h1>Login</h1>
-    <p><small>New? <a href="{% url 'signup' %}">Create an Account</a></small></p>
-</header>
+
 
 
 <form method='post' action='' class="form">
+    <header id="mbile">
+        <h1>Login</h1>
+        <p><small class="down-mobile">Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+    </header>
     {% csrf_token %}
 
     <div class="field">
         <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Myname@Domain.com" name='email'>
+        <input type="email" id="email" placeholder="Email Address" name='email' autofocus >
     </div>
 
     <div class="field">
         <label for="password">Password</label>
-        <input type="password" id="password" name='password' placeholder="*********">
+        <input type="password" id="password" placeholder='Password' name="password" > 
 
-        <div id="togglePassword" onclick='myToggle();'>
-            <i id="hide2" class="fa-solid fa-eye"></i>
-            <i id="hide1" class="fa-solid fa-eye-slash"></i>
-        </div>
+        <span id="togglePassword">
+                     <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
+        </span>
 
     </div>
 
@@ -46,7 +46,7 @@
 
         </div>
         <div class="pass">
-            <p><a href="">Forgot password?</a></p>
+            <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
         </div>
     </div>
     <div class="butns">
@@ -58,5 +58,6 @@
 
     </div>
 </form>
+
 {% endblock %}
 

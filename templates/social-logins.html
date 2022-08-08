@@ -1,21 +1,11 @@
 {% load static %}
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 <p class="txt-lines">Or</p>
+    {% include 'facebook_login.html' %}
 
-<div class="butn2">
-    <button>
-        <img class="google" src="{% static 'images/Google_icon.png' %}"> Continue with Google
-    </button>
-</div>
+    {% include 'google-login.html' %}
 
-<div class="butn3">
-
-    <button>
-        <i class="fa-brands fa-facebook"></i>
-        Continue with Facebook
-    </button>
-</div>
+    {% include 'github_login.html' %}

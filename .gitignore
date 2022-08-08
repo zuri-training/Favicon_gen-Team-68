@@ -1,8 +1,9 @@
 # local server
-
+.vscode
 runs
 # virtual envirinment
 localenv
+env 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -11,7 +12,7 @@ __pycache__/
 
 # C extensions
 *.so
-
+.details
 # Distribution / packaging
 .Python
 build/
@@ -33,6 +34,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 *.pyc
+media/files/**/*
 staticfiles
 # PyInstaller
 #  Usually these files are written by a python script from a template

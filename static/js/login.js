@@ -1,19 +1,18 @@
-const togglePassword1 = document.querySelector("#hide1");
-const togglePassword2 = document.querySelector("#hide2");
+const toggle = document.querySelector(".eyes");
 const password = document.querySelector("#password");
 
-togglePassword1.addEventListener("click", function () {
-   
+toggle.addEventListener("click", () => {
   // toggle the type attribute
-  if (password.type === 'password'){
-    password.type = 'text'
-    togglePassword1.style.display = block
-    togg
+  if (password.type === "password") {
+    password.type = "text";
+    toggle.classList.replace("fa-eye-slash", "fa-eye");
+  } else {
+    password.type = "password";
+    toggle.classList.replace("fa-eye", "fa-eye-slash");
   }
- 
 });
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-        });
+
+const login = document.getElementById("submit");
+login.addEventListener("click", () => {
+  login.textContent = "Authenticating....";
+});

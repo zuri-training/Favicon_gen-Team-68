@@ -1,0 +1,22 @@
+.right-cont {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+  transform: translateX(50%);
+}
+.left-cont {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.center-cont {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.right-cont.appear,
+.left-cont.appear,
+.center-cont.appear {
+  opacity: 1;
+  transform: translate(0);
+}
