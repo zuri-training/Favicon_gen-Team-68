@@ -11,7 +11,7 @@ The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available 
 
 
 
-# Website Preview Image
+# Website Preview Images
 
 
 
