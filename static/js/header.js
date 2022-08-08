@@ -3,6 +3,10 @@ const modal = document.getElementById("modal");
 const overlay = document.querySelector(".overlay");
 const fileName = document.getElementById("file-name");
 const input = document.getElementById("file-input");
+const closeButtonDesk1 = document.querySelector(".close-modal1")
+
+const closeButtonMobile = document.querySelector(".close-modal")
+
 
 const displayImage = (e) => {
   while (fileName.firstChild) {
@@ -24,6 +28,7 @@ const generateIcon = (e) => {
   const fd = new FormData(e.target);
   http.addEventListener("load", (ev) => {
     modal.style.display = "flex";
+    closeButtonDesk1.classList.remove('hidden')
   });
   if (fd.get("file-input").size > 10e6) {
     alert("file size exceeded 10 mb");
