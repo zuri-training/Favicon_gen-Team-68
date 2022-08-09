@@ -6,12 +6,12 @@
         <form method='post' action={% url 'result' %} id='result-gen'>
             {% csrf_token %}
             <div class="heading">
-            <h3>Download favicon size</h3>
+                <h3>Download favicon size</h3>
 
-            <small>Recommended sizes</small>
+                <small>Recommended sizes</small>
             </div>
             <div class='sizes-chb'>
-               
+
                 <label for='s16'><input type='checkbox' class='size-icon' value='16' id='s16' name='s16'><span class="cb">16 X 16</span></label>
                 <label for='s32'><input type='checkbox' class='size-icon' id='s32' value='32' name='s32'><span class="cb">32 X 32<span></label>
                 <label for='s96'><input type='checkbox' class='size-icon' id='s96' name='s96' value='96'><span class="cb">96 X 96</span></label>
@@ -24,15 +24,15 @@
 
             <section class='cp-dwld-icons'>
                 <h4>Copy HTML code after downloading favicon</h4>
-               
-                    <pre class="prettyprint" id="upl">
+
+                <pre class="prettyprint" id="upl">
                      &lt;link rel="icon" type="images/x-icon" sizes="" href="/favicon.ico"&gt;
                     </pre>
-          
+
             </section>
             <div class='down-btns'>
-              
-               
+
+
                 <button class='down-btn-pri' type='submit'>
                     <i class="fa-solid fa-down-to-bracket"></i>
                     {% comment %} <i class="fa-solid fa-down-to-line"></i> {% endcomment %}
@@ -41,9 +41,9 @@
                 </a>
                 <button class='down-btn-grey' onclick="CopyToClipboard('prettyprint')">Copy HTML</button>
             </div>
-            
+
         </form>
-       
+
     </article>
 
     <article class='modal-right'>
@@ -59,6 +59,6 @@
             <img class="google" src="{% static 'images/logo.svg' %}">
         </section>
     </article>
-    </section>
+</section>
 
 {% endif %}

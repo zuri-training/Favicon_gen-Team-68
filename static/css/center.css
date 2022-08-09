@@ -213,7 +213,7 @@ small{
     /* padding: 100px 108px; */
     gap: 10px;
     margin-left: 20px;
-    width: 100%;
+    width: 95%;
     height: 560px;
     background: #FFFFFF;
 }
@@ -530,7 +530,7 @@ small{
         /* padding: 100px 108px; */
         gap: 10px;
         margin: 200px auto 0px;
-        width: 100%;
+        width: 95%;
         height: 560px;
         background: #FFFFFF;
     }
