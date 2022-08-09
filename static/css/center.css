@@ -50,7 +50,7 @@ div img{
 
 }
 
-span{
+span .num{ 
     color: #546DEF;
 }
 
@@ -213,7 +213,7 @@ small{
     /* padding: 100px 108px; */
     gap: 10px;
     margin-left: 20px;
-    width: 100%;
+    width: 95%;
     height: 560px;
     background: #FFFFFF;
 }
@@ -530,7 +530,7 @@ small{
         /* padding: 100px 108px; */
         gap: 10px;
         margin: 200px auto 0px;
-        width: 100%;
+        width: 95%;
         height: 560px;
         background: #FFFFFF;
     }
@@ -805,7 +805,7 @@ small{
         height: 580px;
         background: #FFFFFF;
     }
-    span {
+    span .num{
         width: 35px;
         height: 36px;
         font-family: 'Nunito Sans';
