@@ -30,9 +30,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 const resultForm = document.getElementById("result-gen");
-resultForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
 //Copying embedded html code for the generated favicon
 function CopyToClipboard(containerId) {
   if (document.selection) {
