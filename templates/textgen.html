@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="{% static 'css/textgen.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+{% endblock %}
+
+
+{% block content %}
+<div class="textgen-container">
+    <div class="text-gen">
+        <p class="p-1">NEW FEATURE</p>
+        <p class="p-2">GENERATE FAVICONS FROM TEXT</p>
+        <p class="p-3">Use this tool to generate a favicon from scratch if you don't have an image or logo for your website.</p>
+        <button type="submit" class="textgen-btn">Generate</button>
+    </div>
+    <div class="textgen-image">
+        <img src="{% static 'images/Frame 149.svg' %}" alt="">
+    </div>
+</div>
+{% endblock%}
