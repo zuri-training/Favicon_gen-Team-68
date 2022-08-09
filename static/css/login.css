@@ -32,6 +32,7 @@ body {
   color: var(--dark);
   font-size: var(--regularFontSize);
  overflow-y: hidden;
+ accent-color: #3250ec;
 }
 header#mbile {
   margin: 0% auto;
@@ -134,6 +135,7 @@ header#mbile p small a {
   align-items: center;
 }
 .checkbox-input {
+  accent-color: #3250ec;
   outline: none;
   width: 20px;
   height: 20px;

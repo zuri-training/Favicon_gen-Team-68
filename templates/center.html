@@ -1,21 +1,4 @@
-{% extends 'layout.html' %}
-
 {% load static %}
-
-
-{% block extra_css %}
-
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../static/css/center.css">
-<link rel="stylesheet" href="../static/css/center-animations.css">
-
-{% endblock %}
-{% block extra_scripts %}
-
-<script src="{% static 'js/center-animations.js' %}" defer></script>
-
-{% endblock %}
-{% block content %}
 
 <div class="container-main">
     <div>
@@ -47,7 +30,7 @@
         </div>
         <div class='right-cont'>
             <p>
-            <h3 class="container-4-header1"><span> 01.</span> Upload your file
+            <h3 class="container-4-header1"><span class="num"> 01.</span> Upload your file
             </h3>
             </p>
             <p class="container-4-p1">
@@ -61,7 +44,7 @@
     <div class="container-5">
         <div class='left-cont'>
             <p>
-            <h3 class="container-5-header1"><span> 02.</span> Generate favicon
+            <h3 class="container-5-header1"><span class="num"> 02.</span> Generate favicon
             </h3>
             </p>
             <p class="container-5-p1">
@@ -83,7 +66,7 @@
         </div>
         <div class='right-cont'>
             <p>
-            <h3 class="container-6-header1"><span> 03.</span> Add it to your website
+            <h3 class="container-6-header1"><span class="num"> 03.</span> Add it to your website
             </h3>
             </p>
             <p class="container-6-p1">
@@ -111,5 +94,3 @@
     </div>
 
 </div>
-
-{% endblock %}

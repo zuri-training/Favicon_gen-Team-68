@@ -1,12 +1,7 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 header.main-header {
   background-color: #232330;
   min-height: 1024px;
+  overflow-y: scroll;
 }
 
 .intro {
@@ -99,12 +94,15 @@ header.main-header {
 .recent {
   display: flex;
   justify-content: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
 }
-
+.recent li {
+  max-width: 60px;
+  max-height: 60px;
+}
 .icons {
   color: #ffff;
-  margin-left: 100px;
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -127,7 +125,7 @@ header.main-header {
 .recent-1 {
   font-size: 24px;
   font-weight: 600;
-  margin-left: 70px;
+  margin-left: 170px;
   margin-bottom: 36px;
   color: #ffff;
 }
@@ -455,6 +453,7 @@ a {
     margin-top: 80px;
     margin-left: 18px;
   }
+
   .recent-1 {
     margin-left: 12px;
     font-size: 16px;
@@ -495,7 +494,7 @@ a {
   nav.navbar.sticky {
     position: sticky;
     top: 0;
-    background: #232330; 
+    background: #232330;
     z-index: 9999;
   }
   /* The image preview is not fitting on mobile view */
