@@ -35,9 +35,9 @@ section.modal {
   justify-content: center;
   gap: 2rem;
   transition: var(--transit);
-  /* animation: fadeup 1s forwards linear; */
-  opacity: 0.5;
-  z-index: 10;
+animation: fadeup 1s 1.2s forwards ease-out;
+  opacity: 0;
+  z-index: 11000;
 }
 .close-modal {
   position: absolute;
@@ -51,14 +51,16 @@ section.modal {
 }
 .close-modal1 {
   position: absolute;
-  top: 10%;
-  left: 80%;
+  top: 50%;
+  left: 90%;
   font-size: 2rem;
   cursor: pointer;
   background-color: #ffffff;
   color: #191a1c;
   border-radius: 50%;
   transform: translate (-50%, -0%);
+  opacity: 0;
+  animation: fadein 1s 2.2s forwards ease-out;
 }
 .close-modal:hover {
   color: #3250ec;
@@ -303,6 +305,7 @@ button {
   font-weight: 800;
   letter-spacing: 0.02em;
   line-height: 24px;
+  height: 3.5em;
   border-radius: 4px;
  
 }
@@ -341,10 +344,14 @@ button {
     color: #ffffff;
     background-color: #3250ec;
   }
+  .close-modal1{
+    display: none;
+  }
   section.modal {
-    width: 90%;
+    width: 100%;
     height: auto !important;
     flex-direction: column;
+    
     transform: translate(-50%, -50%);
   }
   .modal article {
@@ -360,27 +367,37 @@ button {
   .modal-left form h3 {
     font-size: 2rem;
     color: #0a0a0b;
+    padding-left: 1em;
+  }
+  .sizes-chb{
+    margin-top: 1em;
+  }
+  .modal-left form small{
+    margin-top: 1.3em;
   }
   pre#upl.prettyprint {
     background-color: hsla(236, 100%, 83%, 0.464);
     font-size: 1.08rem;
+    justify-content: center;
   }
   .down-btns > * {
-    font-size: 1.5rem;
+    font-size: 1.08rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     /* padding: .4em 2.6em; */
 
-    height: 3.5em;
+    height: 3.8em;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    gap: 2em;
+    gap: 1em;
   }
   .down-btn-grey {
-    display: block;
+    display: flex;
     width: 44%;
+    font-size: 1.08rem;
+    
   }
   .down-btn-pri {
     display: flex;
@@ -398,7 +415,7 @@ button {
     cursor: pointer;
   }
   .sizes-chb label {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .sizes-chb label:not(.s16) {
     margin-top: .6em;
@@ -414,20 +431,26 @@ button {
     justify-content: space-between;
   }
   input[type="checkbox"] {
-    transform: scale(1.7);
+    transform: scale(1.4);
  
   }
   .modal-left {
     height: 60%;
   }
   .modal-right {
-    min-height: 50%;
+    min-height: 17em;
   }
   .prev-board {
-    padding-bottom: 2em;
+    padding-bottom: 1.4em;
   }
   .close-modal {
-    top: 4%;
-    right: 90%;
+    top: 6.4%;
+    right: 87%;
+  }
+}
+@media (max-width: 320px){
+  pre#upl.prettyprint {
+    padding-left: 1em;
+  justify-content: center;
   }
 }
