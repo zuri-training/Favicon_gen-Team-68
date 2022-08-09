@@ -12,7 +12,7 @@ urlpatterns = [
     path("signup/", views.signup_view, name="signup"),
     path("upload/", views.upload, name="upload"),
     path("result/", views.result, name="result"),
-    path("contact/", views.contactView, name="contact"),
+    path("contact/", views.contact, name="contact"),
 
     #urls for password reset
     path('reset_password/',

@@ -1,45 +1,192 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --backgrouncolor: #ffffff;
-  --fontFam: "Nunito Sans";
-  --btncolor: #3250ec;
-  --btncolor2: #d6dcfb;
-  --radius: 4px;
-  --gap: 4px;
-  --mobilewidth: 84%;
-  --eyecolor: #99999b;
-  --inputbordercolor: #76777a;
-  --regularfontweight: 400;
-  --dark: #191a1c;
-  --regularFontSize: 0.96rem;
-  --transit: all 0.3s linear;
-}
-body {
-    height: 100vh;
-    width: 100vw;
-    font-weight: var(--regularfontweight);
-    font-family: var(--fontFam);
-    background-color: var(--backgrouncolor);
-    color: var(--dark);
-    font-size: var(--regularFontSize);
-   overflow: hidden;
+	--backgrouncolor: #ffffff;
+	--fontFam: "Nunito Sans";
+	--btncolor: #3250ec;
+	--btncolor2: #d6dcfb;
+	--radius: 4px;
+	--gap: 4px;
+	--mobilewidth: 84%;
+	--eyecolor: #99999b;
+	--inputbordercolor: #76777a;
+	--regularfontweight: 400;
+	--dark: #191a1c;
+	--regularFontSize: 0.96rem;
+	--transit: all 0.3s linear;
   }
-  header#mcont {
-    margin: 0% auto;
-    margin-top: 3em;
-    width: 100%;
-    padding: 1em 0em;
+  body {
+	height: 100vh;
+	width: 100vw;
+	font-weight: var(--regularfontweight);
+	font-family: var(--fontFam);
+	background-color: var(--backgrouncolor);
+	color: var(--dark);
+	font-size: var(--regularFontSize);
+   overflow-y: hidden;
+   accent-color: #3250ec;
+  }
+  .icon-arrow{
+	width: 5%;
+	height: 2px;
+	border-radius: 2px;
+	margin-left: 50px;
+	background-color: #000;
+	position: relative;
+	top:50px;
+  }
+  .icon-arrow::after{
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 2px;
+	border-radius: 3px;
+	background-color: #000;
+	transform: rotate(45deg);
+	position: absolute;
+	left: -6px;
+	bottom: -13px;
+  }
+  .icon-arrow::before{
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 2px;
+	border-radius: 3px;
+	background-color: #000;
+	transform: rotate(-45deg);
+	position: absolute;
+	left: -6px;
+	bottom: 13px;
+  }
+  .icon-arrow:hover{
+    opacity: .5;
+  }
+  header#contact-head {
+	margin: 0% auto;
+	margin-top: 3em;
+	width: 100%;
+	padding: 1em 0em;
   }
   header h1{
-    font-size: 3.12rem;
-    line-height: 64px;
-    font-weight: 600;
-    font-style: normal;
+	font-size: 3.12rem;
+	line-height: 64px;
+	font-weight: 600;
+	font-style: normal;
   }
-  header#cont p {
-    transition: none;
-    padding-top: 0.8em;
-    font-size: 1.2rem;
-    color: rgb(41, 49, 58);
+  header#contact-head p {
+	transition: none;
+	padding-top: 0.8em;
+	font-size: 1.2rem;
+	color: rgb(41, 49, 58);
+  }
+  .form {
+	display: flex;
+	flex-direction: column;
+	padding: .6em 2em;
+	position: relative;
+	width: 40em;
+	margin-right: 0;
+	margin: 0% auto;
+	margin-top: 10em;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	gap: 0.8.em;
+	transition: all 0.4s ease-in-out
+	
+  }
+  .cont-field {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+  }
+  .cont-field input {
+	padding: .8em 0.8em;
+	border-radius: var(--radius);
+	border: 0.8px solid var(--eyecolor);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+	
+  }
+  .cont-field textarea{
+	padding: .8em 0.8em;
+	border-radius: var(--radius);
+	border: 0.8px solid var(--eyecolor);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+	transition: .3s;
+	border-radius: 4px;
+	min-height: 150px;
+  cursor: pointer;
+  margin: 1em 0em;
+  gap: 1.5em;
+  }
+  
+  .cont-field input, textarea:focus {
+	 padding: 1em 0.8em;
+	 outline: none;
+	box-shadow: 0.2px 0px 2px 1.5px rgba(45, 73, 235, 0.25);
+	border: 0.4px solid var(--btncolor); 
+   border-radius: 8px;
+	caret-color: #3250ec;
+  }
+  .cont-field input, textarea::placeholder {
+	display: flex;
+	letter-spacing: 0.08em;
+	justify-content: center;
+	align-items: flex-start;
+	color: var(--eyecolor);
+	font-size: 14px;
+	line-height: 20px;
+  }
+  .cont-butns {
+	display: flex;
+	flex-direction: column;
+	padding: 0em 0em;
+	margin: 1em 0em;
+	gap: 1.5em;
+	width: 100%;
+  }
+  #submit {
+	width: 100%;
+	padding: 1em 0em;
+	border: none;
+	background-color: var(--btncolor);
+	/* box-shadow: 1px 2px 5px 0.5px rgba(45, 73, 235, 0.5); */
+	font-weight: 600;
+	color: #fcfcff;
+	border-radius: var(--radius);
+	letter-spacing: 0.02em;
+	font-size: 1.08rem;
+	line-height: 20px;
+	cursor: pointer;
+   
+  }
+  #submit:hover {
+	padding: 1.2em 0em;
+	transition: all 0.2s ease-out;
+	box-shadow: 0px 12px 16px rgba(150, 150, 209, 0.253);
+  }
+   #submit:visited {
+	padding: 1em 0em;
+	background-color: #21359d;
+	box-shadow: inset 0px 1px 12px rgba(67, 92, 221, 0.13);
+  }
+
+  @media only screen and (max-width: 400px){
+	.txt-lines::before{
+	  height: 0.4px;
+	  width: 10.5em;
+	}
+	.txt-lines::after{
+	  height: 0.4px;
+	  width: 10.5em;
+	}
   }

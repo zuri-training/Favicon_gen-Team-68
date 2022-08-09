@@ -72,15 +72,17 @@ for (let i = 0; i < checkboxes.length; i++) {
     let checked = i.target.checked;
     let valueSet = `${value}x${value}`;
     console.log(value, iconType, checked);
+    let sizes = [];
+   
 
-    if ((checked = true)) {
-      let sizes = ["16x16"];
-      let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`;
-      sizes.push(valueSet);
-      console.log(sizes.join(" "));
-      insertDiv.textContent = faviconLink;
-    } else if ((checked = false)) {
-      insertDiv.textContent = "";
-    }
-  });
-}
+//     if ((checked = true)) {
+      
+//       let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`;
+//       sizes.push(valueSet);
+//       console.log(sizes.join(" "));
+//       insertDiv.textContent = faviconLink;
+//     } else if ((checked = false)) {
+//       insertDiv.textContent = "";
+//     }
+   });
+ }

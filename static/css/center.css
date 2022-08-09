@@ -62,6 +62,7 @@ span .num{
     line-height: 48px;
     width: 327px;
     height: 48px;
+    margin: 0px 0px 10px 0px;
 }
 
 .container-3{
@@ -722,6 +723,7 @@ small{
         display: flex;
         align-items: center;
         color: #323337;
+        margin: 0px 0px 10px 0px;
     }
     .container-2{
         display: flex;
@@ -864,10 +866,11 @@ small{
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 24px;
         align-items: center;
         color: #3250EC;
+        gap: 10px;
         margin: 0px 0px 10px;
         padding: 0px 0px 0px 0px;
     }
@@ -938,7 +941,7 @@ small{
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 24px;
         align-items: center;
         color: #3250EC;
