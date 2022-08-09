@@ -8,30 +8,31 @@
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock %}
 
-{% block extra_scripts %}
-<script src="{% static 'js/login.js' %}" defer></script>
-{% endblock %}
 {% block content %}
 
 
+	<a href=" "><div class="icon-arrow"></div></a>
 
-<form method='post' action='' class="form">
-    <header id="mcont">
-        <h1>Contact Us</h1>
-        <p><small class="down-mobile">We'll ove to hear from you, please send a message <a href="{% url 'signup' %}">Create an Account</a></small></p>
-    </header>
-    {% csrf_token %}
+	<form method='post' action='' class="form">
+		<header id="contact-head">
+			<h1>Contact Us</h1>
+			<p><small class="contact-title">We'd love to hear from you, please send us a message</small></p>
+		</header>
+        {% csrf_token %}
 
-    <div class="mail">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Email Address" name='email' autofocus >
-    </div>
+		<div class="cont-field">
+			<input type="email" id="email" placeholder="Email Address" name='email' autofocus >
+		</div>
 
-    <div class="text">
-        <label for="message">Password</label>
-        <input type="text" id="message" placeholder='Please type your message' name="message" > 
-    </div>
-    </div>
-</form>
+		<div class="cont-field">
+			<textarea placeholder="Message" class="field"></textarea>
+		</div>
+
+		<div class="cont-butns">
+			<div class="cont-butn1">
+				<button type='submit' id='submit'>Send</button>
+			</div>
+		</div>
+	</form>
 
 {% endblock %}
