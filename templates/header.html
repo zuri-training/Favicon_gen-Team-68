@@ -5,6 +5,9 @@
 {% block title %}Welcome | ConfIcon{% endblock %}
 
 {% block extra_css %}
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/center.css">
+<link rel="stylesheet" href="../static/css/center-animations.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
@@ -13,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {% endblock %}
 {% block extra_scripts %}
+<script src="{% static 'js/center-animations.js' %}" defer></script>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
 {% comment %} <script src="https://use.fontawesome.com/cb32fa7986.js" defer></script> {% endcomment %}
 <script src="{% static 'js/copy.js' %}" defer></script>
@@ -101,10 +105,10 @@
         <ul class="recent">
             {% for recent in icons %}
 
-            <li class="header-recent-nmae">
+            <li class="header-recent-name">
                 <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
                     <img src="{{ recent.upload.image.url }}" />
-                    <p>{{recent.upload.image.name | split:'/'}}</p>
+                    <p style='font-size: .4em'>{{recent.upload.image.name | split:'/'}}</p>
                 </a>
             </li>
 
