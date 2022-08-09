@@ -50,7 +50,7 @@ div img{
 
 }
 
-span{
+span .num{ 
     color: #546DEF;
 }
 
@@ -805,7 +805,7 @@ small{
         height: 580px;
         background: #FFFFFF;
     }
-    span {
+    span .num{
         width: 35px;
         height: 36px;
         font-family: 'Nunito Sans';

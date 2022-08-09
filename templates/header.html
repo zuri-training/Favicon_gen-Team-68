@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
-
 {% load static %}
+{% load custom_tags %}
 
 {% block title %}Welcome | ConfIcon{% endblock %}
 
@@ -14,15 +14,18 @@
 {% endblock %}
 {% block extra_scripts %}
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
+{% comment %} <script src="https://use.fontawesome.com/cb32fa7986.js" defer></script> {% endcomment %}
+<script src="{% static 'js/copy.js' %}" defer></script>
 <script src="{% static 'js/upload.js' %}" defer></script>
 {% endblock %}
 
 {% block header %}
 
 <header class='main-header'>
+    {% include 'copy.html' %}
     {% include 'upload.html' %}
     <nav class="navbar sticky">
-      <a href="{% url 'home' %}" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
+        <a href="{% url 'home' %}" class="nav-brand" style="color: white;" id='Go_up'><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
 
         <ul class="nav-menu">
             <li class="nav-item">
@@ -33,7 +36,7 @@
                 </a>
                 <div class="sub-gen">
                     <ul class="drop-down">
-                      <li><a href={% url 'home' %}>Upload Image</a></li>
+                        <li><a href={% url 'home' %}>Upload Image</a></li>
                         <li><a href="#">From Text</a></li>
                     </ul>
                 </div>
@@ -98,10 +101,10 @@
         <ul class="recent">
             {% for recent in icons %}
 
-            <li class="header-recent-nmae">
+            <li class="header-recent-name">
                 <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
                     <img src="{{ recent.upload.image.url }}" />
-                    <p>{{recent.name}}</p>
+                    <p style='font-size: .4em'>{{recent.upload.image.name | split:'/'}}</p>
                 </a>
             </li>
 

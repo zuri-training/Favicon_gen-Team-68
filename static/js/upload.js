@@ -2,26 +2,36 @@
 const darkMode = document.querySelector(".child2");
 const lightMode = document.querySelector(".child1");
 const prevModalVDiv = document.querySelector(".prev-board");
+const centerContainerUpload = document.querySelector(".container-main")
+const closeButtonDeskUpload = document.querySelector(".close-modal1")
+const closeButtonMobileUpload = document.querySelector(".close-modal")
+
+
 const codeDiv = document.querySelector(".cp-space");
-darkMode.addEventListener("click", () => {
+darkMode?.addEventListener("click", () => {
   lightMode.classList.remove("active-toggle");
-  darkMode.classList.add("active-toggle");
+  darkMode.style.backgroundColor = "#0a0a0b";
+  darkMode.style.color = "#ffffff"
   prevModalVDiv.style.backgroundColor = "#232330";
-  codeDiv.style.backgroundColor = "#232330";
-  codeDiv.style.color = "#ffffff";
+
 });
-lightMode.addEventListener("click", () => {
+lightMode?.addEventListener("click", () => {
   lightMode.classList.add("active-toggle");
-  darkMode.classList.remove("active-toggle");
-  prevModalVDiv.style.backgroundColor = "#ddd";
-  codeDiv.style.backgroundColor = "#ddd";
+  darkMode.style.backgroundColor = "#ffffff"
+  darkMode.style.color = "#191a1c"
+  prevModalVDiv.style.backgroundColor = "#ffffff";
+
 });
 //closing the modal of upload page
-const closeButton = document.querySelector(".close-modal");
+
+
 const closeModal = () => {
   modal.style.display = "none";
+closeButtonDeskUpload.classList.add("hidden");
 };
-closeButton.addEventListener("click", closeModal);
+closeButtonDeskUpload.addEventListener("click", closeModal);
+closeButtonMobileUpload.addEventListener("click", closeModal);
+centerContainerUpload.addEventListener('click', closeModal)
 document.addEventListener("keydown", (e) => {
   // console.log(e.key)
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
@@ -29,20 +39,20 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-//const resultForm = document.getElementById("result-gen");
-//resultForm.addEventListener("submit", (e) => {
-//e.preventDefault();
-//});
+const resultForm = document.getElementById("result-gen");
+resultForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 //Copying embedded html code for the generated favicon
 function CopyToClipboard(containerId) {
   if (document.selection) {
     let range = document.body.createTextRange();
-    range.moveToElementText(document.querySelector(".cp-space"));
+    range.moveToElementText(document.querySelector(".prettyprint"));
     range.select().createTextRange();
     navigator.clipboard.writeText(range);
   } else if (window.getSelection) {
     let range = document.createRange();
-    range.selectNode(document.querySelector(".cp-space"));
+    range.selectNode(document.querySelector(".prettyprint"));
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
     navigator.clipboard.writeText(range);
@@ -52,7 +62,7 @@ function CopyToClipboard(containerId) {
 //Adding embedded html code from the user selection of preferred sizes
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-const insertDiv = document.getElementById("box");
+let insertDiv = document.querySelector(".prettyprint");
 
 /*  function func() {
       checkboxes[1].checked = true;
@@ -63,21 +73,17 @@ for (let i = 0; i < checkboxes.length; i++) {
     let value = i.target.value;
     let iconType = i.target.classList.value;
     let checked = i.target.checked;
+    let valueSet = `${value}x${value}`;
     console.log(value, iconType, checked);
-    let html2 = ` &lt;link rel="manifest" href="/site.webmanifest"&gt; `;
-    let html3 = `<code class="prettyprint"> &lt;link rel="apple-touch-icon" sizes="${i.value}x${i.value}" href="/apple-touch-icon.png"&gt; </code>`;
-    let html1 = `<code class="prettyprint"> &lt;link rel="icon" type="image/png" sizes="${value}x${value}" href="/favicon-${value}x${value}.png"&gt; </code>`;
+
     if ((checked = true)) {
-      if (iconType == "size-icon") {
-        insertDiv.insertAdjacentHTML("afterbegin", html1 + "\n");
-      } else if (iconType == "mani") {
-        insertDiv.insertAdjacentHTML("afterbegin", html2 + "\n");
-      } else if (iconType == "apple") {
-        insertDiv.insertAdjacentHTML("afterbegin", html3 + "\n");
-      }
+      let sizes = ["16x16"];
+      let faviconLink = `<link rel="icon" type="images/x-icon" sizes="${sizes}" href="/favicon.ico">`;
+      sizes.push(valueSet);
+      console.log(sizes.join(" "));
+      insertDiv.textContent = faviconLink;
     } else if ((checked = false)) {
       insertDiv.textContent = "";
     }
   });
 }
-
