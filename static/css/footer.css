@@ -17,6 +17,10 @@ Footer div h3,
 div.fav img {
   width: 35px;
 }
+div.fav img:hover{
+  transform: scale(2.7) translate(15px,16px);
+  transition: all 0.5s linear;
+}
 #About_Conficons {
   text-align: center;
   background-color: white;
@@ -102,7 +106,7 @@ Footer div a {
   padding: 25px 0;
 }
 Footer div a:hover {
-  color: rgba(14, 11, 220, 0.927);
+  color: #3250EC;
 }
 .copyright {
   color: white;
@@ -154,6 +158,10 @@ a#arrowup {
   div.fav img {
     width: 30px;
   }
+  div.fav img:hover{
+    transform: scale(2.7) translate(15px,16px);
+    transition: all 0.5s linear;
+  }  
   #About_Conficons {
     text-align: center;
     background-color: white;
@@ -239,7 +247,7 @@ a#arrowup {
     padding: 16px 0;
   }
   Footer div a:hover {
-    color: rgba(14, 11, 220, 0.927);
+    color: #3250EC;
   }
   .copyright {
     display: flex;
@@ -286,12 +294,16 @@ a#arrowup {
     justify-content: center;
     background-color: #232330;
     padding: 50px 0;
-    gap: 3em;
+    gap: 4.5em;
   }
   div.fav img {
     width: 25px;
     height: 30px;
   }
+  div.fav img:hover{
+    transform: scale(2.3) translate(15px,16px);
+    transition: all 0.5s linear;
+  }  
   #About_Conficons {
     text-align: center;
     background-color: white;
@@ -378,7 +390,7 @@ a#arrowup {
     padding: 18px 0;
   }
   Footer div a:hover {
-    color: rgba(14, 11, 220, 0.927);
+    color: #3250EC;
   }
   .copyright {
     display: flex;
@@ -414,12 +426,16 @@ a#arrowup {
     justify-content: center;
     background-color: #232330;
     padding: 30px 0;
-    gap: 2em;
+    gap: 2.5em;
   }
   div.fav img {
     width: 20px;
     height: 23px;
   }
+  div.fav img:hover{
+    transform: scale(2.2) translate(6px,10px);
+    transition: all 0.5s linear;
+  }  
   #About_Conficons {
     text-align: center;
     background-color: white;
@@ -508,7 +524,7 @@ a#arrowup {
     padding: 17px 0;    
   }
   Footer div a:hover {
-    color: rgba(14, 11, 220, 0.927);
+    color: #3250EC;
   }
   .copyright {
     display: flex;
@@ -530,11 +546,16 @@ a#arrowup {
     justify-content: center;
     background-color: #232330;
     padding: 20px 0;
+    gap: 2em;
   }
   div.fav img {
     width: 12px;
     height: 12px;
   }
+  div.fav img:hover{
+    transform: scale(2.0) translate(6px,8px);
+    transition: all 0.5s linear;
+  }  
   footer div#footer_special {
     display: grid;
     justify-content:center;
@@ -552,5 +573,15 @@ a#arrowup {
   }
   .resources a {
     padding: 12px 0;    
+  }
+  .copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    font-size: 11px;    
+    font-family: Dosis, sans-serif;
+    font-weight: normal;
+    width: 100%;
   }
 }
