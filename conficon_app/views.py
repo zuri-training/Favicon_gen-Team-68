@@ -39,23 +39,29 @@ def signup_view(request):
         instance["username"] = username = request.POST.get("username")
         instance["email"] = email = request.POST.get("email")
         password = request.POST.get("password")
-
-        try:
-            Profile.objects.get(email=email)
-        except:
-            user = Profile(username=username.lower(), email=email)
-            user.set_password(password)
-            user.save()
-            login(request, user, backend="django.contrib.auth.backends.ModelBackend")
-            messages.success(request, "Your registration was successful!")
-            return redirect("home")
+        if password and username and email:
+            try:
+                Profile.objects.get(email=email)
+            except:
+                user = Profile(username=username.lower(), email=email)
+                user.set_password(password)
+                user.save()
+                login(
+                    request, user, backend="django.contrib.auth.backends.ModelBackend"
+                )
+                messages.success(request, "Your registration was successful!")
+                return redirect("home")
+            else:
+                messages.error(request, "User exists, please login")
         else:
-            messages.error(request, "User exists, please login")
+            messages.error(request, "Password, username or email cannot be empty")
     context = {"instance": instance}
     return render(request, "signup.html", context)
 
+
 def contact(request):
-    return render(request, 'contact.html')
+    return render(request, "contact.html")
+
 
 def login_view(request):
     """redirects to home is user is already logged in."""
@@ -71,28 +77,33 @@ def login_view(request):
         email = request.POST.get("email").lower()
         password = request.POST.get("password")
         rememberbox = request.POST.get("rememberbox")
-
-        try:
-            user = Profile.objects.get(email=email)
-        except:
-            messages.error(request, "User does not exists!")
-        else:
-            user = authenticate(username=email, password=password)
-            if user:
-                login(
-                    request, user, backend="django.contrib.auth.backends.ModelBackend"
-                )
-
-                # This is setting session to clear(when the browser was closed),
-                # if checkbox is not ticked else it will use the default
-                # session
-                if not rememberbox:
-                    request.session.set_expiry(0)
-
-                messages.info(request, f"You are now logged in as {user.username}.")
-                return redirect("home")
+        if password and email:
+            try:
+                user = Profile.objects.get(email=email)
+            except:
+                messages.error(request, "User does not exists!")
             else:
-                messages.error(request, "Invalid password or email.")
+                user = authenticate(username=email, password=password)
+                if user:
+                    login(
+                        request,
+                        user,
+                        backend="django.contrib.auth.backends.ModelBackend",
+                    )
+
+                    # This is setting session to clear(when the browser was closed),
+                    # if checkbox is not ticked else it will use the default
+                    # session
+                    if not rememberbox:
+                        request.session.set_expiry(0)
+
+                    messages.info(request, f"You are now logged in as {user.username}.")
+                    return redirect("home")
+                else:
+                    messages.error(request, "Invalid password or email.")
+        else:
+            messages.error(request, "Password, or email cannot be empty")
+
     return render(request, "login.html")
 
 
@@ -159,4 +170,4 @@ def result(request):
     )
     return redirect("upload")
     print(result)
-    return render(request, "index.html", {"result": result})
+    return render(request, "index.html", {"result": result, "user_latest": user_latest})
