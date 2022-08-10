@@ -64,7 +64,7 @@ def login_view(request):
         messages.info(
             request, "You are already authenticated! Log out to a create new account."
         )
-        return redirect("authorized-page")
+        return redirect("home")
     if request.META["QUERY_STRING"].startswith("next="):
         messages.info(request, "You must login login first to access that page")
 
