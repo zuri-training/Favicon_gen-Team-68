@@ -27,8 +27,6 @@
 <header class='main-header' id="Go_up">
 
     {% include 'copy.html' %}
-
-    {% include 'upload.html' %}
     <nav class="navbar sticky">
         <a href="{% url 'home' %}" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
 
@@ -149,7 +147,7 @@
 
         </ul>
     </div>
-
+    {% include 'upload.html' %}
     {% endif %}
 </header>
 <script src="{% static 'js/navbar.js' %}">
