@@ -40,7 +40,7 @@ def signup_view(request):
         instance["email"] = email = request.POST.get("email")
         password = request.POST.get("password")
         if not(password and username and email):
-            message.error('Password, username and email cannot be empty')
+            messages.error('Password, username and email cannot be empty')
         try:
             Profile.objects.get(email=email)
         except:
