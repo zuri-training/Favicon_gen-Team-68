@@ -39,9 +39,10 @@ header#mbile {
   margin-top: 3em;
   width: 100%;
   padding: 1em 0em;
+  
 }
 header h1{
-  font-size: 3.12rem;
+  font-size: 4rem !important; 
   line-height: 64px;
   font-weight: 600;
   font-style: normal;
@@ -51,6 +52,9 @@ header#mbile p {
   padding-top: 0.8em;
   font-size: 1.2rem;
   color: rgb(41, 49, 58);
+}
+small.down-mobile {
+  font-size: 1.6rem;
 }
 header#mbile p small a {
   text-decoration: none;
@@ -93,7 +97,6 @@ header#mbile p small a {
   padding-left: 0.08em;
 }
 .field input:focus {
-   padding: 1em 0.8em;
    outline: none;
   box-shadow: 0.2px 0px 2px 1.5px rgba(45, 73, 235, 0.25);
   border: 0.4px solid var(--btncolor); 
@@ -125,7 +128,7 @@ header#mbile p small a {
   width: 100%;
   margin-top: 0em;
   line-height: 20px;
-  font-size: 0.84rem;
+  font-size: 1.2rem;
 }
 .checkbox-field {
   display: flex;
@@ -143,15 +146,31 @@ header#mbile p small a {
 }
 .pass{
   display: block;
-  right: 3.6em;
+  right: 2.8em;
   position: absolute;
-  bottom: 27em;
+  bottom: 21em !important;
+  font-size: 1.2rem;
    }
 .pass p a {
   text-decoration: none;
   color: var(--btncolor);
 }
-
+.field.error input{
+  outline: none;
+  border: none;
+  border: .4px solid hsl(0, 100%, 74%);
+}
+.field.success inout{
+  outline: none;
+ box-shadow: 0.2px 0px 2px 1.5px rgba(45, 73, 235, 0.25);
+ border: 0.4px solid var(--btncolor); 
+border-radius: 8px;
+ transition: all 0.2s ease-out;
+ caret-color: #3250ec;
+}
+.field small{
+  color: hsl(0, 100%, 74%);
+ }
 .butns {
   display: flex;
   flex-direction: column;
@@ -170,18 +189,16 @@ header#mbile p small a {
   color: #fcfcff;
   border-radius: var(--radius);
   letter-spacing: 0.02em;
-  font-size: 1.08rem;
+  font-size: 1.5rem;
   line-height: 20px;
   cursor: pointer;
  
 }
 #submit:hover {
-  padding: 1.2em 0em;
   transition: all 0.2s ease-out;
   box-shadow: 0px 12px 16px rgba(150, 150, 209, 0.253);
 }
  #submit:visited {
-  padding: 1em 0em;
   background-color: #21359d;
   box-shadow: inset 0px 1px 12px rgba(67, 92, 221, 0.13);
 }
@@ -229,7 +246,7 @@ header#mbile p small a {
   cursor: pointer;
   color: var(--dark);
   border-radius: var(--radius);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: center;
   display: flex;
   align-items: center;
@@ -240,15 +257,12 @@ header#mbile p small a {
   position: relative;
 }
 .butn2:hover,.butn3:hover {
-  padding: 1.2em 0em;
+  
   background-color: #fcfcff;
   border: 1px solid #3250ec;
-
-  transform: translateY(-5px);
   transition: all 0.2s ease-out;
 }
 .butn2:visited,.butn3:visited{
-  padding: 1em 0em;
   box-shadow: inset 4px 4px 12px rgb(152, 167, 245, 0.25);
  background-color: #d6dcfb;
  border: 1px solid #3250ec;
@@ -316,7 +330,7 @@ header#mbile{
 header#mbile p{
   z-index: 2;
      position: absolute;
-     bottom: -2.4em;
+     bottom: -4.4em;
      text-align: center;
   }
   .form {
@@ -331,7 +345,7 @@ header#mbile p{
     display: block;
     right: .4em;
     position: absolute;
-    bottom: 26em;
+    bottom: 20.5em !important;
      }
      .txt-lines{
       margin-top: 3.5em;
@@ -369,5 +383,20 @@ header#mbile p{
   .txt-lines::after{
     height: 0.4px;
     width: 10.5em;
+  }
+  i.fa-brands {
+    color: var(--btncolor);
+    font-size: 24px;
+    position: absolute;
+    left: 13%;
+    transform: translateY(-50%);
+   
+  }
+  img.google {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 13%;
+    width: 20px;
+    height: 20px;
   }
 }
