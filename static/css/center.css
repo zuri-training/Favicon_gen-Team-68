@@ -46,7 +46,8 @@ div img{
     font-weight: 600;
     font-size: 24px;
     line-height: 38px;
-    padding: 0px 50px 0px 0px
+    padding: 0px 50px 0px 0px;
+    color: #323337;
 
 }
 
@@ -130,8 +131,8 @@ span .num{
 .container-4-p1{
     font-family: 'Nunito Sans';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 19px;
     line-height: 24px;
     color: #3250EC;
 }
@@ -139,14 +140,14 @@ span .num{
 small{
     color: black;
     font-weight: 100;
-    font-size: x-small
+    font-size: 14px;
 }
 
 .container-4-p2, .container-5-p2{
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 17px;
     background: #3250EC;
     border-radius: 4px;
     width: 200px;
@@ -164,7 +165,6 @@ small{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 100px 108px;
     gap: 10px;
     /* width: 1440px; */
     width: 100%;
@@ -188,8 +188,8 @@ small{
     /* height: 64px; */ 
     font-family: 'Nunito Sans';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 24px;
     color: #3250EC;
     margin-bottom: 10px;
@@ -213,8 +213,7 @@ small{
     justify-content: space-evenly;
     /* padding: 100px 108px; */
     gap: 10px;
-    margin-left: 20px;
-    width: 95%;
+    width: 100%;
     height: 560px;
     background: #FFFFFF;
 }
@@ -232,8 +231,8 @@ small{
 .container-6-p1{
     font-family: 'Nunito Sans';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 24px;
     color: #3250EC;
     margin-bottom: 10px;
@@ -243,7 +242,7 @@ small{
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 17px;
     background: #3250EC;
     color: white;
     border-radius: 4px;
@@ -295,7 +294,7 @@ small{
 .container-7-p2{
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 750;
     font-size: 18px;
     line-height: 32px;
     text-align: center;
@@ -320,6 +319,8 @@ small{
     padding: 16px;
     gap: 8px;
     margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 17px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1023,7 +1024,7 @@ small{
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 24px;
         flex-wrap: wrap;
         align-items: center;
