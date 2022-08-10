@@ -156,7 +156,7 @@ header.main-header {
 
   width: 164px;
   height: 85px;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -277,7 +277,6 @@ a {
   transition: all 0.3s ease-in-out;
   background-color: white;
 }
-
 
 @media (max-width: 768px) {
   .hamburger {
@@ -494,28 +493,27 @@ a {
   nav.navbar.sticky {
     position: sticky;
     top: 0;
+    justify-content: flex-start;
     background: #232330;
     z-index: 9999;
   }
   /* The image preview is not fitting on mobile view */
-  .header-recent-name{
+  .header-recent-name {
     padding-top: 4px;
   }
-
 }
-@media (max-width: 480px){
- 
-  .file-input{
+@media (max-width: 480px) {
+  .file-input {
     text-align: center;
     width: 256px;
   }
-  .file-input-cover{
+  .file-input-cover {
     width: 256px;
     justify-content: center;
     align-items: center;
     margin-left: 48px;
   }
-  .generatebtn{
+  .generatebtn {
     width: 256px;
     justify-content: center;
     align-items: center;
