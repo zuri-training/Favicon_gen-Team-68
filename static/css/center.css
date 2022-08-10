@@ -1269,7 +1269,7 @@ small{
         margin-top: 90px;
         color: #232330;
         gap: 0px;
-        text-align: center;
+        text-align: left;
         margin-left: 20px;
     }
     .container-4-1 {
@@ -1344,8 +1344,8 @@ small{
         line-height: 36px;
         display: block;
         /* justify-content: space-around; */
-        text-align: center;
-        margin: 0;
+        text-align: left;
+        margin: 0 20px;
         color: #232330;
     }
     .container-5-1 {
@@ -1374,7 +1374,8 @@ small{
         align-items: center;
         color: #3250EC;
         gap: 0;
-        text-align: center;
+        text-align: left;
+        margin: 0px 20px;
     }
 
     .container-5-p2 {
@@ -1459,7 +1460,7 @@ small{
         flex-wrap: wrap;
         align-items: center;
         color: #3250EC;
-        text-align: center;
+        text-align: left;
         padding: 0 20px;
     }
     
