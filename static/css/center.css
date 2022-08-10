@@ -1145,8 +1145,8 @@ small{
     }
     .title-heading {
         display: block;
-        text-align: center;
-        margin: 0 auto;
+        text-align: left;
+        margin: 0 20px;
     }
     .container-2{
         display: block;
@@ -1156,7 +1156,7 @@ small{
         padding: 0px;
         gap: 0px;
         width: 100%;
-        height: 472px;
+        height: 450px;
         background: #FFFFFF;
     }
     .empty {
@@ -1180,6 +1180,7 @@ small{
         display: block;
         text-align:start;
         color: #76777A;
+        margin: 0 10px 0px 5px;
     }
     .container-2-div {
         margin: 0px;
@@ -1213,6 +1214,7 @@ small{
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin: 0;
+        width: 100%;
         /* text-fill-color: transparent;
  */
     }
@@ -1224,7 +1226,7 @@ small{
         padding: 0px;
         gap: 0;
         width: 100%;
-        height: 472px;
+        height: 450px;
         background: #FFFFFF;
     }
     span .num{
@@ -1264,10 +1266,11 @@ small{
         line-height: 36px;
         display: block;
         align-items: center;
-        margin-top: 200px;
+        margin-top: 90px;
         color: #232330;
         gap: 0px;
         text-align: center;
+        margin-left: 20px;
     }
     .container-4-1 {
         display: block;
