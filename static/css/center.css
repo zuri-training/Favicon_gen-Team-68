@@ -281,6 +281,14 @@ small{
     height: 440px;
 }
 
+/* .container-7-div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: #3250ec;
+    width: 73%;
+} */
+
 .container-7-p1{
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -704,12 +712,6 @@ small{
     }
 }
 @media only screen and (max-width: 590px) {
-    /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: content-box;
-        width: 100%;
-    } */
     div img{
         width: 100%;
     }
@@ -794,8 +796,7 @@ small{
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin: 20px 20px 30px;
-        /* text-fill-color: transparent;
- */
+
     }
     .container-4 {
         display: flex;
@@ -917,7 +918,6 @@ small{
         font-size: 24px;
         line-height: 36px;
         display: flex;
-        /* justify-content: space-around; */
         align-items: center;
         margin: 0px;
         color: #232330;
@@ -1056,10 +1056,6 @@ small{
         box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);    
     }
     
-    /* .all-started{
-        color: #FFFFFF;
-    }
-     */
     .container-7{
         display: flex;
         flex-wrap: wrap;
@@ -1133,7 +1129,7 @@ small{
 
 /* Screen Size - 320px */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 415px) {
      *{
         margin: 0;
         padding: 0;
@@ -1494,7 +1490,7 @@ small{
     }
      */
     .container-7{
-        display: block;
+        display: flex;
         /* flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
@@ -1557,13 +1553,13 @@ small{
     }
 }
 
-.container-7-div {
+/* .container-7-div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     caret-color: #3250ec;
     width: 320px;
-}
+} */
 .container-main{
      overflow: hidden;
 } 
