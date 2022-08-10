@@ -1,21 +1,4 @@
-{% extends 'layout.html' %}
-
 {% load static %}
-
-
-{% block extra_css %}
-
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../static/css/center.css">
-<link rel="stylesheet" href="../static/css/center-animations.css">
-
-{% endblock %}
-{% block extra_scripts %}
-
-<script src="{% static 'js/center-animations.js' %}" defer></script>
-
-{% endblock %}
-{% block content %}
 
 <div class="container-main">
     <div>
@@ -43,15 +26,17 @@
     </div>
     <div class="container-4">
         <div class='left-cont'>
-            <div class="empty-2"></div>
+            <div class="empty-2">
+                <img src="../static/images/Image upload-pana 1.png" alt="">
+            </div>
         </div>
         <div class='right-cont'>
             <p>
-            <h3 class="container-4-header1"><span> 01.</span> Upload your file
+            <h3 class="container-4-header1"><span class="num"> 01.</span> Upload your file
             </h3>
             </p>
             <p class="container-4-p1">
-                Select an image from your files from your files list <br>(GIF, SVG, JPEG, PNG).
+                Select an image from your files list <br><small>  (GIF, SVG, JPEG, PNG)</small>.
             </p>
             <div class="container-4-1">
                 <p class="container-4-p2 all-started"> Get started</p>
@@ -61,7 +46,7 @@
     <div class="container-5">
         <div class='left-cont'>
             <p>
-            <h3 class="container-5-header1"><span> 02.</span> Generate favicon
+            <h3 class="container-5-header1"><span class="num"> 02.</span> Generate favicon
             </h3>
             </p>
             <p class="container-5-p1">
@@ -73,17 +58,19 @@
         </div>
         <div class='right-cont'>
             <div class="empty-3">
-                <img src="../static/images/Rectangle 445.png" alt="">
+                <img src="../static/images/Process-pana 1.png" alt="">
             </div>
         </div>
     </div>
     <div class="container-6">
         <div class='left-cont'>
-            <div class="empty-4"></div>
+            <div class="empty-4">
+                <img src="../static/images/Rectangle 445.png" alt="">
+            </div>
         </div>
         <div class='right-cont'>
             <p>
-            <h3 class="container-6-header1"><span> 03.</span> Add it to your website
+            <h3 class="container-6-header1"><span class="num"> 03.</span> Add it to your website
             </h3>
             </p>
             <p class="container-6-p1">
@@ -111,5 +98,3 @@
     </div>
 
 </div>
-
-{% endblock %}

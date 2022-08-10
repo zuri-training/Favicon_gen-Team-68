@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <link rel="stylesheet" href="{% static 'css/upload.css' %}">
 <link rel="stylesheet" href="{% static 'css/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/copy.css' %}">
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 {% endblock %}
 
@@ -15,12 +16,19 @@
 
 {% endblock%}
 
+
 {% block content %}
 
 <!-- {# importing flash-messages #}
 {% include 'flash-messages.html' %}
 
 <h1>Yipee!!!!! It worked, welcome on board {{ request.user }}</h1> -->
+
+{% block textgen %}
+
+{% include 'textgen.html' %}
+{% endblock%}
+
 {% include "center.html" %}
 
 {% endblock %}
