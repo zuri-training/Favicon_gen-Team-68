@@ -25,18 +25,22 @@
     {% csrf_token %} 
         <div class="field">
             <label for="username">Name</label>
-            <input type="text" value="{{ instance.username }}" placeholder="Username" id="username" name="username" autofocus required>
+            <input type="text" value="{{ instance.username }}" placeholder="Username" id="username" name="username" autofocus 
+            onmouseover="this.setSelectionRange(this.value.length,this.value.length);"  
+            onfocus="this.setSelectionRange(this.value.length,this.value.length);">
+            <small></small>
         </div>
 
         <div class="field">
             <label for="email">Email Address</label>
-            <input type="email" value="{{ instance.email }}" placeholder="Email Address" id="email" name="email" required>
+            <input type="email" value="{{ instance.email }}" placeholder="Email Address" id="email" name="email" >
+            <small></small>
         </div>
 
         <div class="field">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder='Password' name="password" > 
-    
+            <input type="password" id="password" placeholder='Password' name="password"> 
+            <small></small>
             <span id="togglePassword">
                          <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
             </span>
