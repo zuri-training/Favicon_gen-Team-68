@@ -44,7 +44,7 @@
                     <div class="sub-gen">
                         <ul class="drop-down">
                             <li 
-                             class="up active-upload"><a href={% url 'home' %}>Upload Image</a></li>
+                             class="up" id="active-upload"><a href={% url 'home' %}>Upload Image</a></li>
                             <li class="up"><a href="#">From Text</a></li>
                         </ul>
                     </div>
@@ -98,7 +98,7 @@
                     {% else %}
                     
                     <li class="nav-item">
-                        <a href="{% url 'signup' %}" class="nav-link">Signup</a>
+                        <a href="{% url 'signup' %}" class="nav-link active-sign" >Signup</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'login' %}" class="nav-link">Login</a>

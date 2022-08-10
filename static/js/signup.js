@@ -132,7 +132,7 @@ const showSuccess = (input) => {
 };
 
 const formSubmission = (e) => {
-  e.preventDefault();
+  e.preventDefault()
   const http = new XMLHttpRequest();
   const fd = new FormData(e.target);
   http.addEventListener("success", (ev) => {
