@@ -54,9 +54,6 @@ def signup_view(request):
     context = {"instance": instance}
     return render(request, "signup.html", context)
 
-def contact(request):
-    return render(request, 'contact.html')
-
 def login_view(request):
     """redirects to home is user is already logged in."""
     if request.user.is_authenticated:
