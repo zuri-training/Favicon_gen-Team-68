@@ -5,19 +5,7 @@ const downloadForMe = (e) => {
   console.log(e.target);
   const http = new XMLHttpRequest();
   const fd = new FormData(e.target);
-  http.addEventListener("load", (ev) => {
-    alert("loaded");
-  });
-  http.addEventListener("error", (ev) => {
-    alert("Oops failed");
-  });
-  http.onreadystatechange = () => {
-    if (http.readyState === 4) {
-      console.log(http.response, "checking it");
-    }
-  };
-  http.open("POST", location.origin + "/result/", true);
-  http.send(fd);
+  console.log(e.target)
 };
 
 downloadForm.addEventListener("submit", downloadForMe);

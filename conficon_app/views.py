@@ -39,7 +39,8 @@ def signup_view(request):
         instance["username"] = username = request.POST.get("username")
         instance["email"] = email = request.POST.get("email")
         password = request.POST.get("password")
-
+        if not(password and username and email):
+            message.error('Password, username and email cannot be empty')
         try:
             Profile.objects.get(email=email)
         except:
@@ -159,4 +160,4 @@ def result(request):
     )
     return redirect("upload")
     print(result)
-    return render(request, "index.html", {"result": result})
+    return render(request, "index.html", {"result": result, 'user_latest': user_latest})
