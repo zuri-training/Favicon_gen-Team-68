@@ -173,8 +173,13 @@ def result(request):
     return render(request, "index.html", {"result": result, "user_latest": user_latest})
 
 
+@login_required(login_url="/login")
 def dashboard(request):
     latest_file = Result.objects.first()
     result_list = Result.objects.exclude(id=latest_file.id)
     context = {"latest_file": latest_file, "result_list": result_list}
     return render(request, "dashboard.html", context)
+
+
+def view_404(request, exception=None):
+    return redirect("home")
