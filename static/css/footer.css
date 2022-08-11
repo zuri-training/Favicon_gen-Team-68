@@ -552,7 +552,7 @@ a#arrowup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative; left: 3%;
+    position: relative; left: 0.5em;
     color: white;
     font-size: 12px;
     font-family: Dosis, sans-serif;
