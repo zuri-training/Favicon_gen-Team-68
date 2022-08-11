@@ -47,7 +47,7 @@ header.main-header {
   line-height: 48px;
   color: #323337;
   margin-left: 16px;
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 .upload-image-cam {
@@ -378,7 +378,7 @@ a {
     font-weight: 700;
     line-height: 24px;
     color: #323337;
-    margin-top: auto;
+    /* margin-top: auto; */
     text-align: justify;
   }
 
