@@ -205,14 +205,14 @@ a {
 
 .navbar-sticky {
   display: flex;
-  justify-content: space-between;
-  margin: 4.5em 10em 6em 10em;
+  justify-content: flex-start;
+  margin: 4.5em 7em 6em 17em;
   align-items: center;
+  gap: 15em;
 }
 .navbar-right {
   display: flex;
   justify-content: space-evenly;
-  
 }
 
 .logo-img {
@@ -225,11 +225,26 @@ a {
   width: 60px;
   height: 32px;
   position: relative;
-  padding: .5em .7em;
+  padding: 0.5em 0.7em;
   border: 1px solid transparent;
 }
 #nav-generate {
   position: relative;
+}
+#nav-accounts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2em;
+}
+.nav-paragraph {
+  width: 100%;
+}
+.contact-icon {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
 }
 .material-symbols-outlined {
   position: absolute;
@@ -237,12 +252,12 @@ a {
   left: 95%;
 }
 .nav-link:hover {
-  padding: .5em .7em;
+  padding: 0.5em 0.7em;
   border: 1px solid #3250ec;
   border-radius: 4px;
 }
-.active-sign{
-  padding: .5em .7em;
+.active-sign {
+  padding: 0.5em 0.7em;
   border: 1px solid #3250ec;
   border-radius: 4px;
 }
@@ -250,16 +265,16 @@ a {
   opacity: 1;
   visibility: visible;
 } */
-.sub-gen{
+.sub-gen {
   position: relative;
 }
 .drop-down {
   background-color: #fbfbfb;
   border-radius: 4px;
   font-size: 8px;
-  padding:2em;
+  padding: 2em;
   width: 20em;
-  position: absolute;  
+  position: absolute;
   left: 28%;
   display: none;
   flex-direction: column;
@@ -269,9 +284,9 @@ a {
 /* .drop-down li{
   width: 100%;
 } */
-.drop-down #active-upload a{
-  padding: .2em 0.4em;
-  background-color: #3250EC;
+.drop-down #active-upload a {
+  padding: 0.2em 0.4em;
+  background-color: #3250ec;
   width: 100%;
   border-radius: 4px;
   display: flex;
@@ -282,22 +297,36 @@ a {
 }
 .drop-down a {
   font-size: 1.5rem;
-  color: #0A102F;
+  color: #0a102f;
   display: flex;
   padding-left: 1em;
 }
 .drop-down-2 {
   background-color: #fbfbfb;
   border-radius: 4px;
-  padding: 4px;
-  width: 252px;
+  padding: 0em 0px 3em;
+  width: 30em;
   position: absolute;
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   opacity: 1;
 }
-
+.profile-option-one {
+  display: flex;
+  gap: 0.7em;
+  padding-left: 0.2em;
+}
+.profile-option-two {
+  display: flex;
+  gap: 0.7em;
+  padding-left: 0.2em;
+}
+.profile-option-three {
+  display: flex;
+  gap: 0.7em;
+  padding-left: 0.2em;
+}
 .drop-down-2 a {
   color: #232330;
 }
@@ -307,7 +336,10 @@ a {
 div img .image-class {
   width: 25px !important;
   height: 25px !important;
-  
+}
+.accounts-dropdown {
+  background-color: #f2f4ff;
+  width: 100%;
 }
 
 .hamburger {
@@ -410,7 +442,6 @@ div img .image-class {
     line-height: 48px;
     display: flex;
   }
-
 
   .intro p {
     width: 364px;

@@ -61,11 +61,11 @@
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" id="nav-accounts">
                         <div><img class="image-class" src="{% static 'images/notifications.svg' %}" alt=""></div>
                         <div class="contact-icon">
-                            <img class="image-class" src="{% static 'images/contacts.svg' %}" alt="">
-                            Hi {{ request.user}}!
+                            <img class="image-class" src="{% static 'images/contacts-icon.svg' %}" alt="">
+                            <p class="nav-paragraph">Hi {{ request.user}}!</p>
                         </div>
                     </a>
                     <div class="sub-gen">
