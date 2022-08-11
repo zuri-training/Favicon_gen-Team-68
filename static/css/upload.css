@@ -25,7 +25,8 @@ section.modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%);
+  transform: translate(-50%, -50%);
+
   background: #ffffff;
   border-radius: 8px;
   width: 50%;
@@ -34,11 +35,12 @@ section.modal {
   justify-content: center;
   gap: 2rem;
   transition: var(--transit);
-  animation: fadeup 1s forwards linear;
-  opacity: 0.5;
-  z-index: 10;
+  animation: fadeup 1s 1s forwards ease-out;
+  opacity: 0;
+  z-index: 11000;
 }
 .close-modal {
+  display: none;
   position: absolute;
   top: 10%;
   right: 80%;
@@ -50,14 +52,17 @@ section.modal {
 }
 .close-modal1 {
   position: absolute;
-  top: 10%;
-  left: 80%;
-  font-size: 2rem;
+  top: 27.5%;
+  left: 78.5%;
+  font-size: 3.2rem;
   cursor: pointer;
   background-color: #ffffff;
   color: #191a1c;
+  padding: 0.2em 0.4em;
   border-radius: 50%;
   transform: translate (-50%, -0%);
+  opacity: 0;
+  animation: fadeup 1s 1.2s forwards ease-out;
 }
 .close-modal:hover {
   color: #3250ec;
@@ -164,7 +169,9 @@ section.modal {
   font-size: 2rem;
 }
 input[type="checkbox"] {
-  transform: scale(2);
+  transform: scale(1.5);
+  border: 0.1px solid #067bf0;
+  outline: none !important;
 }
 .sizes-chb {
   margin: 0.5em 0 2em 0;
@@ -198,17 +205,23 @@ input[type="checkbox"] {
   line-height: 24px;
   letter-spacing: 0.02em;
 }
-pre #upl.prettyprint {
-  padding: 2px;
+.htmlcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.htmlcode #upl.prettyprint {
+  padding: .5px;
   border: none !important;
   display: flex;
   outline: none;
-  border: none;
   align-items: center;
-  justify-content: flex-start;
-  height: 3em;
-  text-align: left;
-  padding: 0em 0em !important;
+  justify-content: flex-start !important;
+  
+  width: 90% !important;
+  height: 3.5em;
   margin: 0em 1em;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -234,7 +247,7 @@ pre #upl.prettyprint {
   justify-content: center;
   align-items: center;
   /* padding: .4em 2.6em; */
-
+  
   height: 3.5em;
   border: none;
   border-radius: 4px;
@@ -272,15 +285,13 @@ button {
   box-shadow: inset 4px 4px 12px rgb(152, 167, 245, 0.25);
   background-color: #f5f5f5;
   color: #21359d;
-
-  padding: 0.6em 0em;
+border: 1px solid #3250ec;
   font-size: 1.2rem;
   transition: all 0.3s ease-in;
 }
 .down-btn-pri:hover {
   transition: all 0.3s ease-in;
   box-shadow: 0px 12px 16px rgba(150, 150, 209, 0.253);
-  padding: 0.6em 0em;
   font-size: 1.2rem;
 }
 .down-btn-pri:visited {
@@ -295,14 +306,14 @@ button {
 
 .down-btn-grey {
   display: none;
-  background: #ffffff;
+  background: #98999b;
   font-size: 1.08rem;
-  color: #3250ec;
+  color: #ffffff;
   font-weight: 800;
   letter-spacing: 0.02em;
   line-height: 24px;
+  height: 3.5em;
   border-radius: 4px;
-  border: 1px solid #3250ec;
 }
 
 @keyframes fadein {
@@ -324,6 +335,13 @@ button {
     opacity: 1;
   }
 }
+@media (max-width: 1032px) {
+  .close-modal1 {
+    position: absolute;
+    top: 27.5%;
+    left: 92%;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
   section.modal {
     width: 80%;
@@ -338,9 +356,17 @@ button {
     color: #ffffff;
     background-color: #3250ec;
   }
+  .close-modal1 {
+    display: none;
+  }
+  .close-modal {
+    display: block;
+  }
   section.modal {
-    width: 90%;
+    width: 100%;
+    height: auto !important;
     flex-direction: column;
+
     transform: translate(-50%, -50%);
   }
   .modal article {
@@ -356,27 +382,36 @@ button {
   .modal-left form h3 {
     font-size: 2rem;
     color: #0a0a0b;
+    padding-left: 1em;
+  }
+  .sizes-chb {
+    margin-top: 1em;
+  }
+  .modal-left form small {
+    margin-top: 1.3em;
   }
   pre#upl.prettyprint {
-    background-color: hsla(236, 100%, 83%, 0.664);
+    background-color: hsla(236, 100%, 83%, 0.464);
     font-size: 1.08rem;
+    justify-content: center;
   }
   .down-btns > * {
-    font-size: 1.5rem;
+    font-size: 1.08rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     /* padding: .4em 2.6em; */
 
-    height: 3.5em;
+    height: 3.8em;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    gap: 2em;
+    gap: 1em;
   }
   .down-btn-grey {
-    display: block;
+    display: flex;
     width: 44%;
+    font-size: 1.08rem;
   }
   .down-btn-pri {
     display: flex;
@@ -394,13 +429,13 @@ button {
     cursor: pointer;
   }
   .sizes-chb label {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .sizes-chb label:not(.s16) {
-    margin-top: 1em;
+    margin-top: 0.6em;
   }
   .sizes-chb label .cb {
-    margin-left: 1em;
+    margin-left: 0.8em;
     color: rgba(0, 0, 0, 0.65);
   }
   .down-btns {
@@ -410,19 +445,25 @@ button {
     justify-content: space-between;
   }
   input[type="checkbox"] {
-    transform: scale(2.2);
+    transform: scale(1.4);
   }
   .modal-left {
     height: 60%;
   }
   .modal-right {
-    min-height: 50%;
+    min-height: 17em;
   }
   .prev-board {
-    padding-bottom: 2em;
+    padding-bottom: 1.4em;
   }
   .close-modal {
-    top: 4%;
-    right: 90%;
+    top: 6.4%;
+    right: 87%;
+  }
+}
+@media (max-width: 320px) {
+  pre#upl.prettyprint {
+    padding-left: 1em;
+    justify-content: center;
   }
 }
