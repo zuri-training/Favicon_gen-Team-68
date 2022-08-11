@@ -1,6 +1,6 @@
 header.main-header {
   background-color: #232330;
-  min-height: 1024px;
+  min-height: 900px;
   overflow-y: scroll;
 }
 
@@ -22,7 +22,6 @@ header.main-header {
   color: #ffff;
   text-align: center;
   margin-top: 20px;
-
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -47,7 +46,7 @@ header.main-header {
   line-height: 48px;
   color: #323337;
   margin-left: 16px;
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 .upload-image-cam {
@@ -153,9 +152,9 @@ header.main-header {
   padding: 31px 32px;
   cursor: pointer;
   border-radius: 4px;
-
+  height: 84px;
   width: 164px;
-  height: 85px;
+
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
@@ -357,6 +356,92 @@ div img .image-class {
   background-color: white;
 }
 
+@media (max-width: 1024px) {
+  li a {
+    font-size: 21px;
+    width: 75px;
+  }
+  
+  .nav-menu {
+    justify-content: space-around;
+    gap: 60px;
+  }
+  
+  .nav-brand {
+    font-weight: 450;
+    font-size: 1.8rem;
+    height: 30px;
+  }
+  .intro {
+    margin-top: 195px;
+  }
+  .intro h2 {
+    font-size: 48px;
+  }
+  .intro p {
+    font-size: 22px;
+  }
+  .file-input-cover {
+    width: 550px;
+  }
+}
+
+@media (max-width: 920px) {
+  header.main-header {
+    min-height: 770px;
+  }
+  li a {
+    font-size: 17px;
+    font-weight: 500;
+    width: 100px;
+  }
+  
+  .nav-menu {
+    justify-content: space-around;
+    gap: 70px;
+  }
+  
+  .nav-brand {
+    font-weight: 470;
+    font-size: 1.6rem;
+  }
+  .intro {
+    margin-top: 170px;
+  }
+  .intro h2 {
+    font-size: 43px;
+  }
+  .intro p {
+    font-size: 20px;
+  }
+  .upload-text {
+    font-size: 30px;
+    font-weight: 620;
+  }
+  
+  .upload-image-cam {
+    width: 25px;
+  }
+  
+  .file-input-cover {
+    width: 500px;
+    height: 82px;
+  }
+  
+  .upload {
+    display: flex;
+    gap: 20px;
+  }
+}
+@media (max-width: 890px) {
+  li a {
+    font-weight: 520;
+  }
+  
+  .nav-menu {
+    gap: 43px;
+  }
+}
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -375,7 +460,7 @@ div img .image-class {
     background-color: #000000;
   }
   header {
-    height: 720px;
+    height: 600px;
     flex-wrap: wrap;
     width: 100%;
   }
@@ -492,7 +577,7 @@ div img .image-class {
     font-weight: 700;
     line-height: 24px;
     color: #323337;
-    margin-top: auto;
+    /* margin-top: auto; */
     text-align: justify;
   }
 
@@ -510,7 +595,7 @@ div img .image-class {
     background-color: #3250ec;
     /* margin-top: 4px; */
     width: 356px;
-    height: 12px;
+    /* height: 12px; */
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
