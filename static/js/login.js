@@ -93,6 +93,7 @@ const showSuccess = (input) => {
   field.classList.remove("error");
   field.classList.add("success");
 
+
   // hide the error message
   const error = field.querySelector("small");
   error.textContent = "";
@@ -123,6 +124,7 @@ form.addEventListener("submit", function (e) {
     login.textContent = "Authenticating....";
   }
 });
+
 
 const debounce = (fn, delay = 500) => {
   let timeoutId;
