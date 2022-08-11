@@ -304,6 +304,11 @@ a {
 .drop-down-2 a:hover {
   text-decoration: underline;
 }
+div img .image-class {
+  width: 25px !important;
+  height: 25px !important;
+  
+}
 
 .hamburger {
   display: none;
