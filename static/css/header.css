@@ -111,12 +111,12 @@ header.main-header {
   display: flex;
   flex-direction: column;
 }
-.sub-gen {
+/* .sub-gen {
   display: none;
-}
-.navbar ul li:hover .sub-gen {
+} */
+/* .navbar ul li:hover {
   display: block;
-}
+} */
 
 .lower {
   padding-bottom: 50px;
@@ -169,13 +169,12 @@ li {
 a {
   color: #ffff;
   text-decoration: none;
-
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  width: 86px;
+  /* width: 86px; */
   height: 32px;
 }
 
@@ -237,35 +236,47 @@ a {
   top: 23%;
   left: 100%;
 }
-
-
 .nav-link:hover {
   padding: 4px;
   border: 1px solid #3250ec;
   border-radius: 4px;
 }
-.nav-menu ul:hover {
+/* .nav-menu ul:hover {
   opacity: 1;
   visibility: visible;
+} */
+.sub-gen{
+  position: relative;
 }
 .drop-down {
   background-color: #fbfbfb;
   border-radius: 4px;
-  padding: 4px;
-  width: 252px;
-  position: absolute;
-  margin-top: 8px;
-  display: flex;
+  font-size: 8px;
+  padding:2em;
+  width: 20em;
+  position: absolute;  
+  left: 28%;
+  display: none;
   flex-direction: column;
   opacity: 1;
 }
-
+/* .drop-down li{
+  width: 100%;
+} */
+.active-upload{
+  padding: .2em 0.4em;
+  background-color: #3250EC;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+}
 .drop-down a {
   color: #232330;
+  font-size: 1.5rem;
+  
 }
-.drop-down a:hover {
-  text-decoration: underline;
-}
+
 .drop-down-2 {
   background-color: #fbfbfb;
   border-radius: 4px;
