@@ -8,12 +8,17 @@
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
 {% block extra_scripts %}
 <script src="{% static 'js/login.js' %}" defer></script>
 {% endblock %}
 {% block content %}
 
 
+<a href="{% url 'home' %}">
+    <label style="color: black; -webkit-text-stroke: 6px white;"><i class="fa-solid fa-arrow-left fa-10x"></i></label>
+</a>
 
 <form method='post' action='' class="form">
     <header id="mbile">
