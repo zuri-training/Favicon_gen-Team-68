@@ -100,26 +100,30 @@ const showSuccess = (input) => {
     error.textContent = '';
 }
 
+const loggin = (e) => {
+    e.preventDefault();
 
-form.addEventListener('submit', function (e) {
-    // prevent the form from submitting
-    
-
-    // validate fields
+     // validate fields
     let isEmailValid = checkEmail(),
-        isPasswordValid = checkPassword();
-      
-
-    let isFormValid = isEmailValid &&
-        isPasswordValid;
-     
-
-    // submit to the server if the form is valid
-    if (isFormValid) {
-      login.textContent = "Authenticating....";
+    isPasswordValid = checkPassword();
    
-    }
-});
+    let isFormValid = isEmailValid &&
+     isPasswordValid;
+
+    const http = new XMLHttpRequest();
+    const fd = new FormData(e.target);
+    http.addEventListener("load", (ev) => {
+      // submit to the server if the form is valid
+      if (isFormValid) {
+        login.textContent = "Authenticating....";
+        
+      }
+    });
+    http.open("POST", location.origin + "/login/", true);
+    http.send(fd);
+  };
+
+form.addEventListener('submit',loggin);
 
 
 const debounce = (fn, delay = 500) => {
