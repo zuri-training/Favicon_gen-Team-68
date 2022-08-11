@@ -171,3 +171,10 @@ def result(request):
     return redirect("upload")
     print(result)
     return render(request, "index.html", {"result": result, "user_latest": user_latest})
+
+
+def dashboard(request):
+    latest_file = Result.objects.first()
+    result_list = Result.objects.exclude(id=latest_file.id)
+    context = {"latest_file": latest_file, "result_list": result_list}
+    return render(request, "dashboard.html", context)
