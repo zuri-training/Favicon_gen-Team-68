@@ -148,6 +148,7 @@ header.main-header {
   padding: 34px 32px;
   cursor: pointer;
   border-radius: 4px;
+  height: 84px;
 }
 li {
   list-style: none;
@@ -396,7 +397,7 @@ a {
     background-color: #3250ec;
     margin-top: 20px;
     width: 356px;
-    height: 12px;
+    /* height: 12px; */
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
