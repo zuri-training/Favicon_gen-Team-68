@@ -189,23 +189,36 @@ a {
 
 .nav-menu {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 9em;
 }
 
-.nav-brand {
+/* .nav-brand {
   font-family: "inter", sans-serif;
   font-weight: 400;
   font-size: 2rem;
   width: 136px;
   height: 40px;
   display: flex;
+} */
+
+.navbar-sticky {
+  display: flex;
+  justify-content: space-between;
+  margin: 4.5em 12em 6em 12em;
+  align-items: center;
+}
+.navbar-right {
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 
 .logo-img {
-  width: 100px;
-  height: 30px;
+  width: 100%;
+  height: 1.7em;
 }
 
 .nav-link {
@@ -216,6 +229,15 @@ a {
   padding: 4px;
   border: 1px solid transparent;
 }
+#nav-generate {
+  position: relative;
+}
+.material-symbols-outlined {
+  position: absolute;
+  top: 23%;
+  left: 100%;
+}
+
 
 .nav-link:hover {
   padding: 4px;
@@ -364,6 +386,7 @@ a {
     line-height: 48px;
     display: flex;
   }
+
 
   .intro p {
     width: 364px;

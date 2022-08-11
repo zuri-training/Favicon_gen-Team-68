@@ -27,76 +27,85 @@
 <header class='main-header' id="Go_up">
 
     {% include 'copy.html' %}
-    <nav class="navbar sticky">
-        <a href="{% url 'home' %}" class="nav-brand" style="color: white;"><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
+    <nav class="navbar-sticky">
+        <div class="nav-brand">
+            <a href="{% url 'home' %}" style="color: white;"><img src="{% static 'images/Frame 259.png' %}" alt="brand-logo" class="logo-img"><span></span> </a>
+        </div>
 
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Generate
-                    <span class="material-symbols-outlined">
-                        expand_more
-                    </span>
-                </a>
-                <div class="sub-gen">
-                    <ul class="drop-down">
-                        <li><a href={% url 'home' %}>Upload Image</a></li>
-                        <li><a href="#">From Text</a></li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a href="#how-it-works" class="nav-link">How it works</a>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'contact' %}" class="nav-link">Contact</a>
-            </li>
-            {% if request.user.is_authenticated %}
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <span class="material-symbols-outlined">
-                        account_circle</span>
-                    Hi {{ request.user}}!</a>
+        <div class="navbar-menu">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="nav-generate">Generate
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </a>
                     <div class="sub-gen">
-                        <ul class="drop-down-2">
-                            <li><a href={% url 'home' %}>
-                                <span class="material-symbols-outlined">
-                                    account_box
-                                    </span>
-                                Hi {{ request.user }}!
-                                {{ user.email }}
-                            </a>
-                            <a href="#"></a></li>
-                            <li><a href="#">
-                                <span class="material-symbols-outlined">
-                                    cloud_download
-                                    </span>
-                                Downloads</a></li>
-                            <li><a href="#">
-                                <span class="material-symbols-outlined">
-                                    edit
-                                    </span>
-                                Edit profile</a></li>
-                            <li><a href="{% url 'logout' %}">
-                                <span class="material-symbols-outlined">
-                                    logout
-                                    </span>
-                                Log out</a></li>
+                        <ul class="drop-down">
+                            <li><a href={% url 'home' %}>Upload Image</a></li>
+                            <li><a href="#">From Text</a></li>
                         </ul>
                     </div>
-            </li>
-            <li class='nav-item'>
-                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-                <a href="{% url 'signup' %}" class="nav-link">Signup</a>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'login' %}" class="nav-link">Login</a>
-            </li>
-            {% endif %}
-        </ul>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="#how-it-works" class="nav-link">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-outlined">
+                            account_circle</span>
+                        Hi {{ request.user}}!</a>
+                        <div class="sub-gen">
+                            <ul class="drop-down-2">
+                                <li><a href={% url 'home' %}>
+                                    <span class="material-symbols-outlined">
+                                        account_box
+                                        </span>
+                                    Hi {{ request.user }}!
+                                    {{ user.email }}
+                                </a>
+                                <a href="#"></a></li>
+                                <li><a href="#">
+                                    <span class="material-symbols-outlined">
+                                        cloud_download
+                                        </span>
+                                    Downloads</a></li>
+                                <li><a href="#">
+                                    <span class="material-symbols-outlined">
+                                        edit
+                                        </span>
+                                    Edit profile</a></li>
+                                <li><a href="{% url 'logout' %}">
+                                    <span class="material-symbols-outlined">
+                                        logout
+                                        </span>
+                                    Log out</a></li>
+                            </ul>
+                        </div>
+                </li>
+
+                <div class="navbar-right">
+                    <li class='nav-item'>
+                        <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+                    </li>
+                    {% else %}
+                    
+                    <li class="nav-item">
+                        <a href="{% url 'signup' %}" class="nav-link">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link">Login</a>
+                    </li>
+                    {% endif %}
+                </div>
+            </ul>
+        </div>
+
         <div class="hamburger" id="bar" onclick="myFunction()">
             <span class="bar"></span>
             <span class="bar"></span>
