@@ -26,7 +26,7 @@
    overflow-y: hidden;
    accent-color: #3250ec;
   }
-  .icon-arrow{
+  /* .icon-arrow{
 	width: 5%;
 	height: 2px;
 	border-radius: 2px;
@@ -61,7 +61,7 @@
   }
   .icon-arrow:hover{
     opacity: .5;
-  }
+  } */
   header#contact-head {
 	margin: 0% auto;
 	margin-top: 3em;

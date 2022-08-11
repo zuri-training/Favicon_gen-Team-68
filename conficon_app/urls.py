@@ -13,6 +13,7 @@ urlpatterns = [
     path("upload/", views.upload, name="upload"),
     path("result/", views.result, name="result"),
     path("contact/", views.contact, name="contact"),
+    path('dashboard/', views.dashboard, name='dashboard'),
 
     #urls for password reset
     path('reset_password/',
