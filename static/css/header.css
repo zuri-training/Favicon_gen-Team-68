@@ -1,7 +1,8 @@
 header.main-header {
   background-color: #232330;
   min-height: 900px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  width: 1440px;
 }
 
 .intro {
