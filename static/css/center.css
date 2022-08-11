@@ -73,7 +73,6 @@ span .num{
     align-items: center;
     padding: 52px 0px 28px;
     gap: 10px;
-    /* width: 1440px; */
     width: 100%;
     height: 208px;
     background: #FFFFFF;
@@ -126,6 +125,7 @@ span .num{
     /* width: 278px; */
     height: 48px;
     color: #232330;
+    margin-bottom: 10px;
 }
 
 .container-4-p1{
@@ -135,6 +135,7 @@ span .num{
     font-size: 19px;
     line-height: 24px;
     color: #3250EC;
+    margin-bottom: 15px;
 }
 
 small{
@@ -166,7 +167,6 @@ small{
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
-    /* width: 1440px; */
     width: 100%;
     height: 560px;
     background: #FFFFFF;
@@ -181,6 +181,7 @@ small{
     /* width: 283px; */
     height: 48px;
     color: #232330;
+    margin-bottom: 10px;
 }
 
 .container-5-p1{
@@ -192,7 +193,7 @@ small{
     font-size: 20px;
     line-height: 24px;
     color: #3250EC;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .container-5-div {
@@ -213,7 +214,7 @@ small{
     justify-content: space-evenly;
     /* padding: 100px 108px; */
     gap: 10px;
-    width: 100%;
+    width: 1440px;
     height: 560px;
     background: #FFFFFF;
 }
@@ -226,6 +227,7 @@ small{
     /* width: 278px; */
     height: 48px;
     color: #232330;
+    margin-bottom: 10px;
 }
 
 .container-6-p1{
@@ -235,7 +237,7 @@ small{
     font-size: 20px;
     line-height: 24px;
     color: #3250EC;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .container-6-p2 {
@@ -276,7 +278,6 @@ small{
     padding: 100px 0px;
     gap: 157px;
     background: #D7EEFF;
-    /* width: 1440px; */
     width: 100%;
     height: 440px;
 }
