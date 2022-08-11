@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-dash{
+    height: 1046px;
+    padding: 40px;
+}
+.line-1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.line-1 a{
+    text-decoration: none;
+}
+.line-2{
+    display: flex;
+    justify-content: space-around;
+}
+.dash-dropdown{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    box-shadow: 0px 8px 48px 8px rgba(10, 10, 11, 0.16);
+    border-radius: 8px;
+}

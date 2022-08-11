@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="{% static 'css/header.css' %}">
 <link rel="stylesheet" href="{% static 'css/copy.css' %}">
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
 {% endblock %}
 
 {% block header %}
-
+{% include 'nav.html' %}
 {% include 'header.html' %}
 
 {% endblock%}
