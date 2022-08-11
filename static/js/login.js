@@ -99,7 +99,6 @@ const showSuccess = (input) => {
 };
 
 const formSubmission = (e) => {
-  
   const http = new XMLHttpRequest();
   const fd = new FormData(e.target);
   http.addEventListener("success", (ev) => {
@@ -112,7 +111,7 @@ const formSubmission = (e) => {
   http.send(fd);
 };
 form.addEventListener("submit", function (e) {
-  formSubmission(e);
+  //formSubmission(e);
   // validate fields
   let isEmailValid = checkEmail(),
     isPasswordValid = checkPassword();

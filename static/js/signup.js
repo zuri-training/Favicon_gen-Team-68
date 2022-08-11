@@ -145,7 +145,7 @@ const formSubmission = (e) => {
   http.send(fd);
 };
 form.addEventListener("submit", function (e) {
-  formSubmission(e);
+  //formSubmission(e);
   // validate fields
   let isUsernameValid = checkUsername(),
     isEmailValid = checkEmail(),
