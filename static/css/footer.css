@@ -108,21 +108,23 @@ Footer div a {
 Footer div a:hover {
   color: #3250EC;
 }
-.copyright {
+ /* .copyright {
   color: white;
   font-size: 18px;
   font-family: Dosis, sans-serif;
   font-weight: 400;
-}
+}  */
 .copyright {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   color: white;
   font-size: 18px;
+  position: relative; top: 2.5em; left: 3em;
   font-family: Dosis, sans-serif;
   font-weight: normal;
-  width: 100%;
+  line-height: 98%;
+  /*width: 100%;*/
 }
 a#arrowup i {
   color: white;
@@ -136,7 +138,7 @@ a#arrowup {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  left: 500px;
+  left: 45%;
 }
 @media (max-width: 1100px) {
   Footer div a,
@@ -274,7 +276,7 @@ a#arrowup {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    left: 250px;
+    left: 45%;
   }
 }
 @media (max-width: 768px) {
@@ -356,11 +358,12 @@ a#arrowup {
     width: 80px;
   }
   div.footer_column1 div.icons {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2em;
-    padding-top: 15px;
-    font-size: 25px;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: .2em;
+      margin-bottom: 1.3em;
+      font-size: 24px;
+      width: 40%;
   }
   div.footer_column1 div.Icons i {
     color: white;
@@ -465,7 +468,7 @@ a#arrowup {
     background-color: #232330;
     padding: 50px 0;
   }
-  footer div#footer_top,
+  /* footer div#footer_top, */
   footer div#footer_special {
     display: block;
     line-height: 1rem;
@@ -480,7 +483,7 @@ a#arrowup {
     color: #d6d6d7;
     font-weight: normal;
   }
-  .footer_column1 {
+  /* .footer_column1 {
     width: 100%;
     text-align: center;
     display: flex;
@@ -488,16 +491,17 @@ a#arrowup {
     justify-content: flex-start;
     align-items: center;
     gap: 0.2em;
-  }
+  } */
   footer div#footer_top div span img {
     width: 60px;
   }
-  div.footer_column1 div.icons {
+  div.footer_column1 div.icons  {
     display: flex;
     justify-content: space-evenly;
-    gap: 2.5em;
-    padding-top: 10px;
-    font-size: 16px;
+    margin-top: .2em;
+    margin-bottom: 1.3em;
+    font-size: 18px;
+    width: 55%;
   }
   div.footer_column1 div.Icons i {
     color: white;
@@ -532,6 +536,10 @@ a#arrowup {
   .resources a {
     padding: 17px 0;
   }
+  .Tools,
+  .Information{
+    position: relative; top: 2em;
+  }
   Footer div a:hover {
     color: #3250EC;
   }
@@ -539,6 +547,7 @@ a#arrowup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative; left: 3%;
     color: white;
     font-size: 12px;
     font-family: Dosis, sans-serif;
@@ -595,6 +604,6 @@ a#arrowup {
     font-family: Dosis, sans-serif;
     font-weight: normal;
     width: 100%;
-  }
+  } 
 }
 
