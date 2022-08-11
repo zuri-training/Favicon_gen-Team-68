@@ -31,163 +31,57 @@
 <header class='main-header' id="Go_up">
 
     {% include 'copy.html' %}
-    <nav class="navbar-sticky">
-        <div class="nav-brand">
-            <a href="{% url 'home' %}" style="color: white;"><img src="{% static 'images/Frame 259.png' %}"
-                    alt="brand-logo" class="logo-img"><span></span> </a>
+   
+
+    <div class='sub-header'>
+        <div class="intro">
+            <h2>Get the right sized favicon for you</h2>
+            <p>Upload your image or input your text to generate your favicon</p>
         </div>
 
-        <div class="navbar-menu">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="nav-generate">Generate
-                        <span class="material-symbols-outlined">
-                            expand_more
-                        </span>
-                    </a>
-                    <div class="sub-gen">
-                        <ul class="drop-down">
-                            <li class="up" id="active-upload"><a href={% url 'home' %}>Upload Image</a></li>
-                            <li class="up"><a href="#">From Text</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#how-it-works" class="nav-link">How it works</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
-                </li>
-                {% if request.user.is_authenticated %}
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="nav-accounts">
-                        <div><img class="image-class" src="{% static 'images/notifications.svg' %}" alt=""></div>
-                        <div class="contact-icon">
-                            <img class="image-class" src="{% static 'images/contacts-icon.svg' %}" alt="">
-                            <p class="nav-paragraph">Hi {{ request.user}}!</p>
-                        </div>
-                    </a>
-                    <div class="sub-gen">
-                        <ul class="drop-down-2">
-                            <li>
-                                <a href={% url 'home' %}>
-                                    <div class="accounts-dropdown">
-                                        <div>
-                                            <div class="circle">
-                                                <h3>{{ request.user.split.0 }}</h3>
-                                            </div>
-                                        </div>
-                                       <div>
-                                            <p>{{ request.user }}</p>
-                                            <small>{{ user.email }}</small>
-                                       </div>
-                                    </div>
-                                </a>
-                                <!-- <a href="#"></a> -->
-                            </li>
-                            <div class="profile-dropdown">
-                                <li class="profile">
-                                    <a href="#">
-                                        <div class="profile-option-one">
-                                            <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
-                                            <p>Downloads</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="profile">
-                                    <a href="#">
-                                        <div class="profile-option-two">
-                                            <img class="image-class" src="{% static 'images/edit-btn.svg' %}" alt="">
-                                            <p>Edit profile</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="profile">
-                                    <a href="{% url 'logout' %}">
-                                        <div class="profile-option-three">
-                                            <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
-                                            <p>Log out</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </div>
-                        </ul>
-                    </div>
-                </li>
-
-                <div class="navbar-right">
-                    <!-- <li class='nav-item'>
-                        <a href="{% url 'logout' %}" class="nav-link">Logout</a>
-                    </li> -->
-                    {% else %}
-
-                    <li class="nav-item">
-                        <a href="{% url 'signup' %}" class="nav-link active-sign">Signup</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'login' %}" class="nav-link">Login</a>
-                    </li>
-                    {% endif %}
+        <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
+            {% csrf_token %}
+            <div class="container">
+                <div class="file-input-cover">
+                    <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam">
+                    <h3 class="upload-text">Upload image</h3>
                 </div>
+                <span id='file-name'></span>
+
+                <div class="upload-col">
+                    <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+                </div>
+            </div>
+            <div class="generatediv">
+                <button type="submit" class="generatebtn">Generate</button>
+            </div>
+        </form>
+        {% if request.user.is_authenticated %}
+        <div class="icons">
+            <p class="recent-1">Recently generated favicons</p>
+            <ul class="recent">
+                {% for recent in icons %}
+
+                <li class="header-recent-name">
+                    <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
+                        <img src="{{ recent.upload.image.url }}" />
+                        <p style='font-size: .4em'>{{recent.upload.image.name | split:'/'}}</p>
+                    </a>
+                </li>
+
+
+                {% endfor %}
+
+
+                <!-- what will be the file path to show the images -->
+
+
             </ul>
         </div>
-
-        <div class="hamburger" id="bar" onclick="myFunction()">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-    <div class="intro">
-        <h2>Get the right sized favicon for you</h2>
-        <p>Upload your image or input your text to generate your favicon</p>
-    </div>
-
-    <form method='post' action="{% url 'upload' %}" class="upload" id='upload'>
-        {% csrf_token %}
-        <div class="container">
-            <div class="file-input-cover">
-                <img src="{% static 'images/Vector.png' %}" alt="" class="upload-image-cam">
-                <h3 class="upload-text">Upload image</h3>
-            </div>
-            <span id='file-name'></span>
-
-            <div class="upload-col">
-                <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
-            </div>
-        </div>
-        <div class="generatediv">
-            <button type="submit" class="generatebtn">Generate</button>
-        </div>
-    </form>
-    {% if request.user.is_authenticated %}
-    <div class="icons">
-        <p class="recent-1">Recently generated favicons</p>
-        <ul class="recent">
-            {% for recent in icons %}
-
-            <li class="header-recent-name">
-                <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
-                    <img src="{{ recent.upload.image.url }}" />
-                    <p style='font-size: .4em'>{{recent.upload.image.name | split:'/'}}</p>
-                </a>
-            </li>
-
-
-            {% endfor %}
-
-
-            <!-- what will be the file path to show the images -->
-
-
-        </ul>
     </div>
     {% include 'upload.html' %}
-    {% endif %}
+    {% endif %} 
 </header>
-<script src="{% static 'js/navbar.js' %}">
-</script>
 
 {% if request.user.is_authenticated %}
 

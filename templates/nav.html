@@ -1,0 +1,139 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load custom_tags %}
+
+
+
+{% block extra_css %}
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../static/css/nav.css">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+{% endblock %}
+{% block extra_scripts %}
+<script src="{% static 'js/navbar.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+    {% include 'copy.html' %}
+    <nav class="navbar-sticky">
+        <div class="nav-brand">
+            <a href="{% url 'home' %}" style="color: white;"><img src="{% static 'images/Frame 259.png' %}"
+                    alt="brand-logo" class="logo-img"><span></span> </a>
+        </div>
+
+       
+            <div class="nav-menu">
+                <ul class="menu-left">
+                    <li class="nav-item" id="nav-generate">
+                        <a href="#" class="nav-link" id="nav-generate">Generate
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </a>
+                        <div class="sub-gen">
+                            <ul class="drop-down">
+                                <li class="up active-upload"><a href={% url 'home' %}>Upload Image</a></li>
+                                <li class="up"><a href="#">From Text</a></li>
+                            </ul>
+                        </div>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="#how-it-works" class="nav-link">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="menu-right">
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <div class="nav-link" id="nav-accounts">
+                            <div><img class="image-class" src="{% static 'images/notifications.svg' %}" alt=""></div>
+                            <a  href="#">
+                            <div class="contact-icon">
+                                
+                                <img class="image-class acc" src="{% static 'images/contacts-icon.svg' %}" alt="">
+                                <p class="nav-paragraph">Hi {{ request.user}}!</p>
+                                
+                            </div>
+                        </a>
+                        </div>
+                        <div class="sub-gen">
+                            <ul class="drop-down-2">
+                                <li>
+                                    <a href={% url 'home' %}>
+                                        <div class="accounts-dropdown">
+                                            <div>
+                                                <div class="circle">
+                                                    <h3>{{ request.user.split.0}}</h3>
+                                                </div>
+                                            </div>
+                                            <div class="drop-detail">
+                                                <p>{{ request.user }}</p>
+                                                <small class="email">{{ user.email }}</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <!-- <a href="#"></a> -->
+                                </li>
+                                <div class="profile-dropdown">
+                                    <li class="profile">
+                                        <a href="#">
+                                            <div class="profile-option-one accprof">
+                                                <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
+                                                <p>Downloads</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="profile">
+                                        <a href="#">
+                                            <div class="profile-option-two accprof">
+                                                <img class="image-class" src="{% static 'images/edit-btn.svg' %}" alt="">
+                                                <p>Edit profile</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="profile">
+                                        <a href="{% url 'logout' %}">
+                                            <div class="profile-option-three accprof">
+                                                <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
+                                                <p>Log out</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- <li class='nav-item'>
+                        <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+                    </li> -->
+                    {% else %}
+
+                    <li class="nav-item">
+                        <a href="{% url 'signup' %}" class="nav-link active-sign">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link">Login</a>
+                    </li>
+                   
+                    {% endif %}   
+                </ul>
+            </div>
+            <div class="hamburger" id="bar" onclick="myFunction()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </nav>
+    {% endblock %}
