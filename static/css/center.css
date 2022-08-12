@@ -37,7 +37,30 @@
     box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
     border-radius: 10.3944px;
 }
+.flex-image {
+    display: inline-flex;
+}
+#flex-1 {
+    height: 60px;
+    width: 60px;
+    top: 20px;
+    border-radius: 119px;
+}
 
+#flex-2 {
+    height: 90px;
+    width: 90px;
+    left: 114px;
+    top: 50px;
+    border-radius: 119px;
+}
+#flex-3 {
+    height: 150px;
+    width: 150px;
+    left: -101px;
+    top: 50px;
+    border-radius: 222px;
+}
 .center-p{
     width: 504px;
     height: 251px;
