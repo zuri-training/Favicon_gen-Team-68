@@ -9,13 +9,14 @@ const accDropDown = document.querySelector('.drop-down-2')
 const activeUpload = document.querySelector('.up');
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+  navMenu.classList.toggle("activebar");
 });
 
 document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+    hamburger.style.top = '80%'
+    navMenu.classList.add("activebar");
   })
 );
 
