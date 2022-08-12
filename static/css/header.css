@@ -417,10 +417,56 @@ header {
   color: #AEAEAE;
 }
 }
-@media (max-width: 700px) {
+
+@media (max-width: 768px) {
 .file-input-cover {
   width: 350px;
 }
+.upload {
+  display: flex;
+  color: white;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 136px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-direction: column;
+  width: 80%;
+}
+.generatebtn {
+  justify-content: center;
+  align-items: center;
+  background-color: #3250ec;
+  color: #ffff;
+  border: none;
+  padding: 1em 5.1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  display: flex;
+}
+
+.recent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  gap: 3em;
+  width: 100%;
+}
+.recent-1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 36px;
+  color: #AEAEAE;
+  width: 100%;
+}
+
+
 }
 @media (max-width: 480px) {
   .upload-text {
