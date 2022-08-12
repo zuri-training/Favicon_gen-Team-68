@@ -20,7 +20,7 @@ const downloadForMe = (e) => {
   http.send(fd);
 };
 
-downloadForm.addEventListener("submit", downloadForMe);
+//downloadForm.addEventListener("submit", downloadForMe);
 
 /*const targetImgSrc = document.querySelector("#file-name img")?.src;
 const downloadImg = document.querySelector(".prev-board google");

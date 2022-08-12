@@ -8,14 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/css/center.css">
 <link rel="stylesheet" href="../static/css/center-animations.css">
-<link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {% endblock %}
 {% block extra_scripts %}
 <script src="{% static 'js/center-animations.js' %}" defer></script>
@@ -56,11 +54,14 @@
                 <button type="submit" class="generatebtn">Generate</button>
             </div>
         </form>
-        
+
         <div class="icons">
             <p class="recent-1">Recently generated favicons</p>
             <div class="recent">
-                <img src="{% static 'images/Vector (1).png' %}" />
+                {% for recent in icons %}
+                <img src="{{recent.upload.image.url}}" />
+                {% endfor %}
+                <!--{#}<img src="{% static 'images/Vector (1).png' %}" />
                 <img src="{% static 'images/Vector (2).png' %}" />
                 <img src="{% static 'images/Vector (3).png' %}" />
                 <img src="{% static 'images/Vector (4).png' %}" />
@@ -74,6 +75,7 @@
                 <img src="{% static 'images/Vector (12).png' %}" />
                 <img src="{% static 'images/Vector (13).png' %}" />
                 <img src="{% static 'images/Vector (14).png' %}" />
+                #}-->
             </div>
         </div>
     </div>
