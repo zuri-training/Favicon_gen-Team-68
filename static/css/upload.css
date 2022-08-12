@@ -177,7 +177,7 @@ input[type="checkbox"] {
   margin: 0.5em 0 2em 0;
   margin-top: 2em;
   display: flex;
-  padding: 0em 1.6em;
+  padding: 0em 3.6em;
   flex-direction: column;
   cursor: pointer;
 }
@@ -236,7 +236,7 @@ input[type="checkbox"] {
   display: none;
 }
 .down-btns {
-  margin: 0em 1em;
+  margin: 0em 3.6em;
   margin-top: 1em;
   display: flex;
   justify-content: center;
@@ -439,7 +439,7 @@ border: 1px solid #3250ec;
     color: rgba(0, 0, 0, 0.65);
   }
   .down-btns {
-    margin: 0em 1em;
+    margin: 0em 3.6em;
     margin-top: 1em;
     display: flex;
     justify-content: space-between;

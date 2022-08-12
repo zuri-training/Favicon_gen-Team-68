@@ -436,7 +436,7 @@ ul.drop-down-2 {
     justify-content: space-between;
     padding-left: 4.5em;
     padding-right: 3em;
-  
+   
     gap: 4em;
 }
 .drop-down {
@@ -455,9 +455,9 @@ ul.drop-down-2 {
 }
 .hamburger {
   display: block;
-  z-index: 99;
-  position: fixed;
-  right: 15%;
+  z-index: 1099;
+  position: absolute;
+  right: 5%;
   color: #232330;
 }
 
@@ -486,7 +486,7 @@ ul.drop-down-2 {
    
     transition: 0.3s;
  
-    z-index: 9;
+    z-index: 1000;
   }
 
   a {
@@ -558,7 +558,7 @@ ul.menu-left {
   flex-direction: column;
   align-content: center;
   align-items: flex-start;
-  padding: 0em 2em;
+  padding: 0em ;
   padding-top: 70%;
   margin-left: 1em;
   margin: 0em 1em;
@@ -567,6 +567,7 @@ ul.menu-left {
 }
 a.nav-link {
   font-size: 3rem;
+  width: 100%;
 }
 ul.menu-right {
   display: none;
