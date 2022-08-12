@@ -430,6 +430,7 @@ ul.drop-down-2 {
 
 
 }
+
 @media (max-width: 768px) {
   nav.navbar-sticky {
     display: flex;
@@ -582,12 +583,20 @@ ul.menu-right {
   }
 
 } 
-@media (min-width: 416px) and (max-width: 768px){
+
+@media (max-width: 415px) {
   nav.navbar-sticky {
     display: flex;
     justify-content: space-between;
-    padding-left: 4.5em;
-    padding-right: 4.5em;
-    gap: 4em;
+    padding-left: 2.5em;
+    padding-right: 1em;
+   
+   
+}
+.hamburger {
+  display: block;
+  z-index: 1099;
+  position: static; 
+
 }
 }
