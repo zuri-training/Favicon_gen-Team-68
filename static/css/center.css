@@ -12,11 +12,12 @@
 
 .container-2{
     display: flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items:center;
-    padding: 10em 9em;
+    padding: 100px 108px;
     width: 100%;
     height: 560px;
+    gap: 5em;
 }
 /* display: flex;
     flex-direction: row;
@@ -30,40 +31,42 @@
     background: #FFFFFF;  */
 
 .empty{
-    width: calc(100% / 2);
+    width: 59em;
     height: 360px;
+    /* left: 682px;
     background: #FFFFFF;
     box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
-    border-radius: 10.3944px;
+    border-radius: 10.3944px; */
 }
 .flex-image {
     display: flex;
     width: 100%;
-    height: 360px;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 1.5em;
     margin-bottom: 5em;
+    padding-bottom: 2em;
 }
 #flex-1 {
     height: 9em;
-    width: 100%;
-    top: 20px;
+    width: 9em;
+    /* top: 20px; */
     border-radius: 119px;
 }
 
 #flex-2 {
     height: 18em;
-    width: 100%;
-    left: 114px;
-    top: 50px;
+    width: 18em;
+    /* left: 114px; */
+    /* top: 50px; */
     border-radius: 119px;
 }
 #flex-3 {
     height: 27em;
-    width: 100%;
-    left: -101px;
-    top: 50px;
+    width: 27em;
+    /* left: -101px;
+    top: 50px; */
     border-radius: 222px;
 }
 .center-p{
@@ -358,6 +361,19 @@ small{
     margin: 0 auto;
     font-family: sans-serif;
     font-size: 17px;
+}
+@media only screen and (max-width: 1220) {
+    .container-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 108px;
+        width: 100%;
+        height: 800px;
+        text-align: left;
+        margin: 3em;
+    }
 }
 
 @media only screen and (max-width: 1168px) {
@@ -714,7 +730,7 @@ small{
         margin: 0 auto;
     }
 }
-@media only screen and (max-width: 772px) {
+@media only screen and (max-width: 768px) {
     center-p2 {
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -732,6 +748,62 @@ small{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    }
+    .container-2{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        padding: 100px 108px 100px;
+        width: 100%;
+        height: 60em;
+    }
+    .empty{
+        width: 59em;
+        height: 16.5em;
+        /* left: 682px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
+        border-radius: 10.3944px; */
+    }
+    .empty-2{
+        width: 540px;
+        height: 360px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
+        border-radius: 10.3944px;
+    }
+    .flex-image {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        margin: 1em 0em;
+    }
+    #flex-1 {
+        height: 6em;
+        width: 6em;
+        /* top: 20px; */
+        /* border-radius: 119px; */
+    }
+    
+    #flex-2 {
+        height: 10em;
+        width: 10em;
+        /* left: 114px; */
+        /* top: 50px; */
+        /* border-radius: 119px; */
+    }
+    #flex-3 {
+        height: 15em;
+        width: 15em;
+        /* left: -101px;
+        top: 50px; */
+        /* border-radius: 222px; */
+    }
+    .all-started {
+        margin: 0 0 2em;
     }
 }
 @media only screen and (max-width: 728px) {
@@ -754,7 +826,7 @@ small{
     background-clip: text;
     }
 }
-@media only screen and (max-width: 622px) {
+/* @media only screen and (max-width: 622px) {
     .center-p2 {
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -773,7 +845,7 @@ small{
     -webkit-text-fill-color: transparent;
     background-clip: text;
     }
-}
+} */
 @media only screen and (max-width: 590px) {
     div img{
         width: 100%;
@@ -1252,7 +1324,7 @@ small{
         height: 450px;
         background: #FFFFFF;
     }
-    /* .empty {
+    .empty {
         display: block;
         margin: 20px auto;
         gap: 0px;
@@ -1260,41 +1332,7 @@ small{
         height: 240px;
         background: #FFFFFF;
         box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);    
-    } */
-        .flex-image {
-        display: flex;
-        width: 540px;
-        height: 360px;
-        justify-content: center;
-        align-items: center;
-        gap: 0px;
-        margin-bottom: 5em;
     }
-    #flex-1 {
-        height: 9em;
-        width: 100%;
-        top: 20px;
-        border-radius: 119px;
-        flex-shrink: 1;
-    }
-    
-    #flex-2 {
-        height: 18em;
-        width: 100%;
-        left: 114px;
-        top: 50px;
-        border-radius: 119px;
-        flex-shrink: 2;
-    }
-    #flex-3 {
-        height: 27em;
-        width: 100%;
-        left: -101px;
-        top: 50px;
-        border-radius: 222px;
-        flex-shrink: 3;
-    }
-
     .center-p{
         width: 100%;
         height: 120px;
@@ -1694,3 +1732,4 @@ small{
 .container-main{
      overflow: hidden;
 } 
+
