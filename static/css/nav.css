@@ -585,9 +585,12 @@ ul.menu-right {
 } 
 
 @media (max-width: 415px) {
+
   nav.navbar-sticky {
+
     display: flex;
     justify-content: space-between;
+
     padding-left: 2.5em;
     padding-right: 1em;
    
@@ -597,6 +600,5 @@ ul.menu-right {
   display: block;
   z-index: 1099;
   position: static; 
-
 }
 }
