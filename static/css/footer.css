@@ -121,10 +121,11 @@ Footer div a:hover {
   justify-content: center;
   color: white;
   font-size: 18px;
-  position: relative; top: 2.5em; left: 3em;
+  /* position: relative; top: 2.5em; left: 3em; */
   font-family: Dosis, sans-serif;
   font-weight: normal;
   line-height: 98%;
+  margin: 55px 0px 10px 0px;
   /*width: 100%;*/
 }
 a#arrowup i {
@@ -264,6 +265,7 @@ a#arrowup {
     font-family: Dosis, sans-serif;
     font-weight: normal;
     width: 100%;
+    margin: 55px 0px 10px 0px;
   }
   a#arrowup i {
     color: white;
@@ -410,11 +412,12 @@ a#arrowup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative; left: -3em;
+    /* position: relative; left: -3em; */
     color: white;
     font-size: 12px;
     font-family: Dosis, sans-serif;
     font-weight: normal;
+    margin: 55px 0px 10px 0px;
     width: 100%;
   }
   a#arrowup i {
@@ -553,12 +556,13 @@ a#arrowup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative; left: 0.5em;
+    /* position: relative; left: 0.5em; */
     color: white;
     font-size: 12px;
     font-family: Dosis, sans-serif;
     font-weight: normal;
     width: 100%;
+    margin: 55px 0px 10px 0px;
   }
   a#arrowup i {
     display: none;
@@ -610,6 +614,7 @@ a#arrowup {
     font-family: Dosis, sans-serif;
     font-weight: normal;
     width: 100%;
+    margin: 55px 0px 10px 0px;
   } 
 }
 

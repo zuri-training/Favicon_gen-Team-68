@@ -16,56 +16,62 @@
 {% block content %}
 
 
-<a href="{% url 'home' %}">
-    <label style="color: black; -webkit-text-stroke: 6px white;"><i class="fa-solid fa-arrow-left fa-10x"></i></label>
-</a>
 
-<form method='post' action='' class="form">
-    <header id="mbile">
-        <h1>Login</h1>
-        <p><small class="down-mobile">Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></small></p>
-    </header>
-    {% csrf_token %}
-
-    <div class="field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Email Address" name='email' autofocus 
-        onmouseover="this.setSelectionRange(this.value.length,this.value.length);"  
-        onfocus="this.setSelectionRange(this.value.length,this.value.length);">
-        <small></small>
+    <div style="width: 15%; text-align: right; margin-top: 2em; padding-left: 10px;">
+        <a href="{% url 'home' %}">
+            <label style="color: black; -webkit-text-stroke: 1px white; width: 100%;"><i class="fa-solid fa-arrow-left fa-4x"></i></label>
+        </a>
     </div>
-
-    <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder='Password' name="password" > 
-        <small></small>
-        <span id="togglePassword">
-                     <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
-        </span>
-
-    </div>
-
-    {% include 'flash-messages.html' %}
     
-    <div class="rem-pass">
-        <div class='checkbox-field'>
-            <label class="checkbox" for="remember">Remember me</label>
-            <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
-
-        </div>
-        <div class="pass">
-            <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
-        </div>
-    </div>
-    <div class="butns">
-        <div class="butn1">
-            <button type='submit' id='submit'>Login</button>
-        </div>
-
-        {% include 'social-logins.html' %}
-
-    </div>
-</form>
+    <div>
+        <form method='post' action='' class="form">
+            <header id="mbile">
+                <h1>Login</h1>
+                <p><small class="down-mobile">Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></small></p>
+            </header>
+            {% csrf_token %}
+        
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email" name='email' autofocus 
+                onmouseover="this.setSelectionRange(this.value.length,this.value.length);"  
+                onfocus="this.setSelectionRange(this.value.length,this.value.length);">
+                <small></small>
+            </div>
+        
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder='Password' name="password" > 
+                <small></small>
+                <span id="togglePassword">
+                             <i id="hide1" class="fa-solid eyes fa-eye-slash"></i>
+                </span>
+        
+            </div>
+        
+            {% include 'flash-messages.html' %}
+            
+            <div class="rem-pass">
+                <div class='checkbox-field'>
+                    <label class="checkbox" for="remember">Remember me</label>
+                    <input class="checkbox-input" type="checkbox" name="rememberbox" id="remember">
+        
+                </div>
+                <div class="pass">
+                    <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+                </div>
+            </div>
+            <div class="butns">
+                <div class="butn1">
+                    <button type='submit' id='submit'>Login</button>
+                </div>
+        
+                {% include 'social-logins.html' %}
+        
+            </div>
+        </form>
+    </div>    
+</div>
 
 {% endblock %}
 

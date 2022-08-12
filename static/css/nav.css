@@ -37,6 +37,7 @@ nav.navbar-sticky {
   height: 70px;
   width: 70px;
   background-color:hsla(230, 83%, 56%, 0.54);
+  color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;

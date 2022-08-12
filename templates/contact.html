@@ -12,30 +12,36 @@
 {% block content %}
 
 
-<a href="{% url 'home' %}">
-    <label style="color: black; -webkit-text-stroke: 6px white;"><i class="fa-solid fa-arrow-left fa-10x"></i></label>
-</a>
-
-	<form method='post' action='' class="form">
-		<header id="contact-head">
-			<h1>Contact Us</h1>
-			<p><small class="contact-title">We'd love to hear from you, please send us a message</small></p>
-		</header>
-        {% csrf_token %}
-
-		<div class="cont-field">
-			<input type="email" id="email" placeholder="Email Address" name='email' autofocus >
-		</div>
-
-		<div class="cont-field">
-			<textarea placeholder="Message" class="field"></textarea>
-		</div>
-
-		<div class="cont-butns">
-			<div class="cont-butn1">
-				<button type='submit' id='submit'>Send</button>
+<div class="contact-page-link">
+	<div style="width: 15%; text-align: right; margin-top: 2em; padding-left: 10px;">
+        <a href="{% url 'home' %}">
+            <label style="color: black; -webkit-text-stroke: 1px white; width: 100%;"><i class="fa-solid fa-arrow-left fa-4x"></i></label>
+        </a>
+    </div>
+	
+	<div>
+		<form method='post' action='' class="form">
+			<header id="contact-head">
+				<h1>Contact Us</h1>
+				<p><small class="contact-title">We'd love to hear from you, please send us a message</small></p>
+			</header>
+			{% csrf_token %}
+	
+			<div class="cont-field">
+				<input type="email" id="email" placeholder="Email Address" name='email' autofocus >
 			</div>
-		</div>
-	</form>
+	
+			<div class="cont-field">
+				<textarea placeholder="Message" class="field"></textarea>
+			</div>
+	
+			<div class="cont-butns">
+				<div class="cont-butn1">
+					<button type='submit' id='submit'>Send</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
 {% endblock %}
