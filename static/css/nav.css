@@ -1,0 +1,320 @@
+nav.navbar-sticky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 5em; */
+  gap: 13em;
+  background-color: #232330;
+  padding: 4.5em 12em;
+}
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8em;
+  }
+  ul.menu-left {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+  ul.menu-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+  }
+  #nav-accounts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4em;
+}
+  li{
+    list-style: none;
+}
+.circle {
+  height: 70px;
+  width: 70px;
+  background-color:hsla(230, 83%, 56%, 0.54);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accounts-dropdown {
+  background-color: #f2f4ff;
+  width: 100%;
+  padding: 1em 0em;
+  padding-left: 1.5em;
+  display: flex;
+  gap: .8em;
+  justify-content: flex-start;
+  align-items: center;
+}
+.drop-detail {
+  /* padding: 0; */
+  gap: 0.2em;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.drop-detail p{
+  font-weight: 400;
+}
+small.email {
+  color: hsla(230, 83%, 56%, 0.856);
+  font-weight: 400;
+}
+a {
+  color: #ffff;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  /* width: 86px; */
+  height: 32px;
+}
+
+
+
+.logo-img {
+  width: 100%;
+  height: 1.7em;
+}
+
+.nav-link {
+  transition: ease;
+  /* width: 60px; */
+  height: 32px;
+  position: relative;
+  padding: 0.5em 0.7em;
+  border: 1px solid transparent;
+}
+#nav-generate {
+  position: relative;
+}
+
+
+p.nav-paragraph {
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.contact-icon {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.material-symbols-outlined {
+  position: absolute;
+  top: 35%;
+  left: 95%;
+}
+.nav-link:hover {
+  padding: 0.5em 0.7em;
+  border: 1px solid #3250ec;
+  border-radius: 4px;
+}
+.active-sign {
+  padding: 0.5em 0.7em;
+  border: 1px solid #3250ec;
+  border-radius: 4px;
+}
+
+.sub-gen {
+  position: relative;
+}
+.drop-down {
+  background-color: #fbfbfb;
+  border-radius: 4px;
+  font-size: 8px;
+  padding: 2em;
+  width: 20em;
+  position: absolute;
+  left: 28%;
+  display: none;
+  flex-direction: column;
+  opacity: 1;
+  gap: 1em;
+}
+/* .drop-down li{
+  width: 100%;
+} */
+ .active-upload a {
+  padding: 0.2em 0.4em;
+  background-color: #3250ec;
+  width: 100%;
+  border-radius: 4px;
+  display: none;
+  padding-left: 1em;
+  color: #ffff !important;
+  font-weight: 700;
+  line-height: 24px;
+}
+.drop-down a {
+  font-size: 1.5rem;
+  color: #0a102f;
+  display: flex;
+  padding-left: 1em;
+}
+
+.drop-down-2 {
+  background-color: #fbfbfb;
+  border-radius: 4px;
+  padding: 0em 0px 2em;
+  width: 38em;
+  position: absolute;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+.profile-option-one {
+  display: flex;
+  gap: 0.6em;
+  padding: .3em 1em;
+  margin: 0em .4em;
+  margin-top: .3em;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile-option-two {
+  display: flex;
+  gap: 0.7em; 
+  padding: .3em 1em;
+  margin: 0em .4em;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile-option-three {
+  display: flex;
+  gap: 0.7em;
+  padding: .3em 1em;
+  margin: 0em .4em;
+  justify-content: flex-start;
+  align-items: center;
+}
+.drop-down-2 a {
+  color: #232330;
+  font-weight: 400;
+}
+.accprof:hover {
+  transition: all 0.3s;
+  text-decoration: none;
+  background-color: hsl(233, 100%, 93%);
+
+ border-radius: 2px;
+}
+img.image-class {
+  width: 35px;
+  height: 35px;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  nav.navbar-sticky {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+  .hamburger {
+    display: block;
+    z-index: 99;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #000000;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #000000;
+  }
+ 
+.logo-img{
+  width: 5rem;
+  height: auto;
+}
+  .nav-menu {
+    position: fixed;
+  display: none;
+  
+    flex-direction: column;
+    background-color: white;
+   
+    transition: 0.3s;
+ 
+    z-index: 9;
+  }
+
+  a {
+    color: #232330;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .nav-item {
+    margin: 4px 0;
+    border: #232330;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+  .nav-link:hover {
+    border: none;
+  }
+  .navbar ul li:hover .sub-gen {
+    display: flex;
+  }
+
+  .drop-down {
+    background-color: steelblue;
+    border-radius: 4px;
+    padding: 4px;
+    width: 180px;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 28px;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    top: 40px;
+  }
+  .drop-down-2 {
+    background-color: steelblue;
+    border-radius: 4px;
+    padding: 4px;
+    width: 180px;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    top: 4px;
+  }
+
+} 

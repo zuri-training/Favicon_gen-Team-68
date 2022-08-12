@@ -1,7 +1,13 @@
 header.main-header {
   background-color: #232330;
   min-height: 900px;
-  overflow-y: scroll;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0em 10em;
+  padding-top: 4.5em;
 }
 
 .intro {
@@ -161,203 +167,10 @@ header.main-header {
   font-size: 24px;
   line-height: 32px;
 }
-li {
-  list-style: none;
-}
 
-a {
-  color: #ffff;
-  text-decoration: none;
-  font-family: "Nunito Sans", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  /* width: 86px; */
-  height: 32px;
-}
-
-.navbar {
-  min-height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
-}
-
-.nav-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6em;
-}
-
-/* .nav-brand {
-  font-family: "inter", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  width: 136px;
-  height: 40px;
-  display: flex;
-} */
-
-.navbar-sticky {
-  display: flex;
-  justify-content: flex-start;
-  margin: 4.5em 7em 6em 17em;
-  align-items: center;
-  gap: 15em;
-}
-.navbar-right {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.logo-img {
-  width: 100%;
-  height: 1.7em;
-}
-
-.nav-link {
-  transition: ease;
-  width: 60px;
-  height: 32px;
-  position: relative;
-  padding: 0.5em 0.7em;
-  border: 1px solid transparent;
-}
-#nav-generate {
-  position: relative;
-}
-#nav-accounts {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2em;
-}
-.nav-paragraph {
-  width: 100%;
-}
-.contact-icon {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-}
-.material-symbols-outlined {
-  position: absolute;
-  top: 35%;
-  left: 95%;
-}
-.nav-link:hover {
-  padding: 0.5em 0.7em;
-  border: 1px solid #3250ec;
-  border-radius: 4px;
-}
-.active-sign {
-  padding: 0.5em 0.7em;
-  border: 1px solid #3250ec;
-  border-radius: 4px;
-}
-/* .nav-menu ul:hover {
-  opacity: 1;
-  visibility: visible;
-} */
-.sub-gen {
-  position: relative;
-}
-.drop-down {
-  background-color: #fbfbfb;
-  border-radius: 4px;
-  font-size: 8px;
-  padding: 2em;
-  width: 20em;
-  position: absolute;
-  left: 28%;
-  display: none;
-  flex-direction: column;
-  opacity: 1;
-  gap: 1em;
-}
-/* .drop-down li{
-  width: 100%;
-} */
-.drop-down #active-upload a {
-  padding: 0.2em 0.4em;
-  background-color: #3250ec;
-  width: 100%;
-  border-radius: 4px;
-  display: flex;
-  padding-left: 1em;
-  color: white !important;
-  font-weight: 700;
-  line-height: 24px;
-}
-.drop-down a {
-  font-size: 1.5rem;
-  color: #0a102f;
-  display: flex;
-  padding-left: 1em;
-}
-.drop-down-2 {
-  background-color: #fbfbfb;
-  border-radius: 4px;
-  padding: 0em 0px 3em;
-  width: 30em;
-  position: absolute;
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  opacity: 1;
-}
-.profile-option-one {
-  display: flex;
-  gap: 0.7em;
-  padding-left: 0.2em;
-}
-.profile-option-two {
-  display: flex;
-  gap: 0.7em;
-  padding-left: 0.2em;
-}
-.profile-option-three {
-  display: flex;
-  gap: 0.7em;
-  padding-left: 0.2em;
-}
-.drop-down-2 a {
-  color: #232330;
-}
-.drop-down-2 a:hover {
-  text-decoration: underline;
-}
-div img .image-class {
-  width: 25px !important;
-  height: 25px !important;
-}
-.accounts-dropdown {
-  background-color: #f2f4ff;
-  width: 100%;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
-}
 
 @media (max-width: 1024px) {
-  li a {
+  /* li a {
     font-size: 21px;
     width: 75px;
   }
@@ -371,7 +184,7 @@ div img .image-class {
     font-weight: 450;
     font-size: 1.8rem;
     height: 30px;
-  }
+  } */
   .intro {
     margin-top: 195px;
   }
@@ -387,7 +200,7 @@ div img .image-class {
 }
 
 @media (max-width: 920px) {
-  header.main-header {
+  /* header.main-header {
     min-height: 770px;
   }
   li a {
@@ -404,7 +217,7 @@ div img .image-class {
   .nav-brand {
     font-weight: 470;
     font-size: 1.6rem;
-  }
+  } */
   .intro {
     margin-top: 170px;
   }
@@ -433,7 +246,7 @@ div img .image-class {
     gap: 20px;
   }
 }
-@media (max-width: 890px) {
+/* @media (max-width: 890px) {
   li a {
     font-weight: 520;
   }
@@ -441,70 +254,25 @@ div img .image-class {
   .nav-menu {
     gap: 43px;
   }
+} 
+header {
+   
+  width: 100%;
 }
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    z-index: 99;
-  }
+*/
 
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-    background-color: #000000;
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-    background-color: #000000;
-  }
-  header {
-    height: 600px;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .nav-menu {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    gap: 0;
-    flex-direction: column;
-    background-color: white;
-    z-index: 2;
-    width: 92%;
-    text-align: center;
-    transition: 0.3s;
-    height: 90%;
-    z-index: 9;
-  }
-
-  a {
-    color: #232330;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
-  .nav-item {
-    margin: 4px 0;
-    border: #232330;
-  }
-
-  .nav-menu.active {
-    right: 0;
-  }
-  .nav-link:hover {
-    border: none;
-  }
-  .upload {
-    display: block;
-    justify-content: center;
-    padding: 20px 0;
-    margin: auto;
-    width: 356px;
-  }
-  .navbar ul li:hover .sub-gen {
-    display: block;
+@media (max-width: 480px) {
+  .upload-text {
+    width: 116px;
+    height: 24px;
+    font-size: 16px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #323337;
+    /* margin-top: auto; */
+    text-align: justify;
   }
   .intro {
     width: 356px;
@@ -567,20 +335,6 @@ div img .image-class {
     bottom: 50px;
     z-index: 0;
   }
-
-  .upload-text {
-    width: 116px;
-    height: 24px;
-    font-size: 16px;
-    font-family: "Nunito Sans";
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    color: #323337;
-    /* margin-top: auto; */
-    text-align: justify;
-  }
-
   .upload-image-cam {
     width: 20px;
     height: 20px;
@@ -604,11 +358,6 @@ div img .image-class {
     padding-top: 20px;
   }
 
-  .logo-img {
-    width: 100px;
-    height: 28px;
-  }
-
   .hide-img {
     display: none;
   }
@@ -623,50 +372,10 @@ div img .image-class {
     font-weight: 400;
     font-family: "Nunito Sans", sans-serif;
   }
-  .drop-down {
-    background-color: steelblue;
-    border-radius: 4px;
-    padding: 4px;
-    width: 180px;
-    font-size: 16px;
-    position: absolute;
-    margin-top: 4px;
-    margin-left: 28px;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    top: 40px;
-  }
-  .drop-down-2 {
-    background-color: steelblue;
-    border-radius: 4px;
-    padding: 4px;
-    width: 180px;
-    font-size: 16px;
-    position: absolute;
-    margin-top: 320px;
-    margin-left: 40px;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    top: 4px;
-  }
-  .drop-down {
-    font-size: 16px;
-  }
-  nav.navbar.sticky {
-    position: sticky;
-    top: 0;
-    justify-content: flex-start;
-    background: #232330;
-    z-index: 9999;
-  }
   /* The image preview is not fitting on mobile view */
   .header-recent-name {
     padding-top: 4px;
   }
-}
-@media (max-width: 480px) {
   .file-input {
     text-align: center;
     width: 256px;
