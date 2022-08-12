@@ -207,6 +207,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
+        margin-bottom: 40px;
     }
     .textgen-btn{
         display: flex;
@@ -234,5 +235,137 @@
     }
 }
 
-@media (max-width: 380px){
+@media (max-width: 500px)and (min-width:350px){
+    .textgen-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px 40px 20px;
+        gap: 44px;
+        height: 600px;
+    }
+    .p-1{
+        width: 180px;
+        height: 35px;
+        font-size: 23px;
+        line-height: 35px;
+    }
+    .p-2{
+        width: 348px;
+        height: 68px;
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .p-3{
+        width: 345px;
+        height: 45px;
+        font-weight: 450;
+        font-size: 13px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    .textgen-btn{
+        padding: 10px;
+        margin-top: 15px;
+        width: 160px;
+        height: 42px;
+    }
+    .textgen-image{
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        margin-left: 60px;
+        width: 360px;
+        height: 200px;
+    }
+    
+    .textgen-image img{
+        width: 300px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 349px) and (min-width:250px){
+    .textgen-container{
+        padding: 40px 25px 40px 25px;
+        gap: 26px;
+        height: 550px;
+    }
+    .p-1{
+        width: 160px;
+        height: 32px;
+        font-size: 21px;
+        line-height: 32px;
+    }
+    .p-2{
+        width: 280px;
+        height: 62px;
+        font-size: 21px;
+        line-height: 34px;
+    }
+    .p-3{
+        width: 240px;
+        height: 45px;
+        font-weight: 550;
+        font-size: 13px;
+        line-height: 28px;
+        margin-bottom: 45px;
+    }
+    .textgen-btn{
+        margin-top: 20px;
+        width: 130px;
+        height: 40px;
+    }
+    .textgen-image{
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        margin-left: 10px;
+        width: 250px;
+        height: 200px;
+    }
+    
+    .textgen-image img{
+        width: 220px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 349px){
+    .textgen-container{
+        padding: 40px 25px 40px 25px;
+        gap: 15px;
+        height: 470px;
+    }
+    .p-1{
+        width: 100px;
+        height: 35px;
+        font-size: 17px;
+        line-height: 32px;
+    }
+    .p-2{
+        width: 210px;
+        height: 60px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .p-3{
+        width: 200px;
+        height: 43px;
+        margin-bottom: 70px;
+    }
+    .textgen-btn{
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+    }
+    .textgen-image{
+        padding: 30px;
+        margin-left: 5px;
+        width: 210px;
+        height: 180px;
+    }
+    
+    .textgen-image img{
+        width: 160px;
+        height: auto;
+    }
 }
