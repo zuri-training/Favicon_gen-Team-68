@@ -71,7 +71,7 @@ def login_view(request):
         )
         return redirect("home")
     if request.META["QUERY_STRING"].startswith("next="):
-        messages.info(request, "You must login login first to access that page")
+        messages.info(request, "You must login first to access that page")
 
     if request.method == "POST":
         email = request.POST.get("email").lower()
