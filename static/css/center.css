@@ -32,31 +32,43 @@
 .empty{
     width: 540px;
     height: 360px;
-    left: 682px;
+    left: 20%;
     background: #FFFFFF;
-    box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
-    border-radius: 10.3944px;
+    /* box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
+    border-radius: 10.3944px; */
 }
 .flex-image {
     display: inline-flex;
+    gap: 3em;
+    position: relative; left: 5%;
+    
+}
+.center-image1{
+    margin-top: 20%;
+}
+.center-image2{
+    margin-top: 15%;
+}
+.center-image3{
+    margin-top: 5%;
 }
 #flex-1 {
-    height: 60px;
-    width: 60px;
+    height: 100px;
+    width: 100px;
     top: 20px;
     border-radius: 119px;
 }
 
 #flex-2 {
-    height: 90px;
-    width: 90px;
+    height: 150px;
+    width: 150px;
     left: 114px;
     top: 50px;
     border-radius: 119px;
 }
 #flex-3 {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     left: -101px;
     top: 50px;
     border-radius: 222px;
@@ -374,8 +386,8 @@ small{
         height: 360px;
         left: 682px;
         background: #FFFFFF;
-        box-shadow: 0px 8px 40px 8px rgb(50 80 236 / 24%);
-        border-radius: 10.3944px;
+        /* box-shadow: 0px 8px 40px 8px rgb(50 80 236 / 24%);
+        border-radius: 10.3944px; */
         text-align: left;
     }
     .center-p{
@@ -552,7 +564,7 @@ small{
     .empty-3{
         width: 540px;
         height: 360px;
-        /* box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24); */
+        box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24); 
         border-radius: 10.3944px;
     }
     
@@ -674,6 +686,24 @@ small{
         gap: 8px;
         margin: 0 auto;
     }
+    .flex-image{
+        display: inline-flex;
+        gap: 2em;
+        position: relative;
+        left: 5%;
+    }
+    #flex-1{
+        height: 100px;
+        width: 100px;
+    }
+    #flex-2{
+        height: 150px;
+        width: 150px;
+    }
+    #flex-3{
+        height: 200px;
+        width: 200px;
+    }
 }
 @media only screen and (max-width: 772px) {
     center-p2 {
@@ -772,8 +802,8 @@ small{
         gap: 6.58px;
         width: 356px;
         height: 240px;
-        background: #FFFFFF;
-        box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);    
+        /* background: #FFFFFF;
+        box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);     */
     }
     .center-p{
         width: 356px;
@@ -1141,6 +1171,18 @@ small{
         letter-spacing: 0.02em;
         color: #FFFFFF;
     }
+    #flex-1{
+        height: 80px;
+        width: 80px;
+    }
+    #flex-2{
+        height: 120px;
+        width: 120px;
+    }
+    #flex-3{
+        height: 180px;
+        width: 180px;
+    }
 }
 
 .container-7-div {
@@ -1185,8 +1227,8 @@ small{
         gap: 0px;
         width: 85%;
         height: 240px;
-        background: #FFFFFF;
-        box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);    
+        background: #FFFFFF; 
+        /* box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);     */
     }
     .center-p{
         width: 100%;
@@ -1205,6 +1247,7 @@ small{
     .container-2-div {
         margin: 0px;
         padding-right: 0px;
+        margin-top: 3%;
     }
     .container-3{
         display: flex;
@@ -1574,6 +1617,27 @@ small{
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #FFFFFF;
+    }
+    .flex-image{
+        gap: 1em;
+    }
+    .center-image2{
+        margin-top: 15%;
+    }
+    .center-image3{
+        margin-top: 10%;
+    }
+    #flex-1{
+        height: 50px;
+        width: 50px;
+    }
+    #flex-2{
+        height: 80px;
+        width: 80px;
+    }
+    #flex-3{
+        height: 110px;
+        width: 110px;
     }
 }
 
