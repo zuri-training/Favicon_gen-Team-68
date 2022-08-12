@@ -197,13 +197,17 @@ input[type="checkbox"] {
 }
 .cp-dwld-icons h4 {
   padding: 0.6em 0em;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
   margin-bottom: 0.2em;
   color: #0a0a0b;
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.02em;
+  width: 90%;
+  /* text-align: center; */
+  justify-content: center;
 }
 .htmlcode {
   display: flex;
@@ -390,18 +394,19 @@ border: 1px solid #3250ec;
   .modal-left form small {
     margin-top: 1.3em;
   }
-  pre#upl.prettyprint {
-    background-color: hsla(236, 100%, 83%, 0.464);
+  .htmlcode pre#upl.prettyprint {
+    background-color: hsla(236, 100%, 83%, 0.464) !important;
     font-size: 1.08rem;
     justify-content: center;
+   
   }
   .down-btns > * {
     font-size: 1.08rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* padding: .4em 2.6em; */
-
+    padding: .4em 2.6em;
+   
     height: 3.8em;
     border: none;
     border-radius: 4px;
@@ -410,7 +415,7 @@ border: 1px solid #3250ec;
   }
   .down-btn-grey {
     display: flex;
-    width: 44%;
+    width: 42%;
     font-size: 1.08rem;
   }
   .down-btn-pri {
@@ -420,7 +425,7 @@ border: 1px solid #3250ec;
     background: #3250ec;
     font-size: 1.08rem;
     color: #f5f5f5;
-    width: 44%;
+    width: 42%;
     font-weight: 800;
     letter-spacing: 0.02em;
     line-height: 24px;
@@ -429,7 +434,7 @@ border: 1px solid #3250ec;
     cursor: pointer;
   }
   .sizes-chb label {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
   }
   .sizes-chb label:not(.s16) {
     margin-top: 0.6em;
@@ -439,10 +444,12 @@ border: 1px solid #3250ec;
     color: rgba(0, 0, 0, 0.65);
   }
   .down-btns {
-    margin: 0em 1em;
+    margin: 0 auto;
     margin-top: 1em;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 90%;
   }
   input[type="checkbox"] {
     transform: scale(1.4);

@@ -430,6 +430,7 @@ ul.drop-down-2 {
 
 
 }
+
 @media (max-width: 768px) {
   nav.navbar-sticky {
     display: flex;
@@ -581,12 +582,13 @@ ul.menu-right {
   }
 
 } 
-@media (min-width: 416px) and (max-width: 768px){
+@media (min-width: 416px) {
   nav.navbar-sticky {
+
     display: flex;
     justify-content: space-between;
     padding-left: 4.5em;
-    padding-right: 4.5em;
+    padding-right: 0em;
     gap: 4em;
 }
 }
