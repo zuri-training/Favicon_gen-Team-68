@@ -61,7 +61,7 @@
                                 <div class="accounts-dropdown">
                                     <div>
                                         <div class="circle">
-                                            <h3>{{ request.user.split.0 }}</h3>
+                                            <h3>{{ request.user|make_list|first}}</h3>
                                         </div>
                                     </div>
                                    <div>

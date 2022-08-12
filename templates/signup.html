@@ -18,9 +18,11 @@
 
 {% block content %}
 
-<a href="{% url 'home' %}">
-    <label style="color: black; -webkit-text-stroke: 6px white;"><i class="fa-solid fa-arrow-left fa-5x"></i></label>
-</a>
+<div style="width: 15%; text-align: right; margin-top: 2em; padding-left: 10px;">
+    <a href="{% url 'home' %}">
+        <label style="color: black; -webkit-text-stroke: 1px white; width: 100%;"><i class="fa-solid fa-arrow-left fa-4x"></i></label>
+    </a>
+</div>
 
 <form method='post' action='' class="form">
     
@@ -38,7 +40,7 @@
         </div>
 
         <div class="field">
-            <label for="email">Email Address</label>
+            <label for="email">Email</label>
             <input type="email" value="{{ instance.email }}" placeholder="Email Address" id="email" name="email" >
             <small></small>
         </div>

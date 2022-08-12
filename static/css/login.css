@@ -318,7 +318,7 @@ header#mbile{
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   header h1{
@@ -326,12 +326,6 @@ header#mbile{
     line-height: 32px;
     font-weight: 700;
     font-style: normal;
-  }
-header#mbile p{
-  z-index: 2;
-     position: absolute;
-     bottom: -4.4em;
-     text-align: center;
   }
   .form {
     position: relative;
@@ -399,8 +393,4 @@ header#mbile p{
     width: 20px;
     height: 20px;
   }
-}
-.back-arrow {
-  display: flex;
-  width: 100%;
 }

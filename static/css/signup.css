@@ -269,6 +269,13 @@ i.fa-brands {
   transform: translateY(-50%);
  
 }
+.fa-github {
+  color: black;
+  font-size: 24px;
+  position: absolute;
+  left:25%;
+  transform: translateY(-50%);
+}
 img.google {
   position: absolute;
   transform: translateY(-50%);
@@ -294,7 +301,7 @@ img.google {
 }
 @media only screen and (max-width: 768px) and (min-width: 200px) {
   body {
-  
+
     margin: 0;
     padding: 0;
   }
@@ -307,7 +314,7 @@ header#mbile{
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     transition: none;
   }
@@ -317,12 +324,7 @@ header#mbile{
     font-weight: 700;
     font-style: normal;
   }
-header#mbile p{
-  z-index: 2;
-     position: absolute;
-     bottom: -2.4em;
-     text-align: center;
-  }
+
   .form {
     position: relative;
      width: var(--mobilewidth); 
