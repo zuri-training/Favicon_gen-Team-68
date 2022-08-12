@@ -17,58 +17,6 @@
         </div>
     </div>
 </section>
-<footer>
-    <div id="footer_top">
-        <div class="footer_column1">
-            <span><img src="{% static 'images/Frame 259.png' %}" width="px" height="" alt=""></span>
-            <span class="spec">Get the right sized favicon for you</span>
-            <div class="icons">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-twitter-square"></i>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-        </div>
-        <div id="footer_special">
-            <div class="company" class="group">
-                <h3>Company</h3>
-                <a href="#">How it works</a>
-                <a href="#">Generate</a>
-                <a href="#">Contact</a>
-                <a href="#">Sign Up</a>
-                <a href="#">Login</a>
-            </div>
-            <div class="resources" class="group">
-                <h3>Resources</h3>
-                <a href="#">Noun Project</a>
-                <a href="#">Remix Icon</a>
-                <a href="#">Wizlogo</a>
-                <a href="#">Looka</a>
-                <a href="#">lonos</a>
-                <a href="#">Faviconit</a>
-            </div>
-
-            <div class="Tools" class="group">
-                <h3>Tools</h3>
-                <a href="#">Django Framework</a>
-                <a href="#">MySQL Database</a>
-                <a href="#">Figma</a>
-                <a href="#">CSS</a>
-                <a href="#">HTML</a>
-            </div>
-            <div class="Information" class="group">
-                <h3>Information</h3>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">FAQ</a>
-                <a href="#">Help</a>
-                <a href="#">Support</a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="copy-icon">
-        <span class="copyright">&copy; 2022 Conficon | All Rights Reserved.</span>
-        <a href="#Go_up" id="arrowup" style='position: fixed; bottom: 3em; right:1em; z-index: 99999;'><i class="fa-solid fa-circle-arrow-up"></i></a>
-    </div>
-</footer>
+{% block footer_add %}
+{% include 'addfooter.html' %}
+{% endblock %}

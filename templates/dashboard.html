@@ -4,53 +4,55 @@
 
 {% block title %}ConfIcon Dashboard{% endblock %}
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet" />
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
 <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {% endblock %}
-
-{% block dashboard %}
+{% block header %}
+{% include 'navbar.html'%}
+{% endblock %}
+{% block content %}
 
 <div class="container-dash">
-    {% include 'navbar.html'%}
     <div class="line-1">
         <div>
             <p>Downloads</p>
         </div>
-       <div>
-        <label for="year">Year</label>
-        <select name="year" id="">
-            <option value="2022"> 2022 </option>
-            <option value="2021"> 2021</option>
-            <option value="2020"> 2020 </option>
-            <option value="2019"> 2019</option>
-            <option value="2018"> 2018</option>
-        </select>
-        <label for="license">License Type</label>
-        <select name="license" id="">
-            <option value="MIT">MIT</option>
-            <option value="ZURI">ZURI</option>
-            <option value="GOOGLE">GOOGLE</option>
-        </select>
-        <a href="#">Clear Filter</a>
-       </div>
+        <div>
+            <label for="year">Year</label>
+            <select name="year" id="">
+                <option value="2022"> 2022 </option>
+                <option value="2021"> 2021</option>
+                <option value="2020"> 2020 </option>
+                <option value="2019"> 2019</option>
+                <option value="2018"> 2018</option>
+            </select>
+            <label for="license">License Type</label>
+            <select name="license" id="">
+                <option value="MIT">MIT</option>
+                <option value="ZURI">ZURI</option>
+                <option value="GOOGLE">GOOGLE</option>
+            </select>
+            <a href="#">Clear Filter</a>
+        </div>
     </div>
+    {% for result in result_list %}
     <div class="line-2">
         <div>
             Icon
-            <li>{% result.upload.img.url %}</li>
+            <li>{{ result.upload.img.url }}</li>
         </div>
         <div>
             ID
-            <li>{% result.file.url %}</li>
+            <li>{{ result.file.url }}</li>
         </div>
         <div>
             Date
-            <li>{% upload.date %}</li>
+            <li>{{ upload.date }}</li>
         </div>
         <div>
             Icon Type
@@ -64,9 +66,12 @@
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
-
+{% block footer  %}
+{% include 'addfooter.html' %}
+{% endblock %}
 {% block extra_scripts %}
-<script src="{% static 'js/dashboard.js' %}"></script>
+<script src="{% static 'js/dashboard.js' %}" defer></script>
 {% endblock %}
