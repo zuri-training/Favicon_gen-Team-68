@@ -364,7 +364,7 @@ a#arrowup {
       margin-top: .2em;
       margin-bottom: 1.3em;
       font-size: 24px;
-      width: 40%;
+      width: 55%;
   }
   div.footer_column1 div.Icons i {
     color: white;
@@ -396,6 +396,10 @@ a#arrowup {
     padding-top: 40px;
     width: 40%;
   }
+  .Tools,
+  .Information{
+    position: relative; top: 2em;
+  }
   .resources a {
     padding: 18px 0;
   }
@@ -406,6 +410,7 @@ a#arrowup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative; left: -3em;
     color: white;
     font-size: 12px;
     font-family: Dosis, sans-serif;
@@ -548,7 +553,7 @@ a#arrowup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative; left: 3%;
+    position: relative; left: 0.5em;
     color: white;
     font-size: 12px;
     font-family: Dosis, sans-serif;
