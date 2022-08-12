@@ -63,7 +63,7 @@
                             <div class="contact-icon">
                                 
                                 <img class="image-class acc" src="{% static 'images/contacts-icon.svg' %}" alt="">
-                                <p class="nav-paragraph">Hi {{ request.user}}!</p>
+                                <p class="nav-paragraph">Hi {{ request.user|title}}!</p>
                                 
                             </div>
                         </a>
@@ -75,11 +75,11 @@
                                         <div class="accounts-dropdown">
                                             <div>
                                                 <div class="circle">
-                                                    <h3>{{ request.user.split.0}}</h3>
+                                                    <h3 class='pic'>{{ request.user|make_list|first|title}}</h3>
                                                 </div>
                                             </div>
                                             <div class="drop-detail">
-                                                <p>{{ request.user }}</p>
+                                                <p>{{ request.user|title }}</p>
                                                 <small class="email">{{ user.email }}</small>
                                             </div>
                                         </div>
