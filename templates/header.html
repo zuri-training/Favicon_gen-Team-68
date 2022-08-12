@@ -31,7 +31,7 @@
 <header class='main-header' id="Go_up">
 
     {% include 'copy.html' %}
-   
+
 
     <div class='sub-header'>
         <div class="intro">
@@ -56,31 +56,30 @@
                 <button type="submit" class="generatebtn">Generate</button>
             </div>
         </form>
-        {% if request.user.is_authenticated %}
+        
         <div class="icons">
             <p class="recent-1">Recently generated favicons</p>
-            <ul class="recent">
-                {% for recent in icons %}
-
-                <li class="header-recent-name">
-                    <a href="{{ recent.zip_file.file.url }}" download='{{ recent.zip_file.name }}'>
-                        <img src="{{ recent.upload.image.url }}" />
-                        <p style='font-size: .4em'>{{recent.upload.image.name | split:'/'}}</p>
-                    </a>
-                </li>
-
-
-                {% endfor %}
-
-
-                <!-- what will be the file path to show the images -->
-
-
-            </ul>
+            <div class="recent">
+                <img src="{% static 'images/Vector (1).png' %}" />
+                <img src="{% static 'images/Vector (2).png' %}" />
+                <img src="{% static 'images/Vector (3).png' %}" />
+                <img src="{% static 'images/Vector (4).png' %}" />
+                <img src="{% static 'images/Vector (5).png' %}" />
+                <img src="{% static 'images/Vector (6).png' %}" />
+                <img src="{% static 'images/Vector (7).png' %}" />
+                <img src="{% static 'images/Vector (8).png' %}" />
+                <img src="{% static 'images/Vector (9).png' %}" />
+                <img src="{% static 'images/Vector (10).png' %}" />
+                <img src="{% static 'images/Vector (11).png' %}" />
+                <img src="{% static 'images/Vector (12).png' %}" />
+                <img src="{% static 'images/Vector (13).png' %}" />
+                <img src="{% static 'images/Vector (14).png' %}" />
+            </div>
         </div>
     </div>
+    {% if request.user.is_authenticated %}
     {% include 'upload.html' %}
-    {% endif %} 
+    {% endif %}
 </header>
 
 {% if request.user.is_authenticated %}
