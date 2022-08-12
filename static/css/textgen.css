@@ -12,6 +12,7 @@
     top: 1024px;
     background-color: #232330;
     display: flex;
+    justify-content: space-between;
     gap: 10px;
 }
 
