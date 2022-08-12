@@ -4,13 +4,13 @@ const genDropDown = document.querySelector('.drop-down');
 const generate = document.
 getElementById('nav-generate');
 const acc = document.querySelector('.acc')
-const accDropDown = document.querySelector('.drop-down-2"')
+const accDropDown = document.querySelector('.drop-down-2')
 // const bar = document.getElementById('bar');
 const activeUpload = document.querySelector('.up');
-// hamburger.addEventListener("click", () => {
-//   hamburger.classList.toggle("active");
-//   navMenu.classList.toggle("active");
-// });
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
 
 document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
@@ -22,10 +22,14 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 const genDrop = ()=>{
   genDropDown.style.display = 'flex'  
 }
+const removeGendrop = ()=>{
+  genDropDown.style.display = 'none'
+}
 
 generate.addEventListener("click", genDrop);
-generate.addEventListener("hover", genDrop);
-activeUpload.addEventListener("hover", function(){
+generate.addEventListener("mouseover", genDrop);
+generate.addEventListener('mouseout', removeGendrop)
+activeUpload.addEventListener("mouseover", function(){
   activeUpload.classList.toggle("active-upload");
 });
 activeUpload.addEventListener("click", function(){
@@ -34,5 +38,9 @@ activeUpload.addEventListener("click", function(){
 const displayAcc = () =>{
 accDropDown.style.display = 'flex'
 }
+const removeAcc = () =>{
+  accDropDown.style.display = 'none'
+}
 acc.addEventListener('click', displayAcc)
-acc.addEventListener('hover', displayAcc)
+
+acc.addEventListener('mouseout', removeAcc)
