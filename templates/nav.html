@@ -57,13 +57,13 @@
                 <ul class="menu-right">
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <div class="nav-link" id="nav-accounts">
-                            <div><img class="image-class" src="{% static 'images/notifications.svg' %}" alt=""></div>
+                        <div class="nav-link a" id="nav-accounts">
+                            <div><img class="image-class n" src="{% static 'images/notifications.svg' %}" alt=""></div>
                             <a  href="#">
                             <div class="contact-icon">
                                 
                                 <img class="image-class acc" src="{% static 'images/contacts-icon.svg' %}" alt="">
-                                <p class="nav-paragraph">Hi {{ request.user|title}}!</p>
+                                <p class="nav-paragraph">Hi {{ request.user|title|truncatechars:5}}!</p>
                                 
                             </div>
                         </a>
@@ -79,7 +79,7 @@
                                                 </div>
                                             </div>
                                             <div class="drop-detail">
-                                                <p>{{ request.user|title }}</p>
+                                                <p>{{ request.user|title|truncatechars:5 }}</p>
                                                 <small class="email">{{ user.email }}</small>
                                             </div>
                                         </div>
