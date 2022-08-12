@@ -2,17 +2,7 @@ header.main-header {
   background-color: #232330;
 <<<<<<< HEAD
   min-height: 900px;
-  /* overflow-y: scroll; */
   width: 100%;
-=======
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0em 10em;
-  padding-top: 4.5em;
->>>>>>> 8396ec435624224e4e39d3088438e9dde67ad508
 }
 
 .intro {
