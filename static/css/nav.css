@@ -118,7 +118,7 @@ p.nav-paragraph {
   top: 30%;
   left: 90%;
 }
-.nav-link:hover {
+.nav-link:not(.a):hover {
   padding: 0.5em 0.7em;
   border: 1px solid #3250ec;
   border-radius: 4px;
@@ -438,10 +438,27 @@ ul.drop-down-2 {
   
     gap: 4em;
 }
-  .hamburger {
-    display: block;
-    z-index: 99;
-  }
+.drop-down {
+  background-color: steelblue;
+  border-radius: 4px;
+  padding: 4px;
+  width: 180px;
+  font-size: 16px;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 28px;
+  display: none;
+  flex-direction: column;
+  opacity: 1;
+  top: 40px;
+}
+.hamburger {
+  display: block;
+  z-index: 99;
+  position: fixed;
+  right: 15%;
+  color: #232330;
+}
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -482,8 +499,15 @@ ul.drop-down-2 {
     border: #232330;
   }
 
-  .nav-menu.active {
+  .activebar {
+    display: flex;
+    flex-direction: column;
     right: 0;
+    width: 90%;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    height: 80%;
   }
   .nav-link:hover {
     border: none;
@@ -501,7 +525,7 @@ ul.drop-down-2 {
     position: absolute;
     margin-top: 4px;
     margin-left: 28px;
-    display: flex;
+    display: none;
     flex-direction: column;
     opacity: 1;
     top: 40px;
@@ -515,10 +539,44 @@ ul.drop-down-2 {
     position: absolute;
     margin-top: 320px;
     margin-left: 40px;
-    display: flex;
+    display: none;
     flex-direction: column;
     opacity: 1;
     top: 4px;
+  }
+  p.nav-paragraph {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: none;
+}
+ul.menu-left {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  padding: 0em 2em;
+  padding-top: 70%;
+  margin-left: 1em;
+  margin: 0em 1em;
+    width: 90%;
+    font-size: 2rem;
+}
+a.nav-link {
+  font-size: 3rem;
+}
+ul.menu-right {
+  display: none;
+  justify-content: flex-start;
+  gap: 1em;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+  .acc, .n{
+    display: none;
   }
 
 } 
