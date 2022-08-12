@@ -104,7 +104,7 @@ header.main-header {
 .recent {
   display: flex;  
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 8em;
   width: 100%;
@@ -116,12 +116,12 @@ header.main-header {
   display: flex;
   flex-direction: column;  
   width: 65%;  
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
 .recent-1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;  
   margin-bottom: 36px;
   color: #AEAEAE;
