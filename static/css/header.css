@@ -111,6 +111,7 @@ header.main-header {
 }
 .recent img {
   width: 56px;
+  height: 56px;
 }
 .icons {
   display: flex;
@@ -249,6 +250,7 @@ header.main-header {
   }
   .recent img {
     width: 44px;
+    height: 44px;
   }
   .icons {
     display: flex;
