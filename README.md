@@ -68,7 +68,21 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 
 - [Figma WorkSpace](https://www.figma.com/file/Om0i0dm6XOQN27utcHw5QD/Favicon-general?node-id=0%3A1)
 
-# License
+## License
 [Apache](https://www.apache.org/licenses/) ![](https://img.shields.io/badge/Apache-0078d7.svg)Licensed
 
-# Contributors
+## Contributors
+All thanks goes to these wonderful teamates for making sure this project came to being👏
+<!--Please use the format below to add your own details. 4 persons in each row -->
+<table>
+  <tr>
+    <td align="center" style="backgroundColor:blueviolet";>
+    <img src="https://raw.githubusercontent.com/Tony-smile/images-icons/master/images/Tony.png" width="100px;" alt="Tony-smile"/><br />
+    <a href="https://tony-smile.github.io/mock-poetfolio/#"><b>Profile</b></a><br>
+    </td>
+  </tr>
+  <tr>
+    
+ 
+  </tr>
+</table>
