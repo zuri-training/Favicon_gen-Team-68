@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.files.images import ImageFile as File
 from django.shortcuts import redirect, render
+from django.core.mail import send_mail
 from django.views import generic
 from PIL import Image
 
@@ -60,7 +61,30 @@ def signup_view(request):
 
 
 def contact(request):
-    return render(request, "contact.html")
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        email = request.POST.get('email')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        data = {
+            'message': message,
+            'email': email,
+            'email': email,
+            'message': message,
+        }
+        meaasge = '''
+        New message: {}
+
+        From: {}
+        '''.format(data['message'], data['email'])
+        send_mail(data['email'], message, '', ['youngmaurizz@gmail.com'])
+        return redirect('contact_sent')
+
+    return render(request, "contact.html", {})
+
+def contact_sent(request):
+    return render(request, 'contact_sent.html')
 
 
 def login_view(request):
