@@ -29,15 +29,15 @@ section.modal {
 
   background: #ffffff;
   border-radius: 8px;
-  width: 50%;
+  width: 80em;
   padding: 5em 2.5em;
   display: none; /* this will be 'flex' after successful upload else 'none' */
   justify-content: center;
   gap: 2rem;
   transition: var(--transit);
-  animation: fadeup 1s 1s forwards ease-out;
-  opacity: 0;
-  z-index: 11000;
+  opacity: 1;
+  -webkit-font-smoothing: antialiased;
+overflow-x: hidden;
 }
 .close-modal {
   display: none;
@@ -61,8 +61,7 @@ section.modal {
   padding: 0.2em 0.4em;
   border-radius: 50%;
   transform: translate (-50%, -0%);
-  opacity: 0;
-  animation: fadeup 1s 1.2s forwards ease-out;
+  opacity: 1;
 }
 .close-modal:hover {
   color: #3250ec;
@@ -170,14 +169,13 @@ section.modal {
 }
 input[type="checkbox"] {
   transform: scale(1.5);
-  border: 0.1px solid #067bf0;
-  outline: none !important;
+ 
 }
 .sizes-chb {
-  margin: 0.5em 0 2em 0;
-  margin-top: 2em;
+  /* margin: 0.5em 0 2em 0; */
+  margin-top: 0;
   display: flex;
-  padding: 0em 3.6em;
+  padding: 0em 1em;
   flex-direction: column;
   cursor: pointer;
 }
@@ -191,9 +189,18 @@ input[type="checkbox"] {
   margin-left: 1em;
   color: rgba(0, 0, 0, 0.65);
 }
+.htmlcode {
+  margin: 0.4em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 .cp-dwld-icons {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
 .cp-dwld-icons h4 {
   padding: 0.6em 0em;
@@ -205,7 +212,7 @@ input[type="checkbox"] {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.02em;
-  width: 90%;
+  width: 100%;
   /* text-align: center; */
   justify-content: center;
 }
@@ -382,7 +389,8 @@ border: 1px solid #3250ec;
   .cp-dwld-icons {
     display: flex;
     flex-direction: column;
-  }
+    align-items: center;
+}
   .modal-left form h3 {
     font-size: 2rem;
     color: #0a0a0b;
@@ -396,7 +404,7 @@ border: 1px solid #3250ec;
   }
   .htmlcode pre#upl.prettyprint {
     background-color: hsla(236, 100%, 83%, 0.464) !important;
-    font-size: 1.08rem;
+    font-size: 1.2rem;
     justify-content: center;
    
   }
@@ -434,7 +442,7 @@ border: 1px solid #3250ec;
     cursor: pointer;
   }
   .sizes-chb label {
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
   }
   .sizes-chb label:not(.s16) {
     margin-top: 0.6em;
@@ -468,9 +476,17 @@ border: 1px solid #3250ec;
     right: 87%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 415px) {
   pre#upl.prettyprint {
-    padding-left: 1em;
+    
     justify-content: center;
   }
+  section.modal {
+  width: 100%;
+    padding: 3em 0em;
+  
+}
+img.google {
+  max-height: 10em;
+}
 }

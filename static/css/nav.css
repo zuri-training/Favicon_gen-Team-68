@@ -223,7 +223,9 @@ img.image-class {
   display: none;
   cursor: pointer;
 }
-
+.mobile{
+  display: none;
+}
 .bar {
   display: block;
   width: 25px;
@@ -436,7 +438,7 @@ ul.drop-down-2 {
     display: flex;
     justify-content: space-between;
     padding-left: 4.5em;
-    padding-right: 3em;
+    padding-right: 4em;
    
     gap: 4em;
 }
@@ -458,7 +460,7 @@ ul.drop-down-2 {
   display: block;
   z-index: 1099;
   position: absolute;
-  right: 5%;
+  right: 10%;
   color: #232330;
 }
 
@@ -467,11 +469,11 @@ ul.drop-down-2 {
   }
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    background-color: #000000;
+    background-color: #232330;
   }
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    background-color: #000000;
+    background-color: #232330;
   }
  
 .logo-img{
@@ -483,7 +485,7 @@ ul.drop-down-2 {
   display: none;
   
     flex-direction: column;
-    background-color: white;
+    background-color: rgb(180, 31, 31);
    
     transition: 0.3s;
  
@@ -500,16 +502,39 @@ ul.drop-down-2 {
     margin: 4px 0;
     border: #232330;
   }
-
+  .desktop{
+    display: none;
+  }
+.mobile{
+  display:inline-flex;
+  color: #0a102f;
+}
+.mobile-brand{
+  position: relative;
+  width: 6em;
+  margin-left: 21px;
+padding-bottom: .6em;
+  height: auto;
+  
+}
+hr.mobile {
+  position: absolute;
+  width: 96%;
+  text-align: center;
+  top:56.6%;
+  /* m:argin-right: 5%; */
+  left: 2%;
+}
   .activebar {
     display: flex;
     flex-direction: column;
     right: 0;
-    width: 90%;
+    width: 80%;
     align-items: flex-start;
     justify-content: center;
     align-content: center;
-    height: 80%;
+   z-index: 100;
+    padding-bottom: 4em;
   }
   .nav-link:hover {
     border: none;
@@ -555,20 +580,23 @@ ul.drop-down-2 {
 ul.menu-left {
   display: flex;
   justify-content: center;
-  gap: 3em;
+
   flex-direction: column;
   align-content: center;
   align-items: flex-start;
   padding: 0em ;
-  padding-top: 70%;
+  padding-top: 22.2em;
   margin-left: 1em;
   margin: 0em 1em;
     width: 90%;
     font-size: 2rem;
 }
 a.nav-link {
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
+}
+.nav-item{
+  padding: 0;
 }
 ul.menu-right {
   display: none;
@@ -592,7 +620,7 @@ ul.menu-right {
     justify-content: space-between;
 
     padding-left: 2.5em;
-    padding-right: 1em;
+    padding-right: .5em;
    
    
 }
@@ -600,5 +628,6 @@ ul.menu-right {
   display: block;
   z-index: 1099;
   position: static; 
+  
 }
 }
