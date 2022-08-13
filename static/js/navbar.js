@@ -15,7 +15,7 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
-    hamburger.style.top = '80%'
+    hamburger.style.top = 80%
     navMenu.classList.add("activebar");
   })
 );

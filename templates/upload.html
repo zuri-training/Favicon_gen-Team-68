@@ -1,3 +1,18 @@
+
+{% load static %}
+{% load custom_tags %}
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/upload.css' %}">
+
+{% endblock %}
+{% block extra_scripts %}
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
+
+
+{% endblock %}
+
 {% if request.user.is_authenticated %}
 <button class="close-modal1 hidden"><i class="fa-solid fa-xmark"></i></button>
 <section class='modal' id='modal'>
@@ -37,7 +52,7 @@
                 <button class='down-btn-pri' type='submit'>
                     <i class="fa-solid fa-down-to-bracket"></i>
                     {% comment %} <i class="fa-solid fa-down-to-line"></i> {% endcomment %}
-                    <p>Download</p>
+                    <p>Save</p>
                 </button>
                 </a>
                 <button class='down-btn-grey' onclick="CopyToClipboard('prettyprint')">Copy HTML</button>

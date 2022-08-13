@@ -421,6 +421,7 @@ header {
 @media (max-width: 768px) {
 .file-input-cover {
   width: 350px;
+  z-index: 50;
 }
 .upload {
   display: flex;
