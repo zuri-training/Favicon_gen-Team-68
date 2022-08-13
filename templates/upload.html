@@ -1,17 +1,4 @@
-
 {% load static %}
-{% load custom_tags %}
-{% block extra_css %}
-
-<link rel="stylesheet" href="{% static 'css/upload.css' %}">
-
-{% endblock %}
-{% block extra_scripts %}
-
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
-
-
-{% endblock %}
 
 {% if request.user.is_authenticated %}
 <button class="close-modal1 hidden"><i class="fa-solid fa-xmark"></i></button>
@@ -50,7 +37,7 @@
 
 
                 <button class='down-btn-pri' type='submit'>
-                    <i class="fa-solid fa-down-to-bracket"></i>
+                    <img class="image-class" style="color: white;" src="{% static 'images/download-arrow.svg' %}" alt="">
                     {% comment %} <i class="fa-solid fa-down-to-line"></i> {% endcomment %}
                     <p>Save</p>
                 </button>

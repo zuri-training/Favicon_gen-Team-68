@@ -22,7 +22,7 @@
 {% endblock %}
 
 {% block content %}
-    {% include 'copy.html' %}
+  
     <nav class="navbar-sticky">
         <div class="nav-brand">
             <a href="{% url 'home' %}" style="color: white;"><img src="{% static 'images/Frame 259.png' %}"
@@ -35,7 +35,7 @@
                
                 <ul class="menu-left">
                     <div class="nav-brand mobile">
-                        <a href="{% url 'home' %}" style="color: white;"><img src="{% static 'images/Frame 259.png' %}"
+                        <a href={% url 'home' %}><img src="{% static 'images/coloredlogo.svg' %}"
                                 alt="brand-logo" class="mobile-brand"><span></span> </a>
                                 <HR class='mobile'></HR>
                     </div>
@@ -57,11 +57,9 @@
                     <li class="nav-item mobile">
                         <a href="#">
                             <div class="profile-option-one accprof">
-                                <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
+                                <img class="image-class" src="{% static 'images/generate-icons.svg' %}" alt="">
                                 <p>Generate</p>
-                                <span class="material-symbols-outlined">
-                                    expand_more
-                                </span>
+                               
                             </div>
                         </a>
                         <div class="sub-gen">
@@ -79,16 +77,16 @@
                     <li class="nav-item mobile">
                         <a href="#how-it-works">
                             <div class="profile-option-one accprof">
-                                <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
+                                <img class="image-class" src="{% static 'images/how-it-works.svg' %}" alt="">
                                 <p>How it works</p>
                             </div>
                         </a>
                     </li>
                     <li class="nav-item mobile">
-                        <a href="#">
+                        <a href="{% url 'dashboard' %}">
                             <div class="profile-option-one accprof">
-                                <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
-                                <p>Saved favicons</p>
+                                <img class="image-class" src="{% static 'images/download-arrow.svg' %}" alt="">
+                                <p>Downloads</p>
                             </div>
                         </a>
                     </li>
@@ -97,11 +95,10 @@
                         <a href="#">
                             <div class="profile-option-one accprof">
                                 
-                                <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
+                                <img class="image-class" src="{% static 'images/contact-icons.svg' %}" alt="">
                             <p>My Account</p>
-                            <span class="material-symbols-outlined">
-                                expand_more
-                            </span>
+                            <img class="image-class" src="{% static 'images/forward-arrow.svg' %}" alt="">
+
                             </div>
                         </a>
                     </li>
@@ -114,11 +111,14 @@
                     <li class="nav-item mobile">
                         <a href="{% url 'contact' %}">
                             <div class="profile-option-one accprof">
-                                <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
+                                <img class="image-class" src="{% static 'images/message.svg' %}" alt="">
                                 <p>Contact</p>
+                                <img class="image-class" src="{% static 'images/forward-arrow.svg' %}" alt="">
                             </div>
                         </a>
                     </li>
+
+                    {% if request.user.is_authenticated %}
                     <li class="nav-item mobile">
                         <a href="{% url 'logout' %}">
                             <div class="profile-option-one accprof">
@@ -127,6 +127,16 @@
                             </div>
                         </a>
                     </li>
+                    {% else %}
+                    <li class="nav-item mobile">
+                        <a href="{% url 'login' %}">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
+                                <p>Login</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% endif%}
                 </ul>
 
                 <ul class="menu-right">
@@ -163,7 +173,7 @@
                                 </li>
                                 <div class="profile-dropdown">
                                     <li class="profile">
-                                        <a href="#">
+                                        <a href=""{% url 'dashboard' %}">
                                             <div class="profile-option-one accprof">
                                                 <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
                                                 <p>Downloads</p>
@@ -178,6 +188,7 @@
                                             </div>
                                         </a>
                                     </li>
+                                   
                                     <li class="profile">
                                         <a href="{% url 'logout' %}">
                                             <div class="profile-option-three accprof">
@@ -186,6 +197,7 @@
                                             </div>
                                         </a>
                                     </li>
+                                   
                                 </div>
                             </ul>
                         </div>
