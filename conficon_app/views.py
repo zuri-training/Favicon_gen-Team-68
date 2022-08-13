@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.files.images import ImageFile as File
 from django.shortcuts import redirect, render
+from django.core.mail import send_mail
 from django.views import generic
 from PIL import Image
 
@@ -60,7 +61,30 @@ def signup_view(request):
 
 
 def contact(request):
-    return render(request, "contact.html")
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        email = request.POST.get('email')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        data = {
+            'message': message,
+            'email': email,
+            'email': email,
+            'message': message,
+        }
+        meaasge = '''
+        New message: {}
+
+        From: {}
+        '''.format(data['message'], data['email'])
+        send_mail(data['email'], message, '', ['youngmaurizz@gmail.com'])
+        return redirect('contact_sent')
+
+    return render(request, "contact.html", {})
+
+def contact_sent(request):
+    return render(request, 'contact_sent.html')
 
 
 def login_view(request):
@@ -168,7 +192,7 @@ def result(request):
         zip_file=zipf,
         user=request.user,
     )
-    return redirect("upload")
+    return redirect("dashboard")
     print(result)
     return render(request, "index.html", {"result": result, "user_latest": user_latest})
 
@@ -177,7 +201,11 @@ def result(request):
 def dashboard(request):
     latest_file = Result.objects.first()
     result_list = Result.objects.exclude(id=latest_file.id)
-    context = {"latest_file": latest_file, "result_list": result_list}
+
+    recent_fav = {}
+    if request.user.is_authenticated:
+        recent_fav = Result.objects.filter(user=request.user)
+    context = {"latest_file": latest_file, "result_list": result_list, "icons": recent_fav}
     return render(request, "dashboard.html", context)
 
 

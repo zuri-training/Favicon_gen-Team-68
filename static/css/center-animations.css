@@ -1,15 +1,15 @@
 .right-cont {
-  transition: opacity 400ms ease-in, transform 900ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
   opacity: 0;
   transform: translateX(50%);
 }
 .left-cont {
-  transition: opacity 400ms ease-in, transform 900ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
   opacity: 0;
   transform: translateX(-50%);
 }
 .center-cont {
-  transition: opacity 400ms ease-in, transform 900ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
   opacity: 0;
   transform: translateY(100%);
 }

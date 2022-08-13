@@ -22,17 +22,25 @@
 {% endblock %}
 
 {% block content %}
-    {% include 'copy.html' %}
+  
     <nav class="navbar-sticky">
         <div class="nav-brand">
             <a href="{% url 'home' %}" style="color: white;"><img src="{% static 'images/Frame 259.png' %}"
                     alt="brand-logo" class="logo-img"><span></span> </a>
         </div>
+     
 
        
             <div class="nav-menu">
+               
                 <ul class="menu-left">
-                    <li class="nav-item" id="nav-generate">
+                    <div class="nav-brand mobile">
+                        <a href={% url 'home' %}><img src="{% static 'images/coloredlogo.svg' %}"
+                                alt="brand-logo" class="mobile-brand"><span></span> </a>
+                                <HR class='mobile'></HR>
+                    </div>
+                  
+                    <li class="nav-item desktop" id="nav-generate">
                         <a href="#" class="nav-link" id="nav-generate">Generate
                             <span class="material-symbols-outlined">
                                 expand_more
@@ -45,25 +53,102 @@
                             </ul>
                         </div>
                     </li>
-    
-                    <li class="nav-item">
+
+                    <li class="nav-item mobile">
+                        <a href="#">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/generate-icons.svg' %}" alt="">
+                                <p>Generate</p>
+                               
+                            </div>
+                        </a>
+                        <div class="sub-gen">
+                            <ul class="drop-down">
+                                <li class="up active-upload"><a href={% url 'home' %}>Upload Image</a></li>
+                                <li class="up"><a href="#">From Text</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                  
+                    <li class="nav-item desktop">
                         <a href="#how-it-works" class="nav-link">How it works</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                    <li class="nav-item mobile">
+                        <a href="#how-it-works">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/how-it-works.svg' %}" alt="">
+                                <p>How it works</p>
+                            </div>
+                        </a>
                     </li>
+                    <li class="nav-item mobile">
+                        <a href="{% url 'dashboard' %}">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/download-arrow.svg' %}" alt="">
+                                <p>Downloads</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item mobile">
+                        <a href="#">
+                            <div class="profile-option-one accprof">
+                                
+                                <img class="image-class" src="{% static 'images/contact-icons.svg' %}" alt="">
+                            <p>My Account</p>
+                            <img class="image-class" src="{% static 'images/forward-arrow.svg' %}" alt="">
+
+                            </div>
+                        </a>
+                    </li>
+                   
+                    <li class="nav-item desktop">
+                        <a href="{% url 'contact' %}" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item mobile">
+                        <a href="{% url 'contact' %}">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/message.svg' %}" alt="">
+                                <p>Contact</p>
+                                <img class="image-class" src="{% static 'images/forward-arrow.svg' %}" alt="">
+                            </div>
+                        </a>
+                    </li>
+
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item mobile">
+                        <a href="{% url 'logout' %}">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
+                                <p>Log out</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item mobile">
+                        <a href="{% url 'login' %}">
+                            <div class="profile-option-one accprof">
+                                <img class="image-class" src="{% static 'images/logout.svg' %}" alt="">
+                                <p>Login</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% endif%}
                 </ul>
 
                 <ul class="menu-right">
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <div class="nav-link" id="nav-accounts">
-                            <div><img class="image-class" src="{% static 'images/notifications.svg' %}" alt=""></div>
+                        <div class="nav-link a" id="nav-accounts">
+                            <div><img class="image-class n" src="{% static 'images/notifications.svg' %}" alt=""></div>
                             <a  href="#">
                             <div class="contact-icon">
                                 
                                 <img class="image-class acc" src="{% static 'images/contacts-icon.svg' %}" alt="">
-                                <p class="nav-paragraph">Hi {{ request.user|title}}!</p>
+                                <p class="nav-paragraph">Hi {{ request.user|title|truncatechars:5}}!</p>
                                 
                             </div>
                         </a>
@@ -79,7 +164,7 @@
                                                 </div>
                                             </div>
                                             <div class="drop-detail">
-                                                <p>{{ request.user|title }}</p>
+                                                <p>{{ request.user|title|truncatechars:5 }}</p>
                                                 <small class="email">{{ user.email }}</small>
                                             </div>
                                         </div>
@@ -88,7 +173,7 @@
                                 </li>
                                 <div class="profile-dropdown">
                                     <li class="profile">
-                                        <a href="#">
+                                        <a href=""{% url 'dashboard' %}">
                                             <div class="profile-option-one accprof">
                                                 <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
                                                 <p>Downloads</p>
@@ -103,6 +188,7 @@
                                             </div>
                                         </a>
                                     </li>
+                                   
                                     <li class="profile">
                                         <a href="{% url 'logout' %}">
                                             <div class="profile-option-three accprof">
@@ -111,6 +197,7 @@
                                             </div>
                                         </a>
                                     </li>
+                                   
                                 </div>
                             </ul>
                         </div>

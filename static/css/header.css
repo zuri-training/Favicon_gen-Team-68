@@ -111,6 +111,7 @@ header.main-header {
 }
 .recent img {
   width: 56px;
+  height: 56px;
 }
 .icons {
   display: flex;
@@ -142,7 +143,7 @@ header.main-header {
   background-color: #3250ec;
   color: #ffff;
   border: none;
-  padding: 32px;
+  padding: 30.7px;
   cursor: pointer;
   border-radius: 4px;
   font-family: "Nunito Sans";
@@ -249,6 +250,7 @@ header.main-header {
   }
   .recent img {
     width: 44px;
+    height: 44px;
   }
   .icons {
     display: flex;
@@ -373,7 +375,7 @@ header {
   margin-top: 95px;
   text-align: center;
 }
-.intro h2 {
+/* .intro h2 {
   color: #ffff;
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
@@ -390,7 +392,7 @@ header {
   font-weight: 600;
   font-size: 16px;
   
-}
+} */
 .recent {
   display: flex;  
   flex-wrap: wrap;
@@ -421,6 +423,7 @@ header {
 @media (max-width: 768px) {
 .file-input-cover {
   width: 350px;
+  z-index: 50;
 }
 .upload {
   display: flex;
@@ -485,7 +488,13 @@ header {
     margin-top: 30px;
     text-align: center;
   }
-  .intro h2 {
+  .intro h2{
+    font-size: 36px;
+  }
+  .intro p{
+    font-size: 16px;
+  }
+  /* .intro h2 {
     color: #ffff;
     text-align: center;
     font-family: "Nunito Sans", sans-serif;
@@ -501,7 +510,7 @@ header {
     font-style: normal;
     font-weight: 600;
     font-size: 10px;
-  }
+  } */
   .recent {
     display: flex;  
     flex-wrap: wrap;
@@ -521,7 +530,7 @@ header {
     justify-content: center;
   }
   
-  .recent-1 {
+  .recent-1 { 
     font-size: 16px;
     font-weight: 600;  
     margin-bottom: 36px;
@@ -529,7 +538,7 @@ header {
   }
     .container {
     position: relative;
-    
+
   }
   .file-input {
     position: absolute;
@@ -610,11 +619,12 @@ header {
     margin-left: 48px;
   }
   .generatebtn {
-    width: 96px;
+    width: 200px;
     justify-content: center;
     align-items: center;
+    margin-left: 48px;
   }
-}
+/* }
 @media (max-width: 410px){
 .recent {
   display: flex;  
@@ -717,8 +727,8 @@ header {
       font-weight: 600;  
       margin-bottom: 36px;
       color: #AEAEAE;
-    }
-    }
+    } */
+    /* }
     @media (max-width: 300px){
       .recent {
         display: flex;  
@@ -782,5 +792,5 @@ header {
           width: 92px;
           justify-content: center;
           align-items: center;
-        }
+        } */
         }

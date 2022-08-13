@@ -30,8 +30,8 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
       - run ```python manage.py makemigrations```
       - run ```python manage.py migrate```
       - run ```python manage.py runserver localhost:8000```
-    - To use MySQL as default database
-      - Install [MySQL](https://www.mysql.com/downloads/)
+    - To use postgreSQL as default database
+      - Install [postgreSQL](https://www.postgresql.org/download/)
       - create a ```.env``` file in your project root directory
       - In the ```.env``` define variable name ```USE_PROD=1``` and ```DB_PWD=<your database password>```
       - run ```python manage.py makemigrations```

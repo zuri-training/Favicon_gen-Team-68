@@ -23,9 +23,13 @@ SECRET_KEY = config(
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 ALLOWED_HOSTS = [
-    "localhost",
+    "148.251.6.230",
+    "zurifordummies.com",
+    "conficon.zurifordummies.com",
+    "www.conficon.zurifordummies.com",
     "127.0.0.1",
     "conficon.herokuapp.com",
+    "localhost",
 ]
 
 # Application definition
@@ -176,13 +180,12 @@ DATABASES = {
 if os.getenv("USE_PROD") == "1" and os.getenv("DB_PWD"):
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": "db_testing",
-            "USER": "root",
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": os.getenv("DB_NAME"),
+            "USER": os.getenv("DB_USER"),
             "PASSWORD": os.getenv("DB_PWD"),
-            "HOST": "127.0.0.1",
-            "PORT": "3306",
-            "OPTIONS": {"init_command": "SET sql_mode='STRICT_TRANS_TABLES'"},
+            "HOST": "localhost",
+            "PORT": "",
         }
     }
 
@@ -222,7 +225,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-MEDIA_URL = "/files/"
+MEDIA_URL = "/dashboard/"
 MEDIA_ROOT = BASE_DIR / "media/files"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -253,11 +256,11 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 465
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = "deborahudoh02@gmail.com"
-EMAIL_HOST_PASSWORD = "zwhgjenwimhzelay"
+EMAIL_HOST_USER = "youngmaurizz@gmail.com"
+EMAIL_HOST_PASSWORD = "ojbivzjwdstaxcbv"
 # EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES["default"].update(db_from_env)
+if os.getenv("USE_HEROKU"):
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES["default"].update(db_from_env)
