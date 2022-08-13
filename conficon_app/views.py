@@ -168,7 +168,7 @@ def result(request):
         zip_file=zipf,
         user=request.user,
     )
-    return redirect("home")
+    return redirect("upload")
     print(result)
     return render(request, "index.html", {"result": result, "user_latest": user_latest})
 
