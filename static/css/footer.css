@@ -7,7 +7,7 @@ Footer div h3,
   font-family: Dosis, sans-serif;
   font-weight: 600;
 }
-#About_Conficons div.fav {
+#About_Conficons div .fav {
   display: flex;
   justify-content: center;
   background-color: #232330;
@@ -81,6 +81,12 @@ div.footer_column1 div.icons {
   font-size: 30px;
 }
 div.footer_column1 div.Icons i {
+  color: white;
+}
+.fa-brands{
+  color: white;
+}
+.fa-solid{
   color: white;
 }
 footer div#footer_special {
