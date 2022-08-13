@@ -874,6 +874,44 @@ small{
         height: 472px;
         background: #FFFFFF;
     }
+    .empty{
+        width: 59em;
+        height: 16.5em;
+        /* left: 682px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 40px 8px rgba(50, 80, 236, 0.24);
+        border-radius: 10.3944px; */
+    }
+    .flex-image {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: left;
+        align-items: center;
+        gap: 1.5em;
+        margin: 4em 0em;
+    }
+    #flex-1 {
+        height: 6em;
+        width: 6em;
+        /* top: 20px; */
+        /* border-radius: 119px; */
+    }
+    
+    #flex-2 {
+        height: 10em;
+        width: 10em;
+        /* left: 114px; */
+        /* top: 50px; */
+        /* border-radius: 119px; */
+    }
+    #flex-3 {
+        height: 15em;
+        width: 15em;
+        /* left: -101px;
+        top: 50px; */
+        /* border-radius: 222px; */
+    }
     /* .empty {
         display: flex;
         flex-direction: column;
@@ -886,40 +924,6 @@ small{
         background: #FFFFFF;
         box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);    
     } */
-    .flex-image {
-        display: flex;
-        width: 540px;
-        height: 360px;
-        justify-content: center;
-        align-items: center;
-        gap: 0px;
-        margin-bottom: 5em;
-    }
-    #flex-1 {
-        height: 3em;
-        width: 100%;
-        top: 20px;
-        border-radius: 119px;
-        flex-shrink: 1;
-    }
-    
-    #flex-2 {
-        height: 9em;
-        width: 100%;
-        left: 114px;
-        top: 50px;
-        border-radius: 119px;
-        flex-shrink: 2;
-    }
-    #flex-3 {
-        height: 18em;
-        width: 100%;
-        left: -101px;
-        top: 50px;
-        border-radius: 222px;
-        flex-shrink: 3;
-    }
-
     .center-p{
         width: 356px;
         height: 120px;
@@ -1128,6 +1132,7 @@ small{
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #FFFFFF;
+        margin: 0px;
     }
     
     .container-5-div {
@@ -1210,6 +1215,7 @@ small{
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #FFFFFF;
+        margin: 0px;
     }
 
     .empty-4{
@@ -1273,6 +1279,7 @@ small{
         justify-content: center;
         align-items: center;
         padding: 16px;
+        margin: 0px auto;
         gap: 8px;
         width: 168px;
         height: 44px;
@@ -1291,6 +1298,7 @@ small{
 .container-7-div {
     margin: 0;
     padding: 0;
+    text-align: center;
     box-sizing: border-box;
     caret-color: #3250ec;
 }
@@ -1330,9 +1338,10 @@ small{
         gap: 0px;
         width: 85%;
         height: 240px;
-        background: #FFFFFF;
-        box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);    
+        /* background: #FFFFFF;
+        box-shadow: 0px 5.26667px 26.3333px 5.26667px rgba(50, 80, 236, 0.24);     */
     }
+   
     .center-p{
         width: 100%;
         height: 120px;
