@@ -1,5 +1,6 @@
 
-# Conficon
+# 🧲[![](https://img.shields.io/badge/Conficon-blueviolet?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
+[![]
 A Favicon generator app, converts image design(.PNG, .JPEG) to smaller [favicon](https://en.wikipedia.org/wiki/Favicon) sizes which are available for download and available to use in the HTML code
 
 # Projects Description
@@ -17,9 +18,14 @@ The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available 
 
 ![HeaderImage](media/header.png)
 
-# Technologies Used to Achieve this project 🛠️🧲
+## Technologies Used to Achieve this project 🛠️
 
-This project was created with ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) and the following technologies were used: <br/>
+This project was created with 
+<div style="background-color: rgb(50, 50, 50);">
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
+and the following technologies were used: <br/>
+
 * ♎ __Design__<br/>
         ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
@@ -39,13 +45,13 @@ This project was created with ![Visual Studio Code](https://img.shields.io/badge
 
 * 🎡 __Project Management and Version Control__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
+</div>
 Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the project. The design structure of the project is a [Monolithic](https://en.wikipedia.org/wiki/Monolithic_application) application. HTML, CSS and Javascript are use in the frontend, Python Django framework is used for the backend and MySQL as the database
 
 # How to Install and Run the Project
 -  run git clone https://github.com/zuri-training/Favicon_gen-Team-68.git 
 - create a virtual environment
-- run ```pip install -r requirements.txt```
+- run <div style="background-color: rgb(50, 50, 50);">```pip install -r requirements.txt``` </div>
   - # Database
     - To use the default sqlite database
       - run ```python manage.py makemigrations```
@@ -61,3 +67,8 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 
 
 - [Figma WorkSpace](https://www.figma.com/file/Om0i0dm6XOQN27utcHw5QD/Favicon-general?node-id=0%3A1)
+
+# License
+[Apache](https://www.apache.org/licenses/) ![](https://img.shields.io/badge/Apache-0078d7.svg)Licensed
+
+# Contributors
