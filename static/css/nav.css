@@ -12,6 +12,7 @@ nav.navbar-sticky {
     align-items: center;
     justify-content: space-around;
     gap: 8em;
+   
   }
   ul.menu-left {
     display: flex;
@@ -439,13 +440,14 @@ ul.drop-down-2 {
 
 @media (max-width: 768px) {
   nav.navbar-sticky {
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    padding-left: 4.5em;
-    padding-right: 4em;
-   
-    gap: 4em;
-}
+    padding-left: 3em;
+    padding-right: 0em;
+    /* gap: 4em; */
+  
+  }
 .drop-down {
   background-color: #f2f4ff;
   border-radius: 4px;
@@ -492,7 +494,7 @@ ul.drop-down-2 {
     background-color: #ffffff;
    
     transition: 0.3s;
- 
+    border-bottom-left-radius: 8px;
     z-index: 1000;
   }
 
@@ -598,6 +600,7 @@ ul.menu-left {
   margin: 0em 0.2em;
   width: 90%;
   font-size: 2rem;
+ 
 }
 a.nav-link {
   font-size: 2rem;
@@ -631,14 +634,20 @@ a.ccprof {
 @media (max-width: 415px) {
 
   nav.navbar-sticky {
-
+width: 100%;
     display: flex;
     justify-content: space-between;
 
-    padding-left: 2.5em;
-    padding-right: .1em;
+    padding-left: 1.5em;
+    padding-right: .8em;
    
    
+}
+.logo-img{
+  width: 11rem;
+}
+.navhbrand{
+  width: 85%;
 }
 .mobile-brand{
   width: 4em;
@@ -648,5 +657,6 @@ a.ccprof {
   z-index: 1099;
   position: static; 
   margin-left: 1em;
+  width: 15%;
 }
 }
