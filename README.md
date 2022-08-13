@@ -1,5 +1,6 @@
 
-# Conficon
+# 🧲[![](https://img.shields.io/badge/Conficon-blueviolet?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
+[![]
 A Favicon generator app, converts image design(.PNG, .JPEG) to smaller [favicon](https://en.wikipedia.org/wiki/Favicon) sizes which are available for download and available to use in the HTML code
 
 # Projects Description
@@ -17,7 +18,7 @@ The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available 
 
 ![HeaderImage](media/header.png)
 
-# Technologies Used to Achieve this project 🛠️🧲
+## Technologies Used to Achieve this project 🛠️
 
 This project was created with ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) and the following technologies were used: <br/>
 * ♎ __Design__<br/>
