@@ -73,7 +73,7 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 
 ## Contributors
 All thanks goes to these wonderful teamates for making sure this project came to being👏
-<!--Please use the format below to add your own details. 4 persons in each row -->
+<!--Please use the format below to add your own details. 3 persons in each row -->
 <table>
   <tr>
     <td align="center" style="backgroundColor:blueviolet";>
