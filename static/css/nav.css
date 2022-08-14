@@ -446,7 +446,7 @@ ul.drop-down-2 {
     padding-left: 3em;
     padding-right: 0em;
     /* gap: 4em; */
-  
+  z-index: 1000;
   }
 .drop-down {
   background-color: #f2f4ff;
@@ -524,6 +524,14 @@ ul.drop-down-2 {
 padding-bottom: .6em;
   height: auto;
   
+}
+.profile-option-one {
+  display: flex;
+  padding: 0.3em 1em;
+  margin: 0;
+  /* margin-top: 0.3em; */
+  justify-content: flex-start;
+  align-items: center;
 }
 hr.mobile {
   position: absolute;
@@ -622,7 +630,7 @@ ul.menu-right {
   }
   .sub-gen {
     position: relative;
-    display: none;
+    
 }
 a.ccprof {
   padding: 0.3em 0.6em;

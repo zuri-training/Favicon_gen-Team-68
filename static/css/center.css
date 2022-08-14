@@ -3,7 +3,7 @@
     padding: 0;
     width: 100%;
     box-sizing: border-box;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .center-image{
