@@ -9,44 +9,33 @@
             {% csrf_token %}
             <div class="heading">
                 <h3>Download favicon size</h3>
-
                 <small>Recommended sizes</small>
             </div>
             <div class='sizes-chb'>
-
-                <label for='s16'><input type='checkbox' class='size-icon' value='16' id='s16' name='s16'><span class="cb">16 X 16</span></label>
-                <label for='s32'><input type='checkbox' class='size-icon' id='s32' value='32' name='s32'><span class="cb">32 X 32<span></label>
-                <label for='s96'><input type='checkbox' class='size-icon' id='s96' name='s96' value='96'><span class="cb">96 X 96</span></label>
-                <label for='s120'><input type='checkbox' class='size-icon' id='s120' name='s120' value='120'><span class="cb">120 X 120</span></label>
-                <label for='s180'><input type='checkbox' class='apple' id='s180' name='s180' value='180'><span class="cb">180 X 180</span></label>
-                <label for='s300'><input type='checkbox' class='size-icon' id='s300' name='s300' value='300'><span class="cb">300 X 300</span></label>
-                <label for='s512'><input type='checkbox' class='size-icon' id='s512' name='s512' value='512'><span class="cb">512 X 512</span></label>
+                <label for='s16'><input type='checkbox'  value='16' id='s16' name='s16'><span class="cb">16 X 16</span></label>
+                <label for='s32'><input type='checkbox'  id='s32' value='32' name='s32'><span class="cb">32 X 32<span></label>
+                <label for='s96'><input type='checkbox'  id='s96' name='s96' value='96'><span class="cb">96 X 96</span></label>
+                <label for='s120'><input type='checkbox'  id='s120' name='s120' value='120'><span class="cb">120 X 120</span></label>
+                <label for='s180'><input type='checkbox'  id='s180' name='s180' value='180'><span class="cb">180 X 180</span></label>
+                <label for='s300'><input type='checkbox'  id='s300' name='s300' value='300'><span class="cb">300 X 300</span></label>
+                <label for='s512'><input type='checkbox'  id='s512' name='s512' value='512'><span class="cb">512 X 512</span></label> 
             </div>
-
-
-            <section class='cp-dwld-icons'>
+            <div class='cp-dwld-icons'>
                 <h4>Copy HTML code after downloading favicon</h4>
-
                 <div class="htmlcode">
                     <pre class="prettyprint" id="upl">
                      &lt;link rel="icon" type="images/x-icon" sizes="16x16 32x32 96x96 120x120 180x180 300x300 512x512" href="/favicon.ico"&gt;
                     </pre>
                 </div>
-            </section>
+            </div>
             <div class='down-btns'>
-
-
                 <button class='down-btn-pri' type='submit'>
                     <i class="fa-solid fa-floppy-disk"></i>
-                    {% comment %} <i class="fa-solid fa-down-to-line"></i> {% endcomment %}
                     <p>Save</p>
                 </button>
-                </a>
                 <button class='down-btn-grey' onclick="CopyToClipboard('prettyprint')">Copy HTML</button>
             </div>
-
         </form>
-
     </article>
 
     <article class='modal-right'>

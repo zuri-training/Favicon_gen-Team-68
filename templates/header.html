@@ -24,6 +24,7 @@
 {% endblock %}
 
 {% block header %}
+{% include 'nav.html' %}
 <header class='main-header' id="Go_up">
 
     {% include 'copy.html' %}
@@ -54,6 +55,24 @@
         </form>
 
         <div class="icons">
+            <div class="recent">
+             
+                <img src="{% static 'images/Vector (1).png' %}" />
+                <img src="{% static 'images/Vector (2).png' %}" />
+                <img src="{% static 'images/Vector (3).png' %}" />
+                <img src="{% static 'images/Vector (4).png' %}" />
+                <img src="{% static 'images/Vector (5).png' %}" />
+                <img src="{% static 'images/Vector (6).png' %}" />
+                <img src="{% static 'images/Vector (7).png' %}" />
+                <img src="{% static 'images/Vector (8).png' %}" />
+                <img src="{% static 'images/Vector (9).png' %}" />
+                <img src="{% static 'images/Vector (10).png' %}" />
+                <img src="{% static 'images/Vector (11).png' %}" />
+                <img src="{% static 'images/Vector (12).png' %}" />
+                <img src="{% static 'images/Vector (13).png' %}" />
+                <img src="{% static 'images/Vector (14).png' %}" />
+              
+            </div>
             <p class="recent-1">Recently generated favicons</p>
             <div class="recent">
                 {% for recent in icons %}
