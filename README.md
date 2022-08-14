@@ -77,7 +77,11 @@ All thanks goes to these wonderful teamates for making sure this project came to
   <tr>
     <td align="center" style="backgroundColor:blueviolet";>
     <img src="https://raw.githubusercontent.com/Tony-smile/images-icons/master/images/Tony.png" width="100px;" alt="Tony-smile"/><br />
-    <a href="https://tony-smile.github.io/mock-poetfolio/#"><b>Profile</b></a><br>
+    <a href="https://tony-smile.github.io/mock-poetfolio/#"><b>TonySmile</b></a><br>
+    </td>
+           <td align="center" style="backgroundColor:blueviolet";>
+    <img src="https://raw.githubusercontent.com/jay-davisphem/images-icons/master" width="100px;" alt="Tony-smile"/><br />
+    <a href="https://davisphem.me/"><b>David Oluwafemi</b></a><br>
     </td>
   </tr>
   <tr>
