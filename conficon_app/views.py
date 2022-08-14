@@ -199,13 +199,10 @@ def result(request):
 
 @login_required(login_url="/login")
 def dashboard(request):
-    latest_file = Result.objects.first()
-    result_list = Result.objects.exclude(id=latest_file.id)
+    latest_file = Result.objects.filter(user=request.user).first()
+    recent_fav = Result.objects.filter(user=request.user)
 
-    recent_fav = {}
-    if request.user.is_authenticated:
-        recent_fav = Result.objects.filter(user=request.user)
-    context = {"latest_file": latest_file, "result_list": result_list, "icons": recent_fav}
+    context = {"latest_icon": latest_file, "icons": recent_fav}
     return render(request, "dashboard.html", context)
 
 
