@@ -97,4 +97,7 @@
 {% endblock %}
 {% block extra_scripts %}
 <script src="{% static 'js/dashboard.js' %}" defer></script>
+{% if request.session.my_sizes %}
+<script src="{% static 'js/dashPopUp.js' %}" defer></script>
+{% endif %}
 {% endblock %}
