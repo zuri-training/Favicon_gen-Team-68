@@ -80,7 +80,7 @@ All thanks goes to these wonderful teamates for making sure this project came to
     <a href="https://tony-smile.github.io/mock-poetfolio/#"><b>TonySmile</b></a><br>
     </td>
            <td align="center" style="backgroundColor:blueviolet";>
-    <img src="https://avatars.githubusercontent.com/u/57117270?s=40&v=4" width="100px;" alt="David Oluwafemi"/><br />
+    <img src="https://avatars.githubusercontent.com/u/57117270" width="100px;" alt="David Oluwafemi"/><br />
     <a href="https://davisphem.me/"><b>David Oluwafemi</b></a><br>
     </td>
   </tr>
