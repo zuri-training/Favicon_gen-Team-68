@@ -36,6 +36,7 @@
 button.btn {
   color: #0a0a0b;
   border: 1px solid #3250ec;
+  cursor: pointer;
 }
 a.btn:link,
 a.btn {

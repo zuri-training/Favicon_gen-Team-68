@@ -4,7 +4,6 @@ const femiSBox2 = document.querySelector(".femi-subbox.femi-subbox-2");
 
 const download = document.querySelector("#original-download");
 const fileDownload = document.querySelector("#file-download");
-console.log(femiBox, femiSBox1, femiSBox2);
 const cancelBoxes = document.querySelector(".cancel-boxes");
 
 const popUp = (e) => {
@@ -29,9 +28,9 @@ cancelBoxes.addEventListener("click", rmit);
 document.addEventListener("keydown", (e) => {
   if (e.key == "Escape") rmit();
 });
+
 const code_ = document.querySelector(".code code");
 const text = code_.textContent;
-
 const femiCopyMe = document.querySelector("#femi-copy-me");
 
 femiCopyMe.addEventListener("click", (e) => {
