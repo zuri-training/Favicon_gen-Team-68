@@ -1,4 +1,5 @@
 .femi-box {
+  z-index: -20;
   font-family: "Numnito Sans";
   position: absolute;
   left: 0;
