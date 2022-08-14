@@ -13,10 +13,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {%endblock%}
+
 {% block header %}
 {% include 'dashPopUp.html' %}
 {% include 'nav.html' %}
 {% endblock%}
+
 {% block content %}
 <div style="width: 15%; text-align: left; margin-top: 2em; padding-left: 40px;">
     <a href="{% url 'home' %}">

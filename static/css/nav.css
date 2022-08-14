@@ -6,6 +6,7 @@ nav.navbar-sticky {
   gap: 13em;
   background-color: #232330;
   padding: 4.5em 12em;
+  padding-bottom: 0;
 }
   .nav-menu {
     display: flex;
@@ -249,6 +250,7 @@ img.image-class {
     gap: 10em;
     background-color: #232330;
     padding: 4.5em 8em;
+    padding-bottom: 0;
   }
     .nav-menu {
       display: flex;
@@ -291,6 +293,7 @@ ul.drop-down-2 {
     background-color: rgb(35, 35, 48);
     gap: 7em;
     padding: 4.5em 7em;
+    padding-bottom: 0;
 }
 .nav-menu {
   display: flex;
@@ -329,6 +332,7 @@ ul.menu-left {
     background-color: rgb(35, 35, 48);
     gap: 4em;
     padding: 4.5em 4em;
+    padding-bottom: 0;
 }
 .nav-menu {
   display: flex;
@@ -374,6 +378,7 @@ p.nav-paragraph {
     background-color: rgb(35, 35, 48);
     gap: 4em;
     padding: 3em;
+    padding-bottom: 0;
 }
   a.nav-link {
     font-size: 1.5rem;
@@ -440,11 +445,12 @@ ul.drop-down-2 {
 
 @media (max-width: 768px) {
   nav.navbar-sticky {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     padding-left: 3em;
     padding-right: 0em;
+    padding-bottom: 0;
     /* gap: 4em; */
   z-index: 1000;
   }
@@ -468,6 +474,7 @@ ul.drop-down-2 {
   position: fixed;
   right: 7%;
   color: #545558;
+ 
 }
 
   .hamburger.active .bar:nth-child(2) {
@@ -630,7 +637,7 @@ ul.menu-right {
   }
   .sub-gen {
     position: relative;
-    
+    display: none;
 }
 a.ccprof {
   padding: 0.3em 0.6em;
@@ -648,7 +655,7 @@ width: 100%;
 
     padding-left: 1.5em;
     padding-right: .8em;
-   
+   padding-bottom: 0;
    
 }
 .logo-img{

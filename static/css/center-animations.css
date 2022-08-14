@@ -11,7 +11,7 @@
 .center-cont {
   transition: opacity 250ms ease-in, transform 400ms ease-in;
   opacity: 0;
-  transform: translateY(100%);
+  transform: scale(0);
 }
 
 .right-cont.appear,
