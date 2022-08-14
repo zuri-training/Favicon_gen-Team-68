@@ -96,7 +96,7 @@ header.main-header {
   color: white;
   text-align: center;
   margin-top: 64px;
-  margin-bottom: 136px;
+  /* margin-bottom: 136px; */
   justify-content: center;
   gap: 14px;
 }
@@ -108,6 +108,7 @@ header.main-header {
   align-items: center;
   gap: 8em;
   width: 100%;
+  margin-top: 3em;
 }
 .recent img {
   width: 56px;
@@ -119,13 +120,15 @@ header.main-header {
   width: 65%;  
   /* align-items: center; */
   justify-content: center;
+  margin-top: 0%;
 }
 
 .recent-1 {
   font-size: 30px;
   font-weight: 600;  
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   color: #AEAEAE;
+  margin-top: 2em;
 }
 
 /* .generatediv{
@@ -161,6 +164,7 @@ header.main-header {
   align-items: center;
   gap: 6.2em;
   width: 100%;
+  margin-top: 3em;
 }
 .recent img {
   width: 56px;
@@ -171,6 +175,7 @@ header.main-header {
   width: 65%;  
   align-items: center;
   justify-content: center;
+  margin-top: 0%;
 }
 
 .recent-1 {
@@ -188,6 +193,7 @@ header.main-header {
     align-items: center;
     gap: 5.9em;
     width: 100%;
+    margin-top: 3em;
   }
   .icons {
     display: flex;
@@ -195,6 +201,7 @@ header.main-header {
     width: 72%;  
     align-items: center;
     justify-content: center;
+    margin-top: 0%;
   } 
 }
 
@@ -400,6 +407,7 @@ header {
   align-items: center;
   gap: 4em;
   width: 100%;
+  margin-top: 3em;
 }
 .recent img {
   width: 44px;
@@ -410,6 +418,7 @@ header {
   width: 70%;  
   align-items: center;
   justify-content: center;
+  margin-top: 0%;
 }
 
 .recent-1 {
@@ -430,7 +439,7 @@ header {
   color: white;
   text-align: center;
   margin-top: 64px;
-  margin-bottom: 136px;
+  /* margin-bottom: 136px; */
   justify-content: center;
   align-items: center;
   gap: 14px;
@@ -518,6 +527,7 @@ header {
     align-items: center;
     gap: 2.3em;
     width: 100%;
+    margin-top: 3em;
   }
   .recent img {
     width: 28px;
@@ -528,6 +538,7 @@ header {
     width: 80%;  
     align-items: center;
     justify-content: center;
+    margin-top: 0%;
   }
   
   .recent-1 { 
@@ -596,6 +607,7 @@ header {
   .icons {
     margin-top: 80px;
     margin-left: 18px;
+    margin-top: 0%;
   }
 
   .recent-1 {
@@ -633,6 +645,7 @@ header {
   align-items: center;
   gap: 2.0em;
   width: 100%;
+  margin-top: 2em;
 }
 .recent img {
   width: 24px;
@@ -643,6 +656,7 @@ header {
   width: 80%;  
   align-items: center;
   justify-content: center;
+  margin-top: 0%;
 }
 
 .recent-1 {
@@ -671,6 +685,7 @@ header {
     align-items: center;
     gap: 2.0em;
     width: 100%;
+    margin-top: 2em;
   }
   .recent img {
     width: 20px;
@@ -681,6 +696,7 @@ header {
     width: 80%;  
     align-items: center;
     justify-content: center;
+    margin-top: 0%;
   }
   
   .recent-1 {
@@ -710,6 +726,7 @@ header {
       align-items: center;
       gap: 2.0em;
       width: 100%;
+      margin-top: 3em;
     }
     .recent img {
       width: 17px;
@@ -720,6 +737,7 @@ header {
       width: 80%;  
       align-items: center;
       justify-content: center;
+      margin-top: 0%;
     }
     
     .recent-1 {
@@ -737,6 +755,7 @@ header {
         align-items: center;
         gap: 1.7em;
         width: 100%;
+        margin-top: 2em;
       }
       .recent img {
         width: 16px;
@@ -747,6 +766,7 @@ header {
         width: 80%;  
         align-items: center;
         justify-content: center;
+        margin-top: 0%;
       }
       
       .recent-1 {
@@ -764,6 +784,7 @@ header {
           align-items: center;
           gap: 1.5em;
           width: 100%;
+          margin-top: 2em;
         }
         .recent img {
           width: 16px;
@@ -774,6 +795,7 @@ header {
           width: 85%;  
           align-items: center;
           justify-content: center;
+          margin-top: 0%;
         }
         
         .recent-1 {

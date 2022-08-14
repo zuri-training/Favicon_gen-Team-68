@@ -19,10 +19,10 @@ The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available 
 
 ## Technologies Used to Achieve this project 🛠️
 
-This project was created with 
+This project was created in 
 <div style="background-color: rgb(50, 50, 50);">
 
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) and VIM
 and the following technologies were used: <br/>
 
 * ♎ __Design__<br/>
@@ -77,7 +77,11 @@ All thanks goes to these wonderful teamates for making sure this project came to
   <tr>
     <td align="center" style="backgroundColor:blueviolet";>
     <img src="https://raw.githubusercontent.com/Tony-smile/images-icons/master/images/Tony.png" width="100px;" alt="Tony-smile"/><br />
-    <a href="https://tony-smile.github.io/mock-poetfolio/#"><b>Profile</b></a><br>
+    <a href="https://tony-smile.github.io/mock-poetfolio/#"><b>TonySmile</b></a><br>
+    </td>
+           <td align="center" style="backgroundColor:blueviolet";>
+    <img src="https://avatars.githubusercontent.com/u/57117270" width="100px;" alt="David Oluwafemi"/><br />
+    <a href="https://davisphem.me/"><b>David Oluwafemi</b></a><br>
     </td>
   </tr>
   <tr>

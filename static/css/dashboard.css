@@ -1,5 +1,5 @@
 .container-dash {
-  height: 1046px;
+  min-height: 1046px;
   padding: 40px;
 }
 .line-1 {

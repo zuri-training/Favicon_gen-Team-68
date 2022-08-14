@@ -8,6 +8,8 @@ const accDropDown = document.querySelector('.drop-down-2')
 // const bar = document.getElementById('bar');
 const activeUpload = document.querySelectorAll('.up');
 const user = document.querySelector('.nav-paragraph')
+
+
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("activebar");
@@ -20,6 +22,8 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.add("activebar");
   })
 );
+
+
 
 const genDrop = ()=>{
   genDropDown.style.display = 'flex'  
