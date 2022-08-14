@@ -72,6 +72,26 @@ a.btn {
 .cancel-boxes:hover {
   opacity: 0.5;
 }
+
+#original-download,
+a#original-download:link {
+  color: white;
+}
+#original-download:hover,
+a#original-download:link:hover {
+  opacity: 0.7;
+  /*color: #0a0a0b;
+  background: white;
+  border: 1px solid #3250ec;
+  */
+}
+
+#femi-copy-me:hover {
+  opacity: 0.7;
+  /*color: white;
+  background: #3250ec;
+  */
+}
 @media (max-width: 820px) {
   .femi-box {
     height: 269px;
