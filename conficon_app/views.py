@@ -192,7 +192,7 @@ def result(request):
         zip_file=zipf,
         user=request.user,
     )
-    return redirect("upload")
+    return redirect("dashboard")
     print(result)
     return render(request, "index.html", {"result": result, "user_latest": user_latest})
 
@@ -201,7 +201,11 @@ def result(request):
 def dashboard(request):
     latest_file = Result.objects.first()
     result_list = Result.objects.exclude(id=latest_file.id)
-    context = {"latest_file": latest_file, "result_list": result_list}
+
+    recent_fav = {}
+    if request.user.is_authenticated:
+        recent_fav = Result.objects.filter(user=request.user)
+    context = {"latest_file": latest_file, "result_list": result_list, "icons": recent_fav}
     return render(request, "dashboard.html", context)
 
 
