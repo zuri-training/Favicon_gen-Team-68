@@ -55,11 +55,7 @@
         </form>
 
         <div class="icons">
-            <p class="recent-1">Recently generated favicons</p>
-            <div class="recent">
-                {% for recent in icons %}
-                <img src="{{recent.upload.image.url}}" />
-                {% endfor %}
+          <div class="recent">
                 <img src="{% static 'images/Vector (1).png' %}" />
                 <img src="{% static 'images/Vector (2).png' %}" />
                 <img src="{% static 'images/Vector (3).png' %}" />
@@ -74,6 +70,13 @@
                 <img src="{% static 'images/Vector (12).png' %}" />
                 <img src="{% static 'images/Vector (13).png' %}" />
                 <img src="{% static 'images/Vector (14).png' %}" />
+
+            </div>
+            <p class="recent-1">Recently generated favicons</p>
+            <div class="recent">
+                {% for recent in icons %}
+                <img src="{{recent.upload.image.url}}" />
+                {% endfor %}
             </div>
         </div>
     </div>
