@@ -87,7 +87,7 @@ li{
     border-radius: 8px;
     padding: 20px 0;
     /* gap: 200px; */
-    margin: 1.5em 20px;
+    /* margin: 0 20px; */
 }
 
 .three-dots:after {
@@ -123,9 +123,7 @@ a div:hover{
     opacity: 0;
     z-index: -1;
     max-height: 0;
-    transition: opacity 0.1s,
-    z-index 0.1s;
-    max-height: 5s;
+    transition: opacity 0.1s, z-index 0.1s, max-height: 5s;
   }
   
   .dropdown-container:focus {
@@ -136,7 +134,7 @@ a div:hover{
     opacity: 1;
     z-index: 100;
     max-height: 100vh;
-    transition: opacity 0.2s, z-index 0.2s; max-height: 0.2s;
+    transition: opacity 0.2s, z-index 0.2s, max-height: 0.2s;
   }
 
   @media (max-width: 425px){
@@ -223,7 +221,7 @@ a div:hover{
         /* align-items: center; */
         box-shadow: 0px 8px 48px 8px rgba(10, 10, 11, 0.16);
         border-radius: 0;
-        padding: 5em 0;
+        padding: 10px 0;
         /* gap: 200px; */
         /* margin: 0 20px; */
         /* width: 50%; */
@@ -265,7 +263,7 @@ a div:hover{
         opacity: 0;
         z-index: -1;
         max-height: 0;
-        transition: opacity 0.1s, z-index 0.1s; max-height: 5s;
+        transition: opacity 0.1s, z-index 0.1s, max-height: 5s;
       }
       
       .dropdown-container:focus {
@@ -276,6 +274,6 @@ a div:hover{
         opacity: 1;
         z-index: 100;
         max-height: 100vh;
-        transition: opacity 0.2s, z-index 0.2s; max-height: 0.2s;
+        transition: opacity 0.2s, z-index 0.2s, max-height: 0.2s;
       } 
   }

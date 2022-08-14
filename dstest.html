@@ -1,27 +1,14 @@
-{% extends 'layout.html' %}
-
-{% load static %}
-
-{% block title %}ConfIcon Dashboard{% endblock %}
-
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/footer.css' %}">
-<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-{% endblock %}
-{% block header %}
-{% include 'navbar.html'%}
-{% endblock %}
-{% block content %}
-
-<div style="width: 15%; text-align: left; margin-top: 2em; padding-left: 40px;">
-    <a href="{% url 'home' %}">
-        <label style="color: black; -webkit-text-stroke: 1px white; width: 100%;"><i class="fa-solid fa-arrow-left fa-2x"></i></label>
-    </a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ds.css">
+</head>
+<body>
+    
 
 <div class="container-dash">
     <div class="line-1">
@@ -48,7 +35,7 @@
             <a href="#"> <sub>Clear Filter</sub></a>
         </div>
     </div>
-    
+    {% for result in result_list %}
     <div class="line-2">
         <div>
             <p class="d-p"> Icon </p>
@@ -63,31 +50,29 @@
             <p class="d-p"> Icon Type </p>
         </div>
     </div>
-    {% for result in icons %}
     <div class="main-d-container">
         <div>
-            <a href="{{result.zip_file}}"><li><img src="{{ result.upload.image.url }}" alt=""></li></a>
+            <li>{{ result.upload.img.url }}</li>
         </div>
         <div class="d-p2">
             <li>{{ result.file.url }}</li>
         </div>
         <div>
-            <li>{{ result.date }}</li>
+            <li>{{ upload.date }}</li>
+        </div>
+        <div>
+            <li>Favicon</li>
         </div>
         <div class="dropdown-container" tabindex="-1">
             <div class="three-dots"></div>
             <div class="dropdown">
-              <a href="{{result.zip_file}}"><div> Download </div></a>
+              <a href="#"><div> Download </div></a>
               <a href="#"><div> Delete </div></a>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
-{% endblock %}
-{% block footer  %}
-{% include 'addfooter.html' %}
-{% endblock %}
-{% block extra_scripts %}
-<script src="{% static 'js/dashboard.js' %}" defer></script>
-{% endblock %}
+
+</body>
+</html>
