@@ -1,6 +1,5 @@
 
 # 🧲[![](https://img.shields.io/badge/Conficon-blueviolet?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
-[![]
 A Favicon generator app, converts image design(.PNG, .JPEG) to smaller [favicon](https://en.wikipedia.org/wiki/Favicon) sizes which are available for download and available to use in the HTML code
 
 # Projects Description
