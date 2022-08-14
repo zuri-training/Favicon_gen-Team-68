@@ -261,7 +261,7 @@ button {
   border: none;
   background-color: transparent;
 }
-i.fa-brands {
+.fa-facebook {
   color: var(--btncolor);
   font-size: 24px;
   position: absolute;
@@ -270,7 +270,6 @@ i.fa-brands {
  
 }
 .fa-github {
-  color: black;
   font-size: 24px;
   position: absolute;
   left:25%;
