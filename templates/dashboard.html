@@ -8,15 +8,16 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashPopUp.css' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 {%endblock%}
 {% block header %}
+{% include 'dashPopUp.html' %}
 {% include 'nav.html' %}
 {% endblock%}
 {% block content %}
-
 <div style="width: 15%; text-align: left; margin-top: 2em; padding-left: 40px;">
     <a href="{% url 'home' %}">
         <label style="color: black; -webkit-text-stroke: 1px white; width: 100%;"><i class="fa-solid fa-arrow-left fa-2x"></i></label>
@@ -31,12 +32,12 @@
         <div>
             <!-- <label for="year">Year</label> -->
             <select name="year" id="" class="d-select">
-                <option value="Year" > Year </option>
-                <option value="2022" > 2022 </option>
-                <option value="2021" > 2021</option>
-                <option value="2020" > 2020 </option>
-                <option value="2019" > 2019</option>
-                <option value="2018" > 2018</option>
+                <option value="Year"> Year </option>
+                <option value="2022"> 2022 </option>
+                <option value="2021"> 2021</option>
+                <option value="2020"> 2020 </option>
+                <option value="2019"> 2019</option>
+                <option value="2018"> 2018</option>
             </select>
             <!-- <label for="license">License Type</label> -->
             <select name="license" id="" class="d-select2">
@@ -48,7 +49,7 @@
             <a href="#"> <sub>Clear Filter</sub></a>
         </div>
     </div>
-    
+
     <div class="line-2">
         <div>
             <p class="d-p"> Icon </p>
@@ -66,7 +67,9 @@
     {% for result in icons %}
     <div class="main-d-container">
         <div>
-            <a href="{{result.zip_file}}"><li><img src="{{ result.upload.image.url }}" alt=""></li></a>
+            <a href="{{result.zip_file}}">
+                <li><img src="{{ result.upload.image.url }}" alt=""></li>
+            </a>
         </div>
         <div class="d-p2">
             <li>{{ result.file.url }}</li>
@@ -77,8 +80,12 @@
         <div class="dropdown-container" tabindex="-1">
             <div class="three-dots"></div>
             <div class="dropdown">
-              <a href="{{result.zip_file}}" download='favicon.zip'><div> Download </div></a>
-              <a href="#"><div> Delete </div></a>
+                <a href="{{result.zip_file}}" download='favicon.zip'>
+                    <div> Download </div>
+                </a>
+                <a href="#">
+                    <div> Delete </div>
+                </a>
             </div>
         </div>
     </div>

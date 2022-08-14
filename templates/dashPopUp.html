@@ -1,0 +1,16 @@
+{% load static %}
+<section class='femi-box'>
+    <article class='femi-subbox femi-subbox-1'>
+        <p style="font-size: 2.4em; line-height: 3.2em;">Favicon saved!</p>
+        <p style="font-size: 1.8em; line-height: 2.4em;">Download favicon to device</p>
+        <a class='btn' href="{{latest_icon.zip_file}}" download='favicon.zip'>Download</a>
+    </article>
+    <article class='femi-subbox femi-subbox-2'>
+        <p style="font-size: 2.4em; line-height: 3.2em;">Favicon downloaded!</p>
+        <p style="font-size: 1.8em; line-height: 2.4em;">Remember to copy HTML code after downloading favicon</p>
+        <span class='code'>
+            <code>&lt;link rel='x-icon' sizes="{{request.session.my_sizes}}" href="favicon.zip"/&gt;</code>
+        </span>
+        <button class='btn'>Copy HTML</button>
+    </article>
+</section>
