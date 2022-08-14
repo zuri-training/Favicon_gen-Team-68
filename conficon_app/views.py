@@ -222,3 +222,6 @@ def dashboard(request):
 
 def view_404(request, exception=None):
     return redirect("home")
+
+def documentation(request):
+    return render(request, "doc.html")
