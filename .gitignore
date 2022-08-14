@@ -9,7 +9,8 @@ env
 __pycache__/
 *.py[cod]
 *$py.class
-
+media/*
+media/**
 # C extensions
 *.so
 .details
