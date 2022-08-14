@@ -6,8 +6,8 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.files.images import ImageFile as File
-from django.shortcuts import redirect, render
 from django.core.mail import send_mail
+from django.shortcuts import redirect, render
 from django.views import generic
 from PIL import Image
 
@@ -15,6 +15,8 @@ from .models import Icon, Profile, Result
 
 
 def index(request):
+    if "my_sizes" in request.session:
+        del request.session["my_sizes"]
     recent_fav = {}
     if request.user.is_authenticated:
         recent_fav = Result.objects.filter(user=request.user)
@@ -28,6 +30,8 @@ def authorized_page(request):
 
 
 def signup_view(request):
+    if "my_sizes" in request.session:
+        del request.session["my_sizes"]
     """redirects to home is user is already logged in."""
     if request.user.is_authenticated:
         messages.info(
@@ -61,33 +65,42 @@ def signup_view(request):
 
 
 def contact(request):
-    if request.method == 'POST':
-        message = request.POST.get('message')
-        email = request.POST.get('email')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
+    if "my_sizes" in request.session:
+        del request.session["my_sizes"]
+    if request.method == "POST":
+        message = request.POST.get("message")
+        email = request.POST.get("email")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
 
         data = {
-            'message': message,
-            'email': email,
-            'email': email,
-            'message': message,
+            "message": message,
+            "email": email,
+            "email": email,
+            "message": message,
         }
-        meaasge = '''
+        meaasge = """
         New message: {}
 
         From: {}
-        '''.format(data['message'], data['email'])
-        send_mail(data['email'], message, '', ['youngmaurizz@gmail.com'])
-        return redirect('contact_sent')
+        """.format(
+            data["message"], data["email"]
+        )
+        send_mail(data["email"], message, "", ["youngmaurizz@gmail.com"])
+        return redirect("contact_sent")
 
     return render(request, "contact.html", {})
 
+
 def contact_sent(request):
-    return render(request, 'contact_sent.html')
+    if "my_sizes" in request.session:
+        del request.session["my_sizes"]
+    return render(request, "contact_sent.html")
 
 
 def login_view(request):
+    if "my_sizes" in request.session:
+        del request.session["my_sizes"]
     """redirects to home is user is already logged in."""
     if request.user.is_authenticated:
         messages.info(
@@ -139,6 +152,8 @@ def logout_view(request):
 
 @login_required(login_url="/login")
 def upload(request):
+    if "my_sizes" in request.session:
+        del request.session["my_sizes"]
     if request.method == "POST":
         file_input = request.FILES["file-input"]
 
@@ -169,8 +184,6 @@ def result(request):
     for i in post:
         if i.startswith("s"):
             sizes.append((int(post[i]), int(post[i])))
-    print(sizes)
-
     with (
         Image.open(user_latest.image.path) as img,
         ZipFile("media/favicon.zip", "w") as zip_obj,
@@ -192,20 +205,18 @@ def result(request):
         zip_file=zipf,
         user=request.user,
     )
+    sizes = list(map(lambda x: f"{x[0]}x{x[0]}", sizes))
+    request.session["my_sizes"] = " ".join(sizes)
+    print(request.session["my_sizes"])
     return redirect("dashboard")
-    print(result)
-    return render(request, "index.html", {"result": result, "user_latest": user_latest})
 
 
 @login_required(login_url="/login")
 def dashboard(request):
-    latest_file = Result.objects.first()
-    result_list = Result.objects.exclude(id=latest_file.id)
+    latest_file = Result.objects.filter(user=request.user).first()
+    recent_fav = Result.objects.filter(user=request.user)
 
-    recent_fav = {}
-    if request.user.is_authenticated:
-        recent_fav = Result.objects.filter(user=request.user)
-    context = {"latest_file": latest_file, "result_list": result_list, "icons": recent_fav}
+    context = {"latest_icon": latest_file, "icons": recent_fav}
     return render(request, "dashboard.html", context)
 
 

@@ -1,0 +1,16 @@
+section.femi-box {
+  postion: absolute;
+  top: 10px;
+}
+
+section article.femi-subbox {
+  width: 93.2em;
+  height: 60.8em;
+  border-radius: 0.8em;
+}
+
+section article.femi-subbox-1 {
+}
+
+section article.femi-subbox-2 {
+}

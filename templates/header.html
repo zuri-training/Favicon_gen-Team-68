@@ -45,7 +45,7 @@
                 <span id='file-name'></span>
 
                 <div class="upload-col">
-                    <input type="file" name="file-input" id="file-input" class="file-input" accept='image/*' required />
+                    <input type="file" name="file-input" id="file-input" class="file-input" accept='.jpg, .jpeg, .png, .ico, .gif' required />
                 </div>
             </div>
             <div class="generatediv">
@@ -59,7 +59,7 @@
                 {% for recent in icons %}
                 <img src="{{recent.upload.image.url}}" />
                 {% endfor %}
-                <!--{#}<img src="{% static 'images/Vector (1).png' %}" />
+                <img src="{% static 'images/Vector (1).png' %}" />
                 <img src="{% static 'images/Vector (2).png' %}" />
                 <img src="{% static 'images/Vector (3).png' %}" />
                 <img src="{% static 'images/Vector (4).png' %}" />
@@ -73,7 +73,6 @@
                 <img src="{% static 'images/Vector (12).png' %}" />
                 <img src="{% static 'images/Vector (13).png' %}" />
                 <img src="{% static 'images/Vector (14).png' %}" />
-                #}-->
             </div>
         </div>
     </div>
@@ -86,6 +85,8 @@
 
 <script src="{% static 'js/header.js' %} " defer>
 </script>
+{% else %}
+<script src="{% static 'js/displayImage.js' %} " defer></script>
 {% endif %}
 
 {% endblock %}

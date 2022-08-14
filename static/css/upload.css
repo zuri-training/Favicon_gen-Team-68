@@ -375,9 +375,8 @@ border: 1px solid #3250ec;
   }
   section.modal {
     width: 100%;
-    height: auto !important;
     flex-direction: column;
-
+    max-width: 100%;
     transform: translate(-50%, -50%);
   }
   .modal article {
@@ -465,12 +464,7 @@ border: 1px solid #3250ec;
   input[type="checkbox"] {
     transform: scale(1.4);
   }
-  .modal-left {
-    height: 60%;
-  }
-  .modal-right {
-    min-height: 17em;
-  }
+
   .prev-board {
     padding-bottom: 1.4em;
   }
@@ -485,11 +479,14 @@ border: 1px solid #3250ec;
     justify-content: center;
   }
   section.modal {
+    margin-top: 2em;
   width: 100%;
     padding: 3em 0em;
+    max-height: 100%;
+
   
 }
 img.google {
-  max-height: 10em;
+  max-height: 100%;
 }
 }
