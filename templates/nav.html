@@ -48,7 +48,7 @@
                         </a>
                         <div class="sub-gen">
                             <ul class="drop-down">
-                                <li class="up active-upload"><a href={% url 'home' %}>Upload Image</a></li>
+                                <li class="up active-upload"><a href="{% url 'home' %}>Upload Image</a></li>
                                 <li class="up"><a href="#">From Text</a></li>
                             </ul>
                         </div>
@@ -64,7 +64,7 @@
                         </a>
                         <div class="sub-gen">
                             <ul class="drop-down">
-                                <li class="up active-upload"><a href={% url 'home' %}>Upload Image</a></li>
+                                <li class="up active-upload"><a href="{% url 'home' %}">Upload Image</a></li>
                                 <li class="up"><a href="#">From Text</a></li>
                             </ul>
                         </div>
@@ -72,7 +72,7 @@
 
                   
                     <li class="nav-item desktop">
-                        <a href="#how-it-works" class="nav-link">How it works</a>
+                        <a href="{% url 'documentation' %}" class="nav-link">How it works</a>
                     </li>
                     <li class="nav-item mobile">
                         <a href="#how-it-works">
@@ -156,7 +156,7 @@
                         <div class="sub-gen">
                             <ul class="drop-down-2">
                                 <li>
-                                    <a href={% url 'home' %}>
+                                    <a href="{% url 'home' %}">
                                         <div class="accounts-dropdown">
                                             <div>
                                                 <div class="circle">
@@ -173,7 +173,7 @@
                                 </li>
                                 <div class="profile-dropdown">
                                     <li class="profile">
-                                        <a href=""{% url 'dashboard' %}">
+                                        <a href="{% url 'dashboard' %}">
                                             <div class="profile-option-one accprof">
                                                 <img class="image-class" src="{% static 'images/download.svg' %}" alt="">
                                                 <p>Downloads</p>
