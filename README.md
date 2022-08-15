@@ -89,16 +89,18 @@ All thanks goes to these wonderful teamates for making sure this project came to
     <a href="https://davisphem.me/"><b>David Oluwafemi</b></a><br>
     </td>
     
-    <td align="center" style="backgroundColor:blueviolet";>
-    <img src="https://avatars.githubusercontent.com/u/105166953?v=4" width="100px;" alt="Deborah Udoh"/><br />
-    <a href="https://www.linkedin.com/in/deborah-udoh-b0a720188"><b>Deborah Udoh</b></a><br>
-    </td>
   </tr>
   
   <tr>
         <td align="center" style="backgroundColor:blueviolet";>
     <img src="https://avatars.githubusercontent.com/u/63854917" width="100px;" alt="Victory Abayomi"/><br />
     <a href="https://www.linkedin.com/in/victory-abayomi-70b431201/"><b>Victory Abayomi</b></a><br>
+    </td>
+     
+    
+    <td align="center" style="backgroundColor:blueviolet";>
+    <img src="https://avatars.githubusercontent.com/u/105166953?v=4" width="100px;" alt="Deborah Udoh"/><br />
+    <a href="https://www.linkedin.com/in/deborah-udoh-b0a720188"><b>Deborah Udoh</b></a><br>
     </td>
         
   </tr>
