@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 2.5em 4.3em;
+    width: 95%;
+    height: auto;
+    background-color: #fff;
+    padding: 2.5em 4.3em;
+}
+
+
+h2 {
+    width: 37.5em;
+    height: auto;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1.25em;
+}
+
+h3 {
+    height: 3.2em;
+    width: 18.75em;
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+p{
+    width: 90%;
+    height: auto;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 2em;
+    text-align: left;
+    margin-bottom: 1.25em;
+}
+
+#formats li {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 2.75em;
+    width: 50%;
+    height: auto;
+    text-align: left;
+    margin-bottom: 1em;
+    list-style-type: disc;
+}
+
+#sizes li {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 2.75em;
+    width: 50%;
+    height: auto;
+    text-align: left;
+    margin-bottom: 1em;
+    list-style-type: disc;
+}
+
+
+.img-div {
+    display: grid;
+    place-items: center;
+}
+
+#img1 {
+    height: 18.4em;
+    width: 29.8em;
+    margin: 1.25em 0em;
+}
+#img2 {
+    margin: 1.25em 0em;
+    height: 7.4em;
+    width: 80%;
+    left: 5.5em;
+    padding: 0.25em;
+}
+
+#img3{
+    height: 8.5em;
+    width: 70%;
+    border-radius: 0.25em;
+    padding: 1.5em, 2.5em, 1.5em, 2.5em;
+    margin-bottom: 1.6em;
+}
+
+#img4 {
+    height: auto;
+    width: 80%;
+    margin-bottom: 1.25em;
+}

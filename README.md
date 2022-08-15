@@ -85,7 +85,10 @@ All thanks goes to these wonderful teamates for making sure this project came to
     </td>
   </tr>
   <tr>
-    
- 
+        <td align="center" style="backgroundColor:blueviolet";>
+    <img src="https://avatars.githubusercontent.com/u/63854917" width="100px;" alt="Victory Abayomi"/><br />
+    <a href="https://www.linkedin.com/in/victory-abayomi-70b431201/"><b>Victory Abayomi</b></a><br>
+    </td>
+        
   </tr>
 </table>
