@@ -12,3 +12,5 @@ https://github.com/zuri-training/Favicon_gen-Team-68/issues/108
 
 Styled password reset templates:
 https://github.com/zuri-training/Favicon_gen-Team-68/issues/109
+
+https://github.com/zuri-training/Favicon_gen-Team-68/commits?author=NPDebs
