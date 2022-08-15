@@ -48,14 +48,14 @@
                         </a>
                         <div class="sub-gen">
                             <ul class="drop-down">
-                                <li class="up active-upload"><a href="{% url 'home' %}>Upload Image</a></li>
+                                <li class="up active-upload"><a href="{% url 'home' %}">Upload Image</a></li>
                                 <li class="up"><a href="#">From Text</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="nav-item mobile">
-                        <a href="#upload"  id="nav-generate">
+                        <a href="{%url 'home' %}"  id="nav-generate">
                             <div class="profile-option-one accprof">
                                 <img class="image-class" src="{% static 'images/generate-icons.svg' %}" alt="">
                                 <p>Generate</p>
@@ -92,7 +92,7 @@
                     </li>
 
                     <li class="nav-item mobile">
-                        <a href="#">
+                        <a href="{% url 'dashboard' %}">
                             <div class="profile-option-one accprof">
                                 
                                 <img class="image-class" src="{% static 'images/contact-icons.svg' %}" alt="">

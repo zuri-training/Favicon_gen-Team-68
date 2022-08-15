@@ -445,15 +445,17 @@ ul.drop-down-2 {
 
 @media (max-width: 768px) {
   nav.navbar-sticky {
-    position: absolute;
+     position: fixed; 
     display: flex;
     justify-content: space-between;
     padding-left: 3em;
     padding-right: 0em;
     padding-bottom: 0;
     /* gap: 4em; */
-  z-index: 1000;
-  }
+    z-index: 100000;
+    /* background-color: rgb( 35, 35, 46); */
+    width: 100%;
+}
 .drop-down {
   background-color: #f2f4ff;
   border-radius: 4px;
