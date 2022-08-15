@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans';
+}
+.pass-pop{
+   width: 520px;
+   background: #fff;
+   border-radius: 12px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   text-align: center;
+   transform: translate(-50%,-50%);
+   padding: 0 30px 30px;
+   }
+
+.pass-pop h2{
+    width: 520px;
+    position: absolute;
+    left: 7px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 20px 0 10px;
+    line-height: 32px;
+    color: #0A0A0B;
+}
+.pass-pop p{
+/* Text style/Heading/H4 */
+    position: absolute;
+    width: 520px;
+    left: 7px;
+    top: 70px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+
+/* Grey/grey 400 */
+
+    color: #545558;
+}
+
+@media screen and (max-width: 400px){
+    body {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .popup {
+        width: 100%;
+    }
+    #button {
+        line-height: 3em;
+    }
+}

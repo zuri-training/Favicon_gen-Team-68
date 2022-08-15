@@ -1,7 +1,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/password-reset.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact_sent.css' %}">
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
@@ -15,11 +15,13 @@
     </a>
 </div>
 
-<div class="container" id="box">
-    <i class="uil uil-check-circle"></i>
-    <h1>Message Sent</h1>
-    
-    <p>Thank you for submitting form, we will be in touch soon.</p>
+<div class="popup">
+    <img src="../static/images/codicon_pass.png">
+    <h2>Thank You!</h2>
+    <p>Your message has been successfully sent, we will get back to you.</p>
+    <button type="button">
+        <a href="{% url 'home' %}">ok</a/>
+    </button>
   </div>
 
   {% endblock %}
