@@ -36,7 +36,7 @@ p{
     font-size: 1.5em;
     font-weight: 500;
     line-height: 2em;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 1.25em;
 }
 
@@ -46,7 +46,7 @@ p{
     line-height: 2.75em;
     width: 50%;
     height: auto;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 1em;
     list-style-type: disc;
 }
@@ -93,4 +93,44 @@ p{
     height: auto;
     width: 80%;
     margin-bottom: 1.25em;
+}
+@media (max-width: 750px){
+    p{
+        justify-content: center;
+        margin-left: -2em;
+        width: 100%;
+    }
+    h2{
+        margin-top: 15%;
+        margin-left: -1.5em;
+        width: 110%;
+    }
+    #img1{
+        margin-left: -7em;
+    }
+    #img2{
+        margin-left: -6em;
+        width: 100%;
+    }
+    #img3{
+        margin-left: -5em;
+    }
+    #img4{
+        margin-left: -5em;
+    }
+    h3{
+        margin-top: 1.5em;
+        margin-bottom: -1.5em
+    }
+    #sizes li{
+        width: 100%;
+        margin-left: -2em;
+    }
+    #formats li{
+        margin-left: -2em;
+        width: 100%;
+    }
+    nav.navbar-sticky{
+        width: 100%;
+    }
 }
