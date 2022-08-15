@@ -3,7 +3,7 @@
 A Favicon generator app, converts image design(.PNG, .JPEG) to smaller [favicon](https://en.wikipedia.org/wiki/Favicon) sizes which are available for download and available to use in the HTML code
 
 # Projects Description
-The application allows users to upload images and they convert the images into the different sizes of favicon. Users can choose the sizes they want and then download.
+The application allows authenticated users to upload images and they convert the images into the different sizes of favicon. Users can choose the sizes they want and then download.
 The HTML [embed](https://en.wikipedia.org/wiki/Embedded) code is also available to use during coding process.
 
 
