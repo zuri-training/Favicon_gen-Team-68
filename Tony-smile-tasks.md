@@ -9,3 +9,5 @@
 * [Favicon_gen-Team-68/issues/80](https://github.com/zuri-training/Favicon_gen-Team-68/issues/80)
 
 * [Favicon_gen-Team-68/issues/79](https://github.com/zuri-training/Favicon_gen-Team-68/issues/79)
+
+* [Links to all my Commits in the project](https://github.com/zuri-training/Favicon_gen-Team-68/commits?author=Tony-smile)
