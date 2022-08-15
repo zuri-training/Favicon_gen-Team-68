@@ -1,0 +1,81 @@
+{% load static %}
+{% include 'nav.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="../static/css/doc.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+{% endblock %}
+
+{% block documentation %}
+<div class="container">
+    <div class="section-1">
+        <h2>What are Favicons?</h2>
+        <p>Favicons are used in appbars, browser history, bookmark dropdown, browser tab, search bar etc. It is a little icon that appears next to the webpage title in a browser tab to represent a website or web page.  It serves as a visual identifier for users to spot your website around the web.
+        </p>
+        <div class="img-div">
+            <img id="img1" src="../static/images/Rectangle.png" alt="favicon-sample">
+        </div>
+    </div>
+    <div class="section-2">
+        <h2>Why You Need a Favicon?</h2>
+        <p>From research carried out by our team, we found that often-times users assume websites without favicons are unsafe and they are unprotected while on these sites. Having favicons on your websites not only allows your users easily identify your website or brand, it also builds a sense of trust in anyone that views your website. And so, for a better brand identification and trust building, you ned a favicon.</p>
+        <div class="img-div">
+            <img id="img2" src="../static/images/Frame 101.png" alt="icon-samples">
+        </div>
+    </div>
+
+    <div class="section-3">
+        <h2>Why Choose Conficon</h2>
+        <p>What&apos;s there not to love? You&apos;ve got a simple, easy-to-understand favicon generator website that gets you favicon in seconds! Conficon lets you choose the favicon sizes you want to download and allows you save favicons you like to your dashboard. With Conficon, you can also generate favicons from text allowing you have a logo/favicon all in one go.</p>
+    </div>
+
+    <div class="section-4">
+        <h2>How To Use Conficon</h2>
+        <h2>Step 1:</h2>
+        <h3>Upload your image</h3>
+        <p>The first thing you have to do when generating favicon from image is upload the image you want to convert to a favicon on our site.</p>
+        <div class="img-div">
+            <img id="img3" src="../static/images/Frame 592.png" alt="how-to">
+        </div>
+        <br>
+        <h3>Input your text</h3>
+        <p>Click the generate tab on the header and select &apos;From text&apos; Type in the text you want to generate a favicon from and customize it to your style.</p>
+        <div class="img-div">
+            <img id="img4" src="../static/images/image 3.png" alt="">
+        </div>
+        <h2>Step 2: Click on &apos;Generate&apos;</h2>
+        <p>After uploading your image, click on the &apos;Generate&apos; button and preview your favicon. Select your prefered favicon sizes and click on download.</p>
+        <br>
+        <h2>Step 3: Sign up or Login to download to your device</h2>
+        <h3>First time user</h3>
+        <p>If you&apos;re a first time user of Conficon, then you&apos;ll need to create an account before downloading generated favicons to your device. When you click on the download button, you&apos;ll be redirected to the &apos;Sign up&apos; page. After creating an account, you&apos;ll gain access to all of our resources. You can now download your favicons to your device from your dashboard--where all of your generated favicons are saved.</p>
+        <h3>Return users</h3>
+        <p>If you already have an account with us, then all you need do is login to your account and have unlimited access to all of our resources. Download your saved favicon from your dashboard or generate and download directly to your device as many times as you&apos;d like.</p>
+    </div>
+
+
+    <div class="section-5">
+        <h2>Sizes in Which Favicon Will Be Displayed</h2>
+        <p>
+            <ul id="sizes" style="list-style-type:disc;">
+                <li>Browser favicons - 16x16</li>
+                <li>Taskbar shortcut icons - 32x32</li>
+                <li>Desktop shortcut icons - 96x96</li>
+                <li>Chrome for Android - 160x160</li>
+                <li>Chrome web store icon - 128x128</li>
+                <li>Apple Touch icon-180x180</li></ul>
+        </p>
+    </div>
+    <div class="section-4">
+        <h2>Favicon File Format</h2>
+        <p>
+            <ul id="formats" style="list-style-type:disc;">
+                <li>SVG: It was not widely supported on browsers, but things are moving in a positive direction. Browsers can also display GIFs as favicons, but they are hard to see. SVG files are known to deliver high-quality images without compromising the look, speed, or performance of the site.</li>
+                <li>PNG: PNG files are very popular for creating favicons, as it&apos;s a widely used file format used by creators. They are lightweight and load quickly. When using designs with transparent backgrounds, this is the format to use.</li>
+                <li>JPG: JPG files are not usually used for favicons, as they don&apos;t have the same high-level quality as a PNG.</li>
+                <li>Windows ICO: This was the original file type and is still used by designers. This file type can have multiple bit depths and resolutions.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+{% endblock %}
