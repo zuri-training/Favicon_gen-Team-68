@@ -71,7 +71,10 @@ Python, Django Framework, HTML, CSS Javascript and MySQL are used to build the p
 [Apache](https://www.apache.org/licenses/) ![](https://img.shields.io/badge/Apache-0078d7.svg)Licensed
 # Acknowledgement 
 Thanks to zuri Training and Ingressive for Good for the provision of this learning experience.
-![zuri](https://www.google.com/search?q=ingressive+for+good+and+zuri&tbm=isch&ved=2ahUKEwjdjd__5cj5AhVtxYUKHSTmBPsQ2-cCegQIABAC&oq=ingressive+for+good+and+zuri&gs_lcp=ChJtb2JpbGUtZ3dzLXdpei1pbWcQAzoECCMQJzoFCAAQgAQ6BAgAEBg6BAgAEB5QkgpY3jVghj5oAHAAeACAAdYCiAGIFZIBBTItNy4zmAEAoAEBwAEB&sclient=mobile-gws-wiz-img&ei=TzX6Yp2qLO2KlwSkzJPYDw&bih=790&biw=412&client=ms-android-samsung-gj-rev1&prmd=inv#imgrc=udzWW0MUN1kayM)
+![zuri and Ingressive for good](https://raw.githubusercontent.com/zuri-training/Favicon_gen-Team-68/Tony-smile-patch-4/media/images%20(2).png)
+<b>[zuri.training Website](https://www.google.com/search?q=ingressive+for+good+and+zuri&tbm=isch&ved=2ahUKEwjdjd__5cj5AhVtxYUKHSTmBPsQ2-cCegQIABAC&oq=ingressive+for+good+and+zuri&gs_lcp=ChJtb2JpbGUtZ3dzLXdpei1pbWcQAzoECCMQJzoFCAAQgAQ6BAgAEBg6BAgAEB5QkgpY3jVghj5oAHAAeACAAdYCiAGIFZIBBTItNy4zmAEAoAEBwAEB&sclient=mobile-gws-wiz-img&ei=TzX6Yp2qLO2KlwSkzJPYDw&bih=790&biw=412&client=ms-android-samsung-gj-rev1&prmd=inv#imgrc=udzWW0MUN1kayM)</b>
+<br><b>[Ingressive for Good Website](https://ingressive.org/)</b>
+
 ## Contributors
 All thanks goes to these wonderful teamates for making sure this project came to being👏
 <!--Please use the format below to add your own details. 3 persons in each row -->
