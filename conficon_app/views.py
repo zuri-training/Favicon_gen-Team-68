@@ -86,7 +86,7 @@ def contact(request):
         """.format(
             data["message"], data["email"]
         )
-        send_mail(data["email"], message, "", ["youngmaurizz@gmail.com"])
+        send_mail(data["email"], message, "", ["deborahudoh02@gmail.com"])
         return redirect("contact_sent")
 
     return render(request, "contact.html", {})
