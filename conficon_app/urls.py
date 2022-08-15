@@ -15,6 +15,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("contact_sent/", views.contact_sent, name="contact_sent"),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('documentation/', views.documentation, name='documentation'),
 
     #urls for password reset
     path('reset_password/',
