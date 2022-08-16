@@ -35,7 +35,7 @@
                
                 <ul class="menu-left">
                     <div class="nav-brand mobile">
-                        <a href={% url 'home' %}><img src="{% static 'images/coloredlogo.svg' %}"
+                        <a href="{% url 'home' %}"><img src="{% static 'images/coloredlogo.svg' %}"
                                 alt="brand-logo" class="mobile-brand"><span></span> </a>
                                 <HR class='mobile'></HR>
                     </div>
@@ -75,7 +75,7 @@
                         <a href="{% url 'documentation' %}" class="nav-link">How it works</a>
                     </li>
                     <li class="nav-item mobile">
-                        <a href="#how-it-works">
+                        <a href="{% url 'documentation' %}">
                             <div class="profile-option-one accprof">
                                 <img class="image-class" src="{% static 'images/how-it-works.svg' %}" alt="">
                                 <p>How it works</p>
