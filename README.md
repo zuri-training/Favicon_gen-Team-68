@@ -99,4 +99,10 @@ All thanks goes to these wonderful teamates for making sure this project came to
     <a href="https://www.linkedin.com/in/deborah-udoh-b0a720188"><b>Deborah Udoh</b></a><br>
     </td>
   </tr>
+  <tr>
+        <td align="center" style="backgroundColor:blueviolet";>
+    <img src="https://avatars.githubusercontent.com/u/98839344?v=4" width="100px;" alt="Gabriel Isuekebho"/><br />
+    <a href="https://www.linkedin.com/in/gabriel-isuekebho-24a7b522a/"><b>Gabriel Isuekebho</b></a><br>
+    </td>
+  </tr>
 </table>
